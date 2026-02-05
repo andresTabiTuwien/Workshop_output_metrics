@@ -310,3 +310,109 @@ pass/fail
 4. Verify that `data_access` exists.  
 5. Verify that its value is one of: `open`, `shared`, `closed`.  
 6. If all reused datasets comply, return pass; otherwise return fail.
+
+# Metric: Reused Data Personal
+
+**Metric ID:** data.reused.co.6  
+**Persistent URI:** https://example.org/metric/data.reused.co.6  
+**Dimension:** Completeness  
+
+## Title
+Reused Data Personal
+
+## Narrative
+Verifies the existence of personal data.
+
+## Intended Outcome
+Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include an explicit statement about the presence of personal data.
+
+## Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+## Success Criterion
+For each dataset declared as reused (`is_reused = true`), a `personal_data` field exists and is explicitly set (e.g., boolean or controlled value).
+
+## Failure Criterion
+At least one reused dataset is missing `personal_data` information or contains an invalid or undefined value.
+
+## Expected Result Type
+Boolean (pass/fail)
+
+---
+
+# Associated Test
+
+## Test: Personal data for reused datasets
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-personal-data  
+
+### Description
+Checks the personal_data.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Algorithm (Suggested)
+1. Parse the maDMP JSON document.  
+2. Locate all dataset entries.  
+3. Select datasets where `is_reused = true`.  
+4. Verify that `personal_data` exists.  
+5. Verify that its value is explicit and valid (e.g., `true/false`, or a controlled term your schema allows).  
+6. If all reused datasets comply, return pass; otherwise return fail.
+
+# Metric: Reused Data Sensitive
+
+**Metric ID:** data.reused.co.7  
+**Persistent URI:** https://example.org/metric/data.reused.co.7  
+**Dimension:** Completeness  
+
+## Title
+Reused Data Sensitive
+
+## Narrative
+Verifies the existence of sensitive data.
+
+## Intended Outcome
+Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include an explicit statement about the presence of sensitive data.
+
+## Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+## Success Criterion
+For each dataset declared as reused (`is_reused = true`), a `sensitive_data` field exists and is explicitly set (e.g., boolean or controlled value).
+
+## Failure Criterion
+At least one reused dataset is missing `sensitive_data` information or contains an invalid or undefined value.
+
+## Expected Result Type
+Boolean (pass/fail)
+
+---
+
+# Associated Test
+
+## Test: Sensitive data for reused datasets
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-sensitive-data  
+
+### Description
+Checks the sensitive_data.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Algorithm (Suggested)
+1. Parse the maDMP JSON document.  
+2. Locate all dataset entries.  
+3. Select datasets where `is_reused = true`.  
+4. Verify that `sensitive_data` exists.  
+5. Verify that its value is explicit and valid.  
+6. If all reused datasets comply, return pass; otherwise return fail.

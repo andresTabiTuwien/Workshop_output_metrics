@@ -118,6 +118,40 @@
             },
             "ftr:input": "maDMP JSON",
             "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-personal-data",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (personal data for reused datasets)",
+            "dcterms:description": "Checks the personal_data.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.co.6"
+            },
+            "ftr:input": "maDMP JSON",
+            "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-sensitive-data",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (sensitive data for reused datasets)",
+            "dcterms:description": "Checks the sensitive_data.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.co.7"
+            },
+            "ftr:input": "maDMP JSON",
+            "ftr:output": "pass/fail"
         }
     ]
 }
