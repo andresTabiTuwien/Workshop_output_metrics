@@ -1,18 +1,20 @@
 # Metrics Catalog
 
-| Metric ID | Title | Associated Tests |
-|----------|------|----------------|
-| data.reused.co.1 | maDMP declares reused datasets | [View](tests.md#test-check-for-reused-dataset-declaration) |
-| data.reused.co.2 | Reused Data PID | [View](tests.md#test-check-for-reused-dataset-pid) |
-| data.reused.co.3 | Reused Data License | [View](tests.md#test-license-for-reused-datasets) |
-| data.reused.co.4 | Reused Data Source | [View](tests.md#test-distribution-present) |
-| data.reused.co.5 | Reused Data Access | [View](tests.md#test-access-rights-for-reused-datasets) |
-| data.reused.co.6 | Reused Data Personal | [View](tests.md#test-personal-data-for-reused-datasets) |
-| data.reused.co.7 | Reused Data Sensitive | [View](tests.md#test-sensitive-data-for-reused-datasets) |
-| data.reused.co.8 | Reused Data URL | [View](tests.md#test-access-url) |
-| data.reused.feas.1 | Repository Reused Data PID | [View](tests.md#test-pid-matches-destination-repository-record) |
-| data.reused.feas.2 | Repository Reused Data Access | [View](tests.md#test-reused-data-access-matches-destination) |
-| data.reused.feas.3 | Repository Reused Data License | [View](tests.md#test-reused-data-license-matches-destination) |
+
+| Metric ID | Title | Jump to Metric |
+|----------|------|---------------|
+| data.reused.co.1 | maDMP declares reused datasets | [Go](#metric-madmp-declares-reused-datasets) |
+| data.reused.co.2 | Reused Data PID | [Go](#metric-reused-data-pid) |
+| data.reused.co.3 | Reused Data License | [Go](#metric-reused-data-license) |
+| data.reused.co.4 | Reused Data Source | [Go](#metric-reused-data-source) |
+| data.reused.co.5 | Reused Data Access | [Go](#metric-reused-data-access) |
+| data.reused.co.6 | Reused Data Personal | [Go](#metric-reused-data-personal) |
+| data.reused.co.7 | Reused Data Sensitive | [Go](#metric-reused-data-sensitive) |
+| data.reused.co.8 | Reused Data URL | [Go](#metric-reused-data-url) |
+| data.reused.feas.1 | Repository Reused Data PID | [Go](#metric-repository-reused-data-pid) |
+| data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
+| data.reused.feas.3 | Repository Reused Data License | [Go](#metric-repository-reused-data-license) |
+
 
 ---
 

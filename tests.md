@@ -1,22 +1,23 @@
 # Tests Catalog
 
-| Test Name | Implements Metric |
-|----------|----------------|
-| Check for reused dataset declaration | [data.reused.co.1](metrics.md#metric-madmp-declares-reused-datasets) |
-| Check for reused dataset PID | [data.reused.co.2](metrics.md#metric-reused-data-pid) |
-| License for reused datasets | [data.reused.co.3](metrics.md#metric-reused-data-license) |
-| Distribution present | [data.reused.co.4](metrics.md#metric-reused-data-source) |
-| Distribution access information | [data.reused.co.4](metrics.md#metric-reused-data-source) |
-| Distribution title | [data.reused.co.4](metrics.md#metric-reused-data-source) |
-| Access rights for reused datasets | [data.reused.co.5](metrics.md#metric-reused-data-access) |
-| Personal data for reused datasets | [data.reused.co.6](metrics.md#metric-reused-data-personal) |
-| Sensitive data for reused datasets | [data.reused.co.7](metrics.md#metric-reused-data-sensitive) |
-| Distribution present (URL) | [data.reused.co.8](metrics.md#metric-reused-data-url) |
-| Access URL | [data.reused.co.8](metrics.md#metric-reused-data-url) |
-| PID matches destination repository record | [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid) |
-| PID resolves | [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid) |
-| Reused data access matches destination | [data.reused.feas.2](metrics.md#metric-repository-reused-data-access) |
-| Reused data license matches destination | [data.reused.feas.3](metrics.md#metric-repository-reused-data-license) |
+| Test Name | Jump to Test |
+|----------|-------------|
+| Check for reused dataset declaration | [Go](#test-check-for-reused-dataset-declaration) |
+| Check for reused dataset PID | [Go](#test-check-for-reused-dataset-pid) |
+| License for reused datasets | [Go](#test-license-for-reused-datasets) |
+| Distribution present | [Go](#test-distribution-present) |
+| Distribution access information | [Go](#test-distribution-access-information) |
+| Distribution title | [Go](#test-distribution-title) |
+| Access rights for reused datasets | [Go](#test-access-rights-for-reused-datasets) |
+| Personal data for reused datasets | [Go](#test-personal-data-for-reused-datasets) |
+| Sensitive data for reused datasets | [Go](#test-sensitive-data-for-reused-datasets) |
+| Distribution present (URL) | [Go](#test-distribution-present-url) |
+| Access URL | [Go](#test-access-url) |
+| PID matches destination repository record | [Go](#test-pid-matches-destination-repository-record) |
+| PID resolves | [Go](#test-pid-resolves) |
+| Reused data access matches destination | [Go](#test-reused-data-access-matches-destination) |
+| Reused data license matches destination | [Go](#test-reused-data-license-matches-destination) |
+
 
 ---
 
