@@ -152,6 +152,91 @@
             },
             "ftr:input": "maDMP JSON",
             "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-distribution-url-present",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (distribution present)",
+            "dcterms:description": "Checks the distribution.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.co.8"
+            },
+            "ftr:input": "maDMP JSON",
+            "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-access-url",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (access URL)",
+            "dcterms:description": "Checks the access_url.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.co.8"
+            },
+            "ftr:input": "maDMP JSON",
+            "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-repo-match",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (PID matches repository record)",
+            "dcterms:description": "Checks if reused dataset id in dmp match the destination.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.feas.1"
+            },
+            "ftr:input": "dataset_id in maDMP + repository identifier field(s) (e.g., doi_url in Zenodo)",
+            "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-pid-resolves",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (PID resolves)",
+            "dcterms:description": "Checks if the pid resolves.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.feas.1"
+            },
+            "ftr:input": "dataset_id of maDMP + PID resolver (e.g., DOI resolver)",
+            "ftr:output": "pass/fail"
+        },
+        {
+            "@context": {
+                "dcterms": "http://purl.org/dc/terms/",
+                "ftr": "https://w3id.org/ftr#",
+                "sio": "http://semanticscience.org/resource/"
+            },
+            "@id": "https://example.org/test/T-DCSC-access-match",
+            "@type": "ftr:Test",
+            "dcterms:identifier": "T-DCSC",
+            "dcterms:title": "T-DCSC (reused data access matches destination)",
+            "dcterms:description": "Check if reused data access in dmp matches the destination.",
+            "sio:is-implementation-of": {
+                "@id": "https://example.org/metric/data.reused.feas.2"
+            },
+            "ftr:input": "data_access in maDMP + access_right in destination repository",
+            "ftr:output": "pass/fail"
         }
     ]
 }

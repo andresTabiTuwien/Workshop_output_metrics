@@ -1,3 +1,23 @@
+# Metrics Catalog
+
+| Metric ID | Title | Jump to Metric |
+|----------|-------|---------------|
+| madmp-reused-datasets-declared | maDMP declares reused datasets | [Go](#metric-madmp-declares-reused-datasets) |
+| data.reused.co.2 | Reused Data PID | [Go](#metric-reused-data-pid) |
+| data.reused.co.3 | Reused Data License | [Go](#metric-reused-data-license) |
+| data.reused.co.4 | Reused Data Source | [Go](#metric-reused-data-source) |
+| data.reused.co.5 | Reused Data Access | [Go](#metric-reused-data-access) |
+| data.reused.co.6 | Reused Data Personal | [Go](#metric-reused-data-personal) |
+| data.reused.co.7 | Reused Data Sensitive | [Go](#metric-reused-data-sensitive) |
+| data.reused.co.8 | Reused Data URL | [Go](#metric-reused-data-url) |
+| data.reused.feas.1 | Repository Reused Data PID | [Go](#metric-repository-reused-data-pid) |
+| data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
+| data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
+
+
+
+
+
 # Metric: maDMP declares reused datasets
 
 **Metric ID:** madmp-reused-datasets-declared  
@@ -416,3 +436,214 @@ pass/fail
 4. Verify that `sensitive_data` exists.  
 5. Verify that its value is explicit and valid.  
 6. If all reused datasets comply, return pass; otherwise return fail.
+
+# Metric: Reused Data URL
+
+**Metric ID:** data.reused.co.8  
+**Persistent URI:** https://example.org/metric/data.reused.co.8  
+**Dimension:** Completeness  
+
+## Title
+Reused Data URL
+
+## Narrative
+Verifies that the reused data have URL.
+
+## Intended Outcome
+Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include a URL pointing to their distribution or access location.
+
+## Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+## Success Criterion
+For each dataset declared as reused (`is_reused = true`), at least one distribution includes a non-empty `access_url` (or equivalent URL field).
+
+## Failure Criterion
+At least one reused dataset lacks a distribution URL.
+
+## Expected Result Type
+Boolean (pass/fail)
+
+---
+
+# Associated Tests
+
+## Test: Distribution present
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present  
+
+### Description
+Checks the distribution.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Algorithm (Suggested)
+1. Parse the maDMP JSON document.  
+2. Locate reused datasets (`is_reused = true`).  
+3. Verify that at least one distribution object exists.  
+4. If yes, return pass; otherwise return fail.
+
+---
+
+## Test: Access URL
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-access-url  
+
+### Description
+Checks the access_url.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Algorithm (Suggested)
+1. Parse the maDMP JSON document.  
+2. Locate reused datasets (`is_reused = true`).  
+3. Verify that at least one distribution contains `access_url`.  
+4. If yes, return pass; otherwise return fail.
+
+## Metric: Repository Reused Data PID
+
+**Metric ID:** data.reused.feas.1  
+**Persistent URI:** https://example.org/metric/data.reused.feas.1  
+**Dimension:** Feasibility  
+
+### Title
+Repository Reused Data PID
+
+### Narrative
+Validates that the reused dataset exists in the repository.
+
+### Intended Outcome
+Determine whether the PID for each reused dataset declared in the machine-actionable Data Management Plan (maDMP) corresponds to an existing record in a target repository and resolves via a PID resolver.
+
+### Applies To
+- maDMP JSON (dataset reuse declarations)  
+- Target repository endpoint  
+- PID resolver service  
+
+### Success Criterion
+For each dataset declared as reused (`is_reused = true`):
+
+1. The dataset identifier in the maDMP matches an identifier discoverable in the target repository record (e.g., DOI URL), **and**  
+2. The dataset PID resolves successfully.
+
+### Failure Criterion
+At least one reused dataset PID:
+
+- cannot be matched to a target repository record, **or**  
+- does not resolve via a PID resolver.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+---
+
+### Associated Tests
+
+#### Test: PID matches destination repository record
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-repo-match  
+
+**Description**  
+Checks if reused dataset id in DMP matches the destination.
+
+**Input**  
+- dataset_id in maDMP  
+- repository identifier field(s) (e.g., DOI URL)
+
+**Output**  
+pass/fail
+
+**Algorithm (Suggested)**  
+1. Extract reused dataset identifiers from maDMP (`is_reused = true`).  
+2. Query the target repository using the identifier.  
+3. Retrieve the repository’s canonical identifier for the record.  
+4. Compare with the maDMP dataset identifier.  
+5. Pass if all identifiers match a repository record; otherwise fail.
+
+---
+
+#### Test: PID resolves
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-pid-resolves  
+
+**Description**  
+Checks if the PID resolves.
+
+**Input**  
+- dataset_id from maDMP  
+- PID resolver
+
+**Output**  
+pass/fail
+
+**Algorithm (Suggested)**  
+1. Extract reused dataset identifiers from maDMP (`is_reused = true`).  
+2. Attempt resolution via the resolver (HTTP request).  
+3. Treat successful HTTP responses (2xx/3xx) as resolvable.  
+4. Pass if all PIDs resolve; otherwise fail.
+
+## Metric: Repository Reused Data Access
+
+**Metric ID:** data.reused.feas.2  
+**Persistent URI:** https://example.org/metric/data.reused.feas.2  
+**Dimension:** Feasibility  
+
+### Title
+Repository Reused Data Access
+
+### Narrative
+Validates that the access rights of the reused dataset match those of the destination.
+
+### Intended Outcome
+Determine whether the access rights declared for reused datasets in the machine-actionable Data Management Plan (maDMP) match the access rights recorded in the destination repository.
+
+### Applies To
+- maDMP JSON (dataset reuse declarations)  
+- Target repository endpoint  
+
+### Success Criterion
+For each dataset declared as reused (`is_reused = true`), the `data_access` value in the maDMP matches the corresponding access rights value in the destination repository record (e.g., `access_right`).
+
+### Failure Criterion
+At least one reused dataset has a `data_access` value in the maDMP that does not match the access rights recorded in the destination repository.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+---
+
+### Associated Test
+
+#### Test: Reused data access matches destination
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-access-match  
+
+**Description**  
+Check if reused data access in DMP matches the destination.
+
+**Input**  
+- `data_access` in maDMP  
+- `access_right` in destination repository (e.g., Zenodo)
+
+**Output**  
+pass/fail
+
+**Algorithm (Suggested)**  
+1. Extract reused datasets from maDMP (`is_reused = true`).  
+2. For each reused dataset, retrieve its record from the destination repository.  
+3. Extract the repository access rights value.  
+4. Compare maDMP `data_access` with repository `access_right`.  
+5. Pass if all values match; otherwise fail.
