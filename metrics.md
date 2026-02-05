@@ -2,17 +2,17 @@
 
 | Metric ID | Title | Jump to Metric |
 |----------|------|---------------|
-| data.reused.co.1 | maDMP declares reused datasets | [Go](../../../../Downloads/metrics.md#metric-madmp-declares-reused-datasets) |
-| data.reused.co.2 | Reused Data PID | [Go](../../../../Downloads/metrics.md#metric-reused-data-pid) |
-| data.reused.co.3 | Reused Data License | [Go](../../../../Downloads/metrics.md#metric-reused-data-license) |
-| data.reused.co.4 | Reused Data Source | [Go](../../../../Downloads/metrics.md#metric-reused-data-source) |
-| data.reused.co.5 | Reused Data Access | [Go](../../../../Downloads/metrics.md#metric-reused-data-access) |
-| data.reused.co.6 | Reused Data Personal | [Go](../../../../Downloads/metrics.md#metric-reused-data-personal) |
-| data.reused.co.7 | Reused Data Sensitive | [Go](../../../../Downloads/metrics.md#metric-reused-data-sensitive) |
-| data.reused.co.8 | Reused Data URL | [Go](../../../../Downloads/metrics.md#metric-reused-data-url) |
-| data.reused.feas.1 | Repository Reused Data PID | [Go](../../../../Downloads/metrics.md#metric-repository-reused-data-pid) |
-| data.reused.feas.2 | Repository Reused Data Access | [Go](../../../../Downloads/metrics.md#metric-repository-reused-data-access) |
-| data.reused.feas.3 | Repository Reused Data License | [Go](../../../../Downloads/metrics.md#metric-repository-reused-data-license) |
+| data.reused.co.1 | maDMP declares reused datasets | [Go](#metric-madmp-declares-reused-datasets) |
+| data.reused.co.2 | Reused Data PID | [Go](#metric-reused-data-pid) |
+| data.reused.co.3 | Reused Data License | [Go](#metric-reused-data-license) |
+| data.reused.co.4 | Reused Data Source | [Go](#metric-reused-data-source) |
+| data.reused.co.5 | Reused Data Access | [Go](#metric-reused-data-access) |
+| data.reused.co.6 | Reused Data Personal | [Go](#metric-reused-data-personal) |
+| data.reused.co.7 | Reused Data Sensitive | [Go](#metric-reused-data-sensitive) |
+| data.reused.co.8 | Reused Data URL | [Go](#metric-reused-data-url) |
+| data.reused.feas.1 | Repository Reused Data PID | [Go](#metric-repository-reused-data-pid) |
+| data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
+| data.reused.feas.3 | Repository Reused Data License | [Go](#metric-repository-reused-data-license) |
 
 ---
 
@@ -43,7 +43,7 @@ No dataset entry contains reuse information.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check for reused dataset declaration](../../../../Downloads/tests.md#test-check-for-reused-dataset-declaration)
+- [Check for reused dataset declaration](tests.md#test-check-for-reused-dataset-declaration)
 
 ### JSON-LD (Metric)
 ```json
@@ -96,7 +96,7 @@ At least one reused dataset is missing an identifier or identifier metadata.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check for reused dataset PID](../../../../Downloads/tests.md#test-check-for-reused-dataset-pid)
+- [Check for reused dataset PID](tests.md#test-check-for-reused-dataset-pid)
 
 ### JSON-LD (Metric)
 ```json
@@ -150,7 +150,7 @@ At least one reused dataset is missing license information or required license f
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [License for reused datasets](../../../../Downloads/tests.md#test-license-for-reused-datasets)
+- [License for reused datasets](tests.md#test-license-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -204,9 +204,9 @@ At least one reused dataset lacks distribution or source metadata, or required m
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution present](../../../../Downloads/tests.md#test-distribution-present)  
-- [Distribution access information](../../../../Downloads/tests.md#test-distribution-access-information)  
-- [Distribution title](../../../../Downloads/tests.md#test-distribution-title)
+- [Distribution present](tests.md#test-distribution-present)  
+- [Distribution access information](tests.md#test-distribution-access-information)  
+- [Distribution title](tests.md#test-distribution-title)
 
 ### JSON-LD (Metric)
 ```json
@@ -260,7 +260,7 @@ At least one reused dataset is missing a `data_access` value or contains an inva
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Access rights for reused datasets](../../../../Downloads/tests.md#test-access-rights-for-reused-datasets)
+- [Access rights for reused datasets](tests.md#test-access-rights-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -314,7 +314,7 @@ At least one reused dataset is missing `personal_data` information or contains a
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Personal data for reused datasets](../../../../Downloads/tests.md#test-personal-data-for-reused-datasets)
+- [Personal data for reused datasets](tests.md#test-personal-data-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -368,7 +368,7 @@ At least one reused dataset is missing `sensitive_data` information or contains 
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Sensitive data for reused datasets](../../../../Downloads/tests.md#test-sensitive-data-for-reused-datasets)
+- [Sensitive data for reused datasets](tests.md#test-sensitive-data-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -422,8 +422,8 @@ At least one reused dataset lacks a distribution URL.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution present (URL)](../../../../Downloads/tests.md#test-distribution-present-url)  
-- [Access URL](../../../../Downloads/tests.md#test-access-url)
+- [Distribution present (URL)](tests.md#test-distribution-present-url)  
+- [Access URL](tests.md#test-access-url)
 
 ### JSON-LD (Metric)
 ```json
@@ -483,8 +483,8 @@ At least one reused dataset PID:
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [PID matches destination repository record](../../../../Downloads/tests.md#test-pid-matches-destination-repository-record)  
-- [PID resolves](../../../../Downloads/tests.md#test-pid-resolves)
+- [PID matches destination repository record](tests.md#test-pid-matches-destination-repository-record)  
+- [PID resolves](tests.md#test-pid-resolves)
 
 ### JSON-LD (Metric)
 ```json
@@ -539,7 +539,7 @@ At least one reused dataset has a `data_access` value in the maDMP that does not
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Reused data access matches destination](../../../../Downloads/tests.md#test-reused-data-access-matches-destination)
+- [Reused data access matches destination](tests.md#test-reused-data-access-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -594,7 +594,7 @@ At least one reused dataset has a license value in the maDMP that does not match
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Reused data license matches destination](../../../../Downloads/tests.md#test-reused-data-license-matches-destination)
+- [Reused data license matches destination](tests.md#test-reused-data-license-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
