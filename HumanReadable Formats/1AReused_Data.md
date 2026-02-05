@@ -12,12 +12,7 @@
 | data.reused.co.8 | Reused Data URL | [Go](#metric-reused-data-url) |
 | data.reused.feas.1 | Repository Reused Data PID | [Go](#metric-repository-reused-data-pid) |
 | data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
-| data.reused.feas.2 | Repository Reused Data Access | [Go](#metric-repository-reused-data-access) |
 | data.reused.feas.3 | Repository Reused Data License | [Go](#metric-repository-reused-data-license) |
-
-
-
-
 
 
 # Metric: maDMP declares reused datasets
