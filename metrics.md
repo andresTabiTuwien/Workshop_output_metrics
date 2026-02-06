@@ -2,7 +2,7 @@
 
 | Metric ID | Title | Jump to Metric |
 |----------|------|---------------|
-| data.reused.co.1 | maDMP declares reused datasets | [Go](#metric-madmp-declares-reused-datasets) |
+| data.reused.co.1 | [maDMP declares reused datasets](#metric-madmp-declares-reused-datasets) | [Go] |
 | data.reused.co.2 | Reused Data PID | [Go](#metric-reused-data-pid) |
 | data.reused.co.3 | Reused Data License | [Go](#metric-reused-data-license) |
 | data.reused.co.4 | Reused Data Source | [Go](#metric-reused-data-source) |
