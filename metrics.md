@@ -20,10 +20,16 @@
 | data.new.feas.1 | [Repository PID Resolution](#metric-repository-pid-resolution) |
 | data.new.feas.2 | [Repository New Data Access](#metric-repository-new-data-access) |
 | data.new.feas.3 | [Repository New Data License](#metric-repository-new-data-license) |
+| data.info.cov.1 | [Data Type](#metric-data-type) |
+| data.info.cov.2 | [Data Format](#metric-data-format) |
+| data.info.cov.3 | [Data Size](#metric-data-size) |
+| data.info.feas.1 | [Repository Data Type](#metric-repository-data-type) |
+| data.info.feas.2 | [Repository Data Format](#metric-repository-data-format) |
+| data.info.feas.3 | [Repository Data Size](#metric-repository-data-size) |
 
 
 
-
+| meta.comp.1 | [DMP Common Standard Field Compliance](#metric-dmp-common-standard-field-compliance) |
 
 
 
@@ -1011,3 +1017,385 @@ Boolean (pass/fail)
 }
 ```
 
+# 1b Data - Info
+
+## Metric: Data Type
+
+**Metric ID:** data.info.cov.1  
+**Persistent URI:** https://example.org/metric/data.info.cov.1  
+**Dimension:** Coverage  
+
+### Title
+Data Type
+
+### Narrative
+Verifies that the type of the dataset is qualitative or quantitative.
+
+### Intended Outcome
+Determine whether each dataset in the maDMP specifies its dataset type (e.g., qualitative or quantitative), supporting clearer understanding and management of the data.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For each dataset (or at minimum for the dataset(s) in scope), the field `dataset.type` exists and is non-empty, and its value matches the expected controlled vocabulary (e.g., `qualitative` or `quantitative`, or your project’s equivalent terms).
+
+### Failure Criterion
+`dataset.type` is missing/empty for one or more dataset entries, or uses values outside the accepted vocabulary (if validation against a vocabulary is required).
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset.type is specified](tests.md#test-check-datasettype-is-specified)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.cov.1",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.cov.1",
+  "dcterms:title": "Data Type",
+  "dcterms:description": "Verifies that the type of the dataset is qualitative or quantitative.",
+  "ftr:dimension": "Coverage",
+  "ftr:intendedOutcome": "Determine whether each dataset in the maDMP specifies its dataset type (e.g., qualitative or quantitative).",
+  "ftr:successCriterion": "dataset.type exists and is non-empty for dataset entries and matches the expected vocabulary (e.g., qualitative/quantitative).",
+  "ftr:failureCriterion": "dataset.type is missing/empty for one or more datasets, or uses values outside the accepted vocabulary (if required).",
+  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+## Metric: Data Format
+
+**Metric ID:** data.info.cov.2  
+**Persistent URI:** https://example.org/metric/data.info.cov.2  
+**Dimension:** Coverage  
+
+### Title
+Data Format
+
+### Narrative
+Verifies the format of the dataset.
+
+### Intended Outcome
+Determine whether dataset distribution information includes an explicit format, supporting understanding of how the data can be accessed and processed.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For each dataset distribution (or at minimum for the distribution(s) in scope), `distribution.format` exists and is non-empty.
+
+### Failure Criterion
+`distribution.format` is missing/empty for one or more distributions, or no distribution information exists where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution.format is specified](tests.md#test-check-distributionformat-is-specified)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.cov.2",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.cov.2",
+  "dcterms:title": "Data Format",
+  "dcterms:description": "Verifies the format of the dataset.",
+  "ftr:dimension": "Coverage",
+  "ftr:intendedOutcome": "Determine whether dataset distribution information includes an explicit format.",
+  "ftr:successCriterion": "distribution.format exists and is non-empty for distributions in scope.",
+  "ftr:failureCriterion": "distribution.format is missing/empty for one or more distributions, or no distribution information exists where expected.",
+  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+## Metric: Data Size
+
+**Metric ID:** data.info.cov.3  
+**Persistent URI:** https://example.org/metric/data.info.cov.3  
+**Dimension:** Coverage  
+
+### Title
+Data Size
+
+### Narrative
+Verifies the size of the dataset.
+
+### Intended Outcome
+Determine whether dataset distribution information includes an explicit size, supporting planning for storage, transfer, and processing.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For each dataset distribution (or at minimum for the distribution(s) in scope), `distribution.byte_size` exists and is a valid non-negative number.
+
+### Failure Criterion
+`distribution.byte_size` is missing, empty, non-numeric, or negative for one or more distributions, or no distribution information exists where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution.byte_size is specified](tests.md#test-check-distributionbyte_size-is-specified)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.cov.3",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.cov.3",
+  "dcterms:title": "Data Size",
+  "dcterms:description": "Verifies the size of the dataset.",
+  "ftr:dimension": "Coverage",
+  "ftr:intendedOutcome": "Determine whether dataset distribution information includes an explicit size.",
+  "ftr:successCriterion": "distribution.byte_size exists and is a valid non-negative number for distributions in scope.",
+  "ftr:failureCriterion": "distribution.byte_size is missing/invalid for one or more distributions, or no distribution information exists where expected.",
+  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+
+## Metric: Repository Data Type
+
+**Metric ID:** data.info.feas.1  
+**Persistent URI:** https://example.org/metric/data.info.feas.1  
+**Dimension:** Feasibility  
+
+### Title
+Repository Data Type
+
+### Narrative
+Validates that the type of the dataset match those of the destination.
+
+### Intended Outcome
+Determine whether the dataset type declared in the maDMP matches the dataset type information recorded in the destination repository (e.g., Zenodo), including subtype alignment.
+
+### Applies To
+- maDMP JSON (`dataset.type`)  
+- Destination repository metadata (e.g., Zenodo `type` and `subtype`)
+
+### Success Criterion
+For each dataset in scope:
+1. `dataset.type` in the maDMP matches the destination repository `type` for the corresponding record, and  
+2. Any declared sub-properties or subtype mappings align (maDMP `dataset.type` is consistent with destination `subtype`).
+
+### Failure Criterion
+At least one dataset has a type or subtype mismatch between maDMP and the destination repository, or required fields cannot be retrieved.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset.type matches destination type](tests.md#test-check-datasettype-matches-destination-type)  
+- [Check dataset.type aligns with destination subtype](tests.md#test-check-datasettype-aligns-with-destination-subtype)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.feas.1",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.feas.1",
+  "dcterms:title": "Repository Data Type",
+  "dcterms:description": "Validates that the type of the dataset match those of the destination.",
+  "ftr:dimension": "Feasibility",
+  "ftr:intendedOutcome": "Determine whether the dataset type declared in the maDMP matches the dataset type information recorded in the destination repository (e.g., Zenodo), including subtype alignment.",
+  "ftr:successCriterion": "dataset.type matches destination type and is consistent with destination subtype for datasets in scope.",
+  "ftr:failureCriterion": "At least one dataset has a type/subtype mismatch or required fields cannot be retrieved.",
+  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+## Metric: Repository Data Format
+
+**Metric ID:** data.info.feas.2  
+**Persistent URI:** https://example.org/metric/data.info.feas.2  
+**Dimension:** Feasibility  
+
+### Title
+Repository Data Format
+
+### Narrative
+Validates that the format of the dataset match those of the destination.
+
+### Intended Outcome
+Determine whether the dataset format declared in the maDMP matches the actual file formats stored in the destination repository (e.g., Zenodo).
+
+### Applies To
+- maDMP JSON (`distribution.format`)  
+- Destination repository record (e.g., Zenodo files metadata)
+
+### Success Criterion
+For each dataset distribution in scope, the maDMP `distribution.format` matches the file format(s) observed in the destination repository record (or is compatible with them under a defined mapping rule).
+
+### Failure Criterion
+At least one distribution format declared in the maDMP does not match (or cannot be mapped to) the formats of the deposited files in the destination repository, or required repository metadata cannot be retrieved.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check final dataset format matches destination files](tests.md#test-check-final-dataset-format-matches-destination-files)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.feas.2",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.feas.2",
+  "dcterms:title": "Repository Data Format",
+  "dcterms:description": "Validates that the format of the dataset match those of the destination.",
+  "ftr:dimension": "Feasibility",
+  "ftr:intendedOutcome": "Determine whether the dataset format declared in the maDMP matches the actual file formats stored in the destination repository (e.g., Zenodo).",
+  "ftr:successCriterion": "distribution.format matches (or is compatible with) destination repository file formats for distributions in scope.",
+  "ftr:failureCriterion": "At least one declared distribution.format does not match destination file formats or required repository metadata cannot be retrieved.",
+  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+## Metric: Repository Data Size
+
+**Metric ID:** data.info.feas.3  
+**Persistent URI:** https://example.org/metric/data.info.feas.3  
+**Dimension:** Feasibility  
+
+### Title
+Repository Data Size
+
+### Narrative
+Validates that the size of the dataset match those of the destination.
+
+### Intended Outcome
+Determine whether the dataset size declared in the maDMP matches the actual deposited size recorded in the destination repository (e.g., Zenodo).
+
+### Applies To
+- maDMP JSON (`distribution.byte_size`)  
+- Destination repository metadata (e.g., Zenodo file size / total size)
+
+### Success Criterion
+For each dataset distribution in scope, the maDMP `distribution.byte_size` matches the destination repository recorded size (or is within an acceptable tolerance if you define one).
+
+### Failure Criterion
+At least one distribution has a size mismatch between maDMP and destination repository, or required repository metadata cannot be retrieved.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check final dataset size matches destination size](tests.md#test-check-final-dataset-size-matches-destination-size)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/data.info.feas.3",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "data.info.feas.3",
+  "dcterms:title": "Repository Data Size",
+  "dcterms:description": "Validates that the size of the dataset match those of the destination.",
+  "ftr:dimension": "Feasibility",
+  "ftr:intendedOutcome": "Determine whether the dataset size declared in the maDMP matches the actual deposited size recorded in the destination repository (e.g., Zenodo).",
+  "ftr:successCriterion": "distribution.byte_size matches destination repository recorded size for distributions in scope (or within tolerance if defined).",
+  "ftr:failureCriterion": "At least one distribution has a size mismatch or required repository metadata cannot be retrieved.",
+  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
+  "ftr:expectedResultType": "boolean"
+}
+```
+
+
+
+
+
+
+
+
+
+# 2a Metadata doc
+
+## Metric: DMP Common Standard Field Compliance
+
+**Metric ID:** meta.comp.1  
+**Persistent URI:** https://example.org/metric/meta.comp.1  
+**Dimension:** Compliance  
+
+### Title
+DMP Common Standard Field Compliance
+
+### Narrative
+Verifies that the fields of the DMP JSON are aligned with the data types of the DMP Common Standard.
+
+### Intended Outcome
+Determine whether a maDMP JSON instance conforms to the DMP Common Standard schema, including correct field presence, structure, and data types.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+The maDMP JSON validates successfully against the DMP Common Standard JSON Schema (no validation errors).
+
+### Failure Criterion
+The maDMP JSON fails schema validation (one or more validation errors), including type mismatches, missing required fields, or invalid structures.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Validate maDMP JSON against DMP Common Standard schema](tests.md#test-validate-madmp-json-against-dmp-common-standard-schema)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#"
+  },
+  "@id": "https://example.org/metric/meta.comp.1",
+  "@type": "dqv:Metric",
+  "dcterms:identifier": "meta.comp.1",
+  "dcterms:title": "DMP Common Standard Field Compliance",
+  "dcterms:description": "Verifies that the fields of the DMP JSON are aligned with the data types of the DMP Common Standard.",
+  "ftr:dimension": "Compliance",
+  "ftr:intendedOutcome": "Determine whether a maDMP JSON instance conforms to the DMP Common Standard schema, including correct field presence, structure, and data types.",
+  "ftr:successCriterion": "The maDMP JSON validates successfully against the DMP Common Standard JSON Schema (no validation errors).",
+  "ftr:failureCriterion": "The maDMP JSON fails schema validation (one or more validation errors), including type mismatches, missing required fields, or invalid structures.",
+  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
+  "ftr:expectedResultType": "boolean"
+}
+```

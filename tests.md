@@ -26,7 +26,14 @@
 | [Check PID resolves for dataset_id](#test-check-pid-resolves-for-dataset_id) |
 | [Check new data access matches destination](#test-check-new-data-access-matches-destination) |
 | [Check new data license matches destination](#test-check-new-data-license-matches-destination) |
-
+| [Check dataset.type is specified](#test-check-datasettype-is-specified) |
+| [Check distribution.format is specified](#test-check-distributionformat-is-specified) |
+| [Check distribution.byte_size is specified](#test-check-distributionbyte_size-is-specified) |
+| [Check dataset.type matches destination type](#test-check-datasettype-matches-destination-type) |
+| [Check dataset.type aligns with destination subtype](#test-check-datasettype-aligns-with-destination-subtype) |
+| [Check final dataset format matches destination files](#test-check-final-dataset-format-matches-destination-files) |
+| [Check final dataset size matches destination size](#test-check-final-dataset-size-matches-destination-size) |
+| [Validate maDMP JSON against DMP Common Standard schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
 
 ---
 
@@ -1122,6 +1129,373 @@ pass/fail
     "@id": "https://example.org/metric/data.new.feas.3"
   },
   "ftr:input": "license in maDMP JSON + license in Zenodo",
+  "ftr:output": "pass/fail"
+}
+```
+# 1B Data ino
+## Test: Check dataset.type is specified
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type  
+
+**Implements:** [data.info.cov.1](metrics.md#metric-data-type)
+
+### Description
+Checks if the dataset type (e.g., qualitative or quantitative) is specified (`dataset.type`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries (e.g., the `dataset` array).
+3. For each dataset entry, check whether `dataset.type` exists and is non-empty.
+4. If your project enforces a controlled vocabulary, verify the value is in the allowed set (e.g., `qualitative`, `quantitative`).
+5. Return **pass** if all dataset entries in scope have a valid `dataset.type`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dataset-type",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check dataset.type is specified",
+  "dcterms:description": "Checks if the dataset type (e.g., qualitative or quantitative) is specified (dataset.type).",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.cov.1"
+  },
+  "ftr:input": "maDMP JSON",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check distribution.format is specified
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-format  
+
+**Implements:** [data.info.cov.2](metrics.md#metric-data-format)
+
+### Description
+Checks the dataset format (`distribution.format`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their `distribution` objects/arrays.
+3. For each distribution in scope, check whether `distribution.format` exists and is non-empty.
+4. If your project enforces a controlled vocabulary (e.g., MIME types), optionally validate the value against that vocabulary.
+5. Return **pass** if all distributions in scope have a non-empty `distribution.format`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-distribution-format",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check distribution.format is specified",
+  "dcterms:description": "Checks the dataset format (distribution.format).",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.cov.2"
+  },
+  "ftr:input": "maDMP JSON",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check distribution.byte_size is specified
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-byte-size  
+
+**Implements:** [data.info.cov.3](metrics.md#metric-data-size)
+
+### Description
+Checks the dataset size (`distribution.byte_size`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their `distribution` objects/arrays.
+3. For each distribution in scope, check whether `distribution.byte_size` exists.
+4. Verify that `distribution.byte_size` is numeric (integer or float) and is **≥ 0**.
+5. Return **pass** if all distributions in scope have a valid non-negative `distribution.byte_size`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-distribution-byte-size",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check distribution.byte_size is specified",
+  "dcterms:description": "Checks the dataset size (distribution.byte_size).",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.cov.3"
+  },
+  "ftr:input": "maDMP JSON",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check dataset.type matches destination type
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-match-destination-type  
+
+**Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
+
+### Description
+Checks that dataset is both the type of each destination.
+
+### Input
+dataset.type in maDMP + type in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. For each dataset in scope, extract `dataset.type`.
+3. Determine the destination repository record corresponding to the dataset (e.g., via dataset PID/identifier in the maDMP).
+4. Query the destination repository (e.g., Zenodo API/metadata endpoint) and retrieve the record `type`.
+5. Normalize values if needed (e.g., mapping maDMP vocabulary to Zenodo vocabulary).
+6. Compare maDMP `dataset.type` with destination `type`.
+7. Return **pass** if all compared datasets match; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dataset-type-match-destination-type",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check dataset.type matches destination type",
+  "dcterms:description": "Checks that dataset is both the type of each destination.",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.feas.1"
+  },
+  "ftr:input": "dataset.type in maDMP + type in Zenodo",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check dataset.type aligns with destination subtype
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-align-destination-subtype  
+
+**Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
+
+### Description
+Checks that sub-properties are pointing to the same type.
+
+### Input
+dataset.type in maDMP + subtype in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. For each dataset in scope, extract `dataset.type` (and any local sub-property if your maDMP schema includes it).
+3. Retrieve the corresponding destination record from the repository (e.g., Zenodo).
+4. Extract destination `subtype` (or equivalent sub-classification field).
+5. Apply a mapping/normalization rule that relates maDMP `dataset.type` to acceptable destination subtypes (because subtype may be more granular than type).
+6. Verify that the destination subtype is compatible with the maDMP dataset type (or that the maDMP type can be inferred from the subtype).
+7. Return **pass** if all compared datasets are compatible; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dataset-type-align-destination-subtype",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check dataset.type aligns with destination subtype",
+  "dcterms:description": "Checks that sub-properties are pointing to the same type.",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.feas.1"
+  },
+  "ftr:input": "dataset.type in maDMP + subtype in Zenodo",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check final dataset format matches destination files
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-format-match-destination-files  
+
+**Implements:** [data.info.feas.2](metrics.md#metric-repository-data-format)
+
+### Description
+Checks the final dataset format.
+
+### Input
+distribution.format in maDMP + files in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset distributions in scope and extract `distribution.format`.
+3. Identify the corresponding destination repository record (e.g., Zenodo) for the dataset/distribution using a PID or repository identifier available in the maDMP.
+4. Query the destination repository and retrieve the list of deposited files and their format information (e.g., filename extensions and/or MIME types if provided).
+5. Normalize formats for comparison (e.g., map extensions to MIME types, normalize case, apply a controlled vocabulary or mapping table).
+6. Compare maDMP `distribution.format` to the observed destination file format(s):
+   - **Strict mode:** every maDMP format must be present among destination formats.
+   - **Compatible mode:** maDMP format is considered valid if it maps to at least one destination file format under your mapping table.
+7. Return **pass** if the comparison succeeds for all distributions in scope; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dataset-format-match-destination-files",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check final dataset format matches destination files",
+  "dcterms:description": "Checks the final dataset format.",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.feas.2"
+  },
+  "ftr:input": "distribution.format in maDMP + files in Zenodo",
+  "ftr:output": "pass/fail"
+}
+```
+
+## Test: Check final dataset size matches destination size
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-size-match-destination-size  
+
+**Implements:** [data.info.feas.3](metrics.md#metric-repository-data-size)
+
+### Description
+Checks the final dataset size.
+
+### Input
+distribution.byte_size in maDMP + size in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset distributions in scope and extract `distribution.byte_size`.
+3. Identify the corresponding destination repository record (e.g., Zenodo) using a PID or repository identifier available in the maDMP.
+4. Query the destination repository and retrieve the deposited size value:
+   - If Zenodo provides per-file sizes, compute a total size (sum of file sizes) for the record, or compare per distribution if your mapping supports it.
+5. Normalize size units (ensure all sizes are compared in bytes).
+6. Compare maDMP `distribution.byte_size` to destination size:
+   - **Exact mode:** values must be equal.
+   - **Tolerance mode (optional):** values must be within an acceptable difference threshold (define e.g., ±1%).
+7. Return **pass** if all distributions in scope match (per chosen mode); otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dataset-size-match-destination-size",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Check final dataset size matches destination size",
+  "dcterms:description": "Checks the final dataset size.",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/data.info.feas.3"
+  },
+  "ftr:input": "distribution.byte_size in maDMP + size in Zenodo",
+  "ftr:output": "pass/fail"
+}
+```
+
+# 2A metada doc
+
+## Test: Validate maDMP JSON against DMP Common Standard schema 
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation  
+
+**Implements:** [meta.comp.1](metrics.md#metric-dmp-common-standard-field-compliance)
+
+### Description
+Checks if the JSON matches with DMP Common Standard schema.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Obtain the DMP Common Standard JSON Schema version used by your project (local file or URL).
+2. Load/parse the input maDMP JSON document.
+3. Run JSON Schema validation of the maDMP against the DMP Common Standard schema.
+4. If validation reports **zero** errors, return **pass**.
+5. If one or more validation errors are reported, return **fail** and record the validation error details (path, expected type, etc.) as diagnostic output.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "ftr": "https://w3id.org/ftr#",
+    "sio": "http://semanticscience.org/resource/"
+  },
+  "@id": "https://example.org/test/T-DCSC-dmp-cs-schema-validation",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": "Validate maDMP JSON against DMP Common Standard schema",
+  "dcterms:description": "Checks if the json matches with DMP Common Standard schema.",
+  "sio:is-implementation-of": {
+    "@id": "https://example.org/metric/meta.comp.1"
+  },
+  "ftr:input": "maDMP JSON",
   "ftr:output": "pass/fail"
 }
 ```
