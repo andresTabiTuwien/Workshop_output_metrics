@@ -1,39 +1,42 @@
 # Tests Catalog
 
-| Test Name | 
-|------------|
-| [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
-| [License for reused datasets](#test-license-for-reused-datasets) |
-| [Check for reused dataset PID](#test-check-for-reused-dataset-pid) |
-| [Distribution Present](#test-distribution-present) |
-| [Distribution Access Information](#test-distribution-access-information) |
-| [Distribution Title](#test-distribution-title) |
-| [Access rights for reused datasets](#test-access-rights-for-reused-datasets) |
-| [Personal data for reused datasets](#test-personal-data-for-reused-datasets) |
-| [Sensitive data for reused datasets](#test-sensitive-data-for-reused-datasets) |
-| [Distribution present](#test-distribution-present) |
-| [Access URL](#test-access-url) |
-| [PID matches destination repository record](#test-pid-matches-destination-repository-record) |
-| [PID resolves](#test-pid-resolves) |
-| [Reused data access matches destination](#test-reused-data-access-matches-destination) |
-| [Reused data license matches destination](#test-reused-data-license-matches-destination) |
-| [Check for new data (no is_reused)](#test-check-for-new-data-no-is_reused) |
-| [Check technical_resource for new data collection/creation](#test-check-technical_resource-for-new-data-collectioncreation) |
-| [Check data_access for new datasets](#test-check-data_access-for-new-datasets) |
-| [Check rights of new dataset](#test-check-rights-of-new-dataset) |
-| [Check metadata for new dataset](#test-check-metadata-for-new-dataset) |
-| [Check dataset_id exists](#test-check-dataset_id-exists) |
-| [Check PID resolves for dataset_id](#test-check-pid-resolves-for-dataset_id) |
-| [Check new data access matches destination](#test-check-new-data-access-matches-destination) |
-| [Check new data license matches destination](#test-check-new-data-license-matches-destination) |
-| [Check dataset.type is specified](#test-check-datasettype-is-specified) |
-| [Check distribution.format is specified](#test-check-distributionformat-is-specified) |
-| [Check distribution.byte_size is specified](#test-check-distributionbyte_size-is-specified) |
-| [Check dataset.type matches destination type](#test-check-datasettype-matches-destination-type) |
-| [Check dataset.type aligns with destination subtype](#test-check-datasettype-aligns-with-destination-subtype) |
-| [Check final dataset format matches destination files](#test-check-final-dataset-format-matches-destination-files) |
-| [Check final dataset size matches destination size](#test-check-final-dataset-size-matches-destination-size) |
-| [Validate maDMP JSON against DMP Common Standard schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
+| ID | Title |
+|----------|------|
+| madmp-reused-datasets-declared-json | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
+| T-DCSC | [License for reused datasets](#test-license-for-reused-datasets) |
+| T-DCSC | [Check for reused dataset PID](#test-check-for-reused-dataset-pid) |
+| T-DCSC | [Distribution Present](#test-distribution-present) |
+| T-DCSC | [Distribution Access Information](#test-distribution-access-information) |
+| T-DCSC | [Distribution Title](#test-distribution-title) |
+| T-DCSC | [Access rights for reused datasets](#test-access-rights-for-reused-datasets) |
+| T-DCSC | [Personal data for reused datasets](#test-personal-data-for-reused-datasets) |
+| T-DCSC | [Sensitive data for reused datasets](#test-sensitive-data-for-reused-datasets) |
+| T-DCSC | [Distribution present (URL)](#test-distribution-present-url) |
+| T-DCSC | [Access URL](#test-access-url) |
+| T-DCSC | [PID matches destination repository record](#test-pid-matches-destination-repository-record) |
+| T-DCSC | [PID resolves](#test-pid-resolves) |
+| T-DCSC | [Reused data access matches destination](#test-reused-data-access-matches-destination) |
+| T-DCSC | [Reused data license matches destination](#test-reused-data-license-matches-destination) |
+| T-DCSC | [Check for new data (no is_reused)](#test-check-for-new-data-no-is_reused) |
+| T-DCSC | [Check technical_resource for new data collection/creation](#test-check-technical_resource-for-new-data-collectioncreation) |
+| T-DCSC | [Check data_access for new datasets](#test-check-data_access-for-new-datasets) |
+| T-DCSC | [Check rights of new dataset](#test-check-rights-of-new-dataset) |
+| T-DCSC | [Check metadata for new dataset](#test-check-metadata-for-new-dataset) |
+| T-DCSC | [Check dataset_id exists](#test-check-dataset_id-exists) |
+| T-DCSC | [Check PID resolves for dataset_id](#test-check-pid-resolves-for-dataset_id) |
+| T-DCSC | [Check new data access matches destination](#test-check-new-data-access-matches-destination) |
+| T-DCSC | [Check new data license matches destination](#test-check-new-data-license-matches-destination) |
+| T-DCSC | [Check dataset.type is specified](#test-check-datasettype-is-specified) |
+| T-DCSC | [Check distribution.format is specified](#test-check-distributionformat-is-specified) |
+| T-DCSC | [Check distribution.byte_size is specified](#test-check-distributionbyte_size-is-specified) |
+| T-DCSC | [Check dataset.type matches destination type](#test-check-datasettype-matches-destination-type) |
+| T-DCSC | [Check dataset.type aligns with destination subtype](#test-check-datasettype-aligns-with-destination-subtype) |
+| T-DCSC | [Check final dataset format matches destination files](#test-check-final-dataset-format-matches-destination-files) |
+| T-DCSC | [Check final dataset size matches destination size](#test-check-final-dataset-size-matches-destination-size) |
+| T-DCSC | [Validate maDMP JSON against DMP Common Standard schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
+| T-DCSC | [Check dataset_methodology for controlled vocabularies](#test-check-dataset_methodology-for-controlled-vocabularies) |
+| T-DCSC | [Check technical_resource.name for electronic lab notebook reference](#test-check-technical_resourcename-for-electronic-lab-notebook-reference) |
+
 
 ---
 
@@ -42,7 +45,7 @@
 **Test ID:** madmp-reused-datasets-declared-json  
 **Persistent URI:** https://example.org/test/madmp-reused-datasets-declared-json  
 
-**Implements:** [data.reused.co.1](metrics.md#metric-madmp-declares-reused-datasets)  
+**Implements:** [data.reused.co.1](metrics.md#metric-madmp-declares-reused-datasets)
 
 ### Description
 Given a maDMP JSON document, inspect dataset objects and verify the presence of a field indicating whether the dataset is reused.
@@ -62,20 +65,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/madmp-reused-datasets-declared-json",
   "@type": "ftr:Test",
   "dcterms:identifier": "madmp-reused-datasets-declared-json",
-  "dcterms:title": "Check for reused dataset declaration",
-  "dcterms:description": "Given a maDMP JSON document, inspect dataset objects and verify the presence of a field indicating whether the dataset is reused.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check for reused dataset declaration"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Given a maDMP JSON document, inspect dataset objects and verify the presence of a field indicating whether the dataset is reused."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "madmp-reused-datasets-declared-json-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/madmp-reused-datasets-declared-json/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/madmp-reused-datasets-declared"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -87,7 +145,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license  
 
-**Implements:** [data.reused.co.3](metrics.md#metric-reused-data-license)  
+**Implements:** [data.reused.co.3](metrics.md#metric-reused-data-license)
 
 ### Description
 Check if `is_reused` includes license (ref and start_date).
@@ -110,20 +168,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-license",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "License for reused datasets",
-  "dcterms:description": "Check if `is_reused` includes license (ref and start_date).",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "License for reused datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Check if `is_reused` includes license (ref and start_date)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-license/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -135,7 +248,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC  
 
-**Implements:** [data.reused.co.2](metrics.md#metric-reused-data-pid)  
+**Implements:** [data.reused.co.2](metrics.md#metric-reused-data-pid)
 
 ### Description
 Check if `is_reused` includes `dataset_id` (identifier, type).
@@ -158,20 +271,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check for reused dataset PID",
-  "dcterms:description": "Check if `is_reused` includes `dataset_id` (identifier, type).",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check for reused dataset PID"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Check if `is_reused` includes `dataset_id` (identifier, type)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -183,7 +351,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-present  
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)  
+**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
 ### Description
 Checks the distribution.
@@ -204,20 +372,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-present",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Distribution Present",
-  "dcterms:description": "Checks the distribution.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Distribution Present"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the distribution."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-present/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -229,7 +452,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-access  
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)  
+**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
 ### Description
 Checks whether distribution includes access information (e.g., access URL or download URL).
@@ -249,20 +472,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-access",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Distribution Access Information",
-  "dcterms:description": "Checks whether distribution includes access information (e.g., access URL or download URL).",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Distribution Access Information"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks whether distribution includes access information (e.g., access URL or download URL)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-access/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -274,7 +552,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-title  
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)  
+**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
 ### Description
 Checks if there is title of distribution.
@@ -294,20 +572,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-title",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Distribution Title",
-  "dcterms:description": "Checks if there is title of distribution.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Distribution Title"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there is title of distribution."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-title/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -319,7 +652,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access  
 
-**Implements:** [data.reused.co.5](metrics.md#metric-reused-data-access)  
+**Implements:** [data.reused.co.5](metrics.md#metric-reused-data-access)
 
 ### Description
 Checks the data_access (open, shared, closed).
@@ -341,20 +674,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-access",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Access rights for reused datasets",
-  "dcterms:description": "Checks the data_access (open, shared, closed).",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Access rights for reused datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the data_access (open, shared, closed)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-access/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.5"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -366,7 +754,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-personal-data  
 
-**Implements:** [data.reused.co.6](metrics.md#metric-reused-data-personal)  
+**Implements:** [data.reused.co.6](metrics.md#metric-reused-data-personal)
 
 ### Description
 Checks the personal_data.
@@ -388,20 +776,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-personal-data",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Personal data for reused datasets",
-  "dcterms:description": "Checks the personal_data.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Personal data for reused datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the personal_data."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-personal-data/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.6"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -413,7 +856,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data  
 
-**Implements:** [data.reused.co.7](metrics.md#metric-reused-data-sensitive)  
+**Implements:** [data.reused.co.7](metrics.md#metric-reused-data-sensitive)
 
 ### Description
 Checks the sensitive_data.
@@ -435,32 +878,87 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-sensitive-data",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Sensitive data for reused datasets",
-  "dcterms:description": "Checks the sensitive_data.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Sensitive data for reused datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the sensitive_data."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.7"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
 
 ---
 
-## Test: Distribution present
+## Test: Distribution present (URL)
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present  
 
-**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)  
+**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
 ### Description
 Checks the distribution.
@@ -480,20 +978,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-url-present",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Distribution present",
-  "dcterms:description": "Checks the distribution.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Distribution present (URL)"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the distribution."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-url-present/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.8"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -505,7 +1058,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-url  
 
-**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)  
+**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
 ### Description
 Checks the access_url.
@@ -525,20 +1078,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-access-url",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Access URL",
-  "dcterms:description": "Checks the access_url.",
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Access URL"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the access_url."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-access-url/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.co.8"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -550,7 +1158,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-repo-match  
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)  
+**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
 ### Description
 Checks if reused dataset id in DMP matches the destination.
@@ -572,20 +1180,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-repo-match",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "PID matches destination repository record",
-  "dcterms:description": "Checks if reused dataset id in DMP matches the destination.",
-  "ftr:input": "- dataset_id in maDMP   - repository identifier field(s) (e.g., DOI URL)",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "PID matches destination repository record"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if reused dataset id in DMP matches the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-repo-match/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -597,7 +1260,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-pid-resolves  
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)  
+**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
 ### Description
 Checks if the PID resolves.
@@ -618,20 +1281,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-pid-resolves",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "PID resolves",
-  "dcterms:description": "Checks if the PID resolves.",
-  "ftr:input": "- dataset_id from maDMP   - PID resolver",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "PID resolves"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the PID resolves."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-pid-resolves/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -643,7 +1361,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-match  
 
-**Implements:** [data.reused.feas.2](metrics.md#metric-repository-reused-data-access)  
+**Implements:** [data.reused.feas.2](metrics.md#metric-repository-reused-data-access)
 
 ### Description
 Check if reused data access in DMP matches the destination.
@@ -665,20 +1383,75 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-access-match",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Reused data access matches destination",
-  "dcterms:description": "Check if reused data access in DMP matches the destination.",
-  "ftr:input": "- `data_access` in maDMP   - `access_right` in destination repository (e.g., Zenodo)",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Reused data access matches destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Check if reused data access in DMP matches the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-access-match/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.feas.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
@@ -690,7 +1463,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license-match  
 
-**Implements:** [data.reused.feas.3](metrics.md#metric-repository-reused-data-license)  
+**Implements:** [data.reused.feas.3](metrics.md#metric-repository-reused-data-license)
 
 ### Description
 Checks if the license of the repository is the one mentioned in the DMP.
@@ -703,28 +1476,89 @@ Checks if the license of the repository is the one mentioned in the DMP.
 pass/fail
 
 ### Procedure
-
+1. Extract reused datasets from maDMP (`is_reused = true`).  
+2. For each reused dataset, retrieve its record from the destination repository.  
+3. Extract the license value from the repository record.  
+4. Compare the repository license value with the maDMP license value.  
+5. Return pass if all values match; otherwise return fail.
 
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-license-match",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Reused data license matches destination",
-  "dcterms:description": "Checks if the license of the repository is the one mentioned in the DMP.",
-  "ftr:input": "- license in maDMP JSON   - license in destination repository (e.g., Zenodo)",
-  "ftr:output": "pass/fail",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Reused data license matches destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the license of the repository is the one mentioned in the DMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-license-match/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.reused.feas.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
   }
 }
 ```
+
+---
 
 ## Test: Check for new data (no is_reused)
 
@@ -751,23 +1585,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check for new data (no is_reused)",
-  "dcterms:description": "Checks if there is a dataset without is_reused.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check for new data (no is_reused)"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there is a dataset without `is_reused`."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.1"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check technical_resource for new data collection/creation
 
@@ -797,23 +1688,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-technical-resource",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check technical_resource for new data collection/creation",
-  "dcterms:description": "Checks the technical_resource (description, name, id.identifier and id.type).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check technical_resource for new data collection/creation"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the `technical_resource` (description, name, id.identifier and id.type)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-technical-resource/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.2"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check data_access for new datasets
 
@@ -842,24 +1790,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-access",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check data_access for new datasets",
-  "dcterms:description": "Checks the data_access (open, shared, closed).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check data_access for new datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the `data_access` (`open`, `shared`, `closed`)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-access/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.3"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
 
+---
 
 ## Test: Check rights of new dataset
 
@@ -888,23 +1892,81 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-rights",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check rights of new dataset",
-  "dcterms:description": "Checks the rights of dataset.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check rights of new dataset"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the rights of dataset."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-rights/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.3"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
+
 ## Test: Check metadata for new dataset
 
 **Test ID:** T-DCSC  
@@ -935,23 +1997,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-metadata",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check metadata for new dataset",
-  "dcterms:description": "Checks the metadata (description, language, metadata_id.identifier and metadata_id.type).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check metadata for new dataset"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the metadata (description, language, metadata_id.identifier and metadata_id.type)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-metadata/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.4"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check dataset_id exists
 
@@ -978,23 +2097,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-id-exists",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check dataset_id exists",
-  "dcterms:description": "Checks if there is a dataset_id.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset_id exists"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there is a `dataset_id`."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-exists/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.feas.1"
   },
-  "ftr:input": "dataset_id of maDMP",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check PID resolves for dataset_id
 
@@ -1022,23 +2198,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-id-resolves",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check PID resolves for dataset_id",
-  "dcterms:description": "Checks if the pid resolves.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check PID resolves for dataset_id"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the PID resolves."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-resolves/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.feas.1"
   },
-  "ftr:input": "dataset_id of maDMP in DOI resolver",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check new data access matches destination
 
@@ -1068,23 +2301,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-access-match-destination",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check new data access matches destination",
-  "dcterms:description": "Check if new data access in dmp matches the destination.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check new data access matches destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Check if new data access in DMP matches the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-access-match-destination/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.feas.2"
   },
-  "ftr:input": "data_access in maDMP + access_right in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check new data license matches destination
 
@@ -1115,24 +2405,81 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-new-data-license-match-destination",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check new data license matches destination",
-  "dcterms:description": "Checks if the license of the repository is the one mentioned in the dmp.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check new data license matches destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the license of the repository is the one mentioned in the DMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-new-data-license-match-destination/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.new.feas.3"
   },
-  "ftr:input": "license in maDMP JSON + license in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
-# 1B Data ino
+
+---
+
 ## Test: Check dataset.type is specified
 
 **Test ID:** T-DCSC  
@@ -1159,23 +2506,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-type",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check dataset.type is specified",
-  "dcterms:description": "Checks if the dataset type (e.g., qualitative or quantitative) is specified (dataset.type).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset.type is specified"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset type (e.g., qualitative or quantitative) is specified (`dataset.type`)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-type/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.cov.1"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check distribution.format is specified
 
@@ -1203,23 +2607,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-format",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check distribution.format is specified",
-  "dcterms:description": "Checks the dataset format (distribution.format).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution.format is specified"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the dataset format (`distribution.format`)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-format/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.cov.2"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check distribution.byte_size is specified
 
@@ -1247,23 +2708,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-distribution-byte-size",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check distribution.byte_size is specified",
-  "dcterms:description": "Checks the dataset size (distribution.byte_size).",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution.byte_size is specified"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the dataset size (`distribution.byte_size`)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-byte-size/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.cov.3"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check dataset.type matches destination type
 
@@ -1293,23 +2811,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-type-match-destination-type",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check dataset.type matches destination type",
-  "dcterms:description": "Checks that dataset is both the type of each destination.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset.type matches destination type"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that dataset is both the type of each destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-type-match-destination-type/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.feas.1"
   },
-  "ftr:input": "dataset.type in maDMP + type in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check dataset.type aligns with destination subtype
 
@@ -1339,23 +2914,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-type-align-destination-subtype",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check dataset.type aligns with destination subtype",
-  "dcterms:description": "Checks that sub-properties are pointing to the same type.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset.type aligns with destination subtype"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that sub-properties are pointing to the same type."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-type-align-destination-subtype/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.feas.1"
   },
-  "ftr:input": "dataset.type in maDMP + subtype in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check final dataset format matches destination files
 
@@ -1387,23 +3019,80 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-format-match-destination-files",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check final dataset format matches destination files",
-  "dcterms:description": "Checks the final dataset format.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check final dataset format matches destination files"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the final dataset format."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-format-match-destination-files/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.feas.2"
   },
-  "ftr:input": "distribution.format in maDMP + files in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
 
 ## Test: Check final dataset size matches destination size
 
@@ -1436,27 +3125,82 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dataset-size-match-destination-size",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Check final dataset size matches destination size",
-  "dcterms:description": "Checks the final dataset size.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check final dataset size matches destination size"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the final dataset size."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-size-match-destination-size/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.info.feas.3"
   },
-  "ftr:input": "distribution.byte_size in maDMP + size in Zenodo",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
 
-# 2A metada doc
+---
 
-## Test: Validate maDMP JSON against DMP Common Standard schema 
+## Test: Validate maDMP JSON against DMP Common Standard schema
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation  
@@ -1482,20 +3226,279 @@ pass/fail
 ### JSON-LD (Test)
 ```json
 {
-  "@context": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#",
-    "sio": "http://semanticscience.org/resource/"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/test/T-DCSC-dmp-cs-schema-validation",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
-  "dcterms:title": "Validate maDMP JSON against DMP Common Standard schema",
-  "dcterms:description": "Checks if the json matches with DMP Common Standard schema.",
-  "sio:is-implementation-of": {
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Validate maDMP JSON against DMP Common Standard schema"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the JSON matches with DMP Common Standard schema."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dmp-cs-schema-validation/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
     "@id": "https://example.org/metric/meta.comp.1"
   },
-  "ftr:input": "maDMP JSON",
-  "ftr:output": "pass/fail"
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
 }
 ```
+
+---
+
+## Test: Check dataset_methodology for controlled vocabularies
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies  
+
+**Implements:** [meta.co.1](metrics.md#metric-controlled-vocabularies-used-in-methodology)
+
+### Description
+Checks the dataset_methodology for controlled vocabularies.
+
+### Input
+maDMP JSON + controlled vocabularies from external sources
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset methodology information (e.g., `dataset_methodology` or the equivalent field in your schema).
+3. Extract methodology terms, identifiers, URIs, or references used in that field.
+4. Compare the extracted values against recognized controlled vocabularies or ontology sources defined by your project or external reference lists.
+5. Verify whether at least one methodology element points to, or can be matched with, a controlled vocabulary term or external vocabulary source.
+6. Return **pass** if controlled vocabulary usage is detected in methodology; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset_methodology for controlled vocabularies"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the dataset_methodology for controlled vocabularies."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check technical_resource.name for electronic lab notebook reference
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-technical-resource-eln-reference  
+
+**Implements:** [meta.co.2](metrics.md#metric-electronic-lab-notebook-referenced-as-a-technical-resource)
+
+### Description
+Checks if an electronic lab notebook is mentioned (`technical_resource.name`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `technical_resource` entries in scope.
+3. Extract each `technical_resource.name` value.
+4. Check whether any name explicitly mentions an electronic lab notebook or a known ELN tool/service name used by your project.
+5. Return **pass** if at least one technical resource name indicates an ELN; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-technical-resource-eln-reference",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check technical_resource.name for electronic lab notebook reference"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if an electronic lab notebook is mentioned (`technical_resource.name`)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-technical-resource-eln-reference/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+

@@ -1,6 +1,6 @@
 # Metrics Catalog
 
-| Metric ID | Title | 
+| ID | Title |
 |----------|------|
 | data.reused.co.1 | [maDMP declares reused datasets](#metric-madmp-declares-reused-datasets) |
 | data.reused.co.2 | [Reused Data PID](#metric-reused-data-pid) |
@@ -26,12 +26,9 @@
 | data.info.feas.1 | [Repository Data Type](#metric-repository-data-type) |
 | data.info.feas.2 | [Repository Data Format](#metric-repository-data-format) |
 | data.info.feas.3 | [Repository Data Size](#metric-repository-data-size) |
-
-
-
 | meta.comp.1 | [DMP Common Standard Field Compliance](#metric-dmp-common-standard-field-compliance) |
-
-
+| meta.co.1 | [Controlled Vocabularies Used in Methodology](#metric-controlled-vocabularies-used-in-methodology) |
+| meta.co.2 | [Electronic Lab Notebook Referenced as a technical resource](#metric-electronic-lab-notebook-referenced-as-a-technical-resource) |
 
 
 ---
@@ -68,21 +65,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/madmp-reused-datasets-declared",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.1",
-  "dcterms:title": "maDMP declares reused datasets",
-  "dcterms:description": "The machine-actionable Data Management Plan (maDMP) declares whether any dataset described in the plan is reused.",
-  "ftr:intendedOutcome": "Determine whether reuse of datasets is explicitly declared in the maDMP.",
-  "ftr:successCriterion": "At least one dataset entry in the maDMP contains a boolean field indicating reuse.",
-  "ftr:failureCriterion": "No dataset entry contains reuse information.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/madmp-reused-datasets-declared",
+  "title": {
+    "@language": "en",
+    "@value": "maDMP declares reused datasets"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "The machine-actionable Data Management Plan (maDMP) declares whether any dataset described in the plan is reused."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/madmp-reused-datasets-declared-json"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/madmp-reused-datasets-declared"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Not specified"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -121,22 +163,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.2",
-  "dcterms:title": "Reused Data PID",
-  "dcterms:description": "Verifies that reused datasets come with PIDs.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include persistent identifiers.",
-  "ftr:successCriterion": "For each dataset declared as reused (is_reused=true), an identifier is present (e.g., dataset_id.identifier) and, where applicable, an identifier type is provided.",
-  "ftr:failureCriterion": "At least one reused dataset is missing an identifier or identifier metadata.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data PID"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that reused datasets come with PIDs."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -175,22 +261,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.3",
-  "dcterms:title": "Reused Data License",
-  "dcterms:description": "Verifies that reused datasets come with license.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include license information.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), license metadata is present, including at least a license reference and, where applicable, a start date.",
-  "ftr:failureCriterion": "At least one reused dataset is missing license information or required license fields.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that reused datasets come with license."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-license"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -224,29 +354,73 @@ At least one reused dataset lacks distribution or source metadata, or required m
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution present](tests.md#test-distribution-present)  
-- [Distribution access information](tests.md#test-distribution-access-information)  
-- [Distribution title](tests.md#test-distribution-title)
+- [Distribution Present](tests.md#test-distribution-present)
+- [Distribution Access Information](tests.md#test-distribution-access-information)
+- [Distribution Title](tests.md#test-distribution-title)
 
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.4",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.4",
-  "dcterms:title": "Reused Data Source",
-  "dcterms:description": "Verifies that reused datasets are shared.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include accessible source or distribution information.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), distribution or source metadata is present and contains minimally identifying information such as a title and/or an access location.",
-  "ftr:failureCriterion": "At least one reused dataset lacks distribution or source metadata, or required minimal fields.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.4",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data Source"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that reused datasets are shared."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-present"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -285,22 +459,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.5",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.5",
-  "dcterms:title": "Reused Data Access",
-  "dcterms:description": "Verifies the access rights of the reused datasets.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include an explicit access rights statement.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), a data_access value is present and has an allowed value (open, shared, or closed).",
-  "ftr:failureCriterion": "At least one reused dataset is missing a data_access value or contains an invalid value.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.5",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data Access"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the access rights of the reused datasets."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-access"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.5-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.5"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -339,22 +557,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.6",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.6",
-  "dcterms:title": "Reused Data Personal",
-  "dcterms:description": "Verifies the existence of personal data.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include an explicit statement about the presence of personal data.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), a personal_data field exists and is explicitly set (e.g., boolean or controlled value).",
-  "ftr:failureCriterion": "At least one reused dataset is missing personal_data information or contains an invalid or undefined value.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.6",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data Personal"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the existence of personal data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-personal-data"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.6-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.6"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -393,22 +655,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.7",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.7",
-  "dcterms:title": "Reused Data Sensitive",
-  "dcterms:description": "Verifies the existence of sensitive data.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include an explicit statement about the presence of sensitive data.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), a sensitive_data field exists and is explicitly set (e.g., boolean or controlled value).",
-  "ftr:failureCriterion": "At least one reused dataset is missing sensitive_data information or contains an invalid or undefined value.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.7",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data Sensitive"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the existence of sensitive data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.7-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.7"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -442,28 +748,72 @@ At least one reused dataset lacks a distribution URL.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution present (URL)](tests.md#test-distribution-present-url)  
+- [Distribution present (URL)](tests.md#test-distribution-present-url)
 - [Access URL](tests.md#test-access-url)
 
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.co.8",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.co.8",
-  "dcterms:title": "Reused Data URL",
-  "dcterms:description": "Verifies that the reused data have URL.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether reused datasets declared in the maDMP include a URL pointing to their distribution or access location.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), at least one distribution includes a non-empty access_url (or equivalent URL field).",
-  "ftr:failureCriterion": "At least one reused dataset lacks a distribution URL.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.co.8",
+  "title": {
+    "@language": "en",
+    "@value": "Reused Data URL"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the reused data have URL."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-url-present"
+  },
+  "abbreviation": {
+    "@value": "data.reused.co.8-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.co.8"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -487,7 +837,7 @@ Determine whether the PID for each reused dataset declared in the machine-action
 ### Applies To
 - maDMP JSON (dataset reuse declarations)  
 - Target repository endpoint  
-- PID resolver service  
+- PID resolver service
 
 ### Success Criterion
 For each dataset declared as reused (`is_reused = true`):
@@ -503,28 +853,72 @@ At least one reused dataset PID:
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [PID matches destination repository record](tests.md#test-pid-matches-destination-repository-record)  
+- [PID matches destination repository record](tests.md#test-pid-matches-destination-repository-record)
 - [PID resolves](tests.md#test-pid-resolves)
 
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.feas.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.feas.1",
-  "dcterms:title": "Repository Reused Data PID",
-  "dcterms:description": "Validates that the reused dataset exists in the repository.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the PID for each reused dataset declared in the maDMP corresponds to an existing record in a target repository and resolves via a PID resolver.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true): (1) the maDMP dataset identifier matches an identifier discoverable in the target repository record, and (2) the PID resolves successfully.",
-  "ftr:failureCriterion": "At least one reused dataset PID cannot be matched to a target repository record or does not resolve via a PID resolver.",
-  "ftr:appliesTo": "maDMP JSON + target repository endpoint + PID resolver service",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Reused Data PID"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the reused dataset exists in the repository."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-repo-match"
+  },
+  "abbreviation": {
+    "@value": "data.reused.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -547,7 +941,7 @@ Determine whether the access rights declared for reused datasets in the maDMP ma
 
 ### Applies To
 - maDMP JSON (dataset reuse declarations)  
-- Target repository endpoint  
+- Target repository endpoint
 
 ### Success Criterion
 For each dataset declared as reused (`is_reused = true`), the `data_access` value in the maDMP matches the corresponding access rights value in the destination repository record (e.g., `access_right`).
@@ -564,22 +958,66 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.feas.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.feas.2",
-  "dcterms:title": "Repository Reused Data Access",
-  "dcterms:description": "Validates that the access rights of the reused dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the access rights declared for reused datasets in the maDMP match the access rights recorded in the destination repository.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), the maDMP data_access value matches the access rights value recorded in the destination repository.",
-  "ftr:failureCriterion": "At least one reused dataset has a data_access value in the maDMP that does not match the destination repository access rights.",
-  "ftr:appliesTo": "maDMP JSON + target repository endpoint",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Reused Data Access"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the access rights of the reused dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-access-match"
+  },
+  "abbreviation": {
+    "@value": "data.reused.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
@@ -602,7 +1040,7 @@ Determine whether the license declared for reused datasets in the maDMP matches 
 
 ### Applies To
 - maDMP JSON (dataset reuse declarations)  
-- Target repository endpoint  
+- Target repository endpoint
 
 ### Success Criterion
 For each dataset declared as reused (`is_reused = true`), the license value in the maDMP matches the license value in the destination repository record.
@@ -619,24 +1057,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.reused.feas.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.reused.feas.3",
-  "dcterms:title": "Repository Reused Data License",
-  "dcterms:description": "Validates that license of the reused dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the license declared for reused datasets in the maDMP matches the license recorded in the destination repository.",
-  "ftr:successCriterion": "For each reused dataset (is_reused=true), the maDMP license value matches the license value in the destination repository record.",
-  "ftr:failureCriterion": "At least one reused dataset has a license value in the maDMP that does not match the license recorded in the destination repository.",
-  "ftr:appliesTo": "maDMP JSON + target repository endpoint",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.reused.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Reused Data License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that license of the reused dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-license-match"
+  },
+  "abbreviation": {
+    "@value": "data.reused.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.reused.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: New Data
 
@@ -671,24 +1155,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.1",
-  "dcterms:title": "New Data",
-  "dcterms:description": "Verifies that information about the new data exist.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether the maDMP contains at least one dataset that is not explicitly declared as reused (i.e., a “new” dataset is present).",
-  "ftr:successCriterion": "At least one dataset entry exists where is_reused is absent, indicating the dataset is not marked as reused.",
-  "ftr:failureCriterion": "All dataset entries include is_reused (no dataset found without is_reused), or no dataset entries exist.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.1",
+  "title": {
+    "@language": "en",
+    "@value": "New Data"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that information about the new data exist."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data"
+  },
+  "abbreviation": {
+    "@value": "data.new.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: New Data Collection or Creation
 
@@ -727,24 +1257,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.2",
-  "dcterms:title": "New Data Collection or Creation",
-  "dcterms:description": "Verifies how the new data were collected or created.",
-  "ftr:subDimension": "RDM Coverage",
-  "ftr:intendedOutcome": "Determine whether the maDMP includes technical resource information describing how new data were collected or created.",
-  "ftr:successCriterion": "For at least one new dataset, technical_resource is present and includes description, name, id.identifier, and id.type.",
-  "ftr:failureCriterion": "No dataset provides technical_resource or one or more required fields are missing (description, name, id.identifier, id.type).",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.2",
+  "title": {
+    "@language": "en",
+    "@value": "New Data Collection or Creation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies how the new data were collected or created."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data-technical-resource"
+  },
+  "abbreviation": {
+    "@value": "data.new.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "RDM Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: New Data Access
 
@@ -776,30 +1352,77 @@ No “new” dataset contains `data_access` and/or rights information, or `data_
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check data_access for new datasets](tests.md#test-check-data_access-for-new-datasets)  
+- [Check data_access for new datasets](tests.md#test-check-data_access-for-new-datasets)
 - [Check rights of new dataset](tests.md#test-check-rights-of-new-dataset)
 
 ### JSON-LD (Metric)
-```json 
+```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.3",
-  "dcterms:title": "New Data Access",
-  "dcterms:description": "Verifies that access rights of the new dataset is specified.",
-  "ftr:dimension": "Openness / Reuse",
-  "ftr:intendedOutcome": "Determine whether new datasets in the maDMP specify access rights and rights information needed to understand how the data can be accessed and reused.",
-  "ftr:successCriterion": "For at least one new dataset, data_access exists with a valid value (open, shared, closed) and rights information is present.",
-  "ftr:failureCriterion": "No new dataset contains valid data_access and/or rights information; or data_access is missing/invalid.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.3",
+  "title": {
+    "@language": "en",
+    "@value": "New Data Access"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that access rights of the new dataset is specified."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data-access"
+  },
+  "abbreviation": {
+    "@value": "data.new.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Openness / Reuse"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
+
 ## Metric: New Data Metadata
 
 **Metric ID:** data.new.4  
@@ -837,24 +1460,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.4",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.4",
-  "dcterms:title": "New Data Metadata",
-  "dcterms:description": "Verifies the reproducibility of the new data.",
-  "ftr:dimension": "Completeness",
-  "ftr:intendedOutcome": "Determine whether the maDMP includes sufficient metadata information for new datasets, supporting reproducibility and understanding of the data.",
-  "ftr:successCriterion": "For at least one new dataset, metadata is present and includes description, language, metadata_id.identifier, and metadata_id.type.",
-  "ftr:failureCriterion": "No new dataset provides metadata or one or more required fields are missing (description, language, metadata_id.identifier, metadata_id.type).",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.4",
+  "title": {
+    "@language": "en",
+    "@value": "New Data Metadata"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the reproducibility of the new data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data-metadata"
+  },
+  "abbreviation": {
+    "@value": "data.new.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Repository PID Resolution
 
@@ -886,30 +1555,76 @@ No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check dataset_id exists](tests.md#test-check-dataset_id-exists)  
+- [Check dataset_id exists](tests.md#test-check-dataset_id-exists)
 - [Check PID resolves for dataset_id](tests.md#test-check-pid-resolves-for-dataset_id)
 
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.feas.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.feas.1",
-  "dcterms:title": "Repository PID Resolution",
-  "dcterms:description": "Validates that the PID provided is resolvable according to its system resolver.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether dataset identifiers provided in the maDMP exist and can be resolved using an appropriate PID resolver (e.g., DOI resolver).",
-  "ftr:successCriterion": "At least one dataset includes dataset_id and the dataset_id resolves successfully using the appropriate resolver.",
-  "ftr:failureCriterion": "No dataset_id is provided and/or the provided PID(s) do not resolve.",
-  "ftr:appliesTo": "maDMP JSON + PID resolver service",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository PID Resolution"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the PID provided is resolvable according to its system resolver."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-exists"
+  },
+  "abbreviation": {
+    "@value": "data.new.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Repository New Data Access
 
@@ -945,24 +1660,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.feas.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.feas.2",
-  "dcterms:title": "Repository New Data Access",
-  "dcterms:description": "Validates that the access rights of the new dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether access rights declared for new datasets in the maDMP match the access rights recorded in the destination repository (e.g., Zenodo).",
-  "ftr:successCriterion": "For each new dataset, the maDMP data_access value matches the destination repository access_right value.",
-  "ftr:failureCriterion": "At least one new dataset has data_access that does not match destination access_right, or required fields cannot be found.",
-  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Repository New Data Access"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the access rights of the new dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data-access-match-destination"
+  },
+  "abbreviation": {
+    "@value": "data.new.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Repository New Data License
 
@@ -998,26 +1759,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.new.feas.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.new.feas.3",
-  "dcterms:title": "Repository New Data License",
-  "dcterms:description": "Validates that license of the new dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the license declared for new datasets in the maDMP matches the license recorded in the destination repository (e.g., Zenodo).",
-  "ftr:successCriterion": "For each new dataset, the maDMP license value matches the destination repository license value.",
-  "ftr:failureCriterion": "At least one new dataset has a license value that does not match destination license, or required fields cannot be found.",
-  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.new.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Repository New Data License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that license of the new dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-new-data-license-match-destination"
+  },
+  "abbreviation": {
+    "@value": "data.new.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.new.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
-# 1b Data - Info
+---
 
 ## Metric: Data Type
 
@@ -1052,24 +1857,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.cov.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.cov.1",
-  "dcterms:title": "Data Type",
-  "dcterms:description": "Verifies that the type of the dataset is qualitative or quantitative.",
-  "ftr:dimension": "Coverage",
-  "ftr:intendedOutcome": "Determine whether each dataset in the maDMP specifies its dataset type (e.g., qualitative or quantitative).",
-  "ftr:successCriterion": "dataset.type exists and is non-empty for dataset entries and matches the expected vocabulary (e.g., qualitative/quantitative).",
-  "ftr:failureCriterion": "dataset.type is missing/empty for one or more datasets, or uses values outside the accepted vocabulary (if required).",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.cov.1",
+  "title": {
+    "@language": "en",
+    "@value": "Data Type"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the type of the dataset is qualitative or quantitative."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-type"
+  },
+  "abbreviation": {
+    "@value": "data.info.cov.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.cov.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Data Format
 
@@ -1104,24 +1955,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.cov.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.cov.2",
-  "dcterms:title": "Data Format",
-  "dcterms:description": "Verifies the format of the dataset.",
-  "ftr:dimension": "Coverage",
-  "ftr:intendedOutcome": "Determine whether dataset distribution information includes an explicit format.",
-  "ftr:successCriterion": "distribution.format exists and is non-empty for distributions in scope.",
-  "ftr:failureCriterion": "distribution.format is missing/empty for one or more distributions, or no distribution information exists where expected.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.cov.2",
+  "title": {
+    "@language": "en",
+    "@value": "Data Format"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the format of the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-format"
+  },
+  "abbreviation": {
+    "@value": "data.info.cov.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.cov.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Data Size
 
@@ -1156,25 +2053,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.cov.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.cov.3",
-  "dcterms:title": "Data Size",
-  "dcterms:description": "Verifies the size of the dataset.",
-  "ftr:dimension": "Coverage",
-  "ftr:intendedOutcome": "Determine whether dataset distribution information includes an explicit size.",
-  "ftr:successCriterion": "distribution.byte_size exists and is a valid non-negative number for distributions in scope.",
-  "ftr:failureCriterion": "distribution.byte_size is missing/invalid for one or more distributions, or no distribution information exists where expected.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.cov.3",
+  "title": {
+    "@language": "en",
+    "@value": "Data Size"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the size of the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-byte-size"
+  },
+  "abbreviation": {
+    "@value": "data.info.cov.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.cov.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
+---
 
 ## Metric: Repository Data Type
 
@@ -1207,30 +2149,76 @@ At least one dataset has a type or subtype mismatch between maDMP and the destin
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check dataset.type matches destination type](tests.md#test-check-datasettype-matches-destination-type)  
+- [Check dataset.type matches destination type](tests.md#test-check-datasettype-matches-destination-type)
 - [Check dataset.type aligns with destination subtype](tests.md#test-check-datasettype-aligns-with-destination-subtype)
 
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.feas.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.feas.1",
-  "dcterms:title": "Repository Data Type",
-  "dcterms:description": "Validates that the type of the dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the dataset type declared in the maDMP matches the dataset type information recorded in the destination repository (e.g., Zenodo), including subtype alignment.",
-  "ftr:successCriterion": "dataset.type matches destination type and is consistent with destination subtype for datasets in scope.",
-  "ftr:failureCriterion": "At least one dataset has a type/subtype mismatch or required fields cannot be retrieved.",
-  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Data Type"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the type of the dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-type-match-destination-type"
+  },
+  "abbreviation": {
+    "@value": "data.info.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Repository Data Format
 
@@ -1266,24 +2254,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.feas.2",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.feas.2",
-  "dcterms:title": "Repository Data Format",
-  "dcterms:description": "Validates that the format of the dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the dataset format declared in the maDMP matches the actual file formats stored in the destination repository (e.g., Zenodo).",
-  "ftr:successCriterion": "distribution.format matches (or is compatible with) destination repository file formats for distributions in scope.",
-  "ftr:failureCriterion": "At least one declared distribution.format does not match destination file formats or required repository metadata cannot be retrieved.",
-  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Data Format"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the format of the dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-format-match-destination-files"
+  },
+  "abbreviation": {
+    "@value": "data.info.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
 
 ## Metric: Repository Data Size
 
@@ -1319,34 +2353,70 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/data.info.feas.3",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "data.info.feas.3",
-  "dcterms:title": "Repository Data Size",
-  "dcterms:description": "Validates that the size of the dataset match those of the destination.",
-  "ftr:dimension": "Feasibility",
-  "ftr:intendedOutcome": "Determine whether the dataset size declared in the maDMP matches the actual deposited size recorded in the destination repository (e.g., Zenodo).",
-  "ftr:successCriterion": "distribution.byte_size matches destination repository recorded size for distributions in scope (or within tolerance if defined).",
-  "ftr:failureCriterion": "At least one distribution has a size mismatch or required repository metadata cannot be retrieved.",
-  "ftr:appliesTo": "maDMP JSON + destination repository metadata",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/data.info.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Data Size"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the size of the dataset match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-size-match-destination-size"
+  },
+  "abbreviation": {
+    "@value": "data.info.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.info.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
 
-
-
-
-
-
-
-
-
-# 2a Metadata doc
+---
 
 ## Metric: DMP Common Standard Field Compliance
 
@@ -1381,21 +2451,262 @@ Boolean (pass/fail)
 ### JSON-LD (Metric)
 ```json
 {
-  "@context": {
-    "dqv": "http://www.w3.org/ns/dqv#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "ftr": "https://w3id.org/ftr#"
-  },
+  "@context": "https://w3id.org/ftr/context",
   "@id": "https://example.org/metric/meta.comp.1",
   "@type": "dqv:Metric",
-  "dcterms:identifier": "meta.comp.1",
-  "dcterms:title": "DMP Common Standard Field Compliance",
-  "dcterms:description": "Verifies that the fields of the DMP JSON are aligned with the data types of the DMP Common Standard.",
-  "ftr:dimension": "Compliance",
-  "ftr:intendedOutcome": "Determine whether a maDMP JSON instance conforms to the DMP Common Standard schema, including correct field presence, structure, and data types.",
-  "ftr:successCriterion": "The maDMP JSON validates successfully against the DMP Common Standard JSON Schema (no validation errors).",
-  "ftr:failureCriterion": "The maDMP JSON fails schema validation (one or more validation errors), including type mismatches, missing required fields, or invalid structures.",
-  "ftr:appliesTo": "Machine-actionable Data Management Plan (maDMP) in JSON format.",
-  "ftr:expectedResultType": "boolean"
+  "identifier": "https://example.org/metric/meta.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "DMP Common Standard Field Compliance"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the fields of the DMP JSON are aligned with the data types of the DMP Common Standard."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dmp-cs-schema-validation"
+  },
+  "abbreviation": {
+    "@value": "meta.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
 }
 ```
+
+---
+
+## Metric: Controlled Vocabularies Used in Methodology
+
+**Metric ID:** meta.co.1  
+**Persistent URI:** https://example.org/metric/meta.co.1  
+**Dimension:** Completeness  
+
+### Title
+Controlled Vocabularies Used in Methodology
+
+### Narrative
+Verifies that controlled vocabularies are used in methodology.
+
+### Intended Outcome
+Determine whether the methodology information in the maDMP refers to controlled vocabularies, supporting semantic consistency and interoperability.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For dataset methodology information in scope, `dataset_methodology` includes references to one or more controlled vocabularies, ontology terms, or externally defined vocabulary sources.
+
+### Failure Criterion
+No controlled vocabulary usage can be identified in `dataset_methodology`, or methodology information is missing where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset_methodology for controlled vocabularies](tests.md#test-check-dataset_methodology-for-controlled-vocabularies)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Controlled Vocabularies Used in Methodology"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that controlled vocabularies are used in methodology."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies"
+  },
+  "abbreviation": {
+    "@value": "meta.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Electronic Lab Notebook Referenced as a technical resource
+
+**Metric ID:** meta.co.2  
+**Persistent URI:** https://example.org/metric/meta.co.2  
+**Dimension:** Completeness  
+
+### Title
+Electronic Lab Notebook Referenced as a technical resource
+
+### Narrative
+Verifies that the reference of an electronic lab notebook is included.
+
+### Intended Outcome
+Determine whether the maDMP includes a reference to an electronic lab notebook (ELN) as part of the declared technical resources.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `technical_resource.name` value indicates an electronic lab notebook, or a technical resource is clearly identified as an ELN.
+
+### Failure Criterion
+No technical resource references an electronic lab notebook, or technical resource information is missing where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check technical_resource.name for electronic lab notebook reference](tests.md#test-check-technical_resourcename-for-electronic-lab-notebook-reference)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Electronic Lab Notebook Referenced as a technical resource"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the reference of an electronic lab notebook is included."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-technical-resource-eln-reference"
+  },
+  "abbreviation": {
+    "@value": "meta.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
