@@ -36,7 +36,50 @@
 | T-DCSC | [Validate maDMP JSON against DMP Common Standard schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
 | T-DCSC | [Check dataset_methodology for controlled vocabularies](#test-check-dataset_methodology-for-controlled-vocabularies) |
 | T-DCSC | [Check technical_resource.name for electronic lab notebook reference](#test-check-technical_resourcename-for-electronic-lab-notebook-reference) |
-
+| T-DCSC | [Check related_identifier resource_type for ReadMe file](#test-check-related_identifier-resource_type-for-readme-file) |
+| T-DCSC | [Check metadata_standard_id is registered in metadata registries](#test-check-metadata_standard_id-is-registered-in-metadata-registries) |
+| T-DCSC | [Check distribution format is open](#test-check-distribution-format-is-open) |
+| T-DCSC | [Check ELN dataset linked via related_ids](#test-check-eln-dataset-linked-via-related_ids) |
+| T-DCSC | [Check technical_resource for dataset documentation](#test-check-technical_resource-for-dataset-documentation) |
+| T-DCSC | [Check data_quality_assurance for quality control methods](#test-check-data_quality_assurance-for-quality-control-methods) |
+| T-DCSC | [Check host.title and host.url for storage location](#test-check-hosttitle-and-hosturl-for-storage-location) |
+| T-DCSC | [Check host for trusted repository storage](#test-check-host-for-trusted-repository-storage) |
+| T-DCSC | [Check sensitive_data classification is assigned](#test-check-sensitive_data-classification-is-assigned) |
+| T-DCSC | [Check host security and backup reflect sensitivity level](#test-check-host-security-and-backup-reflect-sensitivity-level) |
+| T-DCSC | [Check contributor.role for backup responsibility](#test-check-contributorrole-for-backup-responsibility) |
+| T-DCSC | [Check backup_frequency is declared](#test-check-backup_frequency-is-declared) |
+| T-DCSC | [Check maDMP for version control system reference](#test-check-madmp-for-version-control-system-reference) |
+| T-DCSC | [Check host.id matches Zenodo deposit location](#test-check-hostid-matches-zenodo-deposit-location) |
+| T-DCSC | [Check security_and_privacy.title for security measures](#test-check-security_and_privacytitle-for-security-measures) |
+| T-DCSC | [Check security_and_privacy.description for access rights management](#test-check-security_and_privacydescription-for-access-rights-management) |
+| T-DCSC | [Check security_and_privacy.description for authorised access controls](#test-check-security_and_privacydescription-for-authorised-access-controls) |
+| T-DCSC | [Check security_and_privacy.description for access control and user permissions](#test-check-security_and_privacydescription-for-access-control-and-user-permissions) |
+| T-DCSC | [Check security_and_privacy.description for access procedures](#test-check-security_and_privacydescription-for-access-procedures) |
+| T-DCSC | [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](#test-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance) |
+| T-DCSC | [Check security_and_privacy.title for implemented security measures at destination](#test-check-security_and_privacytitle-for-implemented-security-measures-at-destination) |
+| T-DCSC | [Check security_and_privacy.description for data protection method when sensitive_data is true](#test-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true) |
+| T-DCSC | [Check security_and_privacy for anonymised synthetic data provision](#test-check-security_and_privacy-for-anonymised-synthetic-data-provision) |
+| T-DCSC | [Check rights for statement of no data restrictions](#test-check-rights-for-statement-of-no-data-restrictions) |
+| T-DCSC | [Check license_ref for dataset licence](#test-check-license_ref-for-dataset-licence) |
+| T-DCSC | [Check license_ref against SPDX for software datasets](#test-check-license_ref-against-spdx-for-software-datasets) |
+| T-DCSC | [Check data_access and rights for access agreements or MoUs](#test-check-data_access-and-rights-for-access-agreements-or-mous) |
+| T-DCSC | [Check contributor.role for data owner](#test-check-contributorrole-for-data-owner) |
+| T-DCSC | [Check contributor for author role when dataset type is software](#test-check-contributor-for-author-role-when-dataset-type-is-software) |
+| T-DCSC | [Check ethical_issues_exist for valid value](#test-check-ethical_issues_exist-for-valid-value) |
+| T-DCSC | [Check ethical_issues_report is present when ethical_issues_exist is yes](#test-check-ethical_issues_report-is-present-when-ethical_issues_exist-is-yes) |
+| T-DCSC | [Check ethical_issues_description is present when ethical_issues_exist is no](#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no) |
+| T-DCSC | [Check data_access for open status](#test-check-data_access-for-open-status) |
+| T-DCSC | [Check distribution is present for dataset](#test-check-distribution-is-present-for-dataset) |
+| T-DCSC | [Check license_ref is present within distribution](#test-check-license_ref-is-present-within-distribution) |
+| T-DCSC | [Check rights for data restrictions reference](#test-check-rights-for-data-restrictions-reference) |
+| T-DCSC | [Check distribution license_ref for Horizon Europe CC-BY compliance](#test-check-distribution-license_ref-for-horizon-europe-cc-by-compliance) |
+| T-DCSC | [Check data_access matches destination host access policy](#test-check-data_access-matches-destination-host-access-policy) |
+| T-DCSC | [Check distribution license_ref matches destination host licence policy](#test-check-distribution-license_ref-matches-destination-host-licence-policy) |
+| T-DCSC | [Check distribution license.start_date matches destination embargo policy](#test-check-distribution-licensestart_date-matches-destination-embargo-policy) |
+| T-DCSC | [Check rights matches destination host restriction policy](#test-check-rights-matches-destination-host-restriction-policy) |
+| T-DCSC | [Check repository host for absence of embargo date](#test-check-repository-host-for-absence-of-embargo-date) |
+| T-DCSC | [Check distribution.license.start_date for absence in maDMP](#test-check-distributionlicensestart_date-for-absence-in-madmp) |
+| T-DCSC | [Check DMP for version control system and update metadata](#test-check-dmp-for-version-control-system-and-update-metadata) |
 
 ---
 
@@ -3502,3 +3545,4609 @@ pass/fail
 }
 ```
 
+## Test: Check related_identifier resource_type for ReadMe file
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-related-identifier-readme-file  
+
+**Implements:** [meta.qual.2](metrics.md#metric-readme-file-reference)
+
+### Description
+Checks if a ReadMe file is included in the related_identifier resource_type.
+
+### Input
+json madmp
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `related_identifier` entries in scope.
+3. Extract the `resource_type` (or equivalent field) for each related identifier.
+4. Check whether any `resource_type` value indicates a ReadMe file (for example `ReadMe`, `README`, or a project-defined equivalent).
+5. Return **pass** if at least one related identifier references a ReadMe file; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-related-identifier-readme-file",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check related_identifier resource_type for ReadMe file"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a ReadMe file is included in the related_identifier resource_type."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-readme-file/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.qual.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+## Test: Check metadata_standard_id is registered in metadata registries
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-metadata-standard-registered  
+
+**Implements:** [meta.stand.comp.1](metrics.md#metric-metadata-standards-used)
+
+### Description
+Checks metadata_standard_id to be registered in RDA Directory and FAIRsharing.
+
+### Input
+metadata in maDMP + metadata registries (https://rdamsc.bath.ac.uk/)
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate metadata standard identifiers in scope (e.g., `metadata_standard_id` or equivalent schema field).
+3. Extract the metadata standard identifiers or names.
+4. Check whether each extracted metadata standard can be matched against recognized metadata registries such as the RDA Metadata Standards Catalog and FAIRsharing.
+5. If your project uses identifier normalization, normalize names, URIs, or registry identifiers before comparison.
+6. Return **pass** if all metadata standards in scope are found in the registries; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-metadata-standard-registered",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check metadata_standard_id is registered in metadata registries"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks metadata_standard_id to be registered in RDA Directory and FAIRsharing."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-metadata-standard-registered/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.stand.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+## Test: Check distribution format is open
+
+**Test ID:** T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-format-open  
+
+**Implements:** [meta.form.op.1](metrics.md#metric-use-of-open-file-formats-for-datasets)
+
+### Description
+Checks distribution_format to be open.
+
+### Input
+madmp
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset distributions in scope and extract the declared format field (e.g., `distribution_format` or the equivalent schema field such as `distribution.format`).
+3. Normalize the extracted format values if needed (e.g., extension, MIME type, or controlled term).
+4. Compare each format against the list, registry, or rule set your project uses to classify formats as open.
+5. Return **pass** if all formats in scope are classified as open; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-format-open",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution format is open"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks distribution_format to be open."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-format-open/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.form.op.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+---
+
+## Test: Check ELN dataset linked via related_ids
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-eln-dataset-linked-related-ids
+
+**Implements:** [meta.doc.qual.1](metrics.md#metric-electronic-lab-notebook-linked)
+
+### Description
+Checks that the electronic lab notebook dataset or `technical_resource.name` includes `related_ids` with the dataset.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `technical_resource` objects.
+3. For each `technical_resource`, check whether `technical_resource.name` identifies an electronic lab notebook.
+4. If an ELN technical resource is found, verify that `related_ids` (or equivalent related identifier field) is present and contains at least one entry linking back to the dataset.
+5. Additionally, check the dataset's `related_identifier` entries for any reference that identifies an ELN record.
+6. Return **pass** if at least one dataset has a confirmed ELN linkage via `related_ids` or `related_identifier`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-eln-dataset-linked-related-ids",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check ELN dataset linked via related_ids"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that the electronic lab notebook dataset or technical_resource.name includes related_ids with the dataset."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "electronic lab notebook"
+    },
+    {
+      "@language": "en",
+      "@value": "related identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset linkage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-eln-dataset-linked-related-ids/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.doc.qual.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check technical_resource for dataset documentation
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-technical-resource-dataset-documentation
+
+**Implements:** [meta.feas.1](metrics.md#metric-existence-of-dataset-documentation)
+
+### Description
+Checks if there is the presence of any documentation supporting the dataset.
+
+### Input
+`technical_resource.name`; `technical_resource.technical_resource_id` in maDMP
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `technical_resource` objects or arrays.
+3. For each `technical_resource` entry, check whether `technical_resource.name` exists and is non-empty.
+4. Additionally check whether `technical_resource.technical_resource_id` exists and is non-empty.
+5. Return **pass** if at least one dataset contains a `technical_resource` entry with a non-empty `name` or `technical_resource_id`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-technical-resource-dataset-documentation",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check technical_resource for dataset documentation"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there is the presence of any documentation supporting the dataset."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset documentation"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-technical-resource-dataset-documentation/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/meta.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check data_quality_assurance for quality control methods
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-data-quality-assurance
+
+**Implements:** [qc.qual.1](metrics.md#metric-quality-control-methods-stated)
+
+### Description
+Checks if quality control methods are mentioned, either as narrative or controlled terms (`data_quality_assurance`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries in scope.
+3. For each dataset, check whether the `data_quality_assurance` field exists.
+4. Verify that the field is non-empty — either containing a free-text narrative description or one or more controlled terms.
+5. Return **pass** if at least one dataset contains a non-empty `data_quality_assurance` value; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-data-quality-assurance",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check data_quality_assurance for quality control methods"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if quality control methods are mentioned, either as narrative or controlled terms (data_quality_assurance)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "quality control"
+    },
+    {
+      "@language": "en",
+      "@value": "data quality assurance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "quality"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-data-quality-assurance/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/qc.qual.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.title and host.url for storage location
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-storage-location
+
+**Implements:** [store.cov.1](metrics.md#metric-data-storage-location-mentioned-in-the-dmp)
+
+### Description
+Checks if there is a reference of storage (`host.title`; `host.url`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object is present.
+4. Verify that `host.title` exists and is non-empty, or that `host.url` exists and is non-empty.
+5. Return **pass** if at least one distribution contains a `host` entry with a non-empty `title` or `url`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-storage-location",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.title and host.url for storage location"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there is a reference of storage (host.title; host.url)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data storage"
+    },
+    {
+      "@language": "en",
+      "@value": "storage location"
+    },
+    {
+      "@language": "en",
+      "@value": "host"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-storage-location/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.cov.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host for trusted repository storage
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-trusted-repository
+
+**Implements:** [store.cov.2](metrics.md#metric-use-of-secure-storage-for-the-dataset-in-a-trusted-repository)
+
+### Description
+Checks if the data are stored in trusted repositories (`host`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object is present.
+4. Inspect `host` properties (e.g., `host.title`, `host.url`, `host.certified_with`, `host.pid_system`) to determine whether the declared host can be identified as a trusted or institutional repository.
+5. Apply your project's rule set for classifying a host as trusted (e.g., presence of a certification, match against a known repository list, or absence of indicators of personal storage).
+6. Return **pass** if at least one distribution declares a host that qualifies as a trusted repository; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-trusted-repository",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host for trusted repository storage"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the data are stored in trusted repositories (host)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "secure storage"
+    },
+    {
+      "@language": "en",
+      "@value": "host"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-trusted-repository/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.cov.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check sensitive_data classification is assigned
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-sensitive-data-classification
+
+**Implements:** [store.comp.1](metrics.md#metric-alignment-of-storage-and-backup-with-information-sensitivity)
+
+### Description
+Checks if the dataset has an assigned classification level (`sensitive_data`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries in scope.
+3. For each dataset, check whether the `sensitive_data` field is present.
+4. Verify that the value is explicit and valid (e.g., a boolean or controlled term allowed by your schema).
+5. Return **pass** if at least one dataset contains an explicitly set `sensitive_data` value; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-sensitive-data-classification",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check sensitive_data classification is assigned"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset has an assigned classification level (sensitive_data)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "data classification"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data-classification/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host security and backup reflect sensitivity level
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-security-backup-sensitivity
+
+**Implements:** [store.comp.1](metrics.md#metric-alignment-of-storage-and-backup-with-information-sensitivity)
+
+### Description
+Checks if the host/storage method reflects appropriate protection level (`security_and_privacy`; `backup_type`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object is present.
+4. Verify that `host.security_and_privacy` exists and is non-empty.
+5. Verify that `host.backup_type` exists and is non-empty.
+6. Cross-reference the declared `sensitive_data` value for the dataset with the `security_and_privacy` and `backup_type` values, applying your project's mapping rules for appropriate protection levels.
+7. Return **pass** if at least one distribution declares storage and backup properties consistent with the dataset's sensitivity classification; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-security-backup-sensitivity",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host security and backup reflect sensitivity level"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the host/storage method reflects appropriate protection level (security_and_privacy; backup_type)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "storage security"
+    },
+    {
+      "@language": "en",
+      "@value": "backup"
+    },
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-security-backup-sensitivity/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor.role for backup responsibility
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-role-backup
+
+**Implements:** [store.cov.3](metrics.md#metric-back-up-responsibility)
+
+### Description
+Checks if someone is responsible for back up activities (`contributor.role`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries in scope (at DMP level or dataset level, depending on your schema).
+3. For each contributor, extract the `role` field value.
+4. Check whether any `role` value indicates backup responsibility according to your project's controlled vocabulary or role list (e.g., a backup manager, data steward, or equivalent term).
+5. Return **pass** if at least one contributor has a role associated with backup responsibility; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-role-backup",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor.role for backup responsibility"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if someone is responsible for back up activities (contributor.role)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "backup responsibility"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "data stewardship"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-backup/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.cov.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check backup_frequency is declared
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-backup-frequency
+
+**Implements:** [store.co.1](metrics.md#metric-back-up-frequency)
+
+### Description
+Checks if the back up performance is frequent (`backup_frequency`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object is present.
+4. Verify that `host.backup_frequency` exists and is non-empty.
+5. Return **pass** if at least one distribution declares a non-empty `backup_frequency`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-backup-frequency",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check backup_frequency is declared"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the back up performance is frequent (backup_frequency)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "backup frequency"
+    },
+    {
+      "@language": "en",
+      "@value": "backup schedule"
+    },
+    {
+      "@language": "en",
+      "@value": "data storage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-backup-frequency/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/store.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.id matches Zenodo deposit location
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-id-matches-zenodo
+
+**Implements:** [stor.feas.1](metrics.md#metric-stored-dataset-location-confirmed)
+
+### Description
+Checks if the storage of the data matches the destination.
+
+### Input
+`host.id` in maDMP + id in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host.id` value.
+4. Query the target repository (e.g., Zenodo API) using the dataset identifier to retrieve the actual deposit record.
+5. Compare the `host.id` from the maDMP with the repository identifier returned by the external query.
+6. Return **pass** if the `host.id` resolves and matches the confirmed deposit location in the target repository; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-id-matches-zenodo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.id matches Zenodo deposit location"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the storage of the data matches the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "storage location"
+    },
+    {
+      "@language": "en",
+      "@value": "deposit confirmation"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-id-matches-zenodo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/stor.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.title for security measures
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-title
+
+**Implements:** [secur.co.1](metrics.md#metric-security-measures-implementation)
+
+### Description
+Checks if secure measures exist (`security_and_privacy.title`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, verify that `title` exists and is non-empty.
+5. Return **pass** if at least one distribution contains a `security_and_privacy` entry with a non-empty `title`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-title",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.title for security measures"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if secure measures exist (security_and_privacy.title)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "security measures"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "security and privacy"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-title/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description for access rights management
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-description
+
+**Implements:** [secur.co.2](metrics.md#metric-sensitive-data-protection-description)
+
+### Description
+Checks if the sensitive data includes a description for access rights management (`security_and_privacy.description`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and identify those where `sensitive_data` is set to true or an equivalent positive value.
+3. For each sensitive dataset, locate the associated `distribution` objects and their `host` entries.
+4. Check whether a `security_and_privacy` object or array is present within the host.
+5. For each `security_and_privacy` entry, verify that `description` exists, is non-empty, and contains a reference to access rights management (e.g., institutional storage, access controls, or authorization mechanisms).
+6. Return **pass** if at least one sensitive dataset has a qualifying `security_and_privacy.description`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-description",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description for access rights management"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the sensitive data includes a description for access rights management (security_and_privacy.description)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights management"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-description/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description for authorised access controls
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-authorised-access
+
+**Implements:** [secur.co.3](metrics.md#metric-authorised-access-control)
+
+### Description
+Checks if access control measures exist for authorised users (`security_and_privacy.description`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, verify that `description` exists and is non-empty.
+5. Check whether the `description` value contains a reference to access control measures for authorised users (e.g., role-based access, authentication, user authorisation procedures, or equivalent terms defined by your project's vocabulary).
+6. Return **pass** if at least one qualifying `security_and_privacy.description` is found; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-authorised-access",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description for authorised access controls"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if access control measures exist for authorised users (security_and_privacy.description)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "access control"
+    },
+    {
+      "@language": "en",
+      "@value": "authorised users"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-authorised-access/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description for access control and user permissions
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-user-management
+
+**Implements:** [secur.co.4](metrics.md#metric-access-control-and-user-management)
+
+### Description
+Checks how access to the data is controlled and if user roles or permissions are defined (`security_and_privacy.description`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and identify those where sensitive data is present.
+3. For each such dataset, locate the associated `distribution` objects and their `host` entries.
+4. Check whether a `security_and_privacy` object or array is present within each host.
+5. For each `security_and_privacy` entry, verify that `description` exists and is non-empty.
+6. Check whether the `description` references both access control mechanisms and user roles or permissions (e.g., role-based access control, permission levels, user group definitions, or equivalent terms defined by your project's vocabulary).
+7. Return **pass** if at least one qualifying `security_and_privacy.description` is found; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-user-management",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description for access control and user permissions"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks how access to the data is controlled and if user roles or permissions are defined (security_and_privacy.description)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "access control"
+    },
+    {
+      "@language": "en",
+      "@value": "user management"
+    },
+    {
+      "@language": "en",
+      "@value": "user permissions"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-user-management/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.co.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description for access procedures
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-access-procedures
+
+**Implements:** [secur.co.5](metrics.md#metric-required-access-procedures)
+
+### Description
+Checks if access procedures for restricted/sensitive data are described in the DMP (`security_and_privacy.description`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, verify that `description` exists and is non-empty.
+5. Check whether the `description` contains a reference to access procedures for restricted or sensitive data (e.g., a data access request process, approval workflow, designated contact point for access, or equivalent procedural terms defined by your project's vocabulary).
+6. Return **pass** if at least one qualifying `security_and_privacy.description` is found; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-access-procedures",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description for access procedures"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if access procedures for restricted/sensitive data are described in the DMP (security_and_privacy.description)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "access procedures"
+    },
+    {
+      "@language": "en",
+      "@value": "restricted data"
+    },
+    {
+      "@language": "en",
+      "@value": "data access request"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-access-procedures/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.co.5"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-gdpr-ethics-compliance
+
+**Implements:** [secur.comp.1](metrics.md#metric-gdpr-and-ethics-compliance)
+
+### Description
+Checks if GDPR and ethical review is mentioned in the DMP `security_and_privacy.description` of the maDMP, validated against the GDPR checklist at https://gdpr.eu/checklist/, and whether `ethical_issues_report` is present.
+
+### Input
+`security_and_privacy.description` in maDMP JSON; `ethical_issues_report` in maDMP JSON; GDPR checklist at https://gdpr.eu/checklist/
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, verify that `description` exists and is non-empty, and check whether it contains a reference to GDPR or applicable data protection legislation (cross-validated against the GDPR checklist at https://gdpr.eu/checklist/).
+5. Independently, check whether the maDMP includes an `ethical_issues_report` field that is present and non-empty.
+6. Return **pass** if at least one of the following conditions is met: a qualifying `security_and_privacy.description` referencing GDPR is found, or a non-empty `ethical_issues_report` is present; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-gdpr-ethics-compliance",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if GDPR and ethical review is mentioned in the DMP security_and_privacy.description of the maDMP, validated against the GDPR checklist, and whether ethical_issues_report is present."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "GDPR"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "ethical review"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-gdpr-ethics-compliance/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.title for implemented security measures at destination
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-title-destination
+
+**Implements:** [secur.feas.1](metrics.md#metric-final-security-measures-implementation)
+
+### Description
+Checks if security measures are implemented in the destination (`security_and_privacy.title` in maDMP).
+
+### Input
+`security_and_privacy.title` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, verify that `title` exists and is non-empty.
+5. Return **pass** if at least one distribution contains a `security_and_privacy` entry with a non-empty `title`, confirming that a security measure is implemented at the destination; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-security-and-privacy-title-destination",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.title for implemented security measures at destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if security measures are implemented in the destination (security_and_privacy.title in maDMP)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "security measures"
+    },
+    {
+      "@language": "en",
+      "@value": "destination repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-title-destination/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/secur.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy.description for data protection method when sensitive_data is true
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-sensitive-data-protection-method
+
+**Implements:** [sens.secure.co.1](metrics.md#metric-sensitive-data-using-method)
+
+### Description
+Checks if a data protection method is mentioned when sensitive data exist.
+
+### Input
+maDMP JSON — if `sensitive_data` = yes, then check `security_and_privacy.description`
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and identify those where `sensitive_data` is set to true or an equivalent positive value.
+3. If no dataset is flagged as sensitive, return **pass** (metric is not applicable).
+4. For each sensitive dataset, locate the associated `distribution` objects and their `host` entries.
+5. Check whether a `security_and_privacy` object or array is present within each host.
+6. For each `security_and_privacy` entry, verify that `description` exists, is non-empty, and describes a method used to protect the sensitive data.
+7. Return **pass** if at least one sensitive dataset has a qualifying `security_and_privacy.description`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-sensitive-data-protection-method",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy.description for data protection method when sensitive_data is true"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a data protection method is mentioned when sensitive data exist."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection method"
+    },
+    {
+      "@language": "en",
+      "@value": "security and privacy"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data-protection-method/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/sens.secure.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check security_and_privacy for anonymised synthetic data provision
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-anonymised-synthetic-data
+
+**Implements:** [sens.secure.co.2](metrics.md#metric-provision-of-anonymised-synthetic-data)
+
+### Description
+Checks if anonymised synthetic data will be provided (`security_and_privacy` in maDMP).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `host` object containing a `security_and_privacy` array or object is present.
+4. For each `security_and_privacy` entry, inspect both `title` and `description` fields for references to anonymisation, pseudonymisation, synthetic data generation, or equivalent terms indicating the intent to provide an anonymised or synthetic version of the data.
+5. Return **pass** if at least one qualifying `security_and_privacy` entry is found; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-anonymised-synthetic-data",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check security_and_privacy for anonymised synthetic data provision"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if anonymised synthetic data will be provided (security_and_privacy in maDMP)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "anonymisation"
+    },
+    {
+      "@language": "en",
+      "@value": "synthetic data"
+    },
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-anonymised-synthetic-data/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/sens.secure.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check rights for statement of no data restrictions
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-rights-no-restrictions
+
+**Implements:** [data.restrict.co.3](metrics.md#metric-statement-of-no-data-restrictions)
+
+### Description
+Checks if there are any restrictions applied to the data (`rights` in maDMP).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `rights` field (or equivalent access rights field) is present.
+4. Inspect the `rights` value to determine whether it explicitly indicates that no restrictions apply (e.g., an open licence URI, a public domain declaration, or a value such as "open" or "unrestricted" as defined by your project's controlled vocabulary).
+5. Return **pass** if at least one distribution contains a `rights` value that confirms the absence of restrictions; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-rights-no-restrictions",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check rights for statement of no data restrictions"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there are any restrictions applied to the data (rights in maDMP)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "open access"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-rights-no-restrictions/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.restrict.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check license_ref for dataset licence
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-license-ref
+
+**Implements:** [data.lice.co.1](metrics.md#metric-dataset-license)
+
+### Description
+Checks if the dataset has a licence (`license_ref`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `license_ref` field is present.
+4. Verify that the `license_ref` value is non-empty and resolves to a recognisable licence identifier or URI.
+5. Return **pass** if at least one distribution contains a non-empty `license_ref`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-license-ref",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check license_ref for dataset licence"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset has a licence (license_ref)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset licence"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "open licence"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-license-ref/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.lice.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check license_ref against SPDX for software datasets
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-license-ref-spdx-software
+
+**Implements:** [soft.lice.comp.1](metrics.md#metric-software-license)
+
+### Description
+Checks if the dataset type is software, then verifies that `license_ref` matches a recognised software licence from the SPDX licence list at https://spdx.org/licenses/.
+
+### Input
+maDMP JSON; SPDX licence list at https://spdx.org/licenses/
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and identify those where `type` is set to software or an equivalent value.
+3. If no dataset is typed as software, return **pass** (metric is not applicable).
+4. For each software dataset, locate the associated `distribution` objects and check whether a `license_ref` field is present and non-empty.
+5. Retrieve the current SPDX licence list from https://spdx.org/licenses/ and check whether the declared `license_ref` value matches a recognised SPDX licence identifier or URI.
+6. Return **pass** if at least one software dataset declares a `license_ref` that matches a recognised SPDX software licence; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-license-ref-spdx-software",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check license_ref against SPDX for software datasets"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset type is software, then verifies that license_ref matches a recognised software licence from the SPDX licence list."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "software licence"
+    },
+    {
+      "@language": "en",
+      "@value": "SPDX"
+    },
+    {
+      "@language": "en",
+      "@value": "licence compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-license-ref-spdx-software/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/soft.lice.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check data_access and rights for access agreements or MoUs
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-data-access-agreements
+
+**Implements:** [data.agree.comp.2](metrics.md#metric-data-access-agreements)
+
+### Description
+Checks the `data_access` and `rights` fields in the maDMP for references to collaborative agreements or MoUs.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries in scope.
+3. For each dataset, check whether a `data_access` field is present and inspect its value for references to a formal data access agreement or MoU.
+4. Additionally, locate associated `distribution` objects and check whether `rights` entries reference a formal agreement or MoU (e.g., a named agreement, a URI pointing to an agreement document, or explicit mention of collaborative access terms).
+5. Return **pass** if at least one dataset contains a qualifying reference to a data access agreement or MoU in either `data_access` or `rights`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-data-access-agreements",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check data_access and rights for access agreements or MoUs"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the data_access and rights fields in the maDMP for references to collaborative agreements or MoUs."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data access agreement"
+    },
+    {
+      "@language": "en",
+      "@value": "MoU"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-data-access-agreements/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.agree.comp.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor.role for data owner
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-role-owner
+
+**Implements:** [own.co.2](metrics.md#metric-data-ownership)
+
+### Description
+Checks that the `contributor.role` field is not blank and contains the value `owner`.
+
+### Input
+`contributor.role` = owner in maDMP
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries in scope (at DMP level or dataset level, depending on your schema).
+3. For each contributor, extract the `role` field value.
+4. Check whether any `role` value is equal to `owner` or an equivalent ownership term as defined by your project's controlled vocabulary.
+5. For any contributor with `role` = `owner`, verify that the associated identifying fields (e.g., `name`, `contributor_id`) are present and non-empty.
+6. Return **pass** if at least one contributor has a non-blank `role` of `owner` with identifying information present; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-role-owner",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor.role for data owner"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that the contributor.role field is not blank and contains the value owner."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data ownership"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "data stewardship"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-owner/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/own.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor for author role when dataset type is software
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-author-software
+
+**Implements:** [soft.auth.co.3](metrics.md#metric-software-author)
+
+### Description
+Checks if the dataset type is software, then verifies that at least one contributor is present as author.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and identify those where `type` is set to software or an equivalent value.
+3. If no dataset is typed as software, return **pass** (metric is not applicable).
+4. For each software dataset, locate associated `contributor` entries (at dataset level or DMP level, depending on your schema).
+5. Check whether at least one contributor has a `role` value indicating authorship (e.g., `author`, `creator`, or equivalent term defined by your project's controlled vocabulary).
+6. Return **pass** if at least one software dataset has a contributor with an authorship role; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-author-software",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor for author role when dataset type is software"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset type is software, then verifies that at least one contributor is present as author."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "software authorship"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "software dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-author-software/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/soft.auth.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check ethical_issues_exist for valid value
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-ethical-issues-exist
+
+**Implements:** [ethics.co.1](metrics.md#metric-ethical-issues)
+
+### Description
+Checks the `ethical_issues_exist` field for a valid value (`yes`, `no`, `unknown`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate the `ethical_issues_exist` field at the DMP level.
+3. Check whether the field is present and non-empty.
+4. Verify that the value is one of the accepted controlled values: `yes`, `no`, or `unknown`.
+5. Return **pass** if `ethical_issues_exist` is present and contains a valid value; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-ethical-issues-exist",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check ethical_issues_exist for valid value"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the ethical_issues_exist field for a valid value (yes, no, unknown)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "ethical issues"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics declaration"
+    },
+    {
+      "@language": "en",
+      "@value": "research ethics"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-ethical-issues-exist/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/ethics.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check ethical_issues_description is present when ethical_issues_exist is no
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-ethical-issues-description-no
+
+**Implements:** [ethics.co.3](metrics.md#metric-justification-for-absence-of-ethical-issues)
+
+### Description
+Checks if a justification is provided when `ethical_issues_exist` = `no`, by verifying the presence of `ethical_issues_description`.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate the `ethical_issues_exist` field at the DMP level.
+3. If `ethical_issues_exist` is not set to `no`, return **pass** (metric is not applicable).
+4. If `ethical_issues_exist` is set to `no`, check whether the `ethical_issues_description` field is present and non-empty.
+5. Return **pass** if `ethical_issues_description` is present and non-empty; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-ethical-issues-description-no",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check ethical_issues_description is present when ethical_issues_exist is no"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a justification is provided when ethical_issues_exist = no, by verifying the presence of ethical_issues_description."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "ethical issues"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics justification"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics description"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-ethical-issues-description-no/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/ethics.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check data_access for open status
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-data-access-open
+
+**Implements:** [data.shar.op.1](metrics.md#metric-data-access-status-open-for-the-dataset)
+
+### Description
+Checks that `data_access` is set to `open` (accepted values: `open`, `shared`, `closed`).
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries in scope.
+3. For each dataset, check whether a `data_access` field is present.
+4. Verify that the `data_access` value is set to `open`.
+5. Return **pass** if at least one dataset has `data_access` set to `open`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-data-access-open",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check data_access for open status"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that data_access is set to open (accepted values: open, shared, closed)."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "open access"
+    },
+    {
+      "@language": "en",
+      "@value": "data access status"
+    },
+    {
+      "@language": "en",
+      "@value": "openness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-data-access-open/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.op.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check distribution is present for dataset
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-present
+
+**Implements:** [data.shar.co.1](metrics.md#metric-data-license-is-present)
+
+### Description
+Checks that a `distribution` entry is present for the dataset.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries in scope.
+3. For each dataset, check whether a `distribution` array or object is present and non-empty.
+4. Return **pass** if at least one dataset contains a non-empty `distribution` entry; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-present",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution is present for dataset"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that a distribution entry is present for the dataset."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data licence"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-present/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check license_ref is present within distribution
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-license-ref
+
+**Implements:** [data.shar.co.1](metrics.md#metric-data-license-is-present)
+
+### Description
+Checks that a `license_ref` is present within the distribution entry.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `license_ref` field is present and non-empty.
+4. Return **pass** if at least one distribution contains a non-empty `license_ref`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-license-ref",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check license_ref is present within distribution"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that a license_ref is present within the distribution entry."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data licence"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-ref/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check rights for data restrictions reference
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-rights-restrictions-reference
+
+**Implements:** [data.shar.co.2](metrics.md#metric-data-restrictions-reference)
+
+### Description
+Checks if any data restrictions are referenced via the `rights` field in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `rights` field is present and non-empty.
+4. Return **pass** if at least one distribution contains a non-empty `rights` value referencing data restrictions or access rights; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-rights-restrictions-reference",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check rights for data restrictions reference"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if any data restrictions are referenced via the rights field in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-rights-restrictions-reference/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check distribution license_ref for Horizon Europe CC-BY compliance
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-license-cc-by
+
+**Implements:** [data.shar.comp.1](metrics.md#metric-funders-data-license)
+
+### Description
+Checks if the maDMP `dataset.distribution.license_ref` matches Horizon Europe RDM requirements, i.e. CC-BY.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `license_ref` field is present and non-empty.
+4. Verify that the `license_ref` value corresponds to a CC-BY licence URI or identifier (e.g., https://creativecommons.org/licenses/by/4.0/, or an equivalent CC-BY variant) as required by Horizon Europe RDM guidelines.
+5. Return **pass** if at least one distribution contains a `license_ref` matching a CC-BY licence; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-license-cc-by",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution license_ref for Horizon Europe CC-BY compliance"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the maDMP dataset.distribution.license_ref matches Horizon Europe RDM requirements, i.e. CC-BY."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "funder licence"
+    },
+    {
+      "@language": "en",
+      "@value": "Horizon Europe"
+    },
+    {
+      "@language": "en",
+      "@value": "CC-BY"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-cc-by/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check data_access matches destination host access policy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-data-access-host-consistency
+
+**Implements:** [data.shar.feas.1](metrics.md#metric-repository-access-rights-consistency-aligned)
+
+### Description
+Checks if the dataset `data_access` value matches the access rights supported by the destination host in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and extract the `data_access` value for each.
+3. For each dataset, locate the associated `distribution` objects and their `host` entries.
+4. Extract any access-related fields from the `host` entry (e.g., `url`, `pid_system`, or access policy metadata) that indicate the access conditions supported by the destination repository.
+5. Compare the dataset-level `data_access` value against the access policy of the destination host, checking for consistency (e.g., a dataset declared as `open` should be hosted at a repository that supports open access).
+6. Return **pass** if at least one dataset has a `data_access` value that is consistent with its destination host access policy; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-data-access-host-consistency",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check data_access matches destination host access policy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset data_access value matches the access rights supported by the destination host in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "repository consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-data-access-host-consistency/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check distribution license_ref matches destination host licence policy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-license-host-alignment
+
+**Implements:** [data.shar.feas.2](metrics.md#metric-repository-data-license-aligned-with-the-dmp)
+
+### Description
+Checks if the data licence matches the destination by verifying `distribution.license.license_ref` against the destination host's licence policy in the maDMP.
+
+### Input
+`distribution.license.license_ref` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `license_ref` value from the `license` object.
+4. Identify the destination host for the same distribution and extract any licence-related metadata from the `host` entry (e.g., supported licence types, host URL, or policy references).
+5. Compare the `license_ref` value against the licence policy of the destination host, checking for consistency.
+6. Return **pass** if at least one distribution has a `license_ref` that is consistent with its destination host licence policy; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-license-host-alignment",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution license_ref matches destination host licence policy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the data licence matches the destination by verifying distribution.license.license_ref against the destination host licence policy in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data licence"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-host-alignment/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.feas.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check distribution license.start_date matches destination embargo policy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-license-start-date-embargo
+
+**Implements:** [data.shar.feas.3](metrics.md#metric-embargo-implementation-alignment)
+
+### Description
+Checks if the embargo date matches the destination by verifying `distribution.license.start_date` against the destination host's embargo policy in the maDMP.
+
+### Input
+`distribution.license.start_date` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `start_date` value from the `license` object.
+4. Identify the destination host for the same distribution and extract any embargo-related metadata from the `host` entry (e.g., supported embargo periods, availability windows, or policy references).
+5. Compare the `start_date` value against the embargo policy of the destination host, checking that the declared embargo period is supported by the repository.
+6. Return **pass** if at least one distribution has a `license.start_date` that is consistent with its destination host embargo policy; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-embargo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution license.start_date matches destination embargo policy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the embargo date matches the destination by verifying distribution.license.start_date against the destination host embargo policy in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "embargo"
+    },
+    {
+      "@language": "en",
+      "@value": "availability date"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-embargo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.feas.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check rights matches destination host restriction policy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-rights-destination-restriction-alignment
+
+**Implements:** [data.shar.feas.4](metrics.md#metric-repository-data-restrictions)
+
+### Description
+Checks if the data restrictions match the destination by verifying the `rights` field against the destination host's restriction policy in the maDMP.
+
+### Input
+`rights` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `rights` field value.
+4. Identify the destination host for the same distribution and extract any restriction-related metadata from the `host` entry (e.g., supported access conditions, restriction policies, or host URL for policy lookup).
+5. Compare the `rights` value against the restriction policy of the destination host, checking that the declared restrictions are consistent with what the repository supports.
+6. Return **pass** if at least one distribution has a `rights` value that is consistent with its destination host restriction policy; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-rights-destination-restriction-alignment",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check rights matches destination host restriction policy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the data restrictions match the destination by verifying the rights field against the destination host restriction policy in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-rights-destination-restriction-alignment/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.feas.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check repository host for absence of embargo date
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-embargo-date-absent
+
+**Implements:** [data.shar.comp.2](metrics.md#metric-embargo-license)
+
+### Description
+Checks that no embargo date field exists in the destination repository host entry, in compliance with Horizon Europe embargo policy.
+
+### Input
+Repository host entry in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, locate the `host` entry.
+4. Check whether any embargo date field is present within the `host` entry.
+5. Return **pass** if no embargo date field is found in any destination host entry; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-embargo-date-absent",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check repository host for absence of embargo date"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that no embargo date field exists in the destination repository host entry, in compliance with Horizon Europe embargo policy."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "embargo"
+    },
+    {
+      "@language": "en",
+      "@value": "Horizon Europe"
+    },
+    {
+      "@language": "en",
+      "@value": "licence compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-embargo-date-absent/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.comp.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check distribution.license.start_date for absence in maDMP
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-license-start-date-absent
+
+**Implements:** [data.shar.comp.2](metrics.md#metric-embargo-license)
+
+### Description
+Checks that `distribution.license.start_date` is not set in the maDMP, in compliance with Horizon Europe embargo policy.
+
+### Input
+`distribution.license.start_date` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `license` object is present containing a `start_date` field.
+4. Return **pass** if no `distribution.license.start_date` field is present or set across all distributions; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-absent",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check distribution.license.start_date for absence in maDMP"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that distribution.license.start_date is not set in the maDMP, in compliance with Horizon Europe embargo policy."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "embargo"
+    },
+    {
+      "@language": "en",
+      "@value": "Horizon Europe"
+    },
+    {
+      "@language": "en",
+      "@value": "licence compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-absent/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.shar.comp.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```

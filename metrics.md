@@ -29,7 +29,46 @@
 | meta.comp.1 | [DMP Common Standard Field Compliance](#metric-dmp-common-standard-field-compliance) |
 | meta.co.1 | [Controlled Vocabularies Used in Methodology](#metric-controlled-vocabularies-used-in-methodology) |
 | meta.co.2 | [Electronic Lab Notebook Referenced as a technical resource](#metric-electronic-lab-notebook-referenced-as-a-technical-resource) |
-
+| meta.qual.2 | [ReadMe File Reference](#metric-readme-file-reference) |
+| meta.stand.comp.1 | [Metadata Standards Used](#metric-metadata-standards-used) |
+| meta.form.op.1 | [Use of Open File Formats for datasets](#metric-use-of-open-file-formats-for-datasets) |
+| meta.doc.qual.1 | [Electronic Lab Notebook Linked](#metric-electronic-lab-notebook-linked) |
+| meta.feas.1 | [Existence of Dataset Documentation](#metric-existence-of-dataset-documentation) |
+| qc.qual.1 | [Quality Control Methods Stated](#metric-quality-control-methods-stated) |
+| store.cov.1 | [Data Storage Location mentioned in the DMP](#metric-data-storage-location-mentioned-in-the-dmp) |
+| store.cov.2 | [Use of Secure Storage for the dataset in a trusted repository](#metric-use-of-secure-storage-for-the-dataset-in-a-trusted-repository) |
+| store.comp.1 | [Alignment of Storage and Backup with Information Sensitivity](#metric-alignment-of-storage-and-backup-with-information-sensitivity) |
+| store.cov.3 | [Back up Responsibility](#metric-back-up-responsibility) |
+| store.co.1 | [Back up Frequency](#metric-back-up-frequency) |
+| store.comp.3 | [Version Control Practices for Software](#metric-version-control-practices-for-software) |
+| stor.feas.1 | [Stored Dataset Location Confirmed](#metric-stored-dataset-location-confirmed) |
+| secur.co.1 | [Security Measures Implementation](#metric-security-measures-implementation) |
+| secur.co.2 | [Sensitive Data Protection Description](#metric-sensitive-data-protection-description) |
+| secur.co.3 | [Authorised Access Control](#metric-authorised-access-control) |
+| secur.co.4 | [Access Control and User Management](#metric-access-control-and-user-management) |
+| secur.co.5 | [Required Access Procedures](#metric-required-access-procedures) |
+| secur.comp.1 | [GDPR and Ethics Compliance](#metric-gdpr-and-ethics-compliance) |
+| secur.feas.1 | [Final Security Measures Implementation](#metric-final-security-measures-implementation) |
+| sens.secure.co.1 | [Sensitive Data Using Method](#metric-sensitive-data-using-method) |
+| sens.secure.co.2 | [Provision of Anonymised Synthetic Data](#metric-provision-of-anonymised-synthetic-data) |
+| data.restrict.co.3 | [Statement of No Data Restrictions](#metric-statement-of-no-data-restrictions) |
+| data.lice.co.1 | [Dataset License](#metric-dataset-license) |
+| soft.lice.comp.1 | [Software License](#metric-software-license) |
+| data.agree.comp.2 | [Data Access Agreements](#metric-data-access-agreements) |
+| own.co.2 | [Data Ownership](#metric-data-ownership) |
+| soft.auth.co.3 | [Software Author](#metric-software-author) |
+| ethics.co.1 | [Ethical Issues](#metric-ethical-issues) |
+| ethics.co.2 | [Ethical Issues and Review](#metric-ethical-issues-and-review) |
+| ethics.co.3 | [Justification for Absence of Ethical Issues](#metric-justification-for-absence-of-ethical-issues) |
+| data.shar.op.1 | [Data Access Status Open for the Dataset](#metric-data-access-status-open-for-the-dataset) |
+| data.shar.co.1 | [Data License is Present](#metric-data-license-is-present) |
+| data.shar.co.2 | [Data Restrictions Reference](#metric-data-restrictions-reference) |
+| data.shar.comp.1 | [Funder's Data License](#metric-funders-data-license) |
+| data.shar.feas.1 | [Repository Access Rights Consistency Aligned](#metric-repository-access-rights-consistency-aligned) |
+| data.shar.feas.2 | [Repository Data License Aligned with the DMP](#metric-repository-data-license-aligned-with-the-dmp) |
+| data.shar.feas.3 | [Embargo Implementation Alignment](#metric-embargo-implementation-alignment) |
+| data.shar.feas.4 | [Repository Data Restrictions](#metric-repository-data-restrictions) |
+| data.shar.comp.2 | [Embargo License](#metric-embargo-license) |
 
 ---
 
@@ -2710,3 +2749,4378 @@ Boolean (pass/fail)
 }
 ```
 
+## Metric: ReadMe File Reference
+
+**Metric ID:** meta.qual.2  
+**Persistent URI:** https://example.org/metric/meta.qual.2  
+**Dimension:** Quality  
+
+### Title
+ReadMe File Reference
+
+### Narrative
+Verifies that ReadMe file is mentioned.
+
+### Intended Outcome
+Determine whether the maDMP includes a reference to a ReadMe file, supporting dataset interpretability and documentation quality.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one related identifier entry indicates a ReadMe file through its `resource_type` (or equivalent field), showing that a ReadMe file is included or referenced.
+
+### Failure Criterion
+No related identifier entry indicates a ReadMe file, or related identifier information is missing where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check related_identifier resource_type for ReadMe file](tests.md#test-check-related_identifier-resource_type-for-readme-file)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.qual.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.qual.2",
+  "title": {
+    "@language": "en",
+    "@value": "ReadMe File Reference"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that ReadMe file is mentioned."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-readme-file"
+  },
+  "abbreviation": {
+    "@value": "meta.qual.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.qual.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Quality"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+## Metric: Metadata Standards Used
+
+**Metric ID:** meta.stand.comp.1  
+**Persistent URI:** https://example.org/metric/meta.stand.comp.1  
+**Dimension:** Compliance  
+
+### Title
+Metadata Standards Used
+
+### Narrative
+Validates if the Metadata Standard is aligned with Metadata Registries.
+
+### Intended Outcome
+Determine whether the metadata standards referenced in the maDMP are registered in recognized metadata registries such as the RDA Metadata Standards Catalog and FAIRsharing.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format plus external metadata registry sources.
+
+### Success Criterion
+For each metadata standard in scope, `metadata_standard_id` is present and can be matched to an entry in a recognized metadata registry such as the RDA Metadata Standards Catalog and/or FAIRsharing.
+
+### Failure Criterion
+`metadata_standard_id` is missing, or one or more referenced metadata standards cannot be found in the target registries.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check metadata_standard_id is registered in metadata registries](tests.md#test-check-metadata_standard_id-is-registered-in-metadata-registries)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.stand.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.stand.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "Metadata Standards Used"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if the Metadata Standard is aligned with Metadata Registries."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-metadata-standard-registered"
+  },
+  "abbreviation": {
+    "@value": "meta.stand.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.stand.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+## Metric: Electronic Lab Notebook Linked
+
+**Metric ID:** meta.doc.qual.1
+**Persistent URI:** https://example.org/metric/meta.doc.qual.1
+**Dimension:** Quality
+
+### Title
+Electronic Lab Notebook Linked
+
+### Narrative
+Verifies that the dataset is linked to the notebook.
+
+### Intended Outcome
+Determine whether the dataset declared in the maDMP is linked to an electronic lab notebook (ELN), either through a `related_identifier` entry or through a `technical_resource.name` reference that associates the dataset with a notebook record.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `related_identifier` entry exists that references the electronic lab notebook dataset, or a `technical_resource.name` value is present that identifies an ELN and includes associated `related_ids` linking it to the dataset.
+
+### Failure Criterion
+No dataset contains a `related_identifier` or `technical_resource.name` entry that can be linked to an electronic lab notebook.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check ELN dataset linked via related_ids](tests.md#test-check-eln-dataset-linked-via-related_ids)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.doc.qual.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.doc.qual.1",
+  "title": {
+    "@language": "en",
+    "@value": "Electronic Lab Notebook Linked"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the dataset is linked to the notebook."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-eln-dataset-linked-related-ids"
+  },
+  "abbreviation": {
+    "@value": "meta.doc.qual.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "electronic lab notebook"
+    },
+    {
+      "@language": "en",
+      "@value": "related identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset linkage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.doc.qual.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Quality"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Use of Open File Formats for datasets
+
+**Metric ID:** meta.form.op.1  
+**Persistent URI:** https://example.org/metric/meta.form.op.1  
+**Dimension:** Openness  
+
+### Title
+Use of Open File Formats for datasets
+
+### Narrative
+Validates if the data formats are open.
+
+### Intended Outcome
+Determine whether the dataset distributions declared in the maDMP use open file formats, supporting openness, accessibility, and reuse.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For each dataset distribution in scope, the declared `distribution_format` (or equivalent format field) is recognized as an open file format according to the rules or registry used by your project.
+
+### Failure Criterion
+At least one declared dataset format is not open, cannot be classified as open, or format information is missing where expected.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution format is open](tests.md#test-check-distribution-format-is-open)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.form.op.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.form.op.1",
+  "title": {
+    "@language": "en",
+    "@value": "Use of Open File Formats for datasets"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if the data formats are open."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-format-open"
+  },
+  "abbreviation": {
+    "@value": "meta.form.op.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "template keyword"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.form.op.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Openness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+---
+
+## Metric: Existence of Dataset Documentation
+
+**Metric ID:** meta.feas.1
+**Persistent URI:** https://example.org/metric/meta.feas.1
+**Dimension:** Feasibility
+
+### Title
+Existence of Dataset Documentation
+
+### Narrative
+Validates if there is a form of accompanying documentation for the dataset.
+
+### Intended Outcome
+Determine whether the maDMP includes at least one form of accompanying documentation for the dataset, declared through `technical_resource.name` or `technical_resource.technical_resource_id`.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `technical_resource` entry exists with a non-empty `name` or `technical_resource_id`, indicating that supporting documentation is declared.
+
+### Failure Criterion
+No dataset contains a `technical_resource` entry, or all `technical_resource` entries are missing both `name` and `technical_resource_id`.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check technical_resource for dataset documentation](tests.md#test-check-technical_resource-for-dataset-documentation)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/meta.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/meta.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Existence of Dataset Documentation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if there is a form of accompanying documentation for the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-technical-resource-dataset-documentation"
+  },
+  "abbreviation": {
+    "@value": "meta.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset documentation"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/meta.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Quality Control Methods Stated
+
+**Metric ID:** qc.qual.1
+**Persistent URI:** https://example.org/metric/qc.qual.1
+**Dimension:** Quality
+
+### Title
+Quality Control Methods Stated
+
+### Narrative
+Verifies that quality control methods are stated.
+
+### Intended Outcome
+Determine whether the maDMP includes a statement of quality control methods for the dataset, either as free-text narrative or as controlled terms in the `data_quality_assurance` field.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, the `data_quality_assurance` field is present and non-empty, containing either a narrative description or one or more controlled terms describing the quality control methods applied.
+
+### Failure Criterion
+No dataset contains a `data_quality_assurance` field, or all present values are empty or missing.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check data_quality_assurance for quality control methods](tests.md#test-check-data_quality_assurance-for-quality-control-methods)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/qc.qual.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/qc.qual.1",
+  "title": {
+    "@language": "en",
+    "@value": "Quality Control Methods Stated"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that quality control methods are stated."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-data-quality-assurance"
+  },
+  "abbreviation": {
+    "@value": "qc.qual.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "quality control"
+    },
+    {
+      "@language": "en",
+      "@value": "data quality assurance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "quality"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/qc.qual.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Quality"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data Storage Location mentioned in the DMP
+
+**Metric ID:** store.cov.1
+**Persistent URI:** https://example.org/metric/store.cov.1
+**Dimension:** Coverage
+
+### Title
+Data Storage Location mentioned in the DMP
+
+### Narrative
+Verifies that the data storage location is mentioned.
+
+### Intended Outcome
+Determine whether the maDMP includes a reference to a data storage location for the dataset, declared through `host.title` or `host.url` within a distribution entry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `host` object is present containing a non-empty `host.title` or `host.url`, indicating that a storage location has been declared.
+
+### Failure Criterion
+No dataset distribution contains a `host` object, or all present `host` entries are missing both `title` and `url`.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.title and host.url for storage location](tests.md#test-check-hosttitle-and-hosturl-for-storage-location)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.cov.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.cov.1",
+  "title": {
+    "@language": "en",
+    "@value": "Data Storage Location mentioned in the DMP"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the data storage location is mentioned."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-storage-location"
+  },
+  "abbreviation": {
+    "@value": "store.cov.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data storage"
+    },
+    {
+      "@language": "en",
+      "@value": "storage location"
+    },
+    {
+      "@language": "en",
+      "@value": "host"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.cov.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Use of Secure Storage for the dataset in a trusted repository
+
+**Metric ID:** store.cov.2
+**Persistent URI:** https://example.org/metric/store.cov.2
+**Dimension:** Coverage
+
+### Title
+Use of Secure Storage for the dataset in a trusted repository
+
+### Narrative
+Verifies that the data are not planned to be stored in personal devices.
+
+### Intended Outcome
+Determine whether the maDMP declares a trusted repository as the storage host for the dataset, rather than a personal device or unmanaged storage location.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host` object is present and its properties (e.g., `host.title`, `host.url`, or `host.certified_with`) indicate a recognized or trusted repository rather than a personal device.
+
+### Failure Criterion
+No dataset distribution declares a `host`, or all declared hosts cannot be identified as a trusted repository (e.g., reference to personal storage, local device, or missing host information).
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host for trusted repository storage](tests.md#test-check-host-for-trusted-repository-storage)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.cov.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.cov.2",
+  "title": {
+    "@language": "en",
+    "@value": "Use of Secure Storage for the dataset in a trusted repository"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the data are not planned to be stored in personal devices."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-trusted-repository"
+  },
+  "abbreviation": {
+    "@value": "store.cov.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "secure storage"
+    },
+    {
+      "@language": "en",
+      "@value": "host"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.cov.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Alignment of Storage and Backup with Information Sensitivity
+
+**Metric ID:** store.comp.1
+**Persistent URI:** https://example.org/metric/store.comp.1
+**Dimension:** Compliance
+
+### Title
+Alignment of Storage and Backup with Information Sensitivity
+
+### Narrative
+Verifies that the DMP declares the sensitivity or classification level of the dataset and that the planned storage and backup strategies align with this classification.
+
+### Intended Outcome
+Determine whether the maDMP both declares a sensitivity classification for the dataset and ensures that the declared storage and backup approach is appropriate for that classification level.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope:
+- `sensitive_data` is present and explicitly set, **and**
+- the associated distribution `host` includes `security_and_privacy` and/or `backup_type` values that are consistent with the declared sensitivity level.
+
+### Failure Criterion
+At least one dataset is missing `sensitive_data`, or the declared storage and backup properties (`security_and_privacy`, `backup_type`) are absent or inconsistent with the sensitivity classification.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check sensitive_data classification is assigned](tests.md#test-check-sensitive_data-classification-is-assigned)
+- [Check host security and backup reflect sensitivity level](tests.md#test-check-host-security-and-backup-reflect-sensitivity-level)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "Alignment of Storage and Backup with Information Sensitivity"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP declares the sensitivity or classification level of the dataset and that the planned storage and backup strategies align with this classification."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data-classification"
+  },
+  "abbreviation": {
+    "@value": "store.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "storage security"
+    },
+    {
+      "@language": "en",
+      "@value": "backup"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Back up Responsibility
+
+**Metric ID:** store.cov.3
+**Persistent URI:** https://example.org/metric/store.cov.3
+**Dimension:** Coverage
+
+### Title
+Back up Responsibility
+
+### Narrative
+Verifies that there is someone responsible for back up activities.
+
+### Intended Outcome
+Determine whether the maDMP declares at least one contributor with a role explicitly associated with backup responsibilities.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `contributor` entry is present with a `role` value that indicates responsibility for backup activities (e.g., a backup manager, data steward, or equivalent role defined by your project's controlled vocabulary).
+
+### Failure Criterion
+No `contributor` entry exists, or no contributor has a `role` value that can be associated with backup responsibilities.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor.role for backup responsibility](tests.md#test-check-contributorrole-for-backup-responsibility)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.cov.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.cov.3",
+  "title": {
+    "@language": "en",
+    "@value": "Back up Responsibility"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that there is someone responsible for back up activities."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-backup"
+  },
+  "abbreviation": {
+    "@value": "store.cov.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "backup responsibility"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "data stewardship"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.cov.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Back up Frequency
+
+**Metric ID:** store.co.1
+**Persistent URI:** https://example.org/metric/store.co.1
+**Dimension:** Completeness
+
+### Title
+Back up Frequency
+
+### Narrative
+Verifies the frequency of the back up performance.
+
+### Intended Outcome
+Determine whether the maDMP declares a backup frequency for the dataset, indicating that backup activities are planned at a defined interval.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host.backup_frequency` field is present and non-empty, indicating that a backup schedule has been declared.
+
+### Failure Criterion
+No dataset distribution contains a `host` object with a `backup_frequency` field, or all present values are empty or missing.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check backup_frequency is declared](tests.md#test-check-backup_frequency-is-declared)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Back up Frequency"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the frequency of the back up performance."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-backup-frequency"
+  },
+  "abbreviation": {
+    "@value": "store.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "backup frequency"
+    },
+    {
+      "@language": "en",
+      "@value": "backup schedule"
+    },
+    {
+      "@language": "en",
+      "@value": "data storage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Version Control Practices for Software
+
+**Metric ID:** store.comp.3
+**Persistent URI:** https://example.org/metric/store.comp.3
+**Dimension:** Compliance
+
+### Title
+Version Control Practices for Software
+
+### Narrative
+Verifies that a description of the version control system used for developed software is included, along with information on how versioning and updates will be managed throughout the project.
+
+### Intended Outcome
+Determine whether the maDMP includes a reference to a version control system for software developed as part of the project, and optionally declares metadata about update plans or versioning frequency.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset or technical resource in scope, the maDMP includes a mention of a version control system (e.g., via `technical_resource.name`, `technical_resource.description`, or an equivalent field), and optionally includes information on update plans or versioning frequency.
+
+### Failure Criterion
+No mention of a version control system can be found in any `technical_resource` or equivalent field, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check DMP for version control system and update metadata](tests.md#test-check-dmp-for-version-control-system-and-update-metadata)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/store.comp.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/store.comp.3",
+  "title": {
+    "@language": "en",
+    "@value": "Version Control Practices for Software"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that a description of the version control system used for developed software is included, along with information on how versioning and updates will be managed throughout the project."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-version-control-system"
+  },
+  "abbreviation": {
+    "@value": "store.comp.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "version control"
+    },
+    {
+      "@language": "en",
+      "@value": "software versioning"
+    },
+    {
+      "@language": "en",
+      "@value": "update management"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/store.comp.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Stored Dataset Location Confirmed
+
+**Metric ID:** stor.feas.1
+**Persistent URI:** https://example.org/metric/stor.feas.1
+**Dimension:** Feasibility
+
+### Title
+Stored Dataset Location Confirmed
+
+### Narrative
+Validates that the location storage matches the destination.
+
+### Intended Outcome
+Determine whether the storage location declared in the maDMP (`host.id`) can be confirmed to match the actual destination where the dataset has been deposited, as verified against an external repository such as Zenodo.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with a target repository (e.g., Zenodo).
+
+### Success Criterion
+The `host.id` declared in the maDMP resolves to the same repository or record identifier as the dataset's actual deposit location in the target repository (e.g., Zenodo), confirming that planned and actual storage locations are consistent.
+
+### Failure Criterion
+The `host.id` in the maDMP is absent, does not resolve, or does not match the identifier of the actual deposit location in the target repository.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/stor.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/stor.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Stored Dataset Location Confirmed"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the location storage matches the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-id-matches-zenodo"
+  },
+  "abbreviation": {
+    "@value": "stor.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "storage location"
+    },
+    {
+      "@language": "en",
+      "@value": "deposit confirmation"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/stor.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Security Measures Implementation
+
+**Metric ID:** secur.co.1
+**Persistent URI:** https://example.org/metric/secur.co.1
+**Dimension:** Completeness
+
+### Title
+Security Measures Implementation
+
+### Narrative
+Verifies that secure measures are implemented to ensure data security during the project.
+
+### Intended Outcome
+Determine whether the maDMP declares at least one security measure for the dataset, through a non-empty `security_and_privacy.title` entry within a distribution host.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `security_and_privacy` object is present with a non-empty `title` value, indicating that a named security measure has been declared.
+
+### Failure Criterion
+No dataset distribution contains a `security_and_privacy` object, or all present entries are missing a `title` or have an empty value.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.title for security measures](tests.md#test-check-security_and_privacytitle-for-security-measures)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Security Measures Implementation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that secure measures are implemented to ensure data security during the project."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-title"
+  },
+  "abbreviation": {
+    "@value": "secur.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "security measures"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "security and privacy"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Sensitive Data Protection Description
+
+**Metric ID:** secur.co.2
+**Persistent URI:** https://example.org/metric/secur.co.2
+**Dimension:** Completeness
+
+### Title
+Sensitive Data Protection Description
+
+### Narrative
+Verifies that if the data are sensitive, then there is a description which includes mention of access rights management via institutional storage.
+
+### Intended Outcome
+Determine whether the maDMP, for any dataset flagged as sensitive, includes a `security_and_privacy.description` that addresses access rights management, such as through institutional storage or equivalent access control mechanisms.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset where `sensitive_data` is set to true (or equivalent), a `security_and_privacy` entry is present with a non-empty `description` that includes reference to access rights management (e.g., institutional storage, access controls, or authorization mechanisms).
+
+### Failure Criterion
+A dataset is flagged as sensitive but has no `security_and_privacy` entry, or the `description` field is absent, empty, or contains no reference to access rights management.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description for access rights management](tests.md#test-check-security_and_privacydescription-for-access-rights-management)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Sensitive Data Protection Description"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that if the data are sensitive, then there is a description which includes mention of access rights management via institutional storage."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-description"
+  },
+  "abbreviation": {
+    "@value": "secur.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights management"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Authorised Access Control
+
+**Metric ID:** secur.co.3
+**Persistent URI:** https://example.org/metric/secur.co.3
+**Dimension:** Completeness
+
+### Title
+Authorised Access Control
+
+### Narrative
+Verifies that the DMP includes a description of access control measures for authorised users.
+
+### Intended Outcome
+Determine whether the maDMP includes a `security_and_privacy.description` that explicitly describes access control measures restricting data access to authorised users only.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `security_and_privacy` entry is present with a non-empty `description` that references access control measures for authorised users (e.g., role-based access, authentication requirements, or user authorisation procedures).
+
+### Failure Criterion
+No dataset distribution contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control for authorised users.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description for authorised access controls](tests.md#test-check-security_and_privacydescription-for-authorised-access-controls)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.co.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Authorised Access Control"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes a description of access control measures for authorised users."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-authorised-access"
+  },
+  "abbreviation": {
+    "@value": "secur.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "access control"
+    },
+    {
+      "@language": "en",
+      "@value": "authorised users"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Access Control and User Management
+
+**Metric ID:** secur.co.4
+**Persistent URI:** https://example.org/metric/secur.co.4
+**Dimension:** Completeness
+
+### Title
+Access Control and User Management
+
+### Narrative
+Verifies that the DMP includes a description of access control and user permission management when sensitive data exist.
+
+### Intended Outcome
+Determine whether the maDMP, for datasets containing sensitive data, includes a `security_and_privacy.description` that addresses how access to the data is controlled and whether user roles or permissions are defined.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset where sensitive data is present, a `security_and_privacy` entry exists with a non-empty `description` that references both access control mechanisms and user role or permission definitions (e.g., role-based access control, permission levels, or user group management).
+
+### Failure Criterion
+No dataset containing sensitive data includes a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control and user permission management.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description for access control and user permissions](tests.md#test-check-security_and_privacydescription-for-access-control-and-user-permissions)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.co.4",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.co.4",
+  "title": {
+    "@language": "en",
+    "@value": "Access Control and User Management"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes a description of access control and user permission management when sensitive data exist."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-user-management"
+  },
+  "abbreviation": {
+    "@value": "secur.co.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "access control"
+    },
+    {
+      "@language": "en",
+      "@value": "user management"
+    },
+    {
+      "@language": "en",
+      "@value": "user permissions"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.co.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Required Access Procedures
+
+**Metric ID:** secur.co.5
+**Persistent URI:** https://example.org/metric/secur.co.5
+**Dimension:** Completeness
+
+### Title
+Required Access Procedures
+
+### Narrative
+Verifies whether the DMP describes the procedures required to gain access to the data.
+
+### Intended Outcome
+Determine whether the maDMP includes a `security_and_privacy.description` that explicitly describes the procedures a user must follow to request or obtain access to restricted or sensitive data.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `security_and_privacy` entry is present with a non-empty `description` that outlines the procedures required to gain access to the data (e.g., data access request process, approval workflow, contact point for access, or equivalent procedural information).
+
+### Failure Criterion
+No dataset contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access procedures for restricted or sensitive data.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description for access procedures](tests.md#test-check-security_and_privacydescription-for-access-procedures)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.co.5",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.co.5",
+  "title": {
+    "@language": "en",
+    "@value": "Required Access Procedures"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies whether the DMP describes the procedures required to gain access to the data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-access-procedures"
+  },
+  "abbreviation": {
+    "@value": "secur.co.5-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "access procedures"
+    },
+    {
+      "@language": "en",
+      "@value": "restricted data"
+    },
+    {
+      "@language": "en",
+      "@value": "data access request"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.co.5"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: GDPR and Ethics Compliance
+
+**Metric ID:** secur.comp.1
+**Persistent URI:** https://example.org/metric/secur.comp.1
+**Dimension:** Compliance
+
+### Title
+GDPR and Ethics Compliance
+
+### Narrative
+Verifies that the DMP includes references to applicable legal and ethical guidelines.
+
+### Intended Outcome
+Determine whether the maDMP includes references to GDPR compliance and ethical review, either through a `security_and_privacy.description` that addresses relevant legal requirements, or through the presence of an `ethical_issues_report` field, cross-validated against the GDPR checklist.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the GDPR checklist at https://gdpr.eu/checklist/.
+
+### Success Criterion
+For at least one dataset in scope, either: (a) the `security_and_privacy.description` contains a reference to GDPR or applicable data protection legislation, or (b) the `ethical_issues_report` field is present and non-empty, indicating that an ethical review has been conducted or referenced.
+
+### Failure Criterion
+No dataset contains a `security_and_privacy.description` referencing GDPR or data protection requirements, and no `ethical_issues_report` field is present or non-empty across the maDMP.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](tests.md#test-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "GDPR and Ethics Compliance"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes references to applicable legal and ethical guidelines."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-gdpr-ethics-compliance"
+  },
+  "abbreviation": {
+    "@value": "secur.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "GDPR"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "ethical review"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Final Security Measures Implementation
+
+**Metric ID:** secur.feas.1
+**Persistent URI:** https://example.org/metric/secur.feas.1
+**Dimension:** Feasibility
+
+### Title
+Final Security Measures Implementation
+
+### Narrative
+Validates that security measures have been implemented in the destination.
+
+### Intended Outcome
+Determine whether the maDMP confirms that the security measures declared for the dataset have been implemented at the destination repository, as evidenced by a non-empty `security_and_privacy.title` entry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `security_and_privacy` entry is present with a non-empty `title`, confirming that a named security measure has been implemented at the destination.
+
+### Failure Criterion
+No dataset distribution contains a `security_and_privacy` entry with a non-empty `title`, indicating that no security measures have been confirmed as implemented at the destination.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.title for implemented security measures at destination](tests.md#test-check-security_and_privacytitle-for-implemented-security-measures-at-destination)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/secur.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/secur.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Final Security Measures Implementation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that security measures have been implemented in the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-security-and-privacy-title-destination"
+  },
+  "abbreviation": {
+    "@value": "secur.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "security measures"
+    },
+    {
+      "@language": "en",
+      "@value": "destination repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/secur.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Sensitive Data Using Method
+
+**Metric ID:** sens.secure.co.1
+**Persistent URI:** https://example.org/metric/sens.secure.co.1
+**Dimension:** Completeness
+
+### Title
+Sensitive Data Using Method
+
+### Narrative
+Verifies that when sensitive data are involved, the DMP includes a description of the method used to protect them.
+
+### Intended Outcome
+Determine whether the maDMP, for any dataset where `sensitive_data` is set to true, includes a non-empty `security_and_privacy.description` that describes the method used to protect the sensitive data.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset where `sensitive_data` is set to true (or equivalent), a `security_and_privacy` entry is present with a non-empty `description` that identifies or describes the data protection method applied.
+
+### Failure Criterion
+A dataset is flagged as sensitive but has no `security_and_privacy` entry, or all present `description` values are absent or empty, with no data protection method described.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy.description for data protection method when sensitive_data is true](tests.md#test-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/sens.secure.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/sens.secure.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Sensitive Data Using Method"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that when sensitive data are involved, the DMP includes a description of the method used to protect them."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-sensitive-data-protection-method"
+  },
+  "abbreviation": {
+    "@value": "sens.secure.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection method"
+    },
+    {
+      "@language": "en",
+      "@value": "security and privacy"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/sens.secure.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Provision of Anonymised Synthetic Data
+
+**Metric ID:** sens.secure.co.2
+**Persistent URI:** https://example.org/metric/sens.secure.co.2
+**Dimension:** Completeness
+
+### Title
+Provision of Anonymised Synthetic Data
+
+### Narrative
+Verifies that there is the intention to provide an anonymised synthetic version of the original data.
+
+### Intended Outcome
+Determine whether the maDMP includes a declaration of intent to provide an anonymised or synthetic version of the dataset, as evidenced through a relevant entry in the `security_and_privacy` field.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `security_and_privacy` entry is present whose `title` or `description` references the provision of anonymised or synthetic data (e.g., anonymisation, pseudonymisation, synthetic data generation, or equivalent terms).
+
+### Failure Criterion
+No dataset contains a `security_and_privacy` entry, or all present entries contain no reference to the provision of anonymised or synthetic data.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check security_and_privacy for anonymised synthetic data provision](tests.md#test-check-security_and_privacy-for-anonymised-synthetic-data-provision)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/sens.secure.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/sens.secure.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Provision of Anonymised Synthetic Data"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that there is the intention to provide an anonymised synthetic version of the original data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-anonymised-synthetic-data"
+  },
+  "abbreviation": {
+    "@value": "sens.secure.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "anonymisation"
+    },
+    {
+      "@language": "en",
+      "@value": "synthetic data"
+    },
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/sens.secure.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Statement of No Data Restrictions
+
+**Metric ID:** data.restrict.co.3
+**Persistent URI:** https://example.org/metric/data.restrict.co.3
+**Dimension:** Completeness
+
+### Title
+Statement of No Data Restrictions
+
+### Narrative
+Verifies that no restrictions apply to the data.
+
+### Intended Outcome
+Determine whether the maDMP explicitly states that no restrictions apply to the dataset, as declared through the `rights` field of the distribution.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `rights` field is present and its value explicitly indicates that no restrictions apply to the data (e.g., an open licence, a public domain declaration, or an equivalent unrestricted access statement).
+
+### Failure Criterion
+No dataset distribution contains a `rights` field, or all present `rights` values indicate restrictions or are ambiguous about the absence of restrictions.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check rights for statement of no data restrictions](tests.md#test-check-rights-for-statement-of-no-data-restrictions)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.restrict.co.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.restrict.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Statement of No Data Restrictions"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that no restrictions apply to the data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-rights-no-restrictions"
+  },
+  "abbreviation": {
+    "@value": "data.restrict.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "open access"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.restrict.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Dataset License
+
+**Metric ID:** data.lice.co.1
+**Persistent URI:** https://example.org/metric/data.lice.co.1
+**Dimension:** Completeness
+
+### Title
+Dataset License
+
+### Narrative
+Verifies that the dataset has a license and which one.
+
+### Intended Outcome
+Determine whether the maDMP declares a license for the dataset through a non-empty `license_ref` field within a distribution entry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `license_ref` field is present and non-empty, identifying the licence under which the dataset is made available.
+
+### Failure Criterion
+No dataset distribution contains a `license_ref` field, or all present values are empty or missing.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check license_ref for dataset licence](tests.md#test-check-license_ref-for-dataset-licence)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.lice.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.lice.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Dataset License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the dataset has a license and which one."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-license-ref"
+  },
+  "abbreviation": {
+    "@value": "data.lice.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset licence"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "open licence"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.lice.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Software License
+
+**Metric ID:** soft.lice.comp.1
+**Persistent URI:** https://example.org/metric/soft.lice.comp.1
+**Dimension:** Compliance
+
+### Title
+Software License
+
+### Narrative
+Verifies that if the dataset is of software type, then the license matches a recognised software license.
+
+### Intended Outcome
+Determine whether the maDMP, for any dataset where `type` is set to software, declares a `license_ref` that corresponds to a recognised software licence as listed in the SPDX licence registry at https://spdx.org/licenses/.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the SPDX licence list at https://spdx.org/licenses/.
+
+### Success Criterion
+For at least one dataset where `type` is set to software, a `license_ref` is present and its value matches a recognised software licence identifier from the SPDX licence registry.
+
+### Failure Criterion
+A dataset is typed as software but has no `license_ref`, or the declared `license_ref` does not match any recognised software licence in the SPDX registry.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check license_ref against SPDX for software datasets](tests.md#test-check-license_ref-against-spdx-for-software-datasets)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/soft.lice.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/soft.lice.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "Software License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that if the dataset is of software type, then the license matches a recognised software license."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-license-ref-spdx-software"
+  },
+  "abbreviation": {
+    "@value": "soft.lice.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "software licence"
+    },
+    {
+      "@language": "en",
+      "@value": "SPDX"
+    },
+    {
+      "@language": "en",
+      "@value": "licence compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/soft.lice.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data Access Agreements
+
+**Metric ID:** data.agree.comp.2
+**Persistent URI:** https://example.org/metric/data.agree.comp.2
+**Dimension:** Compliance
+
+### Title
+Data Access Agreements
+
+### Narrative
+Verifies that collaborated agreements or MoUs are mentioned.
+
+### Intended Outcome
+Determine whether the maDMP references any data access agreements or Memoranda of Understanding (MoUs), either through the `data_access` field or through `rights` entries that indicate the existence of a formal agreement governing data access.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, the `data_access` field or a `rights` entry references a formal data access agreement or MoU (e.g., a named agreement, a link to an agreement document, or an explicit mention of collaborative access terms).
+
+### Failure Criterion
+No dataset contains a `data_access` or `rights` entry that references a data access agreement or MoU, or all present values are absent, empty, or contain no indication of a formal agreement.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check data_access and rights for access agreements or MoUs](tests.md#test-check-data_access-and-rights-for-access-agreements-or-mous)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.agree.comp.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.agree.comp.2",
+  "title": {
+    "@language": "en",
+    "@value": "Data Access Agreements"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that collaborated agreements or MoUs are mentioned."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-data-access-agreements"
+  },
+  "abbreviation": {
+    "@value": "data.agree.comp.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data access agreement"
+    },
+    {
+      "@language": "en",
+      "@value": "MoU"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.agree.comp.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data Ownership
+
+**Metric ID:** own.co.2
+**Persistent URI:** https://example.org/metric/own.co.2
+**Dimension:** Completeness
+
+### Title
+Data Ownership
+
+### Narrative
+Verifies who is the owner of the data and that the field is filled in.
+
+### Intended Outcome
+Determine whether the maDMP declares at least one contributor with a `role` value of `owner`, and that the associated contributor fields are non-empty.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `contributor` entry is present with a `role` value of `owner` and non-empty identifying information (e.g., `name`, `contributor_id`, or equivalent), confirming that data ownership has been declared.
+
+### Failure Criterion
+No `contributor` entry exists with a `role` of `owner`, or the ownership field is present but blank.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor.role for data owner](tests.md#test-check-contributorrole-for-data-owner)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/own.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/own.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Data Ownership"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies who is the owner of the data and that the field is filled in."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-owner"
+  },
+  "abbreviation": {
+    "@value": "own.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data ownership"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "data stewardship"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/own.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Software Author
+
+**Metric ID:** soft.auth.co.3
+**Persistent URI:** https://example.org/metric/soft.auth.co.3
+**Dimension:** Completeness
+
+### Title
+Software Author
+
+### Narrative
+Verifies that if the dataset is of software type, then there is at least one contributor as author.
+
+### Intended Outcome
+Determine whether the maDMP, for any dataset where `type` is set to software, declares at least one contributor with a role indicating authorship.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset where `type` is set to software, a `contributor` entry is present with a `role` value indicating authorship (e.g., `author`, `creator`, or equivalent term defined by your project's controlled vocabulary).
+
+### Failure Criterion
+A dataset is typed as software but has no `contributor` entry, or no contributor has a role indicating authorship.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor for author role when dataset type is software](tests.md#test-check-contributor-for-author-role-when-dataset-type-is-software)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/soft.auth.co.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/soft.auth.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Software Author"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that if the dataset is of software type, then there is at least one contributor as author."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-author-software"
+  },
+  "abbreviation": {
+    "@value": "soft.auth.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "software authorship"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor role"
+    },
+    {
+      "@language": "en",
+      "@value": "software dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/soft.auth.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Ethical Issues
+
+**Metric ID:** ethics.co.1
+**Persistent URI:** https://example.org/metric/ethics.co.1
+**Dimension:** Completeness
+
+### Title
+Ethical Issues
+
+### Narrative
+Verifies that there are ethical issues related.
+
+### Intended Outcome
+Determine whether the maDMP includes an explicit declaration of whether ethical issues exist, through the `ethical_issues_exist` field set to a recognised value (`yes`, `no`, or `unknown`).
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+The `ethical_issues_exist` field is present and contains one of the accepted values: `yes`, `no`, or `unknown`, confirming that the ethical issues status has been explicitly addressed in the DMP.
+
+### Failure Criterion
+The `ethical_issues_exist` field is absent, empty, or contains a value outside the accepted set of `yes`, `no`, or `unknown`.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check ethical_issues_exist for valid value](tests.md#test-check-ethical_issues_exist-for-valid-value)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/ethics.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/ethics.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Ethical Issues"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that there are ethical issues related."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-ethical-issues-exist"
+  },
+  "abbreviation": {
+    "@value": "ethics.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "ethical issues"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics declaration"
+    },
+    {
+      "@language": "en",
+      "@value": "research ethics"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/ethics.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Ethical Issues and Review
+
+**Metric ID:** ethics.co.2
+**Persistent URI:** https://example.org/metric/ethics.co.2
+**Dimension:** Completeness
+
+### Title
+Ethical Issues and Review
+
+### Narrative
+Verifies that if there are any ethical issues, an ethical review is required and included.
+
+### Intended Outcome
+Determine whether the maDMP, when `ethical_issues_exist` is set to `yes`, includes a non-empty `ethical_issues_report` field referencing the corresponding ethical review.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+If `ethical_issues_exist` is set to `yes`, the `ethical_issues_report` field is present and non-empty, confirming that an ethical review has been conducted and referenced.
+
+### Failure Criterion
+`ethical_issues_exist` is set to `yes` but the `ethical_issues_report` field is absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check ethical_issues_report is present when ethical_issues_exist is yes](tests.md#test-check-ethical_issues_report-is-present-when-ethical_issues_exist-is-yes)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/ethics.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/ethics.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Ethical Issues and Review"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that if there are any ethical issues, an ethical review is required and included."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-ethical-issues-report"
+  },
+  "abbreviation": {
+    "@value": "ethics.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "ethical issues"
+    },
+    {
+      "@language": "en",
+      "@value": "ethical review"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics report"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/ethics.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Justification for Absence of Ethical Issues
+
+**Metric ID:** ethics.co.3
+**Persistent URI:** https://example.org/metric/ethics.co.3
+**Dimension:** Completeness
+
+### Title
+Justification for Absence of Ethical Issues
+
+### Narrative
+Verifies that if there are no ethical issues, then there is a justification.
+
+### Intended Outcome
+Determine whether the maDMP, when `ethical_issues_exist` is set to `no`, includes a non-empty `ethical_issues_description` field providing a justification for the absence of ethical issues.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+If `ethical_issues_exist` is set to `no`, the `ethical_issues_description` field is present and non-empty, providing a justification for why no ethical issues apply.
+
+### Failure Criterion
+`ethical_issues_exist` is set to `no` but the `ethical_issues_description` field is absent or empty, with no justification provided.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/ethics.co.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/ethics.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Justification for Absence of Ethical Issues"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that if there are no ethical issues, then there is a justification."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-ethical-issues-description-no"
+  },
+  "abbreviation": {
+    "@value": "ethics.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "ethical issues"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics justification"
+    },
+    {
+      "@language": "en",
+      "@value": "ethics description"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/ethics.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data Access Status Open for the Dataset
+
+**Metric ID:** data.shar.op.1
+**Persistent URI:** https://example.org/metric/data.shar.op.1
+**Dimension:** Openness
+
+### Title
+Data Access Status Open for the Dataset
+
+### Narrative
+Verifies that the access conditions of the data are open.
+
+### Intended Outcome
+Determine whether the maDMP declares the dataset's access status as open, through a `data_access` field set to the value `open`.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, the `data_access` field is present and set to `open`, confirming that the data is openly accessible.
+
+### Failure Criterion
+No dataset contains a `data_access` field, or all present values are set to `shared`, `closed`, or any value other than `open`.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check data_access for open status](tests.md#test-check-data_access-for-open-status)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.op.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.op.1",
+  "title": {
+    "@language": "en",
+    "@value": "Data Access Status Open for the Dataset"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the access conditions of the data are open."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-data-access-open"
+  },
+  "abbreviation": {
+    "@value": "data.shar.op.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "open access"
+    },
+    {
+      "@language": "en",
+      "@value": "data access status"
+    },
+    {
+      "@language": "en",
+      "@value": "openness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.op.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Openness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data License is Present
+
+**Metric ID:** data.shar.co.1
+**Persistent URI:** https://example.org/metric/data.shar.co.1
+**Dimension:** Completeness
+
+### Title
+Data License is Present
+
+### Narrative
+Verifies that there is a licence.
+
+### Intended Outcome
+Determine whether the maDMP includes a distribution entry for the dataset and that the distribution declares a licence through a non-empty `license_ref` field.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `distribution` entry is present and contains a non-empty `license_ref` field, confirming that a licence has been declared for the distributed data.
+
+### Failure Criterion
+No dataset contains a `distribution` entry, or all present distributions lack a `license_ref` field or contain an empty value.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution is present for dataset](tests.md#test-check-distribution-is-present-for-dataset)
+- [Check license_ref is present within distribution](tests.md#test-check-license_ref-is-present-within-distribution)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Data License is Present"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that there is a licence."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": [
+    {
+      "@id": "https://example.org/test/T-DCSC-distribution-present"
+    },
+    {
+      "@id": "https://example.org/test/T-DCSC-distribution-license-ref"
+    }
+  ],
+  "abbreviation": {
+    "@value": "data.shar.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data licence"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data Restrictions Reference
+
+**Metric ID:** data.shar.co.2
+**Persistent URI:** https://example.org/metric/data.shar.co.2
+**Dimension:** Completeness
+
+### Title
+Data Restrictions Reference
+
+### Narrative
+Verifies that the data restrictions are referenced.
+
+### Intended Outcome
+Determine whether the maDMP includes a reference to data restrictions through a non-empty `rights` field within a distribution entry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a `rights` field is present and non-empty, confirming that data restrictions or access rights have been referenced.
+
+### Failure Criterion
+No dataset distribution contains a `rights` field, or all present values are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check rights for data restrictions reference](tests.md#test-check-rights-for-data-restrictions-reference)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Data Restrictions Reference"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the data restrictions are referenced."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-rights-restrictions-reference"
+  },
+  "abbreviation": {
+    "@value": "data.shar.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Funder's Data License
+
+**Metric ID:** data.shar.comp.1
+**Persistent URI:** https://example.org/metric/data.shar.comp.1
+**Dimension:** Compliance
+
+### Title
+Funder's Data License
+
+### Narrative
+Verifies that the data license is aligned with the funder's license.
+
+### Intended Outcome
+Determine whether the maDMP declares a dataset distribution licence that complies with Horizon Europe RDM requirements, specifically that `license_ref` resolves to a CC-BY licence or equivalent.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Horizon Europe RDM licence requirements.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `license_ref` field is present and its value corresponds to a CC-BY licence (e.g., https://creativecommons.org/licenses/by/4.0/ or an equivalent CC-BY variant), in alignment with Horizon Europe RDM requirements.
+
+### Failure Criterion
+No dataset distribution contains a `license_ref` field, or all present `license_ref` values do not correspond to a CC-BY licence as required by Horizon Europe RDM guidelines.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution license_ref for Horizon Europe CC-BY compliance](tests.md#test-check-distribution-license_ref-for-horizon-europe-cc-by-compliance)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "Funder's Data License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the data license is aligned with the funder's license."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-cc-by"
+  },
+  "abbreviation": {
+    "@value": "data.shar.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "funder licence"
+    },
+    {
+      "@language": "en",
+      "@value": "Horizon Europe"
+    },
+    {
+      "@language": "en",
+      "@value": "CC-BY"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Access Rights Consistency Aligned
+
+**Metric ID:** data.shar.feas.1
+**Persistent URI:** https://example.org/metric/data.shar.feas.1
+**Dimension:** Feasibility
+
+### Title
+Repository Access Rights Consistency Aligned
+
+### Narrative
+Validates that the data has the same access rights with the destination.
+
+### Intended Outcome
+Determine whether the access rights declared for the dataset in the maDMP are consistent with the access policy of the destination repository, confirming that the declared `data_access` value aligns with the access conditions supported by the destination host.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, the `data_access` value at dataset level is consistent with the access rights or access policy indicated by the destination `host` entry in the associated `distribution`, confirming alignment between declared access and repository capabilities.
+
+### Failure Criterion
+The `data_access` value at dataset level conflicts with or is not supported by the access policy of the declared destination host, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check data_access matches destination host access policy](tests.md#test-check-data_access-matches-destination-host-access-policy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Access Rights Consistency Aligned"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the data has the same access rights with the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-data-access-host-consistency"
+  },
+  "abbreviation": {
+    "@value": "data.shar.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "repository consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Data License Aligned with the DMP
+
+**Metric ID:** data.shar.feas.2
+**Persistent URI:** https://example.org/metric/data.shar.feas.2
+**Dimension:** Feasibility
+
+### Title
+Repository Data License Aligned with the DMP
+
+### Narrative
+Validates that the data has the same license with the destination.
+
+### Intended Outcome
+Determine whether the licence declared for the dataset distribution in the maDMP is consistent with the licence supported or required by the destination repository, confirming alignment between `distribution.license.license_ref` and the destination host's licence policy.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `license_ref` value is present and consistent with the licence policy of the declared destination host, confirming that the data licence and repository licence requirements are aligned.
+
+### Failure Criterion
+The `license_ref` value is absent, empty, or inconsistent with the licence policy of the declared destination host, indicating a mismatch between the declared data licence and the repository's requirements.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution license_ref matches destination host licence policy](tests.md#test-check-distribution-license_ref-matches-destination-host-licence-policy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.feas.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Data License Aligned with the DMP"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the data has the same license with the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-host-alignment"
+  },
+  "abbreviation": {
+    "@value": "data.shar.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data licence"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Embargo Implementation Alignment
+
+**Metric ID:** data.shar.feas.3
+**Persistent URI:** https://example.org/metric/data.shar.feas.3
+**Dimension:** Feasibility
+
+### Title
+Embargo Implementation Alignment
+
+### Narrative
+Validates that the embargo date of the data matches with that of the destination.
+
+### Intended Outcome
+Determine whether the embargo date declared in the maDMP via `distribution.license.start_date` is consistent with the embargo policy or availability date supported by the destination repository, confirming alignment between the planned embargo and the destination's capabilities.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `license.start_date` field is present and its value is consistent with the embargo period or availability date supported by the declared destination host.
+
+### Failure Criterion
+The `license.start_date` field is absent or empty, or its value is inconsistent with the embargo policy of the declared destination host, indicating a mismatch between the planned embargo date and the repository's supported availability window.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check distribution license.start_date matches destination embargo policy](tests.md#test-check-distribution-licensestart_date-matches-destination-embargo-policy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.feas.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Embargo Implementation Alignment"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the embargo date of the data matches with that of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-embargo"
+  },
+  "abbreviation": {
+    "@value": "data.shar.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "embargo"
+    },
+    {
+      "@language": "en",
+      "@value": "availability date"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Data Restrictions
+
+**Metric ID:** data.shar.feas.4
+**Persistent URI:** https://example.org/metric/data.shar.feas.4
+**Dimension:** Feasibility
+
+### Title
+Repository Data Restrictions
+
+### Narrative
+Validates that the data restrictions match those of the destination.
+
+### Intended Outcome
+Determine whether the data restrictions declared in the maDMP via the `rights` field are consistent with the restriction policy of the destination repository, confirming alignment between the declared access rights and what the destination host supports.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `rights` field is present and its value is consistent with the restriction policy of the declared destination host, confirming that the declared data restrictions are supported by the destination repository.
+
+### Failure Criterion
+The `rights` field is absent or empty, or its value is inconsistent with the restriction policy of the declared destination host, indicating a mismatch between the declared data restrictions and the repository's supported access conditions.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check rights matches destination host restriction policy](tests.md#test-check-rights-matches-destination-host-restriction-policy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.feas.4",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.feas.4",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Data Restrictions"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the data restrictions match those of the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-rights-destination-restriction-alignment"
+  },
+  "abbreviation": {
+    "@value": "data.shar.feas.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "data restrictions"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "repository alignment"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.feas.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Embargo License
+
+**Metric ID:** data.shar.comp.2
+**Persistent URI:** https://example.org/metric/data.shar.comp.2
+**Dimension:** Compliance
+
+### Title
+Embargo License
+
+### Narrative
+Validates that the embargo is not violated against the funder's policy.
+
+### Intended Outcome
+Determine whether the embargo declared in the maDMP complies with Horizon Europe embargo policy, verified through two checks: that no embargo date exists in the repository host entry, and that `distribution.license.start_date` is absent or not set in the maDMP, confirming that no non-compliant embargo has been applied.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Horizon Europe RDM embargo policy.
+
+### Success Criterion
+Both of the following conditions are met: (1) no embargo date field is present in the destination repository host entry, and (2) `distribution.license.start_date` is absent or not set in the maDMP, confirming that no embargo has been applied in violation of Horizon Europe policy.
+
+### Failure Criterion
+An embargo date is present in the repository host entry, or `distribution.license.start_date` is set in the maDMP, indicating a potential violation of Horizon Europe embargo policy.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check repository host for absence of embargo date](tests.md#test-check-repository-host-for-absence-of-embargo-date)
+- [Check distribution.license.start_date for absence in maDMP](tests.md#test-check-distributionlicensestart_date-for-absence-in-madmp)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.shar.comp.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.shar.comp.2",
+  "title": {
+    "@language": "en",
+    "@value": "Embargo License"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the embargo is not violated against the funder's policy."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": [
+    {
+      "@id": "https://example.org/test/T-DCSC-host-embargo-date-absent"
+    },
+    {
+      "@id": "https://example.org/test/T-DCSC-distribution-license-start-date-absent"
+    }
+  ],
+  "abbreviation": {
+    "@value": "data.shar.comp.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "embargo"
+    },
+    {
+      "@language": "en",
+      "@value": "Horizon Europe"
+    },
+    {
+      "@language": "en",
+      "@value": "licence compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.shar.comp.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
