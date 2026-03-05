@@ -79,6 +79,19 @@
 | T-DCSC | [Check rights matches destination host restriction policy](#test-check-rights-matches-destination-host-restriction-policy) |
 | T-DCSC | [Check repository host for absence of embargo date](#test-check-repository-host-for-absence-of-embargo-date) |
 | T-DCSC | [Check distribution.license.start_date for absence in maDMP](#test-check-distributionlicensestart_date-for-absence-in-madmp) |
+| T-DCSC | [Check preservation_statement exists in host](#test-check-preservation_statement-exists-in-host) |
+| T-DCSC | [Check host.title and host.url against thematic repository registries](#test-check-hosttitle-and-hosturl-against-thematic-repository-registries) |
+| T-DCSC | [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](#test-check-host-against-openaire-and-fairsharing-fair-benchmarks) |
+| T-DCSC | [Check host against trusted repository registry benchmark](#test-check-host-against-trusted-repository-registry-benchmark) |
+| T-DCSC | [Check host.backup_frequency and host.backup_type for back-up strategy](#test-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy) |
+| T-DCSC | [Check certified_with exists in host](#test-check-certified_with-exists-in-host) |
+| T-DCSC | [Check cost title or description for preservation reference](#test-check-cost-title-or-description-for-preservation-reference) |
+| T-DCSC | [Check host_id against FAIRsharing for repository policy](#test-check-host_id-against-fairsharing-for-repository-policy) |
+| T-DCSC | [Check dataset_id resolves to declared destination via DOI URL](#test-check-dataset_id-resolves-to-declared-destination-via-doi-url) |
+| T-DCSC | [Check preservation_statement and host for long-term storage intention](#test-check-preservation_statement-and-host-for-long-term-storage-intention) |
+| T-DCSC | [Check dataset.keyword against Zenodo keywords](#test-check-datasetkeyword-against-zenodo-keywords) |
+| T-DCSC | [Check dataset.language against Zenodo language support](#test-check-datasetlanguage-against-zenodo-language-support) |
+| T-DCSC | [Check host_id against Zenodo and FAIRsharing for policy compliance](#test-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance) |
 | T-DCSC | [Check DMP for version control system and update metadata](#test-check-dmp-for-version-control-system-and-update-metadata) |
 
 ---
@@ -8142,6 +8155,1369 @@ pass/fail
   },
   "sio:SIO_000233": {
     "@id": "https://example.org/metric/data.shar.comp.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.title and host.url against thematic repository registries
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-thematic-registry-match
+
+**Implements:** [repo.co.3](metrics.md#metric-thematic-data-repositories-referenced)
+
+### Description
+Checks if the repository `host.title` or `host.url` matches a thematic repository in the OpenAIRE Graph repositories API or another SKG API repository registry.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host.title` and `host.url` values.
+4. Query the OpenAIRE Graph repositories API (or an equivalent SKG API repository registry) using `host.title` or `host.url` as search parameters.
+5. Check whether the returned results indicate that the referenced repository is classified as a thematic repository within the registry.
+6. Return **pass** if at least one distribution's `host.title` or `host.url` matches a thematic repository entry in the registry; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-thematic-registry-match",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.title and host.url against thematic repository registries"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository host.title or host.url matches a thematic repository in the OpenAIRE Graph repositories API or another SKG API repository registry."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "thematic repository"
+    },
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "repository registry"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-thematic-registry-match/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.co.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host against OpenAIRE and FAIRsharing FAIR benchmarks
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-fair-benchmark
+
+**Implements:** [repo.comp.2](metrics.md#metric-repository-fairness-conformation)
+
+### Description
+Checks if the repository declared in `host` is aligned with FAIR data principles by cross-referencing against benchmarks in OpenAIRE and FAIRsharing.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host.title` and `host.url` values.
+4. Query the OpenAIRE repository API using `host.title` or `host.url` to check whether the repository is listed and carries a FAIR-related assessment or endorsement.
+5. Query the FAIRsharing registry using `host.title` or `host.url` to check whether the repository is listed and associated with FAIR data principles compliance.
+6. Return **pass** if at least one distribution's host is found in either OpenAIRE or FAIRsharing with a FAIR benchmark or endorsement; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-fair-benchmark",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host against OpenAIRE and FAIRsharing FAIR benchmarks"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository declared in host is aligned with FAIR data principles by cross-referencing against benchmarks in OpenAIRE and FAIRsharing."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "FAIR data principles"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-fair-benchmark/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.comp.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host against trusted repository registry benchmark
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-trusted-registry
+
+**Implements:** [repo.comp.3](metrics.md#metric-trusted-repository-is-used)
+
+### Description
+Checks if the repository declared in `host` is included in a trusted repository registry benchmark.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host.title` and `host.url` values.
+4. Query a recognised trusted repository registry (e.g., CoreTrustSeal certified repositories list, CLARIN centres, DINI certified repositories, or an equivalent benchmark) using `host.title` or `host.url` as search parameters.
+5. Check whether the repository is listed and holds a valid trusted repository certification or endorsement.
+6. Return **pass** if at least one distribution's host is found in a recognised trusted repository registry; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-trusted-registry",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host against trusted repository registry benchmark"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository declared in host is included in a trusted repository registry benchmark."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "CoreTrustSeal"
+    },
+    {
+      "@language": "en",
+      "@value": "repository certification"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-trusted-registry/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.comp.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.backup_frequency and host.backup_type for back-up strategy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-backup-strategy
+
+**Implements:** [repo.co.4](metrics.md#metric-verification-of-back-up-strategy)
+
+### Description
+Checks that a back-up strategy exists by verifying that `host.backup_frequency` and `host.backup_type` are present and non-empty in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, locate the `host` entry.
+4. Check whether the `backup_frequency` field is present and non-empty within the `host` entry.
+5. Check whether the `backup_type` field is present and non-empty within the same `host` entry.
+6. Return **pass** if at least one host entry contains both a non-empty `backup_frequency` and a non-empty `backup_type`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-backup-strategy",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.backup_frequency and host.backup_type for back-up strategy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that a back-up strategy exists by verifying that host.backup_frequency and host.backup_type are present and non-empty in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "back-up strategy"
+    },
+    {
+      "@language": "en",
+      "@value": "backup frequency"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-backup-strategy/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.co.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check certified_with exists in host
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-certified-with
+
+**Implements:** [repo.co.5](metrics.md#metric-certification-of-repository)
+
+### Description
+Checks that a `certified_with` field exists and is non-empty within the `host` entry of the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, locate the `host` entry.
+4. Check whether a `certified_with` field is present and non-empty within the `host` entry.
+5. Return **pass** if at least one host entry contains a non-empty `certified_with` value; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-certified-with",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check certified_with exists in host"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that a certified_with field exists and is non-empty within the host entry of the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository certification"
+    },
+    {
+      "@language": "en",
+      "@value": "certified_with"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-certified-with/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.co.5"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check cost title or description for preservation reference
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-cost-preservation-reference
+
+**Implements:** [repo.co.7](metrics.md#metric-used-resources-for-preservation)
+
+### Description
+Checks if a `cost` entry with `currency_code`, `description`, `title`, and `value` includes a reference to preservation in its `title` or `description`.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `cost` entries at DMP level.
+3. For each cost entry, check whether `currency_code` and `value` are present and non-empty.
+4. Check whether the `title` or `description` field of the cost entry contains a term related to preservation (e.g., "preservation", "archiving", "long-term storage", or equivalent).
+5. Return **pass** if at least one cost entry has non-empty `currency_code` and `value`, and a `title` or `description` referencing preservation; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-cost-preservation-reference",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check cost title or description for preservation reference"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a cost entry with currency_code, description, title, and value includes a reference to preservation in its title or description."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "long-term preservation"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "resources"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-cost-preservation-reference/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.co.7"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host_id against FAIRsharing for repository policy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-id-fairsharing-policy
+
+**Implements:** [repo.co.6](metrics.md#metric-repository-policy-is-present)
+
+### Description
+Checks if the repository identified by `host_id.identifier` and `host_id.type` in the maDMP has associated policies in FAIRsharing.
+
+### Input
+maDMP JSON; FAIRsharing registry
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host_id.identifier` and `host_id.type` values from the `host` entry.
+4. Query the FAIRsharing registry using the extracted `host_id.identifier` and `host_id.type` to locate the corresponding repository record.
+5. Check whether the FAIRsharing record for the repository contains one or more associated policy entries (e.g., via the `id_policy` field or equivalent policy linkage in the FAIRsharing API response).
+6. Return **pass** if at least one distribution's host resolves to a FAIRsharing repository record with at least one associated policy; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-id-fairsharing-policy",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host_id against FAIRsharing for repository policy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository identified by host_id.identifier and host_id.type in the maDMP has associated policies in FAIRsharing."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository policy"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "host identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-id-fairsharing-policy/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.co.6"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dataset_id resolves to declared destination via DOI URL
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-id-doi-destination
+
+**Implements:** [repo.feas.1](metrics.md#metric-repository-identifier-accuracy)
+
+### Description
+Checks if the reused dataset identifier in the maDMP matches the destination by resolving `dataset_id` against its DOI URL.
+
+### Input
+`dataset_id` in maDMP JSON; DOI URL resolution
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and extract the `dataset_id` field (identifier and type) for each.
+3. For each dataset, check whether the `dataset_id` value is present, non-empty, and of type DOI or resolvable identifier.
+4. Resolve the `dataset_id` via its DOI URL (e.g., via https://doi.org/) and retrieve the landing page or metadata record.
+5. Compare the resolved repository or hosting institution against the destination declared in the associated `distribution.host` entry.
+6. Return **pass** if at least one dataset's `dataset_id` resolves to the declared destination repository; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-dataset-id-doi-destination",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset_id resolves to declared destination via DOI URL"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the reused dataset identifier in the maDMP matches the destination by resolving dataset_id against its DOI URL."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "DOI"
+    },
+    {
+      "@language": "en",
+      "@value": "repository destination"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-doi-destination/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check preservation_statement and host for long-term storage intention
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-preservation-statement-host
+
+**Implements:** [repo.feas.2](metrics.md#metric-long-term-preservation-dataset)
+
+### Description
+Checks the dataset `preservation_statement` and `host` fields to verify that the dataset is intended to be archived in a long-term storage repository.
+
+### Input
+`preservation_statement` in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, check whether a `preservation_statement` field is present and non-empty within the `host` entry.
+4. Check whether the same distribution contains a `host` entry with at least a `title` or `url` identifying a destination repository.
+5. Return **pass** if at least one distribution contains both a non-empty `preservation_statement` and a declared destination `host`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-preservation-statement-host",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check preservation_statement and host for long-term storage intention"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the dataset preservation_statement and host fields to verify that the dataset is intended to be archived in a long-term storage repository."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "long-term preservation"
+    },
+    {
+      "@language": "en",
+      "@value": "preservation statement"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-preservation-statement-host/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.feas.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dataset.keyword against Zenodo keywords
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-keyword-zenodo
+
+**Implements:** [repo.feas.4](metrics.md#metric-repository-specificities)
+
+### Description
+Checks if the repository has the appropriate characteristics by verifying that `dataset.keyword` values in the maDMP match keywords supported or indexed in Zenodo.
+
+### Input
+`dataset.keyword` in maDMP JSON; Zenodo keyword index
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and extract the `keyword` field values for each.
+3. If no `keyword` values are present, return **fail**.
+4. Query the Zenodo API using the extracted keyword values to check whether they are recognised or indexed within Zenodo's subject or keyword metadata.
+5. Return **pass** if at least one dataset's `keyword` values match keywords supported or indexed in Zenodo; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-dataset-keyword-zenodo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset.keyword against Zenodo keywords"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository has the appropriate characteristics by verifying that dataset.keyword values in the maDMP match keywords supported or indexed in Zenodo."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository appropriateness"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset keyword"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-keyword-zenodo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.feas.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dataset.language against Zenodo language support
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-language-zenodo
+
+**Implements:** [repo.feas.4](metrics.md#metric-repository-specificities)
+
+### Description
+Checks if the repository has the appropriate characteristics by verifying that `dataset.language` in the maDMP matches a language supported by Zenodo.
+
+### Input
+`dataset.language` in maDMP JSON; Zenodo language support
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and extract the `language` field value for each.
+3. If no `language` value is present, return **fail**.
+4. Query the Zenodo API or consult Zenodo's supported language list to check whether the declared `language` value is recognised and supported by Zenodo.
+5. Return **pass** if at least one dataset's `language` value matches a language supported by Zenodo; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-dataset-language-zenodo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset.language against Zenodo language support"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository has the appropriate characteristics by verifying that dataset.language in the maDMP matches a language supported by Zenodo."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository appropriateness"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset language"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-language-zenodo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.feas.4"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host_id against Zenodo and FAIRsharing for policy compliance
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy
+
+**Implements:** [repo.comp.3](metrics.md#metric-repository-policy-compliance)
+
+### Description
+Checks if the repository is aligned with policies and registry entries by cross-referencing `host_id.identifier` and `host_id.type` against repository records in Zenodo and FAIRsharing.
+
+### Input
+`host_id.identifier` and `host_id.type` in maDMP JSON; Zenodo repository records; FAIRsharing registry
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host_id.identifier` and `host_id.type` values from the `host` entry.
+4. Query the Zenodo API using the extracted identifier to check whether the repository is listed and has associated policy or compliance metadata.
+5. Query the FAIRsharing registry using the extracted identifier to check whether the repository record contains associated policy entries or compliance information.
+6. Return **pass** if at least one distribution's host resolves to a matching record in either Zenodo or FAIRsharing with associated policy compliance information; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host_id against Zenodo and FAIRsharing for policy compliance"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository is aligned with policies and registry entries by cross-referencing host_id.identifier and host_id.type against repository records in Zenodo and FAIRsharing."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository policy compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/repo.comp.3"
   },
   "ftr:supportedBy": {
     "@id": "https://example.org/project"

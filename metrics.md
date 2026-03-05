@@ -69,6 +69,18 @@
 | data.shar.feas.3 | [Embargo Implementation Alignment](#metric-embargo-implementation-alignment) |
 | data.shar.feas.4 | [Repository Data Restrictions](#metric-repository-data-restrictions) |
 | data.shar.comp.2 | [Embargo License](#metric-embargo-license) |
+| repo.co.2 | [Long-term Preservation Repository](#metric-long-term-preservation-repository) |
+| repo.co.3 | [Thematic Data Repositories Referenced](#metric-thematic-data-repositories-referenced) |
+| repo.comp.2 | [Repository FAIRness Conformation](#metric-repository-fairness-conformation) |
+| repo.comp.3 | [Trusted Repository is Used](#metric-trusted-repository-is-used) |
+| repo.co.4 | [Verification of Back-up Strategy](#metric-verification-of-back-up-strategy) |
+| repo.co.5 | [Certification of Repository](#metric-certification-of-repository) |
+| repo.co.7 | [Used Resources for Preservation](#metric-used-resources-for-preservation) |
+| repo.co.6 | [Repository Policy is Present](#metric-repository-policy-is-present) |
+| repo.feas.1 | [Repository Identifier Accuracy](#metric-repository-identifier-accuracy) |
+| repo.feas.2 | [Long-Term Preservation Dataset](#metric-long-term-preservation-dataset) |
+| repo.feas.4 | [Repository Specificities](#metric-repository-specificities) |
+| repo.comp.3 | [Repository Policy Compliance](#metric-repository-policy-compliance) |
 
 ---
 
@@ -7102,6 +7114,1222 @@ Boolean (pass/fail)
   ],
   "landingPage": {
     "@id": "https://example.org/metric/data.shar.comp.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Thematic Data Repositories Referenced
+
+**Metric ID:** repo.co.3
+**Persistent URI:** https://example.org/metric/repo.co.3
+**Dimension:** Completeness
+
+### Title
+Thematic Data Repositories Referenced
+
+### Narrative
+Verifies that the repository of each data referenced is thematic.
+
+### Intended Outcome
+Determine whether the maDMP references a thematic repository for each dataset, by matching `host.title` or `host.url` against known thematic repositories listed in the OpenAIRE Graph repositories API or another SKG API repository registry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the OpenAIRE Graph repositories API or equivalent SKG API repository registry.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host.title` or `host.url` value matches a thematic repository entry in the OpenAIRE Graph repositories API or an equivalent SKG API repository registry, confirming that a domain-specific repository has been designated.
+
+### Failure Criterion
+No dataset distribution contains a `host.title` or `host.url` value that matches a thematic repository in the OpenAIRE Graph repositories API or equivalent SKG API registry, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.title and host.url against thematic repository registries](tests.md#test-check-hosttitle-and-hosturl-against-thematic-repository-registries)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.co.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.co.3",
+  "title": {
+    "@language": "en",
+    "@value": "Thematic Data Repositories Referenced"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the repository of each data referenced is thematic."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-thematic-registry-match"
+  },
+  "abbreviation": {
+    "@value": "repo.co.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "thematic repository"
+    },
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "repository registry"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.co.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository FAIRness Conformation
+
+**Metric ID:** repo.comp.2
+**Persistent URI:** https://example.org/metric/repo.comp.2
+**Dimension:** Compliance
+
+### Title
+Repository FAIRness Conformation
+
+### Narrative
+Validates that the repository conforms with FAIR data principles.
+
+### Intended Outcome
+Determine whether the destination repository declared in the maDMP via `host` is aligned with FAIR data principles, by cross-referencing `host.title` or `host.url` against FAIR benchmarks available through OpenAIRE and FAIRsharing.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with OpenAIRE repository benchmarks and the FAIRsharing registry.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host.title` or `host.url` matches a repository entry in OpenAIRE or FAIRsharing that is assessed as conforming with or endorsing FAIR data principles.
+
+### Failure Criterion
+No dataset distribution contains a `host.title` or `host.url` that matches a FAIR-assessed repository in OpenAIRE or FAIRsharing, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](tests.md#test-check-host-against-openaire-and-fairsharing-fair-benchmarks)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.comp.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.comp.2",
+  "title": {
+    "@language": "en",
+    "@value": "Repository FAIRness Conformation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the repository conforms with FAIR data principles."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-fair-benchmark"
+  },
+  "abbreviation": {
+    "@value": "repo.comp.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "FAIR data principles"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.comp.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Trusted Repository is Used
+
+**Metric ID:** repo.comp.3
+**Persistent URI:** https://example.org/metric/repo.comp.3
+**Dimension:** Compliance
+
+### Title
+Trusted Repository is Used
+
+### Narrative
+Validates that the repository is listed in trusted repositories.
+
+### Intended Outcome
+Determine whether the destination repository declared in the maDMP via `host` is included in a recognised trusted repository registry or benchmark, confirming that data will be deposited in a repository meeting established trust criteria.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with a trusted repository registry benchmark.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host.title` or `host.url` matches an entry in a recognised trusted repository registry (e.g., CoreTrustSeal, CLARIN, DINI, or an equivalent trusted repository benchmark), confirming use of a trusted repository.
+
+### Failure Criterion
+No dataset distribution contains a `host.title` or `host.url` that matches an entry in a recognised trusted repository registry, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host against trusted repository registry benchmark](tests.md#test-check-host-against-trusted-repository-registry-benchmark)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.comp.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.comp.3",
+  "title": {
+    "@language": "en",
+    "@value": "Trusted Repository is Used"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the repository is listed in trusted repositories."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-trusted-registry"
+  },
+  "abbreviation": {
+    "@value": "repo.comp.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "CoreTrustSeal"
+    },
+    {
+      "@language": "en",
+      "@value": "repository certification"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.comp.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Verification of Back-up Strategy
+
+**Metric ID:** repo.co.4
+**Persistent URI:** https://example.org/metric/repo.co.4
+**Dimension:** Completeness
+
+### Title
+Verification of Back-up Strategy
+
+### Narrative
+Verifies that the repository has a back-up strategy.
+
+### Intended Outcome
+Determine whether the maDMP declares a back-up strategy for the destination repository through the `host.backup_frequency` and `host.backup_type` fields, confirming that a repository-level back-up plan has been documented.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host` entry contains both a non-empty `backup_frequency` and a non-empty `backup_type` field, confirming that a back-up strategy has been declared for the destination repository.
+
+### Failure Criterion
+No dataset distribution contains a `host` entry with both `backup_frequency` and `backup_type` fields present and non-empty, indicating that no back-up strategy has been documented.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.backup_frequency and host.backup_type for back-up strategy](tests.md#test-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.co.4",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.co.4",
+  "title": {
+    "@language": "en",
+    "@value": "Verification of Back-up Strategy"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the repository has a back-up strategy."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-backup-strategy"
+  },
+  "abbreviation": {
+    "@value": "repo.co.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "back-up strategy"
+    },
+    {
+      "@language": "en",
+      "@value": "backup frequency"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.co.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Certification of Repository
+
+**Metric ID:** repo.co.5
+**Persistent URI:** https://example.org/metric/repo.co.5
+**Dimension:** Completeness
+
+### Title
+Certification of Repository
+
+### Narrative
+Verifies that the repository is certified.
+
+### Intended Outcome
+Determine whether the maDMP declares a certification for the destination repository through a non-empty `certified_with` field within the `host` entry, confirming that the repository holds a recognised certification.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host` entry contains a non-empty `certified_with` field, confirming that a repository certification has been declared.
+
+### Failure Criterion
+No dataset distribution contains a `host` entry with a `certified_with` field present and non-empty, indicating that no repository certification has been documented.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check certified_with exists in host](tests.md#test-check-certified_with-exists-in-host)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.co.5",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.co.5",
+  "title": {
+    "@language": "en",
+    "@value": "Certification of Repository"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the repository is certified."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-certified-with"
+  },
+  "abbreviation": {
+    "@value": "repo.co.5-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "repository certification"
+    },
+    {
+      "@language": "en",
+      "@value": "certified_with"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.co.5"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Used Resources for Preservation
+
+**Metric ID:** repo.co.7
+**Persistent URI:** https://example.org/metric/repo.co.7
+**Dimension:** Completeness
+
+### Title
+Used Resources for Preservation
+
+### Narrative
+Verifies that there are resources which accomplish the long-term preservation.
+
+### Intended Outcome
+Determine whether the maDMP includes at least one `cost` entry whose `title` or `description` references long-term preservation, confirming that dedicated resources have been allocated for preservation activities.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `cost` entry is present with non-empty `currency_code`, `value`, and either a `title` or `description` that references preservation, confirming that resources for long-term preservation have been budgeted and described.
+
+### Failure Criterion
+No `cost` entry is present, or no present `cost` entry contains a `title` or `description` referencing preservation, indicating that no resources for long-term preservation have been declared.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check cost title or description for preservation reference](tests.md#test-check-cost-title-or-description-for-preservation-reference)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.co.7",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.co.7",
+  "title": {
+    "@language": "en",
+    "@value": "Used Resources for Preservation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that there are resources which accomplish the long-term preservation."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-cost-preservation-reference"
+  },
+  "abbreviation": {
+    "@value": "repo.co.7-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "long-term preservation"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "resources"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.co.7"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Policy is Present
+
+**Metric ID:** repo.co.6
+**Persistent URI:** https://example.org/metric/repo.co.6
+**Dimension:** Completeness
+
+### Title
+Repository Policy is Present
+
+### Narrative
+Validates if the selected repository has policies.
+
+### Intended Outcome
+Determine whether the destination repository declared in the maDMP has associated policies, by extracting the repository identifier from `host_id.identifier` and `host_id.type` and cross-referencing against policy records in the FAIRsharing registry.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the FAIRsharing registry policy records.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host_id.identifier` and `host_id.type` values resolve to a repository entry in FAIRsharing that has one or more associated policies declared, confirming that the selected repository has a documented policy.
+
+### Failure Criterion
+No dataset distribution contains a `host_id.identifier` or `host_id.type` that resolves to a FAIRsharing repository entry with associated policies, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host_id against FAIRsharing for repository policy](tests.md#test-check-host_id-against-fairsharing-for-repository-policy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.co.6",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.co.6",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Policy is Present"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if the selected repository has policies."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-id-fairsharing-policy"
+  },
+  "abbreviation": {
+    "@value": "repo.co.6-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "repository policy"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "host identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.co.6"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Identifier Accuracy
+
+**Metric ID:** repo.feas.1
+**Persistent URI:** https://example.org/metric/repo.feas.1
+**Dimension:** Feasibility
+
+### Title
+Repository Identifier Accuracy
+
+### Narrative
+Validates that the repository matches the destination of the dataset.
+
+### Intended Outcome
+Determine whether the dataset identifier declared in the maDMP via `dataset_id` resolves to the same repository as the declared destination, by cross-referencing the identifier against its DOI URL to confirm that the dataset is registered at the intended destination repository.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced against DOI URL resolution.
+
+### Success Criterion
+For at least one dataset in scope, the `dataset_id` value resolves via its DOI URL to the declared destination repository, confirming that the identifier and destination are consistent.
+
+### Failure Criterion
+The `dataset_id` value is absent or empty, does not resolve via DOI URL, or resolves to a repository other than the declared destination, indicating a mismatch between the dataset identifier and its intended destination.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset_id resolves to declared destination via DOI URL](tests.md#test-check-dataset_id-resolves-to-declared-destination-via-doi-url)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Identifier Accuracy"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the repository matches the destination of the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-doi-destination"
+  },
+  "abbreviation": {
+    "@value": "repo.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "dataset identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "DOI"
+    },
+    {
+      "@language": "en",
+      "@value": "repository destination"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Long-Term Preservation Dataset
+
+**Metric ID:** repo.feas.2
+**Persistent URI:** https://example.org/metric/repo.feas.2
+**Dimension:** Feasibility
+
+### Title
+Long-Term Preservation Dataset
+
+### Narrative
+Validates if there is an intention that the dataset is stored in a long-term storage system.
+
+### Intended Outcome
+Determine whether the maDMP expresses an intention to archive the dataset in a long-term storage system, by verifying that a `preservation_statement` is declared and that a destination `host` is identified for the associated distribution.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, a non-empty `preservation_statement` is present and a destination `host` entry is declared, confirming that there is an expressed intention to archive the dataset in a long-term storage repository.
+
+### Failure Criterion
+No dataset distribution contains both a non-empty `preservation_statement` and a declared `host` entry, indicating that no intention to store the dataset in a long-term storage system has been documented.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check preservation_statement and host for long-term storage intention](tests.md#test-check-preservation_statement-and-host-for-long-term-storage-intention)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.feas.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Long-Term Preservation Dataset"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if there is an intention that the dataset is stored in a long-term storage system."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-preservation-statement-host"
+  },
+  "abbreviation": {
+    "@value": "repo.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "long-term preservation"
+    },
+    {
+      "@language": "en",
+      "@value": "preservation statement"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Specificities
+
+**Metric ID:** repo.feas.4
+**Persistent URI:** https://example.org/metric/repo.feas.4
+**Dimension:** Feasibility
+
+### Title
+Repository Specificities
+
+### Narrative
+Validates if the selected repository is appropriate for the characteristics and intended use of the dataset.
+
+### Intended Outcome
+Determine whether the destination repository declared in the maDMP is appropriate for the dataset, by verifying that the dataset's `keyword` and `language` values are compatible with the characteristics and scope supported by the destination repository, cross-referenced against Zenodo metadata.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo repository metadata.
+
+### Success Criterion
+For at least one dataset in scope, both `dataset.keyword` values match keywords supported or indexed in Zenodo, and `dataset.language` matches a language supported by Zenodo, confirming that the repository is appropriate for the dataset's characteristics.
+
+### Failure Criterion
+No dataset contains `keyword` or `language` values that match the characteristics supported by the declared destination repository in Zenodo, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset.keyword against Zenodo keywords](tests.md#test-check-datasetkeyword-against-zenodo-keywords)
+- [Check dataset.language against Zenodo language support](tests.md#test-check-datasetlanguage-against-zenodo-language-support)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.feas.4",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.feas.4",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Specificities"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if the selected repository is appropriate for the characteristics and intended use of the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": [
+    {
+      "@id": "https://example.org/test/T-DCSC-dataset-keyword-zenodo"
+    },
+    {
+      "@id": "https://example.org/test/T-DCSC-dataset-language-zenodo"
+    }
+  ],
+  "abbreviation": {
+    "@value": "repo.feas.4-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "repository appropriateness"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset characteristics"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.feas.4"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Policy Compliance
+
+**Metric ID:** repo.comp.3
+**Persistent URI:** https://example.org/metric/repo.comp.3
+**Dimension:** Compliance
+
+### Title
+Repository Policy Compliance
+
+### Narrative
+Validates if the selected repository is compliant with relevant policies.
+
+### Intended Outcome
+Determine whether the destination repository declared in the maDMP is aligned with relevant policies and registry entries, by cross-referencing `host_id.identifier` and `host_id.type` against repository records in Zenodo and FAIRsharing to confirm policy compliance.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo and FAIRsharing registry entries.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host_id.identifier` and `host_id.type` values resolve to a repository entry in either Zenodo or FAIRsharing that is associated with relevant policies, confirming that the selected repository is compliant with applicable policy requirements.
+
+### Failure Criterion
+No dataset distribution contains `host_id.identifier` or `host_id.type` values that resolve to a repository entry in Zenodo or FAIRsharing with associated policy compliance records, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host_id against Zenodo and FAIRsharing for policy compliance](tests.md#test-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/repo.comp.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/repo.comp.3",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Policy Compliance"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates if the selected repository is compliant with relevant policies."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy"
+  },
+  "abbreviation": {
+    "@value": "repo.comp.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "repository policy compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "FAIRsharing"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/repo.comp.3"
   },
   "version": {
     "@value": "0.0.1"
