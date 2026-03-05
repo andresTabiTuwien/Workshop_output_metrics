@@ -81,6 +81,24 @@
 | repo.feas.2 | [Long-Term Preservation Dataset](#metric-long-term-preservation-dataset) |
 | repo.feas.4 | [Repository Specificities](#metric-repository-specificities) |
 | repo.comp.3 | [Repository Policy Compliance](#metric-repository-policy-compliance) |
+| data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-data-external-resources-included-in-the-dmp) |
+| data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-metadata-standard-specified-in-the-dmp) |
+| data.exteresource.feas.1 | [Resolvable External Resources](#metric-resolvable-external-resources) |
+| data.exteresource.feas.2 | [OpenAIRE Mentioned Dataset Validation](#metric-openaire-mentioned-dataset-validation) |
+| data.exteresource.feas.3 | [Used Taxonomy](#metric-used-taxonomy) |
+| data.pid.cov.1 | [Dataset PID](#metric-dataset-pid) |
+| data.pid.cov.2 | [Trusted Repository Referenced](#metric-trusted-repository-referenced) |
+| data.pid.feas.1 | [Repository PID](#metric-repository-pid) |
+| data.pid.feas.3 | [PIDs can be Resolved](#metric-pids-can-be-resolved) |
+| role.co.1 | [RDM Roles](#metric-rdm-roles) |
+| dmp.valid.co.2 | [DMP Validation by Data Steward](#metric-dmp-validation-by-data-steward) |
+| role.pid.co.1 | [Contributors and Organisations PIDs](#metric-contributors-and-organisations-pids) |
+| role.feas.1 | [Referenced RDM Roles](#metric-referenced-rdm-roles) |
+| role.feas.2 | [Final Data Steward Validation](#metric-final-data-steward-validation) |
+| role.feas.3 | [Referenced Contributors and Organisations PIDs](#metric-referenced-contributors-and-organisations-pids) |
+| cost.comp.1 | [Repository Cost](#metric-repository-cost) |
+| cost.co.1 | [DMP Budget Specifications](#metric-dmp-budget-specifications) |
+| cost.co.2 | [No Extra RDM Costs](#metric-no-extra-rdm-costs) |
 
 ---
 
@@ -8336,6 +8354,1992 @@ Boolean (pass/fail)
   },
   "inDimension": {
     "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Data External Resources Included in the DMP
+
+**Metric ID:** data.exteresource.co.1
+**Persistent URI:** https://example.org/metric/data.exteresource.co.1
+**Dimension:** Completeness
+
+### Title
+Data External Resources Included in the DMP
+
+### Narrative
+Verifies that the DMP includes the used external resources of the data.
+
+### Intended Outcome
+Determine whether the maDMP references external resources associated with the data through the `related_identifier.identifier` field, confirming that any external resources used by or related to the dataset have been declared in the DMP.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `related_identifier` entry is present containing a non-empty `identifier` field, confirming that external resources have been referenced in the DMP.
+
+### Failure Criterion
+No dataset contains a `related_identifier` entry with a non-empty `identifier` field, indicating that no external resources have been declared in the DMP.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check related_identifier.identifier for external resources](tests.md#test-check-related_identifieridentifier-for-external-resources)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.exteresource.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.exteresource.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Data External Resources Included in the DMP"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes the used external resources of the data."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-external-resources"
+  },
+  "abbreviation": {
+    "@value": "data.exteresource.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "external resources"
+    },
+    {
+      "@language": "en",
+      "@value": "related identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.exteresource.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Metadata Standard Specified in the DMP
+
+**Metric ID:** data.exteresource.co.2
+**Persistent URI:** https://example.org/metric/data.exteresource.co.2
+**Dimension:** Completeness
+
+### Title
+Metadata Standard Specified in the DMP
+
+### Narrative
+Verifies that a specific metadata standard or format is mentioned for documenting the dataset.
+
+### Intended Outcome
+Determine whether the maDMP declares a metadata standard or format for the dataset through the `related_identifier.metadata_scheme`, `related_identifier.scheme_type`, and `related_identifier.scheme_uri` fields, confirming that the documentation standard applied to the dataset has been identified.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset in scope, a `related_identifier` entry is present containing non-empty values for `metadata_scheme`, `scheme_type`, and `scheme_uri`, confirming that a metadata standard or format has been specified in the DMP.
+
+### Failure Criterion
+No dataset contains a `related_identifier` entry with non-empty `metadata_scheme`, `scheme_type`, and `scheme_uri` fields, indicating that no metadata standard or format has been declared in the DMP.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check related_identifier for metadata standard fields](tests.md#test-check-related_identifier-for-metadata-standard-fields)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.exteresource.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.exteresource.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "Metadata Standard Specified in the DMP"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that a specific metadata standard or format is mentioned for documenting the dataset."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-metadata-standard"
+  },
+  "abbreviation": {
+    "@value": "data.exteresource.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "metadata standard"
+    },
+    {
+      "@language": "en",
+      "@value": "metadata scheme"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.exteresource.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Resolvable External Resources
+
+**Metric ID:** data.exteresource.feas.1
+**Persistent URI:** https://example.org/metric/data.exteresource.feas.1
+**Dimension:** Feasibility
+
+### Title
+Resolvable External Resources
+
+### Narrative
+Validates that all included external URLs are valid and resolvable.
+
+### Intended Outcome
+Determine whether the external URLs declared in the maDMP are valid and resolvable, confirming that referenced external resources are accessible and that the links included in the DMP are functional.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one URL present in the maDMP, the URL is syntactically valid and resolves successfully to an accessible resource, confirming that at least one external resource link is functional.
+
+### Failure Criterion
+All URLs present in the maDMP are either syntactically invalid, unreachable, or return error responses, indicating that no declared external resource link is resolvable.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check URLs in maDMP are valid and resolvable](tests.md#test-check-urls-in-madmp-are-valid-and-resolvable)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.exteresource.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.exteresource.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Resolvable External Resources"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that all included external URLs are valid and resolvable."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-url-resolvable"
+  },
+  "abbreviation": {
+    "@value": "data.exteresource.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "resolvable URLs"
+    },
+    {
+      "@language": "en",
+      "@value": "external resources"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.exteresource.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: OpenAIRE Mentioned Dataset Validation
+
+**Metric ID:** data.exteresource.feas.2
+**Persistent URI:** https://example.org/metric/data.exteresource.feas.2
+**Dimension:** Feasibility
+
+### Title
+OpenAIRE Mentioned Dataset Validation
+
+### Narrative
+Validates that datasets mentioned in the DMP are found in OpenAIRE via the skg-if endpoint.
+
+### Intended Outcome
+Determine whether the datasets referenced in the maDMP can be located in OpenAIRE through the SKG-IF API, by cross-referencing `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, and `dataset.type` against OpenAIRE records, confirming that the mentioned datasets are registered and discoverable.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the OpenAIRE SKG-IF API.
+
+### Success Criterion
+For at least one dataset in scope, the combination of `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, and `dataset.type` resolves to a matching record in the OpenAIRE SKG-IF API, confirming that the dataset is registered and findable in OpenAIRE.
+
+### Failure Criterion
+No dataset in scope produces a matching record in the OpenAIRE SKG-IF API using the declared `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, or `dataset.type`, or the relevant fields are absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset fields against OpenAIRE SKG-IF API](tests.md#test-check-dataset-fields-against-openaire-skg-if-api)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.exteresource.feas.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.exteresource.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "OpenAIRE Mentioned Dataset Validation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that datasets mentioned in the DMP are found in OpenAIRE via the skg-if endpoint."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-openaire-skg-if"
+  },
+  "abbreviation": {
+    "@value": "data.exteresource.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "SKG-IF"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset validation"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.exteresource.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Used Taxonomy
+
+**Metric ID:** data.exteresource.feas.3
+**Persistent URI:** https://example.org/metric/data.exteresource.feas.3
+**Dimension:** Feasibility
+
+### Title
+Used Taxonomy
+
+### Narrative
+Validates that the published dataset acknowledges contributors using the CRediT taxonomy.
+
+### Intended Outcome
+Determine whether the maDMP declares contributor roles using the CRediT (Contributor Roles Taxonomy) taxonomy, by cross-referencing the `contributor` field values against recognised CRediT role terms, confirming that contributor acknowledgement follows a standardised taxonomy.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with the CRediT taxonomy.
+
+### Success Criterion
+For at least one dataset in scope, a `contributor` entry is present whose `role` value matches a recognised term from the CRediT taxonomy, confirming that contributor roles have been declared using the standardised taxonomy.
+
+### Failure Criterion
+No dataset contains a `contributor` entry whose `role` value matches a CRediT taxonomy term, or the `contributor` field is absent or empty.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor roles against CRediT taxonomy](tests.md#test-check-contributor-roles-against-credit-taxonomy)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.exteresource.feas.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.exteresource.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Used Taxonomy"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the published dataset acknowledges contributors using the CRediT taxonomy."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-credit-taxonomy"
+  },
+  "abbreviation": {
+    "@value": "data.exteresource.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "CRediT taxonomy"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.exteresource.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Dataset PID
+
+**Metric ID:** data.pid.cov.1
+**Persistent URI:** https://example.org/metric/data.pid.cov.1
+**Dimension:** Coverage
+
+### Title
+Dataset PID
+
+### Narrative
+Verifies that the dataset has a PID.
+
+### Intended Outcome
+Determine whether the maDMP declares a persistent identifier system for the dataset's destination repository through the `host.pid_system` field, confirming that a PID system is in place to ensure persistent identification of the dataset.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host` entry contains a non-empty `pid_system` field, confirming that a persistent identifier system has been declared for the destination repository.
+
+### Failure Criterion
+No dataset distribution contains a `host` entry with a non-empty `pid_system` field, indicating that no persistent identifier system has been declared.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.pid_system for PID declaration](tests.md#test-check-hostpid_system-for-pid-declaration)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.pid.cov.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.pid.cov.1",
+  "title": {
+    "@language": "en",
+    "@value": "Dataset PID"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the dataset has a PID."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-pid-system"
+  },
+  "abbreviation": {
+    "@value": "data.pid.cov.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.pid.cov.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Trusted Repository Referenced
+
+**Metric ID:** data.pid.cov.2
+**Persistent URI:** https://example.org/metric/data.pid.cov.2
+**Dimension:** Coverage
+
+### Title
+Trusted Repository Referenced
+
+### Narrative
+Verifies that the repository where the data will be deposited is listed in a trusted registry and a valid link to the repository is provided in the DMP.
+
+### Intended Outcome
+Determine whether the maDMP references a trusted repository for data deposition, verified through two checks: that the repository is listed in a trusted registry via the `certified_with` field, and that a valid resolvable link to the repository is provided via `host_id.identifier` and `host_id.type`.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+Both of the following conditions are met: (1) at least one distribution's `host` entry contains a non-empty `certified_with` field matching a trusted registry, and (2) at least one distribution's `host_id.identifier` and `host_id.type` values provide a valid and resolvable link to the repository.
+
+### Failure Criterion
+Either the `certified_with` field is absent or does not match a trusted registry, or `host_id.identifier` and `host_id.type` are absent, empty, or do not resolve to a valid repository link.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check certified_with against trusted registry](tests.md#test-check-certified_with-against-trusted-registry)
+- [Check host_id.identifier and host_id.type for valid repository link](tests.md#test-check-host_ididentifier-and-host_idtype-for-valid-repository-link)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.pid.cov.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.pid.cov.2",
+  "title": {
+    "@language": "en",
+    "@value": "Trusted Repository Referenced"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the repository where the data will be deposited is listed in a trusted registry and a valid link to the repository is provided in the DMP."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": [
+    {
+      "@id": "https://example.org/test/T-DCSC-certified-with-trusted-registry"
+    },
+    {
+      "@id": "https://example.org/test/T-DCSC-host-id-valid-link"
+    }
+  ],
+  "abbreviation": {
+    "@value": "data.pid.cov.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "repository link"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.pid.cov.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Coverage"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository PID
+
+**Metric ID:** data.pid.feas.1
+**Persistent URI:** https://example.org/metric/data.pid.feas.1
+**Dimension:** Feasibility
+
+### Title
+Repository PID
+
+### Narrative
+Validates that the repository provides the PID.
+
+### Intended Outcome
+Determine whether the PID system declared for the destination repository in the maDMP via `host.pid_system` is consistent with the PID system provided by the repository, cross-referenced against Zenodo's DOI assignment, confirming that the declared PID system is actually supported by the destination.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo DOI metadata.
+
+### Success Criterion
+For at least one dataset distribution in scope, the `host.pid_system` value matches the PID system supported by the declared destination repository as verified in Zenodo (e.g., DOI assignment), confirming that the repository provides the declared PID type.
+
+### Failure Criterion
+The `host.pid_system` value is absent, empty, or does not match the PID system supported by the declared destination repository in Zenodo, indicating a mismatch between the declared and actual PID provision.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check host.pid_system matches destination PID system in Zenodo](tests.md#test-check-hostpid_system-matches-destination-pid-system-in-zenodo)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.pid.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.pid.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository PID"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the repository provides the PID."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-host-pid-system-zenodo"
+  },
+  "abbreviation": {
+    "@value": "data.pid.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.pid.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: PIDs can be Resolved
+
+**Metric ID:** data.pid.feas.3
+**Persistent URI:** https://example.org/metric/data.pid.feas.3
+**Dimension:** Feasibility
+
+### Title
+PIDs can be Resolved
+
+### Narrative
+Validates that the PID in the repository is valid and resolvable.
+
+### Intended Outcome
+Determine whether the persistent identifier declared for the dataset in the maDMP via `dataset_id.identifier` and `dataset_id.type` is valid and resolvable, by cross-referencing the identifier against its DOI URL in Zenodo, confirming that the PID leads to an accessible and valid resource.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo DOI URL resolution.
+
+### Success Criterion
+For at least one dataset in scope, the `dataset_id.identifier` value of type DOI resolves successfully via its DOI URL in Zenodo to an accessible resource, confirming that the PID is valid and resolvable.
+
+### Failure Criterion
+The `dataset_id.identifier` value is absent, empty, not of a resolvable type, or fails to resolve via its DOI URL in Zenodo, indicating that the declared PID is invalid or not resolvable.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dataset_id resolves via DOI URL in Zenodo](tests.md#test-check-dataset_id-resolves-via-doi-url-in-zenodo)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/data.pid.feas.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/data.pid.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "PIDs can be Resolved"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the PID in the repository is valid and resolvable."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-dataset-id-doi-zenodo-resolve"
+  },
+  "abbreviation": {
+    "@value": "data.pid.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "DOI resolution"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/data.pid.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: RDM Roles
+
+**Metric ID:** role.co.1
+**Persistent URI:** https://example.org/metric/role.co.1
+**Dimension:** Completeness
+
+### Title
+RDM Roles
+
+### Narrative
+Verifies that the roles of the contributors are included.
+
+### Intended Outcome
+Determine whether the maDMP declares contributor information including name, role, and contact details through the `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` fields, confirming that the roles and identities of all contributors to the data management plan have been documented.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `contributor` entry is present at DMP level containing non-empty values for `name`, `role`, and `contact`, confirming that contributor roles have been fully declared in the DMP.
+
+### Failure Criterion
+No `contributor` entry is present at DMP level, or no present entry contains non-empty values for all three of `name`, `role`, and `contact`, indicating that contributor role information is incomplete or absent.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dmp.contributor name, role, and contact](tests.md#test-check-dmpcontributor-name-role-and-contact)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/role.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/role.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "RDM Roles"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the roles of the contributors are included."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-name-role-contact"
+  },
+  "abbreviation": {
+    "@value": "role.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM roles"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/role.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: DMP Validation by Data Steward
+
+**Metric ID:** dmp.valid.co.2
+**Persistent URI:** https://example.org/metric/dmp.valid.co.2
+**Dimension:** Completeness
+
+### Title
+DMP Validation by Data Steward
+
+### Narrative
+Verifies that the DMP is approved by Data Stewards.
+
+### Intended Outcome
+Determine whether the maDMP includes at least one contributor whose `role` is declared as Data Steward, confirming that a qualified Data Steward has been assigned to and is accountable for the DMP.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `contributor` entry is present at DMP level with a `role` value equal to `Data Steward`, confirming that DMP validation by a Data Steward has been declared.
+
+### Failure Criterion
+No `contributor` entry is present with a `role` value of `Data Steward`, indicating that no Data Steward has been assigned to validate the DMP.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dmp.contributor.role for Data Steward](tests.md#test-check-dmpcontributorrole-for-data-steward)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/dmp.valid.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/dmp.valid.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "DMP Validation by Data Steward"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP is approved by Data Stewards."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-data-steward"
+  },
+  "abbreviation": {
+    "@value": "dmp.valid.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "Data Steward"
+    },
+    {
+      "@language": "en",
+      "@value": "DMP validation"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/dmp.valid.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Contributors and Organisations PIDs
+
+**Metric ID:** role.pid.co.1
+**Persistent URI:** https://example.org/metric/role.pid.co.1
+**Dimension:** Completeness
+
+### Title
+Contributors and Organisations PIDs
+
+### Narrative
+Verifies that the DMP includes the contributors and their affiliation PIDs.
+
+### Intended Outcome
+Determine whether the maDMP declares persistent identifiers for both contributors and their affiliated organisations through the `contributor.contributor_id` and `contributor.affiliation.affiliation_id` fields, confirming that all contributors and their institutional affiliations are persistently identified.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `contributor` entry is present containing both a non-empty `contributor_id` and a non-empty `affiliation.affiliation_id`, confirming that persistent identifiers for contributors and their organisations have been declared in the DMP.
+
+### Failure Criterion
+No `contributor` entry contains both a non-empty `contributor_id` and a non-empty `affiliation.affiliation_id`, indicating that contributor and/or organisational PIDs are absent or incomplete.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor_id and affiliation.affiliation_id for PIDs](tests.md#test-check-contributor_id-and-affiliationaffiliation_id-for-pids)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/role.pid.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/role.pid.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "Contributors and Organisations PIDs"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes the contributors and their affiliation PIDs."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-id-affiliation-id"
+  },
+  "abbreviation": {
+    "@value": "role.pid.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor PID"
+    },
+    {
+      "@language": "en",
+      "@value": "affiliation PID"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/role.pid.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Referenced RDM Roles
+
+**Metric ID:** role.feas.1
+**Persistent URI:** https://example.org/metric/role.feas.1
+**Dimension:** Feasibility
+
+### Title
+Referenced RDM Roles
+
+### Narrative
+Validates that the contributors and their roles are included in the destination.
+
+### Intended Outcome
+Determine whether the contributors and their roles declared in the maDMP via `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` are reflected in the destination, by cross-referencing against the destination's `contributors.name` and `contributors.type` fields, confirming that contributor information is consistently represented across the DMP and its destination.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with destination contributor metadata.
+
+### Success Criterion
+For at least one contributor declared in the maDMP, the `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` values are matched by corresponding `contributors.name` and `contributors.type` entries in the destination, confirming that contributor roles are consistently referenced.
+
+### Failure Criterion
+No contributor declared in the maDMP via `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` can be matched against `contributors.name` and `contributors.type` in the destination, or the relevant fields are absent or empty in either source.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check dmp.contributor fields against destination contributors](tests.md#test-check-dmpcontributor-fields-against-destination-contributors)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/role.feas.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/role.feas.1",
+  "title": {
+    "@language": "en",
+    "@value": "Referenced RDM Roles"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the contributors and their roles are included in the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-fields-destination"
+  },
+  "abbreviation": {
+    "@value": "role.feas.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM roles"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/role.feas.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Final Data Steward Validation
+
+**Metric ID:** role.feas.2
+**Persistent URI:** https://example.org/metric/role.feas.2
+**Dimension:** Feasibility
+
+### Title
+Final Data Steward Validation
+
+### Narrative
+Validates that the DMP is approved in the destination by Data Stewards.
+
+### Intended Outcome
+Determine whether the Data Steward role declared in the maDMP via `dmp.contributor.role` is reflected in the destination through a corresponding `contributors.type` value of `Other`, confirming that the Data Steward's contribution has been carried through to the destination record.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with destination contributor metadata.
+
+### Success Criterion
+At least one contributor in the maDMP has a `role` value of `Data Steward`, and a corresponding entry with `contributors.type` equal to `Other` is present in the destination, confirming that the Data Steward's contribution is referenced in the destination.
+
+### Failure Criterion
+No contributor in the maDMP has a `role` value of `Data Steward`, or no corresponding `contributors.type` of `Other` is present in the destination, indicating that the Data Steward validation is not reflected in the destination record.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check Data Steward role in maDMP against contributors.type Other in destination](tests.md#test-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/role.feas.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/role.feas.2",
+  "title": {
+    "@language": "en",
+    "@value": "Final Data Steward Validation"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the DMP is approved in the destination by Data Stewards."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-data-steward-role-destination-other"
+  },
+  "abbreviation": {
+    "@value": "role.feas.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "Data Steward"
+    },
+    {
+      "@language": "en",
+      "@value": "DMP validation"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/role.feas.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Referenced Contributors and Organisations PIDs
+
+**Metric ID:** role.feas.3
+**Persistent URI:** https://example.org/metric/role.feas.3
+**Dimension:** Feasibility
+
+### Title
+Referenced Contributors and Organisations PIDs
+
+### Narrative
+Validates that the PIDs of the contributors are included in the destination.
+
+### Intended Outcome
+Determine whether the contributor and affiliation PIDs declared in the maDMP via `contributor.contributor_id` and `contributor.affiliation.affiliation_id` are reflected in the destination, by cross-referencing against `contributors.orcid` and `contributors.affiliation` in Zenodo, confirming that persistent identifiers for contributors and their organisations are consistently carried through to the destination record.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo contributor metadata.
+
+### Success Criterion
+For at least one contributor declared in the maDMP, the `contributor.contributor_id` matches a `contributors.orcid` entry in Zenodo and the `contributor.affiliation.affiliation_id` matches a `contributors.affiliation` entry in Zenodo, confirming that contributor and organisational PIDs are referenced in the destination.
+
+### Failure Criterion
+No contributor declared in the maDMP has a `contributor.contributor_id` or `contributor.affiliation.affiliation_id` that can be matched against `contributors.orcid` or `contributors.affiliation` in Zenodo, or the relevant fields are absent or empty in either source.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check contributor PIDs in maDMP against Zenodo contributors](tests.md#test-check-contributor-pids-in-madmp-against-zenodo-contributors)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/role.feas.3",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/role.feas.3",
+  "title": {
+    "@language": "en",
+    "@value": "Referenced Contributors and Organisations PIDs"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Validates that the PIDs of the contributors are included in the destination."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-contributor-pids-zenodo"
+  },
+  "abbreviation": {
+    "@value": "role.feas.3-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor PID"
+    },
+    {
+      "@language": "en",
+      "@value": "affiliation PID"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/role.feas.3"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Feasibility"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: Repository Cost
+
+**Metric ID:** cost.comp.1
+**Persistent URI:** https://example.org/metric/cost.comp.1
+**Dimension:** Compliance
+
+### Title
+Repository Cost
+
+### Narrative
+Verifies the cost of the repository.
+
+### Intended Outcome
+Determine whether the cost declared in the maDMP for the destination repository is consistent with the actual cost of the repository, confirming that the budgeted repository cost accurately reflects the repository's pricing.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with repository cost information.
+
+### Success Criterion
+At least one `cost` entry is present in the maDMP whose declared values are consistent with the actual cost associated with the destination repository, confirming that the repository cost has been accurately represented in the DMP.
+
+### Failure Criterion
+No `cost` entry is present in the maDMP, or the declared cost values do not match the actual cost of the destination repository, indicating a discrepancy between the budgeted and actual repository cost.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check cost in maDMP against repository cost](tests.md#test-check-cost-in-madmp-against-repository-cost)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/cost.comp.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/cost.comp.1",
+  "title": {
+    "@language": "en",
+    "@value": "Repository Cost"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies the cost of the repository."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-cost-repository"
+  },
+  "abbreviation": {
+    "@value": "cost.comp.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "repository cost"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/cost.comp.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Compliance"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: DMP Budget Specifications
+
+**Metric ID:** cost.co.1
+**Persistent URI:** https://example.org/metric/cost.co.1
+**Dimension:** Completeness
+
+### Title
+DMP Budget Specifications
+
+### Narrative
+Verifies that the DMP includes the budget for PMs and monetary resources.
+
+### Intended Outcome
+Determine whether the maDMP declares budget information covering both personnel months and monetary resources through the `cost` field, confirming that the financial planning for the data management activities has been documented in the DMP.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+At least one `cost` entry is present at DMP level containing non-empty values for `currency_code`, `value`, `title`, and `description`, confirming that budget specifications for the DMP have been declared.
+
+### Failure Criterion
+No `cost` entry is present at DMP level, or no present entry contains the required non-empty fields, indicating that budget information for the DMP is absent or incomplete.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check cost fields for budget specification](tests.md#test-check-cost-fields-for-budget-specification)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/cost.co.1",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/cost.co.1",
+  "title": {
+    "@language": "en",
+    "@value": "DMP Budget Specifications"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP includes the budget for PMs and monetary resources."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-cost-budget-specification"
+  },
+  "abbreviation": {
+    "@value": "cost.co.1-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "budget"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/cost.co.1"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  },
+  "hasBenchmark": {
+    "@id": "https://example.org/benchmark/default"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "supportedBy": {
+    "@id": "https://example.org/project"
+  }
+}
+```
+
+---
+
+## Metric: No Extra RDM Costs
+
+**Metric ID:** cost.co.2
+**Persistent URI:** https://example.org/metric/cost.co.2
+**Dimension:** Completeness
+
+### Title
+No Extra RDM Costs
+
+### Narrative
+Verifies that the DMP states that no additional resources are needed.
+
+### Intended Outcome
+Determine whether the maDMP explicitly declares that no additional resources beyond those already budgeted are required for data management activities, confirming that the absence of extra RDM costs has been documented in the DMP.
+
+### Applies To
+Machine-actionable Data Management Plan (maDMP) in JSON format.
+
+### Success Criterion
+The `cost` field in the maDMP is present and its content explicitly states that no additional resources are needed, or the `cost` entries collectively confirm that all required resources have been accounted for with no outstanding budget gaps declared.
+
+### Failure Criterion
+The `cost` field is absent, empty, or does not contain any indication that no additional resources are required, indicating that the DMP does not address the absence of extra RDM costs.
+
+### Expected Result Type
+Boolean (pass/fail)
+
+### Associated Test(s)
+- [Check cost in maDMP for no additional resources statement](tests.md#test-check-cost-in-madmp-for-no-additional-resources-statement)
+
+### JSON-LD (Metric)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/metric/cost.co.2",
+  "@type": "dqv:Metric",
+  "identifier": "https://example.org/metric/cost.co.2",
+  "title": {
+    "@language": "en",
+    "@value": "No Extra RDM Costs"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "Verifies that the DMP states that no additional resources are needed."
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcterms:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "hasImplementation": {
+    "@id": "https://example.org/test/T-DCSC-cost-no-additional-resources"
+  },
+  "abbreviation": {
+    "@value": "cost.co.2-M"
+  },
+  "contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "no additional resources"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM costs"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://example.org/metric/cost.co.2"
+  },
+  "version": {
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@value": "Completeness"
   },
   "isApplicableFor": {
     "@id": "https://schema.org/Dataset"

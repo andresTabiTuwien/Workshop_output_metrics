@@ -92,6 +92,25 @@
 | T-DCSC | [Check dataset.keyword against Zenodo keywords](#test-check-datasetkeyword-against-zenodo-keywords) |
 | T-DCSC | [Check dataset.language against Zenodo language support](#test-check-datasetlanguage-against-zenodo-language-support) |
 | T-DCSC | [Check host_id against Zenodo and FAIRsharing for policy compliance](#test-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance) |
+| T-DCSC | [Check related_identifier.identifier for external resources](#test-check-related_identifieridentifier-for-external-resources) |
+| T-DCSC | [Check related_identifier for metadata standard fields](#test-check-related_identifier-for-metadata-standard-fields) |
+| T-DCSC | [Check URLs in maDMP are valid and resolvable](#test-check-urls-in-madmp-are-valid-and-resolvable) |
+| T-DCSC | [Check dataset fields against OpenAIRE SKG-IF API](#test-check-dataset-fields-against-openaire-skg-if-api) |
+| T-DCSC | [Check contributor roles against CRediT taxonomy](#test-check-contributor-roles-against-credit-taxonomy) |
+| T-DCSC | [Check host.pid_system for PID declaration](#test-check-hostpid_system-for-pid-declaration) |
+| T-DCSC | [Check certified_with against trusted registry](#test-check-certified_with-against-trusted-registry) |
+| T-DCSC | [Check host_id.identifier and host_id.type for valid repository link](#test-check-host_ididentifier-and-host_idtype-for-valid-repository-link) |
+| T-DCSC | [Check host.pid_system matches destination PID system in Zenodo](#test-check-hostpid_system-matches-destination-pid-system-in-zenodo) |
+| T-DCSC | [Check dataset_id resolves via DOI URL in Zenodo](#test-check-dataset_id-resolves-via-doi-url-in-zenodo) |
+| T-DCSC | [Check dmp.contributor name, role, and contact](#test-check-dmpcontributor-name-role-and-contact) |
+| T-DCSC | [Check dmp.contributor.role for Data Steward](#test-check-dmpcontributorrole-for-data-steward) |
+| T-DCSC | [Check contributor_id and affiliation.affiliation_id for PIDs](#test-check-contributor_id-and-affiliationaffiliation_id-for-pids) |
+| T-DCSC | [Check dmp.contributor fields against destination contributors](#test-check-dmpcontributor-fields-against-destination-contributors) |
+| T-DCSC | [Check Data Steward role in maDMP against contributors.type Other in destination](#test-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination) |
+| T-DCSC | [Check contributor PIDs in maDMP against Zenodo contributors](#test-check-contributor-pids-in-madmp-against-zenodo-contributors) |
+| T-DCSC | [Check cost in maDMP against repository cost](#test-check-cost-in-madmp-against-repository-cost) |
+| T-DCSC | [Check cost fields for budget specification](#test-check-cost-fields-for-budget-specification) |
+| T-DCSC | [Check cost in maDMP for no additional resources statement](#test-check-cost-in-madmp-for-no-additional-resources-statement) |
 | T-DCSC | [Check DMP for version control system and update metadata](#test-check-dmp-for-version-control-system-and-update-metadata) |
 
 ---
@@ -9518,6 +9537,2045 @@ pass/fail
   },
   "sio:SIO_000233": {
     "@id": "https://example.org/metric/repo.comp.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check related_identifier.identifier for external resources
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-related-identifier-external-resources
+
+**Implements:** [data.exteresource.co.1](metrics.md#metric-data-external-resources-included-in-the-dmp)
+
+### Description
+Checks if there are external resources declared in the DMP by verifying the presence of `related_identifier.identifier` entries.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and check for the presence of a `related_identifier` array or object.
+3. For each `related_identifier` entry, check whether the `identifier` field is present and non-empty.
+4. Return **pass** if at least one dataset contains a `related_identifier` entry with a non-empty `identifier` field; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-related-identifier-external-resources",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check related_identifier.identifier for external resources"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if there are external resources declared in the DMP by verifying the presence of related_identifier.identifier entries."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "external resources"
+    },
+    {
+      "@language": "en",
+      "@value": "related identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-external-resources/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.exteresource.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check related_identifier for metadata standard fields
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-related-identifier-metadata-standard
+
+**Implements:** [data.exteresource.co.2](metrics.md#metric-metadata-standard-specified-in-the-dmp)
+
+### Description
+Checks if a metadata format or standard is listed in the DMP by verifying that `related_identifier.metadata_scheme`, `related_identifier.scheme_type`, and `related_identifier.scheme_uri` are present and non-empty.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and check for the presence of a `related_identifier` array or object.
+3. For each `related_identifier` entry, check whether `metadata_scheme`, `scheme_type`, and `scheme_uri` fields are all present and non-empty.
+4. Return **pass** if at least one dataset contains a `related_identifier` entry with non-empty values for all three fields; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-related-identifier-metadata-standard",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check related_identifier for metadata standard fields"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a metadata format or standard is listed in the DMP by verifying that related_identifier.metadata_scheme, related_identifier.scheme_type, and related_identifier.scheme_uri are present and non-empty."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "metadata standard"
+    },
+    {
+      "@language": "en",
+      "@value": "metadata scheme"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-related-identifier-metadata-standard/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.exteresource.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check URLs in maDMP are valid and resolvable
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-url-resolvable
+
+**Implements:** [data.exteresource.feas.1](metrics.md#metric-resolvable-external-resources)
+
+### Description
+Checks if all included URLs in the maDMP are syntactically valid and resolve to accessible resources.
+
+### Input
+URLs in maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Extract all URL values present across the document (e.g., from `related_identifier.identifier`, `host.url`, `distribution.access_url`, and any other URL-bearing fields).
+3. For each extracted URL, validate its syntax against standard URL format rules.
+4. Attempt to resolve each syntactically valid URL via an HTTP request and check whether it returns a successful response (e.g., HTTP 200 or 3xx redirect to a valid resource).
+5. Return **pass** if at least one URL is both syntactically valid and successfully resolvable; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-url-resolvable",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check URLs in maDMP are valid and resolvable"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if all included URLs in the maDMP are syntactically valid and resolve to accessible resources."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "resolvable URLs"
+    },
+    {
+      "@language": "en",
+      "@value": "external resources"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-url-resolvable/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.exteresource.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dataset fields against OpenAIRE SKG-IF API
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-openaire-skg-if
+
+**Implements:** [data.exteresource.feas.2](metrics.md#metric-openaire-mentioned-dataset-validation)
+
+### Description
+Checks if datasets declared in the maDMP are found in the OpenAIRE SKG-IF API by querying with `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, and `dataset.type`.
+
+### Input
+`dataset_id.identifier`, `dataset_id.type`, `dataset.title`, `dataset.type` in maDMP JSON; OpenAIRE SKG-IF API
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and extract `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, and `dataset.type` for each.
+3. For each dataset, query the OpenAIRE SKG-IF API using the extracted identifier (preferring `dataset_id.identifier` and `dataset_id.type`) to search for a matching record.
+4. If no match is found by identifier, retry the query using `dataset.title` and `dataset.type` as search parameters.
+5. Check whether the API response contains a record that corresponds to the declared dataset.
+6. Return **pass** if at least one dataset produces a matching record in the OpenAIRE SKG-IF API; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-dataset-openaire-skg-if",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dataset fields against OpenAIRE SKG-IF API"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if datasets declared in the maDMP are found in the OpenAIRE SKG-IF API by querying with dataset_id.identifier, dataset_id.type, dataset.title, and dataset.type."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "OpenAIRE"
+    },
+    {
+      "@language": "en",
+      "@value": "SKG-IF"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset validation"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-dataset-openaire-skg-if/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.exteresource.feas.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor roles against CRediT taxonomy
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-credit-taxonomy
+
+**Implements:** [data.exteresource.feas.3](metrics.md#metric-used-taxonomy)
+
+### Description
+Checks if the dataset uses the CRediT taxonomy by verifying that `contributor` role values in the maDMP match recognised CRediT taxonomy terms.
+
+### Input
+`contributor` in maDMP JSON; CRediT taxonomy
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP or dataset level and extract the `role` value for each.
+3. If no `contributor` entries or `role` values are present, return **fail**.
+4. Compare each extracted `role` value against the list of recognised CRediT taxonomy role terms (e.g., Conceptualization, Data Curation, Formal Analysis, Funding Acquisition, Investigation, Methodology, Project Administration, Resources, Software, Supervision, Validation, Visualization, Writing – Original Draft, Writing – Review & Editing).
+5. Return **pass** if at least one contributor's `role` value matches a recognised CRediT taxonomy term; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-credit-taxonomy",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor roles against CRediT taxonomy"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset uses the CRediT taxonomy by verifying that contributor role values in the maDMP match recognised CRediT taxonomy terms."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "CRediT taxonomy"
+    },
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-credit-taxonomy/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.exteresource.feas.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.pid_system for PID declaration
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-pid-system
+
+**Implements:** [data.pid.cov.1](metrics.md#metric-dataset-pid)
+
+### Description
+Checks if the dataset has a PID by verifying that `host.pid_system` is present and non-empty in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, locate the `host` entry.
+4. Check whether a `pid_system` field is present and non-empty within the `host` entry.
+5. Return **pass** if at least one host entry contains a non-empty `pid_system` value; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-pid-system",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.pid_system for PID declaration"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the dataset has a PID by verifying that host.pid_system is present and non-empty in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-pid-system/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.pid.cov.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check certified_with against trusted registry
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-certified-with-trusted-registry
+
+**Implements:** [data.pid.cov.2](metrics.md#metric-trusted-repository-referenced)
+
+### Description
+Checks if the repository is listed in a trusted registry by verifying the `certified_with` field in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, locate the `host` entry and extract the `certified_with` field value.
+4. Check whether the `certified_with` value is present, non-empty, and corresponds to a recognised trusted registry (e.g., CoreTrustSeal, CLARIN, DINI, or equivalent).
+5. Return **pass** if at least one host entry contains a `certified_with` value matching a trusted registry; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-certified-with-trusted-registry",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check certified_with against trusted registry"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the repository is listed in a trusted registry by verifying the certified_with field in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "trusted repository"
+    },
+    {
+      "@language": "en",
+      "@value": "certification"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-certified-with-trusted-registry/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.pid.cov.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host_id.identifier and host_id.type for valid repository link
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-id-valid-link
+
+**Implements:** [data.pid.cov.2](metrics.md#metric-trusted-repository-referenced)
+
+### Description
+Checks if a valid link to the repository is provided by verifying that `host_id.identifier` and `host_id.type` are present, non-empty, and resolvable in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract `host_id.identifier` and `host_id.type` from the `host` entry.
+4. Check whether both `host_id.identifier` and `host_id.type` are present and non-empty.
+5. Attempt to resolve the `host_id.identifier` value as a URL or persistent identifier to confirm it leads to a valid, accessible repository resource.
+6. Return **pass** if at least one distribution's `host_id.identifier` and `host_id.type` are present and the identifier resolves successfully; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-id-valid-link",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host_id.identifier and host_id.type for valid repository link"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if a valid link to the repository is provided by verifying that host_id.identifier and host_id.type are present, non-empty, and resolvable in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository link"
+    },
+    {
+      "@language": "en",
+      "@value": "host identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-id-valid-link/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.pid.cov.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check host.pid_system matches destination PID system in Zenodo
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-host-pid-system-zenodo
+
+**Implements:** [data.pid.feas.1](metrics.md#metric-repository-pid)
+
+### Description
+Checks if the PID system declared in `host.pid_system` matches the PID system provided by the destination repository, cross-referenced against Zenodo DOI metadata.
+
+### Input
+`host.pid_system` in maDMP JSON; Zenodo DOI metadata
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate dataset entries and their associated `distribution` objects or arrays.
+3. For each distribution, extract the `host.pid_system` value and the destination repository identifier from the `host` entry.
+4. Query the Zenodo API using the destination repository identifier to retrieve the repository's supported PID system (e.g., DOI assignment via Zenodo).
+5. Compare the `host.pid_system` value against the PID system confirmed as supported by the destination repository in Zenodo.
+6. Return **pass** if at least one distribution's `host.pid_system` matches the PID system provided by its declared destination in Zenodo; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-host-pid-system-zenodo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check host.pid_system matches destination PID system in Zenodo"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if the PID system declared in host.pid_system matches the PID system provided by the destination repository, cross-referenced against Zenodo DOI metadata."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-host-pid-system-zenodo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/data.pid.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dmp.contributor name, role, and contact
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-name-role-contact
+
+**Implements:** [role.co.1](metrics.md#metric-rdm-roles)
+
+### Description
+Checks that `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` are present and non-empty in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level.
+3. For each contributor entry, check whether `name`, `role`, and `contact` fields are all present and non-empty.
+4. Return **pass** if at least one contributor entry contains non-empty values for all three of `name`, `role`, and `contact`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-name-role-contact",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dmp.contributor name, role, and contact"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that dmp.contributor.name, dmp.contributor.role, and dmp.contributor.contact are present and non-empty in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM roles"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-name-role-contact/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/role.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dmp.contributor.role for Data Steward
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-role-data-steward
+
+**Implements:** [dmp.valid.co.2](metrics.md#metric-dmp-validation-by-data-steward)
+
+### Description
+Checks that at least one `dmp.contributor.role` value equals `Data Steward` in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level.
+3. For each contributor entry, extract the `role` field value.
+4. Check whether any `role` value matches `Data Steward` (case-insensitive).
+5. Return **pass** if at least one contributor entry has a `role` value of `Data Steward`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-role-data-steward",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dmp.contributor.role for Data Steward"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that at least one dmp.contributor.role value equals Data Steward in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "Data Steward"
+    },
+    {
+      "@language": "en",
+      "@value": "DMP validation"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-role-data-steward/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/dmp.valid.co.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor_id and affiliation.affiliation_id for PIDs
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-id-affiliation-id
+
+**Implements:** [role.pid.co.1](metrics.md#metric-contributors-and-organisations-pids)
+
+### Description
+Checks that `contributor.contributor_id` and `contributor.affiliation.affiliation_id` are present and non-empty in the maDMP.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level.
+3. For each contributor entry, check whether `contributor_id` is present and non-empty.
+4. For the same contributor entry, check whether `affiliation.affiliation_id` is present and non-empty within at least one affiliated organisation entry.
+5. Return **pass** if at least one contributor entry contains both a non-empty `contributor_id` and a non-empty `affiliation.affiliation_id`; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-id-affiliation-id",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor_id and affiliation.affiliation_id for PIDs"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that contributor.contributor_id and contributor.affiliation.affiliation_id are present and non-empty in the maDMP."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor PID"
+    },
+    {
+      "@language": "en",
+      "@value": "affiliation PID"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-id-affiliation-id/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/role.pid.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check dmp.contributor fields against destination contributors
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-fields-destination
+
+**Implements:** [role.feas.1](metrics.md#metric-referenced-rdm-roles)
+
+### Description
+Checks that the roles of the contributors declared in the maDMP are mentioned in the destination by cross-referencing `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` against `contributors.name` and `contributors.type` in the destination.
+
+### Input
+`dmp.contributor.name`, `dmp.contributor.role`, `dmp.contributor.contact` in maDMP JSON; `contributors.name`, `contributors.type` in destination metadata
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level and extract `name`, `role`, and `contact` for each.
+3. If no contributor entries or required fields are present, return **fail**.
+4. Retrieve contributor metadata from the destination, extracting `contributors.name` and `contributors.type` entries.
+5. For each contributor declared in the maDMP, attempt to match `dmp.contributor.name` against `contributors.name` and `dmp.contributor.role` against `contributors.type` in the destination.
+6. Return **pass** if at least one maDMP contributor can be matched by name and role type in the destination contributor metadata; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-fields-destination",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check dmp.contributor fields against destination contributors"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that the roles of the contributors declared in the maDMP are mentioned in the destination by cross-referencing dmp.contributor.name, dmp.contributor.role, and dmp.contributor.contact against contributors.name and contributors.type in the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor roles"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM roles"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-fields-destination/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/role.feas.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check Data Steward role in maDMP against contributors.type Other in destination
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-data-steward-role-destination-other
+
+**Implements:** [role.feas.2](metrics.md#metric-final-data-steward-validation)
+
+### Description
+Checks that the contribution of a Data Steward is referenced in the destination by verifying that `dmp.contributor.role` equals `Data Steward` in the maDMP and a corresponding `contributors.type` of `Other` is present in the destination.
+
+### Input
+`dmp.contributor.role` in maDMP JSON; `contributors.type` in destination metadata
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level and extract the `role` field value for each.
+3. Check whether at least one contributor entry has a `role` value of `Data Steward` (case-insensitive).
+4. If no `Data Steward` role is found, return **fail**.
+5. Retrieve contributor metadata from the destination and extract `contributors.type` values.
+6. Check whether at least one `contributors.type` entry in the destination has a value of `Other`.
+7. Return **pass** if both a `Data Steward` role is declared in the maDMP and a `contributors.type` of `Other` is present in the destination; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-data-steward-role-destination-other",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check Data Steward role in maDMP against contributors.type Other in destination"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that the contribution of a Data Steward is referenced in the destination by verifying that dmp.contributor.role equals Data Steward in the maDMP and a corresponding contributors.type of Other is present in the destination."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "Data Steward"
+    },
+    {
+      "@language": "en",
+      "@value": "DMP validation"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-data-steward-role-destination-other/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/role.feas.2"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check contributor PIDs in maDMP against Zenodo contributors
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-contributor-pids-zenodo
+
+**Implements:** [role.feas.3](metrics.md#metric-referenced-contributors-and-organisations-pids)
+
+### Description
+Checks if each contributor entry includes a valid PID in the destination by cross-referencing `contributor.affiliation.affiliation_id` and `contributor.contributor_id` in the maDMP against `contributors.affiliation` and `contributors.orcid` in Zenodo.
+
+### Input
+`contributor.affiliation.affiliation_id` and `contributor.contributor_id` in maDMP JSON; `contributors.affiliation` and `contributors.orcid` in Zenodo
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `contributor` entries at DMP level and extract `contributor_id` and `affiliation.affiliation_id` for each.
+3. If no contributor entries or required PID fields are present, return **fail**.
+4. Query the Zenodo API for the relevant dataset record and retrieve `contributors.orcid` and `contributors.affiliation` values.
+5. For each contributor declared in the maDMP, attempt to match `contributor.contributor_id` against `contributors.orcid` and `contributor.affiliation.affiliation_id` against `contributors.affiliation` in the Zenodo record.
+6. Return **pass** if at least one contributor's PIDs are matched in the Zenodo destination record; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-contributor-pids-zenodo",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check contributor PIDs in maDMP against Zenodo contributors"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks if each contributor entry includes a valid PID in the destination by cross-referencing contributor.affiliation.affiliation_id and contributor.contributor_id in the maDMP against contributors.affiliation and contributors.orcid in Zenodo."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "contributor PID"
+    },
+    {
+      "@language": "en",
+      "@value": "affiliation PID"
+    },
+    {
+      "@language": "en",
+      "@value": "Zenodo"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-contributor-pids-zenodo/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/role.feas.3"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check cost in maDMP against repository cost
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-cost-repository
+
+**Implements:** [cost.comp.1](metrics.md#metric-repository-cost)
+
+### Description
+Checks the cost of the repository by verifying that the `cost` declared in the maDMP is consistent with the actual cost of the destination repository.
+
+### Input
+`cost` in maDMP JSON; repository cost information
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `cost` entries at DMP level and extract `currency_code`, `value`, `title`, and `description` for each.
+3. If no `cost` entries are present, return **fail**.
+4. Identify the destination repository from the associated `distribution.host` entries.
+5. Retrieve the actual cost information for the destination repository from the repository's pricing documentation or API.
+6. Compare the declared `cost.value` and `cost.currency_code` in the maDMP against the actual repository cost.
+7. Return **pass** if at least one declared cost entry is consistent with the actual cost of the destination repository; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-cost-repository",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check cost in maDMP against repository cost"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the cost of the repository by verifying that the cost declared in the maDMP is consistent with the actual cost of the destination repository."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "repository cost"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-cost-repository/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/cost.comp.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check cost fields for budget specification
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-cost-budget-specification
+
+**Implements:** [cost.co.1](metrics.md#metric-dmp-budget-specifications)
+
+### Description
+Checks that the `cost` field in the maDMP is present and contains the required budget information for PMs and monetary resources.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `cost` entries at DMP level.
+3. For each cost entry, check whether `currency_code`, `value`, `title`, and `description` are all present and non-empty.
+4. Return **pass** if at least one `cost` entry contains non-empty values for all required fields; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-cost-budget-specification",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check cost fields for budget specification"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks that the cost field in the maDMP is present and contains the required budget information for PMs and monetary resources."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "budget"
+    },
+    {
+      "@language": "en",
+      "@value": "cost"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-cost-budget-specification/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/cost.co.1"
+  },
+  "ftr:supportedBy": {
+    "@id": "https://example.org/project"
+  },
+  "dpv:isApplicableFor": {
+    "@id": "https://schema.org/Dataset"
+  }
+}
+```
+
+---
+
+## Test: Check cost in maDMP for no additional resources statement
+
+**Test ID:** T-DCSC
+**Persistent URI:** https://example.org/test/T-DCSC-cost-no-additional-resources
+
+**Implements:** [cost.co.2](metrics.md#metric-no-extra-rdm-costs)
+
+### Description
+Checks the `cost` field in the maDMP to verify that it explicitly states that no additional resources are needed for data management activities.
+
+### Input
+maDMP JSON
+
+### Output
+pass/fail
+
+### Procedure
+1. Parse the maDMP JSON document.
+2. Locate `cost` entries at DMP level.
+3. If no `cost` entries are present, return **fail**.
+4. For each cost entry, inspect the `title` and `description` fields for explicit statements indicating that no additional resources are required (e.g., phrases such as "no additional resources", "no extra costs", "within existing budget", or equivalent).
+5. Return **pass** if at least one `cost` entry contains a `title` or `description` that explicitly states no additional resources are needed; otherwise return **fail**.
+
+### JSON-LD (Test)
+```json
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://example.org/test/T-DCSC-cost-no-additional-resources",
+  "@type": "ftr:Test",
+  "dcterms:identifier": "T-DCSC",
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "Check cost in maDMP for no additional resources statement"
+  },
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "Checks the cost field in the maDMP to verify that it explicitly states that no additional resources are needed for data management activities."
+  },
+  "dcat:keyword": [
+    {
+      "@language": "en",
+      "@value": "no additional resources"
+    },
+    {
+      "@language": "en",
+      "@value": "RDM costs"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    }
+  ],
+  "vivo:abbreviation": {
+    "@value": "T-DCSC-T"
+  },
+  "dcat:endpointDescription": {
+    "@id": "https://example.org/api"
+  },
+  "dcat:endpointURL": {
+    "@id": "https://example.org/test/T-DCSC-cost-no-additional-resources/run"
+  },
+  "doap:repository": {
+    "@id": "https://example.org/repository"
+  },
+  "dcterms:type": {
+    "@id": "https://example.org/test-type/default"
+  },
+  "dcterms:license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "ftr:applicationArea": {
+    "@id": "https://example.org/application-area/default"
+  },
+  "dcat:version": {
+    "@value": "0.0.1"
+  },
+  "adms:versionNotes": {
+    "@language": "en",
+    "@value": "Initial template version"
+  },
+  "ftr:status": {
+    "@language": "en",
+    "@value": "Draft"
+  },
+  "dcat:contactPoint": {
+    "@id": "https://example.org/contact"
+  },
+  "dcterms:creator": [
+    {
+      "@id": "https://example.org/organization"
+    }
+  ],
+  "dcat:publisher": {
+    "@id": "https://example.org/organization"
+  },
+  "sio:SIO_000233": {
+    "@id": "https://example.org/metric/cost.co.2"
   },
   "ftr:supportedBy": {
     "@id": "https://example.org/project"
