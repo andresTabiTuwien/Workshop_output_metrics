@@ -4,20 +4,20 @@
 |----------|------|
 | madmp-reused-datasets-declared-json | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
 | T-DCSC | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
-| T-DCSC | [License for reused datasets](#test-license-for-reused-datasets) |
+| T-DCSC | [Check License for Reused Datasets](#test-license-for-reused-datasets) |
 | T-DCSC | [Check for reused dataset PID](#test-check-for-reused-dataset-pid) |
-| T-DCSC | [Distribution Present](#test-distribution-present) |
-| T-DCSC | [Distribution Access Information](#test-distribution-access-information) |
-| T-DCSC | [Distribution Title](#test-distribution-title) |
-| T-DCSC | [Access rights for reused datasets](#test-access-rights-for-reused-datasets) |
-| T-DCSC | [Personal data for reused datasets](#test-personal-data-for-reused-datasets) |
-| T-DCSC | [Sensitive data for reused datasets](#test-sensitive-data-for-reused-datasets) |
-| T-DCSC | [Distribution present (URL)](#test-distribution-present-url) |
-| T-DCSC | [Access URL](#test-access-url) |
-| T-DCSC | [PID matches destination repository record](#test-pid-matches-destination-repository-record) |
-| T-DCSC | [PID resolves](#test-pid-resolves) |
-| T-DCSC | [Reused data access matches destination](#test-reused-data-access-matches-destination) |
-| T-DCSC | [Reused data license matches destination](#test-reused-data-license-matches-destination) |
+| T-DCSC | [Check Distribution Entry is Present](#test-distribution-present) |
+| T-DCSC | [Check Distribution Access Information is Present](#test-distribution-access-information) |
+| T-DCSC | [Check Distribution Title is Present](#test-distribution-title) |
+| T-DCSC | [Check Access Rights for Reused Datasets](#test-access-rights-for-reused-datasets) |
+| T-DCSC | [Check Personal Data Flag for Reused Datasets](#test-personal-data-for-reused-datasets) |
+| T-DCSC | [Check Sensitive Data Flag for Reused Datasets](#test-sensitive-data-for-reused-datasets) |
+| T-DCSC | [Check Distribution URL is Present](#test-distribution-present-url) |
+| T-DCSC | [Check Access URL is Present and Non-empty](#test-access-url) |
+| T-DCSC | [Check PID Matches Destination Repository Record](#test-pid-matches-destination-repository-record) |
+| T-DCSC | [Check PID Resolves Successfully](#test-pid-resolves) |
+| T-DCSC | [Check Reused Data Access Matches Destination](#test-reused-data-access-matches-destination) |
+| T-DCSC | [Check Reused Data License Matches Destination](#test-reused-data-license-matches-destination) |
 | T-DCSC | [Check for new data (no is_reused)](#test-check-for-new-data-no-is_reused) |
 | T-DCSC | [Check technical_resource for new data collection/creation](#test-check-technical_resource-for-new-data-collectioncreation) |
 | T-DCSC | [Check data_access for new datasets](#test-check-data_access-for-new-datasets) |
@@ -34,7 +34,7 @@
 | T-DCSC | [Check dataset.type aligns with destination subtype](#test-check-datasettype-aligns-with-destination-subtype) |
 | T-DCSC | [Check final dataset format matches destination files](#test-check-final-dataset-format-matches-destination-files) |
 | T-DCSC | [Check final dataset size matches destination size](#test-check-final-dataset-size-matches-destination-size) |
-| T-DCSC | [Validate maDMP JSON against DMP Common Standard schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
+| T-DCSC | [Check maDMP JSON Validates Against DMP Common Standard Schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
 | T-DCSC | [Check dataset_methodology for controlled vocabularies](#test-check-dataset_methodology-for-controlled-vocabularies) |
 | T-DCSC | [Check technical_resource.name for electronic lab notebook reference](#test-check-technical_resourcename-for-electronic-lab-notebook-reference) |
 | T-DCSC | [Check related_identifier resource_type for ReadMe file](#test-check-related_identifier-resource_type-for-readme-file) |
@@ -151,7 +151,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data reuse"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "vivo:abbreviation": {
@@ -211,7 +223,7 @@ pass/fail
 
 ---
 
-## Test: License for reused datasets
+## Test: Check License for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license
@@ -219,7 +231,7 @@ pass/fail
 **Implements:** [data.reused.co.3](metrics.md#metric-reused-data-license)
 
 ### Description
-Check if `is_reused` includes license (ref and start_date).
+Checks whether the `is_reused` dataset entry includes a license reference (`license_ref`) with both a license identifier and a start date, confirming that the legal terms for reusing the dataset are declared.
 
 ### Input
 maDMP JSON
@@ -245,7 +257,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "License for reused datasets"
+    "@value": "Check License for Reused Datasets"
   },
   "dcterms:description": {
     "@language": "en",
@@ -254,7 +266,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -322,7 +346,7 @@ pass/fail
 **Implements:** [data.reused.co.2](metrics.md#metric-reused-data-pid)
 
 ### Description
-Check if `is_reused` includes `dataset_id` (identifier, type).
+Checks whether the `is_reused` dataset entry includes a persistent identifier (`dataset_id`) with both an identifier value and a type, confirming that the reused dataset can be unambiguously referenced.
 
 ### Input
 maDMP JSON
@@ -352,12 +376,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Check if `is_reused` includes `dataset_id` (identifier, type)."
+    "@value": "Checks whether the reused dataset entry includes a persistent identifier with both an identifier value and type, confirming the dataset can be unambiguously referenced."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -417,7 +453,7 @@ pass/fail
 
 ---
 
-## Test: Distribution Present
+## Test: Check Distribution Entry is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-present
@@ -425,7 +461,7 @@ pass/fail
 **Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
 ### Description
-Checks the distribution.
+Checks whether at least one distribution entry exists for the dataset, confirming that information about how and where the data is accessible has been provided in the maDMP.
 
 ### Input
 maDMP JSON
@@ -449,16 +485,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Distribution Present"
+    "@value": "Check Distribution Entry is Present"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the distribution."
+    "@value": "Checks whether at least one distribution entry exists for the dataset, confirming that information about how and where the data is accessible has been provided."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "vivo:abbreviation": {
@@ -518,7 +566,7 @@ pass/fail
 
 ---
 
-## Test: Distribution Access Information
+## Test: Check Distribution Access Information is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-access
@@ -549,7 +597,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Distribution Access Information"
+    "@value": "Check Distribution Access Information is Present"
   },
   "dcterms:description": {
     "@language": "en",
@@ -558,7 +606,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -618,7 +678,7 @@ pass/fail
 
 ---
 
-## Test: Distribution Title
+## Test: Check Distribution Title is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-title
@@ -626,7 +686,7 @@ pass/fail
 **Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
 ### Description
-Checks if there is title of distribution.
+Checks whether the distribution entry includes a non-empty title, confirming that the distribution is named and can be identified by users browsing the dataset record.
 
 ### Input
 maDMP JSON
@@ -649,16 +709,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Distribution Title"
+    "@value": "Check Distribution Title is Present"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if there is title of distribution."
+    "@value": "Checks whether the distribution entry includes a non-empty title, confirming that the distribution is named and identifiable."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution title"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "vivo:abbreviation": {
@@ -718,7 +790,7 @@ pass/fail
 
 ---
 
-## Test: Access rights for reused datasets
+## Test: Check Access Rights for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access
@@ -726,7 +798,7 @@ pass/fail
 **Implements:** [data.reused.co.5](metrics.md#metric-reused-data-access)
 
 ### Description
-Checks the data_access (open, shared, closed).
+Checks whether the data access field (`data_access`) for the reused dataset is declared with a recognised value — open, shared, or closed — confirming that access conditions are explicitly stated.
 
 ### Input
 maDMP JSON
@@ -751,16 +823,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Access rights for reused datasets"
+    "@value": "Check Access Rights for Reused Datasets"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the data_access (open, shared, closed)."
+    "@value": "Checks whether the data access field for the reused dataset is declared with a recognised value — open, shared, or closed."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -820,7 +904,7 @@ pass/fail
 
 ---
 
-## Test: Personal data for reused datasets
+## Test: Check Personal Data Flag for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-personal-data
@@ -828,7 +912,7 @@ pass/fail
 **Implements:** [data.reused.co.6](metrics.md#metric-reused-data-personal)
 
 ### Description
-Checks the personal_data.
+Checks whether the `personal_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data contains personal information subject to data protection regulations.
 
 ### Input
 maDMP JSON
@@ -853,16 +937,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Personal data for reused datasets"
+    "@value": "Check Personal Data Flag for Reused Datasets"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the personal_data."
+    "@value": "Checks whether the personal_data field is present and populated, confirming the DMP addresses whether the data contains personal information."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "personal data"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection"
+    },
+    {
+      "@language": "en",
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -922,7 +1018,7 @@ pass/fail
 
 ---
 
-## Test: Sensitive data for reused datasets
+## Test: Check Sensitive Data Flag for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data
@@ -930,7 +1026,7 @@ pass/fail
 **Implements:** [data.reused.co.7](metrics.md#metric-reused-data-sensitive)
 
 ### Description
-Checks the sensitive_data.
+Checks whether the `sensitive_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data requires special handling or protection measures.
 
 ### Input
 maDMP JSON
@@ -955,16 +1051,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Sensitive data for reused datasets"
+    "@value": "Check Sensitive Data Flag for Reused Datasets"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the sensitive_data."
+    "@value": "Checks whether the sensitive_data field is present and populated, confirming the DMP addresses whether the data requires special handling."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1024,7 +1132,7 @@ pass/fail
 
 ---
 
-## Test: Distribution present (URL)
+## Test: Check Distribution URL is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present
@@ -1032,7 +1140,7 @@ pass/fail
 **Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
 ### Description
-Checks the distribution.
+Checks whether a distribution entry with an access URL is present for the reused dataset, confirming that users can locate and retrieve the data from a declared address.
 
 ### Input
 maDMP JSON
@@ -1055,16 +1163,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Distribution present (URL)"
+    "@value": "Check Distribution URL is Present"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the distribution."
+    "@value": "Checks whether a distribution entry with an access URL is present for the reused dataset, confirming users can locate and retrieve the data."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "access URL"
+    },
+    {
+      "@language": "en",
+      "@value": "data location"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1124,7 +1244,7 @@ pass/fail
 
 ---
 
-## Test: Access URL
+## Test: Check Access URL is Present and Non-empty
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-url
@@ -1132,7 +1252,7 @@ pass/fail
 **Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
 ### Description
-Checks the access_url.
+Checks whether the `access_url` field within the distribution entry is present and non-empty, confirming that a direct link to the data is provided in the maDMP.
 
 ### Input
 maDMP JSON
@@ -1155,16 +1275,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Access URL"
+    "@value": "Check Access URL is Present and Non-empty"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the access_url."
+    "@value": "Checks whether the access_url field within the distribution entry is present and non-empty, confirming a direct link to the data is provided."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "access URL"
+    },
+    {
+      "@language": "en",
+      "@value": "data location"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1224,7 +1356,7 @@ pass/fail
 
 ---
 
-## Test: PID matches destination repository record
+## Test: Check PID Matches Destination Repository Record
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-repo-match
@@ -1232,7 +1364,7 @@ pass/fail
 **Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
 ### Description
-Checks if reused dataset id in DMP matches the destination.
+Checks whether the persistent identifier declared for the reused dataset in the maDMP matches the corresponding record found in the destination repository, confirming consistency between the plan and the repository.
 
 ### Input
 - dataset_id in maDMP  
@@ -1257,7 +1389,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "PID matches destination repository record"
+    "@value": "Check PID Matches Destination Repository Record"
   },
   "dcterms:description": {
     "@language": "en",
@@ -1266,7 +1398,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -1326,7 +1470,7 @@ pass/fail
 
 ---
 
-## Test: PID resolves
+## Test: Check PID Resolves Successfully
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-pid-resolves
@@ -1334,7 +1478,7 @@ pass/fail
 **Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
 ### Description
-Checks if the PID resolves.
+Checks whether the persistent identifier declared in the maDMP resolves to an accessible online resource, confirming that the PID is active, valid, and leads to the correct dataset.
 
 ### Input
 - dataset_id from maDMP  
@@ -1358,16 +1502,28 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "PID resolves"
+    "@value": "Check PID Resolves Successfully"
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if the PID resolves."
+    "@value": "Checks whether the persistent identifier declared in the maDMP resolves to an accessible online resource, confirming the PID is active and valid."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID resolution"
+    },
+    {
+      "@language": "en",
+      "@value": "DOI"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1427,7 +1583,7 @@ pass/fail
 
 ---
 
-## Test: Reused data access matches destination
+## Test: Check Reused Data Access Matches Destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-match
@@ -1460,7 +1616,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Reused data access matches destination"
+    "@value": "Check Reused Data Access Matches Destination"
   },
   "dcterms:description": {
     "@language": "en",
@@ -1469,7 +1625,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -1529,7 +1697,7 @@ pass/fail
 
 ---
 
-## Test: Reused data license matches destination
+## Test: Check Reused Data License Matches Destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license-match
@@ -1562,7 +1730,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Reused data license matches destination"
+    "@value": "Check Reused Data License Matches Destination"
   },
   "dcterms:description": {
     "@language": "en",
@@ -1571,7 +1739,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -1639,7 +1819,7 @@ pass/fail
 **Implements:** [data.new.1](metrics.md#metric-new-data)
 
 ### Description
-Checks if there is a dataset without `is_reused`.
+Checks whether the maDMP includes at least one dataset entry that does not carry an `is_reused` flag, confirming that newly produced or collected data is declared as part of the research project.
 
 ### Input
 maDMP JSON
@@ -1666,12 +1846,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if there is a dataset without `is_reused`."
+    "@value": "Checks whether the maDMP includes at least one dataset entry without an is_reused flag, confirming newly produced data is declared."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data production"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "vivo:abbreviation": {
@@ -1739,7 +1931,7 @@ pass/fail
 **Implements:** [data.new.2](metrics.md#metric-new-data-collection-or-creation)
 
 ### Description
-Checks the `technical_resource` (description, name, id.identifier and id.type).
+Checks whether the `technical_resource` entries for new datasets include description, name, and identifier fields, confirming that the tools and methods used for data collection or creation are documented.
 
 ### Input
 maDMP JSON
@@ -1769,12 +1961,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the `technical_resource` (description, name, id.identifier and id.type)."
+    "@value": "Checks whether the technical_resource entries for new datasets include description, name, and identifier fields documenting the data collection tools and methods."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "data collection"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1842,7 +2046,7 @@ pass/fail
 **Implements:** [data.new.3](metrics.md#metric-new-data-access)
 
 ### Description
-Checks the `data_access` (`open`, `shared`, `closed`).
+Checks whether the `data_access` field for new datasets is declared with a recognised value — open, shared, or closed — confirming that access conditions for newly produced data are explicitly stated.
 
 ### Input
 maDMP JSON
@@ -1871,12 +2075,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the `data_access` (`open`, `shared`, `closed`)."
+    "@value": "Checks whether the data_access field for new datasets is declared with a recognised value — open, shared, or closed."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -1944,7 +2160,7 @@ pass/fail
 **Implements:** [data.new.3](metrics.md#metric-new-data-access)
 
 ### Description
-Checks the rights of dataset.
+Checks whether the `rights` field is present and non-empty for new datasets, confirming that the legal terms or conditions governing access to the newly produced data are documented.
 
 ### Input
 maDMP JSON
@@ -1973,12 +2189,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the rights of dataset."
+    "@value": "Checks whether the rights field is present and non-empty for new datasets, confirming legal terms governing access are documented."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data rights"
+    },
+    {
+      "@language": "en",
+      "@value": "license"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2046,7 +2274,7 @@ pass/fail
 **Implements:** [data.new.4](metrics.md#metric-new-data-metadata)
 
 ### Description
-Checks the metadata (description, language, metadata_id.identifier and metadata_id.type).
+Checks whether new dataset entries include metadata fields such as description, language, and metadata standard identifier, confirming that sufficient information is provided for users to understand and reuse the data.
 
 ### Input
 maDMP JSON
@@ -2078,12 +2306,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the metadata (description, language, metadata_id.identifier and metadata_id.type)."
+    "@value": "Checks whether new dataset entries include metadata fields such as description, language, and metadata standard identifier."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "metadata"
+    },
+    {
+      "@language": "en",
+      "@value": "reproducibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2151,7 +2391,7 @@ pass/fail
 **Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
 
 ### Description
-Checks if there is a `dataset_id`.
+Checks whether a `dataset_id` field with a non-empty identifier is present for the new dataset, confirming that the data has been assigned a reference that can be used to locate and cite it.
 
 ### Input
 dataset_id of maDMP
@@ -2178,12 +2418,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if there is a `dataset_id`."
+    "@value": "Checks whether a dataset_id field with a non-empty identifier is present, confirming the new dataset has been assigned a referenceable identifier."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2251,7 +2503,7 @@ pass/fail
 **Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
 
 ### Description
-Checks if the PID resolves.
+Checks whether the persistent identifier declared in the `dataset_id` field resolves successfully to an accessible online resource, confirming that the identifier is active and leads to the correct dataset record.
 
 ### Input
 dataset_id of maDMP in DOI resolver
@@ -2279,12 +2531,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if the PID resolves."
+    "@value": "Checks whether the persistent identifier in the dataset_id field resolves successfully to an accessible online resource."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID resolution"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2387,7 +2651,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -2491,7 +2767,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -2592,7 +2880,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset type"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset classification"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
     }
   ],
   "vivo:abbreviation": {
@@ -2660,7 +2960,7 @@ pass/fail
 **Implements:** [data.info.cov.2](metrics.md#metric-data-format)
 
 ### Description
-Checks the dataset format (`distribution.format`).
+Checks whether the `format` field within the dataset distribution entry is present and non-empty, confirming that the file format of the data has been declared so users know what tools are needed to open it.
 
 ### Input
 maDMP JSON
@@ -2688,12 +2988,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the dataset format (`distribution.format`)."
+    "@value": "Checks whether the format field within the dataset distribution entry is present and non-empty, confirming the file format has been declared."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "file format"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "interoperability"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2761,7 +3073,7 @@ pass/fail
 **Implements:** [data.info.cov.3](metrics.md#metric-data-size)
 
 ### Description
-Checks the dataset size (`distribution.byte_size`).
+Checks whether the `byte_size` field within the dataset distribution entry is present and has a positive value, confirming that the size of the dataset has been declared to support storage planning.
 
 ### Input
 maDMP JSON
@@ -2789,12 +3101,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the dataset size (`distribution.byte_size`)."
+    "@value": "Checks whether the byte_size field within the distribution entry is present and has a positive value, confirming the dataset size has been declared."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset size"
+    },
+    {
+      "@language": "en",
+      "@value": "storage planning"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -2897,7 +3221,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset type"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "type consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -2965,7 +3301,7 @@ pass/fail
 **Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
 
 ### Description
-Checks that sub-properties are pointing to the same type.
+Checks whether the dataset type declared in the maDMP aligns with the sub-type or resource type classification used by the destination repository, confirming consistency in how the data is categorised.
 
 ### Input
 dataset.type in maDMP + subtype in Zenodo
@@ -2995,12 +3331,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks that sub-properties are pointing to the same type."
+    "@value": "Checks whether the dataset type declared in the maDMP aligns with the sub-type or resource type classification used by the destination repository."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset type"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "subtype"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -3068,7 +3416,7 @@ pass/fail
 **Implements:** [data.info.feas.2](metrics.md#metric-repository-data-format)
 
 ### Description
-Checks the final dataset format.
+Checks whether the file format declared in the maDMP for the dataset distribution matches the actual file format of the data deposited in the destination repository, confirming that the plan reflects reality.
 
 ### Input
 distribution.format in maDMP + files in Zenodo
@@ -3100,12 +3448,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the final dataset format."
+    "@value": "Checks whether final dataset format matches destination files as required by the maDMP specification."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "file format"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "format consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -3173,7 +3533,7 @@ pass/fail
 **Implements:** [data.info.feas.3](metrics.md#metric-repository-data-size)
 
 ### Description
-Checks the final dataset size.
+Checks whether the dataset size declared in the maDMP matches the actual size of the data deposited in the destination repository, confirming that the stated and actual storage requirements are consistent.
 
 ### Input
 distribution.byte_size in maDMP + size in Zenodo
@@ -3206,12 +3566,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the final dataset size."
+    "@value": "Checks whether final dataset size matches destination size as required by the maDMP specification."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset size"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "size consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "vivo:abbreviation": {
@@ -3271,7 +3643,7 @@ pass/fail
 
 ---
 
-## Test: Validate maDMP JSON against DMP Common Standard schema
+## Test: Check maDMP JSON Validates Against DMP Common Standard Schema
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation
@@ -3303,7 +3675,7 @@ pass/fail
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
     "@language": "en",
-    "@value": "Validate maDMP JSON against DMP Common Standard schema"
+    "@value": "Check maDMP JSON Validates Against DMP Common Standard Schema"
   },
   "dcterms:description": {
     "@language": "en",
@@ -3312,7 +3684,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "DMP Common Standard"
+    },
+    {
+      "@language": "en",
+      "@value": "schema validation"
+    },
+    {
+      "@language": "en",
+      "@value": "JSON"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
     }
   ],
   "vivo:abbreviation": {
@@ -3380,7 +3764,7 @@ pass/fail
 **Implements:** [meta.co.1](metrics.md#metric-controlled-vocabularies-used-in-methodology)
 
 ### Description
-Checks the dataset_methodology for controlled vocabularies.
+Checks whether the methodology description in the maDMP references terms from a recognised controlled vocabulary, confirming that the research methods are described in a standardised and interoperable way.
 
 ### Input
 maDMP JSON + controlled vocabularies from external sources
@@ -3409,12 +3793,24 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks the dataset_methodology for controlled vocabularies."
+    "@value": "Checks whether dataset_methodology for controlled vocabularies as required by the maDMP specification."
   },
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "controlled vocabulary"
+    },
+    {
+      "@language": "en",
+      "@value": "methodology"
+    },
+    {
+      "@language": "en",
+      "@value": "interoperability"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -3482,7 +3878,7 @@ pass/fail
 **Implements:** [meta.co.2](metrics.md#metric-electronic-lab-notebook-referenced-as-a-technical-resource)
 
 ### Description
-Checks if an electronic lab notebook is mentioned (`technical_resource.name`).
+Checks whether the `technical_resource.name` field in the maDMP includes a reference to an electronic lab notebook, confirming that the use of this documentation tool has been declared in the plan.
 
 ### Input
 maDMP JSON
@@ -3515,7 +3911,19 @@ pass/fail
   "dcat:keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "electronic lab notebook"
+    },
+    {
+      "@language": "en",
+      "@value": "ELN"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "vivo:abbreviation": {
@@ -4788,7 +5196,7 @@ pass/fail
 **Implements:** [store.co.1](metrics.md#metric-back-up-frequency)
 
 ### Description
-Checks if the back up performance is frequent (`backup_frequency`).
+Checks whether the `backup_frequency` field in the maDMP is present and non-empty, confirming that the plan specifies how often data backups will be performed to protect against loss.
 
 ### Input
 maDMP JSON
@@ -5015,7 +5423,7 @@ pass/fail
 **Implements:** [secur.co.1](metrics.md#metric-security-measures-implementation)
 
 ### Description
-Checks if secure measures exist (`security_and_privacy.title`).
+Checks whether the `security_and_privacy.title` field is present and non-empty in the maDMP, confirming that at least one security measure has been named and associated with the dataset.
 
 ### Input
 maDMP JSON
@@ -5043,7 +5451,7 @@ pass/fail
   },
   "dcterms:description": {
     "@language": "en",
-    "@value": "Checks if secure measures exist (security_and_privacy.title)."
+    "@value": "Checks whether security_and_privacy.title for security measures as required by the maDMP specification."
   },
   "dcat:keyword": [
     {
@@ -6153,7 +6561,7 @@ pass/fail
 **Implements:** [data.lice.co.1](metrics.md#metric-dataset-license)
 
 ### Description
-Checks if the dataset has a licence (`license_ref`).
+Checks whether the `license_ref` field within the dataset distribution entry is present and non-empty, confirming that a license has been declared and users know the terms under which the data may be used.
 
 ### Input
 maDMP JSON

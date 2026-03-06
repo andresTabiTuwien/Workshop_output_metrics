@@ -13,16 +13,16 @@
 | data.reused.feas.1 | [Repository Reused Data PID](#metric-repository-reused-data-pid) |
 | data.reused.feas.2 | [Repository Reused Data Access](#metric-repository-reused-data-access) |
 | data.reused.feas.3 | [Repository Reused Data License](#metric-repository-reused-data-license) |
-| data.new.1 | [New Data](#metric-new-data) |
+| data.new.1 | [New Dataset Declared in the DMP](#metric-new-data) |
 | data.new.2 | [New Data Collection or Creation](#metric-new-data-collection-or-creation) |
 | data.new.3 | [New Data Access](#metric-new-data-access) |
 | data.new.4 | [New Data Metadata](#metric-new-data-metadata) |
 | data.new.feas.1 | [Repository PID Resolution](#metric-repository-pid-resolution) |
 | data.new.feas.2 | [Repository New Data Access](#metric-repository-new-data-access) |
 | data.new.feas.3 | [Repository New Data License](#metric-repository-new-data-license) |
-| data.info.cov.1 | [Data Type](#metric-data-type) |
-| data.info.cov.2 | [Data Format](#metric-data-format) |
-| data.info.cov.3 | [Data Size](#metric-data-size) |
+| data.info.cov.1 | [Dataset Type Specified](#metric-data-type) |
+| data.info.cov.2 | [Dataset File Format Specified](#metric-data-format) |
+| data.info.cov.3 | [Dataset Size Specified](#metric-data-size) |
 | data.info.feas.1 | [Repository Data Type](#metric-repository-data-type) |
 | data.info.feas.2 | [Repository Data Format](#metric-repository-data-format) |
 | data.info.feas.3 | [Repository Data Size](#metric-repository-data-size) |
@@ -52,12 +52,12 @@
 | sens.secure.co.1 | [Sensitive Data Using Method](#metric-sensitive-data-using-method) |
 | sens.secure.co.2 | [Provision of Anonymised Synthetic Data](#metric-provision-of-anonymised-synthetic-data) |
 | data.restrict.co.3 | [Statement of No Data Restrictions](#metric-statement-of-no-data-restrictions) |
-| data.lice.co.1 | [Dataset License](#metric-dataset-license) |
-| soft.lice.comp.1 | [Software License](#metric-software-license) |
+| data.lice.co.1 | [Dataset License Declared](#metric-dataset-license) |
+| soft.lice.comp.1 | [Software Dataset License Declared](#metric-software-license) |
 | data.agree.comp.2 | [Data Access Agreements](#metric-data-access-agreements) |
-| own.co.2 | [Data Ownership](#metric-data-ownership) |
-| soft.auth.co.3 | [Software Author](#metric-software-author) |
-| ethics.co.1 | [Ethical Issues](#metric-ethical-issues) |
+| own.co.2 | [Data Ownership Role Declared](#metric-data-ownership) |
+| soft.auth.co.3 | [Software Dataset Author Declared](#metric-software-author) |
+| ethics.co.1 | [Ethical Issues Status Declared](#metric-ethical-issues) |
 | ethics.co.2 | [Ethical Issues and Review](#metric-ethical-issues-and-review) |
 | ethics.co.3 | [Justification for Absence of Ethical Issues](#metric-justification-for-absence-of-ethical-issues) |
 | data.shar.op.1 | [Data Access Status Open for the Dataset](#metric-data-access-status-open-for-the-dataset) |
@@ -68,7 +68,7 @@
 | data.shar.feas.2 | [Repository Data License Aligned with the DMP](#metric-repository-data-license-aligned-with-the-dmp) |
 | data.shar.feas.3 | [Embargo Implementation Alignment](#metric-embargo-implementation-alignment) |
 | data.shar.feas.4 | [Repository Data Restrictions](#metric-repository-data-restrictions) |
-| data.shar.comp.2 | [Embargo License](#metric-embargo-license) |
+| data.shar.comp.2 | [Embargo Period License Declared](#metric-embargo-license) |
 | repo.co.3 | [Thematic Data Repositories Referenced](#metric-thematic-data-repositories-referenced) |
 | repo.comp.2 | [Repository FAIRness Conformation](#metric-repository-fairness-conformation) |
 | repo.comp.3 | [Trusted Repository is Used](#metric-trusted-repository-is-used) |
@@ -78,23 +78,23 @@
 | repo.co.6 | [Repository Policy is Present](#metric-repository-policy-is-present) |
 | repo.feas.1 | [Repository Identifier Accuracy](#metric-repository-identifier-accuracy) |
 | repo.feas.2 | [Long-Term Preservation Dataset](#metric-long-term-preservation-dataset) |
-| repo.feas.4 | [Repository Specificities](#metric-repository-specificities) |
+| repo.feas.4 | [Repository Compatibility with Dataset Characteristics](#metric-repository-specificities) |
 | data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-data-external-resources-included-in-the-dmp) |
 | data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-metadata-standard-specified-in-the-dmp) |
 | data.exteresource.feas.1 | [Resolvable External Resources](#metric-resolvable-external-resources) |
 | data.exteresource.feas.2 | [OpenAIRE Mentioned Dataset Validation](#metric-openaire-mentioned-dataset-validation) |
-| data.exteresource.feas.3 | [Used Taxonomy](#metric-used-taxonomy) |
-| data.pid.cov.1 | [Dataset PID](#metric-dataset-pid) |
+| data.exteresource.feas.3 | [Contributor Roles Follow CRediT Taxonomy](#metric-used-taxonomy) |
+| data.pid.cov.1 | [Dataset Persistent Identifier Declared](#metric-dataset-pid) |
 | data.pid.cov.2 | [Trusted Repository Referenced](#metric-trusted-repository-referenced) |
-| data.pid.feas.1 | [Repository PID](#metric-repository-pid) |
+| data.pid.feas.1 | [Repository Persistent Identifier System Verified](#metric-repository-pid) |
 | data.pid.feas.3 | [PIDs can be Resolved](#metric-pids-can-be-resolved) |
-| role.co.1 | [RDM Roles](#metric-rdm-roles) |
+| role.co.1 | [Research Data Management Roles Declared](#metric-rdm-roles) |
 | dmp.valid.co.2 | [DMP Validation by Data Steward](#metric-dmp-validation-by-data-steward) |
 | role.pid.co.1 | [Contributors and Organisations PIDs](#metric-contributors-and-organisations-pids) |
 | role.feas.1 | [Referenced RDM Roles](#metric-referenced-rdm-roles) |
 | role.feas.2 | [Final Data Steward Validation](#metric-final-data-steward-validation) |
 | role.feas.3 | [Referenced Contributors and Organisations PIDs](#metric-referenced-contributors-and-organisations-pids) |
-| cost.comp.1 | [Repository Cost](#metric-repository-cost) |
+| cost.comp.1 | [Repository Cost Verified Against Actual Pricing](#metric-repository-cost) |
 | cost.co.1 | [DMP Budget Specifications](#metric-dmp-budget-specifications) |
 | cost.co.2 | [No Extra RDM Costs](#metric-no-extra-rdm-costs) |
 
@@ -112,7 +112,7 @@ maDMP declares reused datasets
 The machine-actionable Data Management Plan (maDMP) declares whether any dataset described in the plan is reused.
 
 ### Intended Outcome
-Determine whether reuse of datasets is explicitly declared in the maDMP.
+Determine whether the reuse of existing datasets is explicitly declared in the maDMP, confirming that the research project accounts for pre-existing data sources rather than treating all data as newly produced.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -142,7 +142,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "The machine-actionable Data Management Plan (maDMP) declares whether any dataset described in the plan is reused."
+    "@value": "Checks whether the maDMP explicitly declares the reuse of existing datasets as part of the research project."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -167,7 +167,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data reuse"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset declaration"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -207,10 +223,10 @@ Boolean (pass/fail)
 Reused Data PID
 
 ### Narrative
-Verifies that reused datasets come with PIDs.
+Verifies that each reused dataset referenced in the DMP includes a persistent identifier (PID), enabling reliable and unambiguous discovery of the original data source.
 
 ### Intended Outcome
-Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include persistent identifiers.
+Determine whether reused datasets declared in the maDMP are accompanied by a persistent identifier, such as a DOI or URL-based PID, enabling reliable citation and unambiguous discovery of the original data source.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -240,7 +256,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that reused datasets come with PIDs."
+    "@value": "Checks whether each reused dataset referenced in the maDMP includes a persistent identifier for reliable citation and discovery."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -265,7 +281,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -305,10 +337,10 @@ Boolean (pass/fail)
 Reused Data License
 
 ### Narrative
-Verifies that reused datasets come with license.
+Verifies that each reused dataset referenced in the DMP declares a license, ensuring that users and researchers know the terms under which the data may be used.
 
 ### Intended Outcome
-Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include license information.
+Determine whether reused datasets declared in the maDMP include a license reference, confirming that the legal terms of use for the source data are known and documented in the plan.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -323,7 +355,7 @@ At least one reused dataset is missing license information or required license f
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [License for reused datasets](tests.md#test-license-for-reused-datasets)
+- [Check License for Reused Datasets](tests.md#test-license-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -338,7 +370,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that reused datasets come with license."
+    "@value": "Checks whether each reused dataset referenced in the maDMP declares a license defining the terms of use."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -363,7 +395,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "license reference"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -403,10 +451,10 @@ Boolean (pass/fail)
 Reused Data Source
 
 ### Narrative
-Verifies that reused datasets are shared.
+Verifies that reused datasets referenced in the DMP are shared with sufficient distribution information, confirming that the data source is accessible and not merely cited.
 
 ### Intended Outcome
-Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include accessible source or distribution information.
+Determine whether reused datasets declared in the maDMP include distribution information showing how and where the data is accessible, confirming that the source data is not merely cited but properly referenced.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -421,9 +469,9 @@ At least one reused dataset lacks distribution or source metadata, or required m
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution Present](tests.md#test-distribution-present)
-- [Distribution Access Information](tests.md#test-distribution-access-information)
-- [Distribution Title](tests.md#test-distribution-title)
+- [Check Distribution Entry is Present](tests.md#test-distribution-present)
+- [Check Distribution Access Information is Present](tests.md#test-distribution-access-information)
+- [Check Distribution Title is Present](tests.md#test-distribution-title)
 
 ### JSON-LD (Metric)
 ```json
@@ -438,7 +486,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that reused datasets are shared."
+    "@value": "Checks whether reused datasets in the maDMP include distribution information confirming the data is accessible and not merely cited."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -463,7 +511,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "data sharing"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -503,10 +567,10 @@ Boolean (pass/fail)
 Reused Data Access
 
 ### Narrative
-Verifies the access rights of the reused datasets.
+Verifies the access conditions declared for reused datasets in the DMP, ensuring that it is clear whether the data is openly available, shared under conditions, or restricted.
 
 ### Intended Outcome
-Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include an explicit access rights statement.
+Determine whether the access conditions for reused datasets are declared in the maDMP, confirming that it is clear whether the data is open, shared under specific conditions, or subject to restrictions.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -521,7 +585,7 @@ At least one reused dataset is missing a `data_access` value or contains an inva
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Access rights for reused datasets](tests.md#test-access-rights-for-reused-datasets)
+- [Check Access Rights for Reused Datasets](tests.md#test-access-rights-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -536,7 +600,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the access rights of the reused datasets."
+    "@value": "Checks whether the maDMP declares the access conditions for each reused dataset, distinguishing between open, shared, and restricted access."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -561,7 +625,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -601,7 +681,7 @@ Boolean (pass/fail)
 Reused Data Personal
 
 ### Narrative
-Verifies the existence of personal data.
+Verifies whether any reused datasets contain personal data, as declared in the DMP, so that appropriate data protection measures and compliance obligations can be identified.
 
 ### Intended Outcome
 Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include an explicit statement about the presence of personal data.
@@ -619,7 +699,7 @@ At least one reused dataset is missing `personal_data` information or contains a
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Personal data for reused datasets](tests.md#test-personal-data-for-reused-datasets)
+- [Check Personal Data Flag for Reused Datasets](tests.md#test-personal-data-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -634,7 +714,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the existence of personal data."
+    "@value": "Checks whether the maDMP declares whether any reused dataset contains personal data, enabling appropriate data protection measures."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -659,7 +739,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "personal data"
+    },
+    {
+      "@language": "en",
+      "@value": "data protection"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -699,7 +795,7 @@ Boolean (pass/fail)
 Reused Data Sensitive
 
 ### Narrative
-Verifies the existence of sensitive data.
+Verifies whether any reused datasets contain sensitive data, as declared in the DMP, so that appropriate security and handling requirements can be identified and applied.
 
 ### Intended Outcome
 Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include an explicit statement about the presence of sensitive data.
@@ -717,7 +813,7 @@ At least one reused dataset is missing `sensitive_data` information or contains 
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Sensitive data for reused datasets](tests.md#test-sensitive-data-for-reused-datasets)
+- [Check Sensitive Data Flag for Reused Datasets](tests.md#test-sensitive-data-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -732,7 +828,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the existence of sensitive data."
+    "@value": "Checks whether the maDMP declares whether any reused dataset contains sensitive data, enabling appropriate security and handling measures."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -757,7 +853,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "sensitive data"
+    },
+    {
+      "@language": "en",
+      "@value": "data security"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -797,7 +909,7 @@ Boolean (pass/fail)
 Reused Data URL
 
 ### Narrative
-Verifies that the reused data have URL.
+Verifies that reused datasets referenced in the DMP include a URL, making it possible for users to locate and access the original data source directly.
 
 ### Intended Outcome
 Determine whether reused datasets declared in the machine-actionable Data Management Plan (maDMP) include a URL pointing to their distribution or access location.
@@ -815,8 +927,8 @@ At least one reused dataset lacks a distribution URL.
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Distribution present (URL)](tests.md#test-distribution-present-url)
-- [Access URL](tests.md#test-access-url)
+- [Check Distribution URL is Present](tests.md#test-distribution-present-url)
+- [Check Access URL is Present and Non-empty](tests.md#test-access-url)
 
 ### JSON-LD (Metric)
 ```json
@@ -831,7 +943,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the reused data have URL."
+    "@value": "Checks whether each reused dataset in the maDMP includes a URL so that the original data source can be located and accessed."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -856,7 +968,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "access URL"
+    },
+    {
+      "@language": "en",
+      "@value": "data location"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -896,7 +1024,7 @@ Boolean (pass/fail)
 Repository Reused Data PID
 
 ### Narrative
-Validates that the reused dataset exists in the repository.
+Validates that the reused dataset declared in the DMP can be found in the destination repository, confirming that the referenced data actually exists and is accessible at the stated location.
 
 ### Intended Outcome
 Determine whether the PID for each reused dataset declared in the machine-actionable Data Management Plan (maDMP) corresponds to an existing record in a target repository and resolves via a PID resolver.
@@ -920,8 +1048,8 @@ At least one reused dataset PID:
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [PID matches destination repository record](tests.md#test-pid-matches-destination-repository-record)
-- [PID resolves](tests.md#test-pid-resolves)
+- [Check PID Matches Destination Repository Record](tests.md#test-pid-matches-destination-repository-record)
+- [Check PID Resolves Successfully](tests.md#test-pid-resolves)
 
 ### JSON-LD (Metric)
 ```json
@@ -936,7 +1064,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the reused dataset exists in the repository."
+    "@value": "Checks whether the reused dataset declared in the maDMP can be found in the destination repository at the stated location."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -961,7 +1089,27 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "data discovery"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1020,7 +1168,7 @@ At least one reused dataset has a `data_access` value in the maDMP that does not
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Reused data access matches destination](tests.md#test-reused-data-access-matches-destination)
+- [Check Reused Data Access Matches Destination](tests.md#test-reused-data-access-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -1035,7 +1183,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the access rights of the reused dataset match those of the destination."
+    "@value": "Checks whether the access conditions for reused datasets declared in the maDMP match the access policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1060,7 +1208,27 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1103,7 +1271,7 @@ Repository Reused Data License
 Validates that license of the reused dataset match those of the destination.
 
 ### Intended Outcome
-Determine whether the license declared for reused datasets in the maDMP matches the license recorded in the destination repository.
+Determine whether the license declared for reused datasets in the maDMP matches the license recorded in the destination repository, confirming that the licensing information is consistent across the plan and the repository record.
 
 ### Applies To
 - maDMP JSON (dataset reuse declarations)  
@@ -1119,7 +1287,7 @@ At least one reused dataset has a license value in the maDMP that does not match
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Reused data license matches destination](tests.md#test-reused-data-license-matches-destination)
+- [Check Reused Data License Matches Destination](tests.md#test-reused-data-license-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -1134,7 +1302,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that license of the reused dataset match those of the destination."
+    "@value": "Checks whether the license declared for reused datasets in the maDMP is consistent with the license recorded in the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1159,7 +1327,27 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "reused dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1189,7 +1377,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: New Data
+## Metric: New Dataset Declared in the DMP
 
 **Metric ID:** data.new.1  
 **Persistent URI:** https://example.org/metric/data.new.1
@@ -1199,7 +1387,7 @@ Boolean (pass/fail)
 New Data
 
 ### Narrative
-Verifies that information about the new data exist.
+Verifies that the DMP includes a declaration of at least one new dataset being produced or collected as part of the research project, confirming that data production activities are documented.
 
 ### Intended Outcome
 Determine whether the maDMP contains at least one dataset that is not explicitly declared as reused (i.e., a “new” dataset is present).
@@ -1228,11 +1416,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.new.1",
   "title": {
     "@language": "en",
-    "@value": "New Data"
+    "@value": "New Dataset Declared in the DMP"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that information about the new data exist."
+    "@value": "Checks whether the maDMP declares at least one new dataset being produced or collected as part of the research project."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1257,7 +1445,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset declaration"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "data production"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -1297,10 +1501,10 @@ Boolean (pass/fail)
 New Data Collection or Creation
 
 ### Narrative
-Verifies how the new data were collected or created.
+Verifies that the DMP describes how new data were collected or created, providing transparency about the methods and tools used in the data production process.
 
 ### Intended Outcome
-Determine whether the maDMP includes technical resource information describing how new data were collected or created.
+Determine whether the maDMP includes technical resource information describing how new data were collected or created, confirming that the data production process is transparent and documented for future users.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -1334,7 +1538,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies how the new data were collected or created."
+    "@value": "Checks whether the maDMP describes the methods and tools used to collect or create new data."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1359,7 +1563,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data collection"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "methodology"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1435,7 +1655,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that access rights of the new dataset is specified."
+    "@value": "Checks whether the access rights for new datasets are explicitly declared in the maDMP."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1460,7 +1680,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "access rights"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "openness"
     }
   ],
   "landingPage": {
@@ -1500,10 +1736,10 @@ Boolean (pass/fail)
 New Data Metadata
 
 ### Narrative
-Verifies the reproducibility of the new data.
+Verifies that the DMP provides sufficient metadata for new datasets to support reproducibility, enabling others to understand, reuse, and validate the data in the future.
 
 ### Intended Outcome
-Determine whether the maDMP includes sufficient metadata information for new datasets, supporting reproducibility and understanding of the data.
+Determine whether the maDMP includes sufficient metadata information for new datasets to support reproducibility, ensuring that future users have enough context to understand, validate, and reuse the data.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -1537,7 +1773,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the reproducibility of the new data."
+    "@value": "Checks whether the maDMP provides sufficient metadata for new datasets to support reproducibility and reuse."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1562,7 +1798,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "metadata"
+    },
+    {
+      "@language": "en",
+      "@value": "reproducibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -1638,7 +1890,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the PID provided is resolvable according to its system resolver."
+    "@value": "Checks whether the persistent identifier declared for a new dataset in the maDMP resolves to an accessible online resource."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1663,7 +1915,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "persistent identifier"
+    },
+    {
+      "@language": "en",
+      "@value": "PID resolution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "landingPage": {
@@ -1737,7 +2005,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the access rights of the new dataset match those of the destination."
+    "@value": "Checks whether the access rights declared for new datasets in the maDMP match the access policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1762,7 +2030,27 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data access"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1836,7 +2124,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that license of the new dataset match those of the destination."
+    "@value": "Checks whether the license declared for new datasets in the maDMP is consistent with the license applied by the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1861,7 +2149,27 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "new dataset"
+    },
+    {
+      "@language": "en",
+      "@value": "data license"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
     }
   ],
   "landingPage": {
@@ -1891,7 +2199,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Data Type
+## Metric: Dataset Type Specified
 
 **Metric ID:** data.info.cov.1  
 **Persistent URI:** https://example.org/metric/data.info.cov.1
@@ -1930,11 +2238,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.info.cov.1",
   "title": {
     "@language": "en",
-    "@value": "Data Type"
+    "@value": "Dataset Type Specified"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the type of the dataset is qualitative or quantitative."
+    "@value": "Checks whether the type of each dataset is declared in the maDMP, enabling users to understand what kind of data has been produced."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -1959,7 +2267,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset type"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset classification"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
+    },
+    {
+      "@language": "en",
+      "@value": "data description"
     }
   ],
   "landingPage": {
@@ -1989,7 +2313,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Data Format
+## Metric: Dataset File Format Specified
 
 **Metric ID:** data.info.cov.2  
 **Persistent URI:** https://example.org/metric/data.info.cov.2
@@ -1999,7 +2323,7 @@ Boolean (pass/fail)
 Data Format
 
 ### Narrative
-Verifies the format of the dataset.
+Verifies that the file format of the dataset distribution is declared in the DMP, helping users assess whether the data can be opened and processed with common tools.
 
 ### Intended Outcome
 Determine whether dataset distribution information includes an explicit format, supporting understanding of how the data can be accessed and processed.
@@ -2028,11 +2352,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.info.cov.2",
   "title": {
     "@language": "en",
-    "@value": "Data Format"
+    "@value": "Dataset File Format Specified"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the format of the dataset."
+    "@value": "Checks whether the file format of each dataset distribution is declared in the maDMP, helping users assess tool requirements."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2057,7 +2381,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "file format"
+    },
+    {
+      "@language": "en",
+      "@value": "dataset format"
+    },
+    {
+      "@language": "en",
+      "@value": "interoperability"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
     }
   ],
   "landingPage": {
@@ -2087,7 +2427,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Data Size
+## Metric: Dataset Size Specified
 
 **Metric ID:** data.info.cov.3  
 **Persistent URI:** https://example.org/metric/data.info.cov.3
@@ -2097,10 +2437,10 @@ Boolean (pass/fail)
 Data Size
 
 ### Narrative
-Verifies the size of the dataset.
+Verifies that the size of the dataset distribution is declared in the DMP, supporting storage planning and helping users assess download and processing requirements.
 
 ### Intended Outcome
-Determine whether dataset distribution information includes an explicit size, supporting planning for storage, transfer, and processing.
+Determine whether dataset distribution information includes an explicit size declaration, supporting storage planning and helping users assess the practical requirements for downloading and processing the data.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -2126,11 +2466,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.info.cov.3",
   "title": {
     "@language": "en",
-    "@value": "Data Size"
+    "@value": "Dataset Size Specified"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the size of the dataset."
+    "@value": "Checks whether the size of each dataset distribution is declared in the maDMP, supporting storage and download planning."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2155,7 +2495,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset size"
+    },
+    {
+      "@language": "en",
+      "@value": "storage planning"
+    },
+    {
+      "@language": "en",
+      "@value": "distribution"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "coverage"
     }
   ],
   "landingPage": {
@@ -2232,7 +2588,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the type of the dataset match those of the destination."
+    "@value": "Checks whether the dataset type declared in the maDMP matches the type classification used by the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2257,7 +2613,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset type"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "type consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "landingPage": {
@@ -2331,7 +2703,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the format of the dataset match those of the destination."
+    "@value": "Checks whether the file format declared in the maDMP matches the format of the data actually deposited in the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2356,7 +2728,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "file format"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "format consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "landingPage": {
@@ -2430,7 +2818,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the size of the dataset match those of the destination."
+    "@value": "Checks whether the dataset size declared in the maDMP matches the actual size of the data deposited in the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2455,7 +2843,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "dataset size"
+    },
+    {
+      "@language": "en",
+      "@value": "repository"
+    },
+    {
+      "@language": "en",
+      "@value": "size consistency"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "feasibility"
     }
   ],
   "landingPage": {
@@ -2513,7 +2917,7 @@ The maDMP JSON fails schema validation (one or more validation errors), includin
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Validate maDMP JSON against DMP Common Standard schema](tests.md#test-validate-madmp-json-against-dmp-common-standard-schema)
+- [Check maDMP JSON Validates Against DMP Common Standard Schema](tests.md#test-validate-madmp-json-against-dmp-common-standard-schema)
 
 ### JSON-LD (Metric)
 ```json
@@ -2528,7 +2932,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the fields of the DMP JSON are aligned with the data types of the DMP Common Standard."
+    "@value": "Checks whether the maDMP is a valid JSON document that conforms to the RDA DMP Common Standard schema."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2553,7 +2957,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "DMP Common Standard"
+    },
+    {
+      "@language": "en",
+      "@value": "schema validation"
+    },
+    {
+      "@language": "en",
+      "@value": "JSON"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "compliance"
     }
   ],
   "landingPage": {
@@ -2593,10 +3013,10 @@ Boolean (pass/fail)
 Controlled Vocabularies Used in Methodology
 
 ### Narrative
-Verifies that controlled vocabularies are used in methodology.
+Verifies that the DMP references controlled vocabularies in the description of the research methodology, promoting consistency and interoperability in how data and concepts are described.
 
 ### Intended Outcome
-Determine whether the methodology information in the maDMP refers to controlled vocabularies, supporting semantic consistency and interoperability.
+Determine whether the methodology information in the maDMP references controlled vocabularies, supporting semantic consistency and making it easier for others to interpret and reuse the described methods and data.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -2626,7 +3046,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that controlled vocabularies are used in methodology."
+    "@value": "Checks whether the methodology description in the maDMP references terms from a recognised controlled vocabulary."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2651,7 +3071,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "controlled vocabulary"
+    },
+    {
+      "@language": "en",
+      "@value": "methodology"
+    },
+    {
+      "@language": "en",
+      "@value": "interoperability"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -2724,7 +3160,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the reference of an electronic lab notebook is included."
+    "@value": "Checks whether the maDMP references an electronic lab notebook as a technical resource used in the research project."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -2749,7 +3185,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "electronic lab notebook"
+    },
+    {
+      "@language": "en",
+      "@value": "ELN"
+    },
+    {
+      "@language": "en",
+      "@value": "technical resource"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "completeness"
     }
   ],
   "landingPage": {
@@ -3089,10 +3541,10 @@ Boolean (pass/fail)
 Use of Open File Formats for datasets
 
 ### Narrative
-Validates if the data formats are open.
+Validates that the file formats used for dataset distributions are open and non-proprietary, ensuring long-term accessibility and reducing barriers to data reuse.
 
 ### Intended Outcome
-Determine whether the dataset distributions declared in the maDMP use open file formats, supporting openness, accessibility, and reuse.
+Determine whether the dataset distributions declared in the maDMP use open file formats, supporting long-term accessibility and ensuring that the data can be read without proprietary software.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -3122,7 +3574,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates if the data formats are open."
+    "@value": "Checks whether the file formats declared for dataset distributions in the maDMP are open and non-proprietary."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3147,7 +3599,23 @@ Boolean (pass/fail)
   "keyword": [
     {
       "@language": "en",
-      "@value": "template keyword"
+      "@value": "open file format"
+    },
+    {
+      "@language": "en",
+      "@value": "interoperability"
+    },
+    {
+      "@language": "en",
+      "@value": "data accessibility"
+    },
+    {
+      "@language": "en",
+      "@value": "maDMP"
+    },
+    {
+      "@language": "en",
+      "@value": "openness"
     }
   ],
   "landingPage": {
@@ -3219,7 +3687,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates if there is a form of accompanying documentation for the dataset."
+    "@value": "Checks whether the maDMP references a technical resource providing documentation for the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3296,7 +3764,7 @@ Boolean (pass/fail)
 Quality Control Methods Stated
 
 ### Narrative
-Verifies that quality control methods are stated.
+Verifies that the DMP describes the quality control methods applied to the data, giving users and reviewers confidence in the accuracy and reliability of the dataset.
 
 ### Intended Outcome
 Determine whether the maDMP includes a statement of quality control methods for the dataset, either as free-text narrative or as controlled terms in the `data_quality_assurance` field.
@@ -3329,7 +3797,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that quality control methods are stated."
+    "@value": "Checks whether the maDMP describes the quality control methods applied to ensure the accuracy and reliability of the data."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3406,7 +3874,7 @@ Boolean (pass/fail)
 Data Storage Location mentioned in the DMP
 
 ### Narrative
-Verifies that the data storage location is mentioned.
+Verifies that the DMP identifies where the data will be stored during the active phase of the project, ensuring that storage responsibilities and locations are clearly documented.
 
 ### Intended Outcome
 Determine whether the maDMP includes a reference to a data storage location for the dataset, declared through `host.title` or `host.url` within a distribution entry.
@@ -3439,7 +3907,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the data storage location is mentioned."
+    "@value": "Checks whether the maDMP identifies the location where data will be stored during the active phase of the project."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3549,7 +4017,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the data are not planned to be stored in personal devices."
+    "@value": "Checks whether the maDMP specifies a trusted repository as the storage location for the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3662,7 +4130,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP declares the sensitivity or classification level of the dataset and that the planned storage and backup strategies align with this classification."
+    "@value": "Checks whether the sensitivity classification and storage security measures in the maDMP are aligned."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3746,7 +4214,7 @@ Back up Responsibility
 Verifies that there is someone responsible for back up activities.
 
 ### Intended Outcome
-Determine whether the maDMP declares at least one contributor with a role explicitly associated with backup responsibilities.
+Determine whether the maDMP declares at least one contributor with a role explicitly associated with backup responsibility, confirming that someone is accountable for ensuring the data is regularly and reliably backed up.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -3776,7 +4244,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that there is someone responsible for back up activities."
+    "@value": "Checks whether the maDMP assigns backup responsibility to at least one named contributor."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3853,7 +4321,7 @@ Boolean (pass/fail)
 Back up Frequency
 
 ### Narrative
-Verifies the frequency of the back up performance.
+Verifies that the DMP specifies how often backups of the data will be performed, helping to ensure that data can be recovered in the event of loss or corruption.
 
 ### Intended Outcome
 Determine whether the maDMP declares a backup frequency for the dataset, indicating that backup activities are planned at a defined interval.
@@ -3886,7 +4354,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the frequency of the back up performance."
+    "@value": "Checks whether the maDMP specifies the frequency at which data backups will be performed."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -3996,7 +4464,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that a description of the version control system used for developed software is included, along with information on how versioning and updates will be managed throughout the project."
+    "@value": "Checks whether the maDMP satisfies the criterion: version control practices for software."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4073,7 +4541,7 @@ Boolean (pass/fail)
 Stored Dataset Location Confirmed
 
 ### Narrative
-Validates that the location storage matches the destination.
+Validates that the storage location declared in the DMP matches the actual destination repository where the data has been deposited, confirming consistency between plan and practice.
 
 ### Intended Outcome
 Determine whether the storage location declared in the maDMP (`host.id`) can be confirmed to match the actual destination where the dataset has been deposited, as verified against an external repository such as Zenodo.
@@ -4106,7 +4574,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the location storage matches the destination."
+    "@value": "Checks whether the storage location declared in the maDMP matches the destination repository where the data has been deposited."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4216,7 +4684,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that secure measures are implemented to ensure data security during the project."
+    "@value": "Checks whether the maDMP includes a named security measure applied to protect the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4326,7 +4794,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that if the data are sensitive, then there is a description which includes mention of access rights management via institutional storage."
+    "@value": "Checks whether the maDMP describes how access rights to the dataset are managed."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4436,7 +4904,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes a description of access control measures for authorised users."
+    "@value": "Checks whether the maDMP describes the controls used to authorise access to the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4546,7 +5014,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes a description of access control and user permission management when sensitive data exist."
+    "@value": "Checks whether the maDMP describes the procedures for managing user access and permissions."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4656,7 +5124,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies whether the DMP describes the procedures required to gain access to the data."
+    "@value": "Checks whether the maDMP describes the procedures that users must follow to request access to the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4766,7 +5234,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes references to applicable legal and ethical guidelines."
+    "@value": "Checks whether the maDMP addresses GDPR compliance and ethical considerations in its security and privacy declarations."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4876,7 +5344,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that security measures have been implemented in the destination."
+    "@value": "Checks whether the security measures declared in the maDMP are reflected in the destination repository record."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -4986,7 +5454,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that when sensitive data are involved, the DMP includes a description of the method used to protect them."
+    "@value": "Checks whether the maDMP describes the method used to protect sensitive data when the dataset is flagged as sensitive."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5096,7 +5564,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that there is the intention to provide an anonymised synthetic version of the original data."
+    "@value": "Checks whether the maDMP declares that anonymised or synthetic data will be provided as an alternative to restricted data."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5173,7 +5641,7 @@ Boolean (pass/fail)
 Statement of No Data Restrictions
 
 ### Narrative
-Verifies that no restrictions apply to the data.
+Verifies that the DMP explicitly states that no access restrictions apply to the data, making it clear to users and reviewers that the dataset is freely available.
 
 ### Intended Outcome
 Determine whether the maDMP explicitly states that no restrictions apply to the dataset, as declared through the `rights` field of the distribution.
@@ -5206,7 +5674,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that no restrictions apply to the data."
+    "@value": "Checks whether the maDMP explicitly states that no access restrictions apply to the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5273,7 +5741,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Dataset License
+## Metric: Dataset License Declared
 
 **Metric ID:** data.lice.co.1
 **Persistent URI:** https://example.org/metric/data.lice.co.1
@@ -5286,7 +5754,7 @@ Dataset License
 Verifies that the dataset has a license and which one.
 
 ### Intended Outcome
-Determine whether the maDMP declares a license for the dataset through a non-empty `license_ref` field within a distribution entry.
+Determine whether the maDMP declares a license for the dataset through a non-empty license reference field, confirming that users are informed of the legal terms under which the dataset may be accessed and reused.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -5312,11 +5780,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.lice.co.1",
   "title": {
     "@language": "en",
-    "@value": "Dataset License"
+    "@value": "Dataset License Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the dataset has a license and which one."
+    "@value": "Checks whether the maDMP declares a license for the dataset distribution via a non-empty license reference field."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5383,7 +5851,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Software License
+## Metric: Software Dataset License Declared
 
 **Metric ID:** soft.lice.comp.1
 **Persistent URI:** https://example.org/metric/soft.lice.comp.1
@@ -5422,11 +5890,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/soft.lice.comp.1",
   "title": {
     "@language": "en",
-    "@value": "Software License"
+    "@value": "Software Dataset License Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that if the dataset is of software type, then the license matches a recognised software license."
+    "@value": "Checks whether the maDMP declares an SPDX-compliant license for software datasets."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5503,7 +5971,7 @@ Boolean (pass/fail)
 Data Access Agreements
 
 ### Narrative
-Verifies that collaborated agreements or MoUs are mentioned.
+Verifies that the DMP references any collaboration agreements or Memoranda of Understanding (MoUs) governing data access, ensuring that formal arrangements are documented and traceable.
 
 ### Intended Outcome
 Determine whether the maDMP references any data access agreements or Memoranda of Understanding (MoUs), either through the `data_access` field or through `rights` entries that indicate the existence of a formal agreement governing data access.
@@ -5536,7 +6004,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that collaborated agreements or MoUs are mentioned."
+    "@value": "Checks whether the maDMP references any collaboration agreements or Memoranda of Understanding governing data access."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5603,7 +6071,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Data Ownership
+## Metric: Data Ownership Role Declared
 
 **Metric ID:** own.co.2
 **Persistent URI:** https://example.org/metric/own.co.2
@@ -5642,11 +6110,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/own.co.2",
   "title": {
     "@language": "en",
-    "@value": "Data Ownership"
+    "@value": "Data Ownership Role Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies who is the owner of the data and that the field is filled in."
+    "@value": "Checks whether the maDMP declares at least one contributor with a data ownership role."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5713,7 +6181,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Software Author
+## Metric: Software Dataset Author Declared
 
 **Metric ID:** soft.auth.co.3
 **Persistent URI:** https://example.org/metric/soft.auth.co.3
@@ -5752,11 +6220,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/soft.auth.co.3",
   "title": {
     "@language": "en",
-    "@value": "Software Author"
+    "@value": "Software Dataset Author Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that if the dataset is of software type, then there is at least one contributor as author."
+    "@value": "Checks whether the maDMP declares an author contributor for datasets classified as software."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5823,7 +6291,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Ethical Issues
+## Metric: Ethical Issues Status Declared
 
 **Metric ID:** ethics.co.1
 **Persistent URI:** https://example.org/metric/ethics.co.1
@@ -5833,7 +6301,7 @@ Boolean (pass/fail)
 Ethical Issues
 
 ### Narrative
-Verifies that there are ethical issues related.
+Verifies that the DMP declares a position on whether ethical issues are present in the research, which is a required step in responsible and compliant data management.
 
 ### Intended Outcome
 Determine whether the maDMP includes an explicit declaration of whether ethical issues exist, through the `ethical_issues_exist` field set to a recognised value (`yes`, `no`, or `unknown`).
@@ -5862,11 +6330,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/ethics.co.1",
   "title": {
     "@language": "en",
-    "@value": "Ethical Issues"
+    "@value": "Ethical Issues Status Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that there are ethical issues related."
+    "@value": "Checks whether the maDMP declares a position on the existence of ethical issues in the research."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -5976,7 +6444,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that if there are any ethical issues, an ethical review is required and included."
+    "@value": "Checks whether the maDMP satisfies the criterion: ethical issues and review."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6086,7 +6554,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that if there are no ethical issues, then there is a justification."
+    "@value": "Checks whether the maDMP provides a description of ethical issues when the ethical issues field is set to no."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6196,7 +6664,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the access conditions of the data are open."
+    "@value": "Checks whether the maDMP declares at least one dataset with an open access status."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6273,7 +6741,7 @@ Boolean (pass/fail)
 Data License is Present
 
 ### Narrative
-Verifies that there is a licence.
+Verifies that the DMP includes a license declaration for the dataset distribution, confirming that users are informed of the legal terms under which the data may be accessed and reused.
 
 ### Intended Outcome
 Determine whether the maDMP includes a distribution entry for the dataset and that the distribution declares a licence through a non-empty `license_ref` field.
@@ -6307,7 +6775,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that there is a licence."
+    "@value": "Checks whether the maDMP includes a license declaration for the dataset distribution."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6389,10 +6857,10 @@ Boolean (pass/fail)
 Data Restrictions Reference
 
 ### Narrative
-Verifies that the data restrictions are referenced.
+Verifies that the DMP references any restrictions that apply to data access or sharing, ensuring that limitations on data availability are clearly communicated to users and reviewers.
 
 ### Intended Outcome
-Determine whether the maDMP includes a reference to data restrictions through a non-empty `rights` field within a distribution entry.
+Determine whether the maDMP includes a reference to data restrictions through a non-empty rights field, confirming that any limitations on data access or sharing are explicitly documented in the plan.
 
 ### Applies To
 Machine-actionable Data Management Plan (maDMP) in JSON format.
@@ -6422,7 +6890,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the data restrictions are referenced."
+    "@value": "Checks whether the maDMP references any restrictions applying to data access or sharing."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6532,7 +7000,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the data license is aligned with the funder's license."
+    "@value": "Checks whether the dataset license declared in the maDMP is compliant with the Horizon Europe CC-BY requirement."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6642,7 +7110,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the data has the same access rights with the destination."
+    "@value": "Checks whether the data access declared in the maDMP matches the access policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6752,7 +7220,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the data has the same license with the destination."
+    "@value": "Checks whether the license declared in the maDMP matches the license policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6862,7 +7330,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the embargo date of the data matches with that of the destination."
+    "@value": "Checks whether the embargo period declared in the maDMP is consistent with the embargo policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -6972,7 +7440,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the data restrictions match those of the destination."
+    "@value": "Checks whether the access restrictions declared in the maDMP are consistent with the restriction policy of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7039,7 +7507,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Embargo License
+## Metric: Embargo Period License Declared
 
 **Metric ID:** data.shar.comp.2
 **Persistent URI:** https://example.org/metric/data.shar.comp.2
@@ -7079,11 +7547,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.shar.comp.2",
   "title": {
     "@language": "en",
-    "@value": "Embargo License"
+    "@value": "Embargo Period License Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the embargo is not violated against the funder's policy."
+    "@value": "Checks whether neither the maDMP nor the destination repository declares an embargo for the dataset."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7198,7 +7666,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the repository of each data referenced is thematic."
+    "@value": "Checks whether the repository declared in the maDMP is listed in a recognised thematic repository registry."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7275,7 +7743,7 @@ Boolean (pass/fail)
 Repository FAIRness Conformation
 
 ### Narrative
-Validates that the repository conforms with FAIR data principles.
+Validates that the repository selected for data deposition conforms with FAIR data principles, as verified through recognised registries such as OpenAIRE or FAIRsharing.
 
 ### Intended Outcome
 Determine whether the destination repository declared in the maDMP via `host` is aligned with FAIR data principles, by cross-referencing `host.title` or `host.url` against FAIR benchmarks available through OpenAIRE and FAIRsharing.
@@ -7308,7 +7776,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the repository conforms with FAIR data principles."
+    "@value": "Checks whether the repository declared in the maDMP conforms with FAIR data principles as verified through recognised registries."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7385,7 +7853,7 @@ Boolean (pass/fail)
 Trusted Repository is Used
 
 ### Narrative
-Validates that the repository is listed in trusted repositories.
+Validates that the repository where data will be deposited is recognised as a trusted repository, as verified through established registry benchmarks.
 
 ### Intended Outcome
 Determine whether the destination repository declared in the maDMP via `host` is included in a recognised trusted repository registry or benchmark, confirming that data will be deposited in a repository meeting established trust criteria.
@@ -7418,7 +7886,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the repository is listed in trusted repositories."
+    "@value": "Checks whether the repository declared in the maDMP is recognised as a trusted repository in an established registry."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7495,7 +7963,7 @@ Boolean (pass/fail)
 Verification of Back-up Strategy
 
 ### Narrative
-Verifies that the repository has a back-up strategy.
+Verifies that the repository declared in the DMP has a documented backup strategy, ensuring that data held in the repository is protected against loss.
 
 ### Intended Outcome
 Determine whether the maDMP declares a back-up strategy for the destination repository through the `host.backup_frequency` and `host.backup_type` fields, confirming that a repository-level back-up plan has been documented.
@@ -7528,7 +7996,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the repository has a back-up strategy."
+    "@value": "Checks whether the repository declared in the maDMP has a documented backup strategy."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7605,7 +8073,7 @@ Boolean (pass/fail)
 Certification of Repository
 
 ### Narrative
-Verifies that the repository is certified.
+Verifies that the repository declared in the DMP holds a recognised certification, such as CoreTrustSeal, confirming that it meets established standards for trustworthy data repositories.
 
 ### Intended Outcome
 Determine whether the maDMP declares a certification for the destination repository through a non-empty `certified_with` field within the `host` entry, confirming that the repository holds a recognised certification.
@@ -7638,7 +8106,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the repository is certified."
+    "@value": "Checks whether the repository declared in the maDMP holds a recognised certification such as CoreTrustSeal."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7748,7 +8216,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that there are resources which accomplish the long-term preservation."
+    "@value": "Checks whether the maDMP references preservation costs associated with long-term storage in the declared repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7825,7 +8293,7 @@ Boolean (pass/fail)
 Repository Policy is Present
 
 ### Narrative
-Validates if the selected repository has policies.
+Validates that the repository selected for data deposition has documented policies, as verified through FAIRsharing, ensuring that the repository operates under transparent and accountable governance.
 
 ### Intended Outcome
 Determine whether the destination repository declared in the maDMP has associated policies, by extracting the repository identifier from `host_id.identifier` and `host_id.type` and cross-referencing against policy records in the FAIRsharing registry.
@@ -7858,7 +8326,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates if the selected repository has policies."
+    "@value": "Checks whether the repository declared in the maDMP has documented policies as verified through FAIRsharing."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -7968,7 +8436,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the repository matches the destination of the dataset."
+    "@value": "Checks whether the dataset identifier declared in the maDMP resolves to the correct record in the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8078,7 +8546,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates if there is an intention that the dataset is stored in a long-term storage system."
+    "@value": "Checks whether the maDMP declares an intention to preserve the dataset long-term in a suitable repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8145,7 +8613,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Repository Specificities
+## Metric: Repository Compatibility with Dataset Characteristics
 
 **Metric ID:** repo.feas.4
 **Persistent URI:** https://example.org/metric/repo.feas.4
@@ -8185,11 +8653,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/repo.feas.4",
   "title": {
     "@language": "en",
-    "@value": "Repository Specificities"
+    "@value": "Repository Compatibility with Dataset Characteristics"
   },
   "description": {
     "@language": "en",
-    "@value": "Validates if the selected repository is appropriate for the characteristics and intended use of the dataset."
+    "@value": "Checks whether the dataset characteristics declared in the maDMP are compatible with the specific requirements of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8304,7 +8772,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes the used external resources of the data."
+    "@value": "Checks whether the maDMP references external datasets or resources via related identifiers."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8414,7 +8882,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that a specific metadata standard or format is mentioned for documenting the dataset."
+    "@value": "Checks whether the maDMP references external metadata standards via related identifiers."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8524,7 +8992,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that all included external URLs are valid and resolvable."
+    "@value": "Checks whether the URLs declared as related identifiers in the maDMP are valid and resolvable."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8634,7 +9102,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that datasets mentioned in the DMP are found in OpenAIRE via the skg-if endpoint."
+    "@value": "Checks whether the datasets referenced in the maDMP can be found and validated through the OpenAIRE API."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8701,7 +9169,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Used Taxonomy
+## Metric: Contributor Roles Follow CRediT Taxonomy
 
 **Metric ID:** data.exteresource.feas.3
 **Persistent URI:** https://example.org/metric/data.exteresource.feas.3
@@ -8740,11 +9208,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.exteresource.feas.3",
   "title": {
     "@language": "en",
-    "@value": "Used Taxonomy"
+    "@value": "Contributor Roles Follow CRediT Taxonomy"
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the published dataset acknowledges contributors using the CRediT taxonomy."
+    "@value": "Checks whether the contributor roles declared in the maDMP are terms from the CRediT taxonomy."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8811,7 +9279,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Dataset PID
+## Metric: Dataset Persistent Identifier Declared
 
 **Metric ID:** data.pid.cov.1
 **Persistent URI:** https://example.org/metric/data.pid.cov.1
@@ -8821,7 +9289,7 @@ Boolean (pass/fail)
 Dataset PID
 
 ### Narrative
-Verifies that the dataset has a PID.
+Verifies that the destination repository declared in the DMP supports a persistent identifier system, ensuring that the dataset will receive a stable and citable identifier upon deposit.
 
 ### Intended Outcome
 Determine whether the maDMP declares a persistent identifier system for the dataset's destination repository through the `host.pid_system` field, confirming that a PID system is in place to ensure persistent identification of the dataset.
@@ -8850,11 +9318,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.pid.cov.1",
   "title": {
     "@language": "en",
-    "@value": "Dataset PID"
+    "@value": "Dataset Persistent Identifier Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the dataset has a PID."
+    "@value": "Checks whether the destination repository declared in the maDMP supports a persistent identifier system."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -8965,7 +9433,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the repository where the data will be deposited is listed in a trusted registry and a valid link to the repository is provided in the DMP."
+    "@value": "Checks whether the repository referenced in the maDMP is listed in a trusted repository registry with a valid resolvable link."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9037,7 +9505,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Repository PID
+## Metric: Repository Persistent Identifier System Verified
 
 **Metric ID:** data.pid.feas.1
 **Persistent URI:** https://example.org/metric/data.pid.feas.1
@@ -9047,7 +9515,7 @@ Boolean (pass/fail)
 Repository PID
 
 ### Narrative
-Validates that the repository provides the PID.
+Validates that the persistent identifier system declared for the destination repository in the DMP matches the identifier system actually provided by that repository, confirming that PIDs will be issued as expected.
 
 ### Intended Outcome
 Determine whether the PID system declared for the destination repository in the maDMP via `host.pid_system` is consistent with the PID system provided by the repository, cross-referenced against Zenodo's DOI assignment, confirming that the declared PID system is actually supported by the destination.
@@ -9076,11 +9544,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/data.pid.feas.1",
   "title": {
     "@language": "en",
-    "@value": "Repository PID"
+    "@value": "Repository Persistent Identifier System Verified"
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the repository provides the PID."
+    "@value": "Checks whether the PID system declared in the maDMP matches the identifier system provided by the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9189,7 +9657,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the PID in the repository is valid and resolvable."
+    "@value": "Checks whether the dataset identifier declared in the maDMP resolves successfully via its DOI URL."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9256,7 +9724,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: RDM Roles
+## Metric: Research Data Management Roles Declared
 
 **Metric ID:** role.co.1
 **Persistent URI:** https://example.org/metric/role.co.1
@@ -9266,7 +9734,7 @@ Boolean (pass/fail)
 RDM Roles
 
 ### Narrative
-Verifies that the roles of the contributors are included.
+Verifies that the DMP identifies all contributors involved in research data management, including their names, roles, and contact information, ensuring clear accountability throughout the project.
 
 ### Intended Outcome
 Determine whether the maDMP declares contributor information including name, role, and contact details through the `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` fields, confirming that the roles and identities of all contributors to the data management plan have been documented.
@@ -9295,11 +9763,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/role.co.1",
   "title": {
     "@language": "en",
-    "@value": "RDM Roles"
+    "@value": "Research Data Management Roles Declared"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the roles of the contributors are included."
+    "@value": "Checks whether the maDMP declares all contributors with their names, roles, and contact information."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9376,7 +9844,7 @@ Boolean (pass/fail)
 DMP Validation by Data Steward
 
 ### Narrative
-Verifies that the DMP is approved by Data Stewards.
+Verifies that the DMP has been reviewed and approved by at least one Data Steward, confirming that a qualified professional has validated the data management plan.
 
 ### Intended Outcome
 Determine whether the maDMP includes at least one contributor whose `role` is declared as Data Steward, confirming that a qualified Data Steward has been assigned to and is accountable for the DMP.
@@ -9409,7 +9877,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP is approved by Data Stewards."
+    "@value": "Checks whether at least one contributor in the maDMP holds the role of Data Steward."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9519,7 +9987,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes the contributors and their affiliation PIDs."
+    "@value": "Checks whether the maDMP includes persistent identifiers for contributors and their affiliated organisations."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9629,7 +10097,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the contributors and their roles are included in the destination."
+    "@value": "Checks whether the contributor roles declared in the maDMP are reflected in the destination repository record."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9739,7 +10207,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the DMP is approved in the destination by Data Stewards."
+    "@value": "Checks whether the Data Steward contribution declared in the maDMP is referenced in the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9849,7 +10317,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Validates that the PIDs of the contributors are included in the destination."
+    "@value": "Checks whether the contributor and affiliation identifiers declared in the maDMP are present in the destination repository record."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -9916,7 +10384,7 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Repository Cost
+## Metric: Repository Cost Verified Against Actual Pricing
 
 **Metric ID:** cost.comp.1
 **Persistent URI:** https://example.org/metric/cost.comp.1
@@ -9926,7 +10394,7 @@ Boolean (pass/fail)
 Repository Cost
 
 ### Narrative
-Verifies the cost of the repository.
+Verifies that the costs declared in the DMP for the destination repository are consistent with the actual pricing of that repository, ensuring that the budget is accurate and realistic.
 
 ### Intended Outcome
 Determine whether the cost declared in the maDMP for the destination repository is consistent with the actual cost of the repository, confirming that the budgeted repository cost accurately reflects the repository's pricing.
@@ -9955,11 +10423,11 @@ Boolean (pass/fail)
   "identifier": "https://example.org/metric/cost.comp.1",
   "title": {
     "@language": "en",
-    "@value": "Repository Cost"
+    "@value": "Repository Cost Verified Against Actual Pricing"
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies the cost of the repository."
+    "@value": "Checks whether the repository cost declared in the maDMP is consistent with the actual pricing of the destination repository."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -10069,7 +10537,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP includes the budget for PMs and monetary resources."
+    "@value": "Checks whether the maDMP includes a budget declaration covering both personnel and monetary resources."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -10179,7 +10647,7 @@ Boolean (pass/fail)
   },
   "description": {
     "@language": "en",
-    "@value": "Verifies that the DMP states that no additional resources are needed."
+    "@value": "Checks whether the maDMP explicitly states that no additional resources beyond those already budgeted are required."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
