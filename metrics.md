@@ -69,7 +69,6 @@
 | data.shar.feas.3 | [Embargo Implementation Alignment](#metric-embargo-implementation-alignment) |
 | data.shar.feas.4 | [Repository Data Restrictions](#metric-repository-data-restrictions) |
 | data.shar.comp.2 | [Embargo License](#metric-embargo-license) |
-| repo.co.2 | [Long-term Preservation Repository](#metric-long-term-preservation-repository) |
 | repo.co.3 | [Thematic Data Repositories Referenced](#metric-thematic-data-repositories-referenced) |
 | repo.comp.2 | [Repository FAIRness Conformation](#metric-repository-fairness-conformation) |
 | repo.comp.3 | [Trusted Repository is Used](#metric-trusted-repository-is-used) |
@@ -80,7 +79,6 @@
 | repo.feas.1 | [Repository Identifier Accuracy](#metric-repository-identifier-accuracy) |
 | repo.feas.2 | [Long-Term Preservation Dataset](#metric-long-term-preservation-dataset) |
 | repo.feas.4 | [Repository Specificities](#metric-repository-specificities) |
-| repo.comp.3 | [Repository Policy Compliance](#metric-repository-policy-compliance) |
 | data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-data-external-resources-included-in-the-dmp) |
 | data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-metadata-standard-specified-in-the-dmp) |
 | data.exteresource.feas.1 | [Resolvable External Resources](#metric-resolvable-external-resources) |
@@ -105,7 +103,7 @@
 ## Metric: maDMP declares reused datasets
 
 **Metric ID:** data.reused.co.1  
-**Persistent URI:** https://example.org/metric/madmp-reused-datasets-declared  
+**Persistent URI:** https://example.org/metric/data.reused.co.1
 
 ### Title
 maDMP declares reused datasets
@@ -135,9 +133,9 @@ Boolean (pass/fail)
 ```json
 {
   "@context": "https://w3id.org/ftr/context",
-  "@id": "https://example.org/metric/madmp-reused-datasets-declared",
+  "@id": "https://example.org/metric/data.reused.co.1",
   "@type": "dqv:Metric",
-  "identifier": "https://example.org/metric/madmp-reused-datasets-declared",
+  "identifier": "https://example.org/metric/data.reused.co.1",
   "title": {
     "@language": "en",
     "@value": "maDMP declares reused datasets"
@@ -173,7 +171,7 @@ Boolean (pass/fail)
     }
   ],
   "landingPage": {
-    "@id": "https://example.org/metric/madmp-reused-datasets-declared"
+    "@id": "https://example.org/metric/data.reused.co.1"
   },
   "version": {
     "@value": "0.0.1"
@@ -202,8 +200,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data PID
 
 **Metric ID:** data.reused.co.2  
-**Persistent URI:** https://example.org/metric/data.reused.co.2  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.2
+**Dimension:** Completeness
 
 ### Title
 Reused Data PID
@@ -300,8 +298,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data License
 
 **Metric ID:** data.reused.co.3  
-**Persistent URI:** https://example.org/metric/data.reused.co.3  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.3
+**Dimension:** Completeness
 
 ### Title
 Reused Data License
@@ -398,8 +396,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data Source
 
 **Metric ID:** data.reused.co.4  
-**Persistent URI:** https://example.org/metric/data.reused.co.4  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.4
+**Dimension:** Completeness
 
 ### Title
 Reused Data Source
@@ -498,8 +496,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data Access
 
 **Metric ID:** data.reused.co.5  
-**Persistent URI:** https://example.org/metric/data.reused.co.5  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.5
+**Dimension:** Completeness
 
 ### Title
 Reused Data Access
@@ -596,8 +594,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data Personal
 
 **Metric ID:** data.reused.co.6  
-**Persistent URI:** https://example.org/metric/data.reused.co.6  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.6
+**Dimension:** Completeness
 
 ### Title
 Reused Data Personal
@@ -694,8 +692,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data Sensitive
 
 **Metric ID:** data.reused.co.7  
-**Persistent URI:** https://example.org/metric/data.reused.co.7  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.7
+**Dimension:** Completeness
 
 ### Title
 Reused Data Sensitive
@@ -792,8 +790,8 @@ Boolean (pass/fail)
 ## Metric: Reused Data URL
 
 **Metric ID:** data.reused.co.8  
-**Persistent URI:** https://example.org/metric/data.reused.co.8  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.reused.co.8
+**Dimension:** Completeness
 
 ### Title
 Reused Data URL
@@ -891,8 +889,8 @@ Boolean (pass/fail)
 ## Metric: Repository Reused Data PID
 
 **Metric ID:** data.reused.feas.1  
-**Persistent URI:** https://example.org/metric/data.reused.feas.1  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.reused.feas.1
+**Dimension:** Feasibility
 
 ### Title
 Repository Reused Data PID
@@ -996,8 +994,8 @@ Boolean (pass/fail)
 ## Metric: Repository Reused Data Access
 
 **Metric ID:** data.reused.feas.2  
-**Persistent URI:** https://example.org/metric/data.reused.feas.2  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.reused.feas.2
+**Dimension:** Feasibility
 
 ### Title
 Repository Reused Data Access
@@ -1095,8 +1093,8 @@ Boolean (pass/fail)
 ## Metric: Repository Reused Data License
 
 **Metric ID:** data.reused.feas.3  
-**Persistent URI:** https://example.org/metric/data.reused.feas.3  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.reused.feas.3
+**Dimension:** Feasibility
 
 ### Title
 Repository Reused Data License
@@ -1194,8 +1192,8 @@ Boolean (pass/fail)
 ## Metric: New Data
 
 **Metric ID:** data.new.1  
-**Persistent URI:** https://example.org/metric/data.new.1  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.new.1
+**Dimension:** Completeness
 
 ### Title
 New Data
@@ -1292,7 +1290,7 @@ Boolean (pass/fail)
 ## Metric: New Data Collection or Creation
 
 **Metric ID:** data.new.2  
-**Persistent URI:** https://example.org/metric/data.new.2  
+**Persistent URI:** https://example.org/metric/data.new.2
 **Sub-Dimension:** RDM Coverage  
 
 ### Title
@@ -1394,8 +1392,8 @@ Boolean (pass/fail)
 ## Metric: New Data Access
 
 **Metric ID:** data.new.3  
-**Persistent URI:** https://example.org/metric/data.new.3  
-**Dimension:** Openness / Reuse  
+**Persistent URI:** https://example.org/metric/data.new.3
+**Dimension:** Openness / Reuse
 
 ### Title
 New Data Access
@@ -1495,8 +1493,8 @@ Boolean (pass/fail)
 ## Metric: New Data Metadata
 
 **Metric ID:** data.new.4  
-**Persistent URI:** https://example.org/metric/data.new.4  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/data.new.4
+**Dimension:** Completeness
 
 ### Title
 New Data Metadata
@@ -1597,8 +1595,8 @@ Boolean (pass/fail)
 ## Metric: Repository PID Resolution
 
 **Metric ID:** data.new.feas.1  
-**Persistent URI:** https://example.org/metric/data.new.feas.1  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.new.feas.1
+**Dimension:** Feasibility
 
 ### Title
 Repository PID Resolution
@@ -1698,8 +1696,8 @@ Boolean (pass/fail)
 ## Metric: Repository New Data Access
 
 **Metric ID:** data.new.feas.2  
-**Persistent URI:** https://example.org/metric/data.new.feas.2  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.new.feas.2
+**Dimension:** Feasibility
 
 ### Title
 Repository New Data Access
@@ -1797,8 +1795,8 @@ Boolean (pass/fail)
 ## Metric: Repository New Data License
 
 **Metric ID:** data.new.feas.3  
-**Persistent URI:** https://example.org/metric/data.new.feas.3  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.new.feas.3
+**Dimension:** Feasibility
 
 ### Title
 Repository New Data License
@@ -1896,8 +1894,8 @@ Boolean (pass/fail)
 ## Metric: Data Type
 
 **Metric ID:** data.info.cov.1  
-**Persistent URI:** https://example.org/metric/data.info.cov.1  
-**Dimension:** Coverage  
+**Persistent URI:** https://example.org/metric/data.info.cov.1
+**Dimension:** Coverage
 
 ### Title
 Data Type
@@ -1994,8 +1992,8 @@ Boolean (pass/fail)
 ## Metric: Data Format
 
 **Metric ID:** data.info.cov.2  
-**Persistent URI:** https://example.org/metric/data.info.cov.2  
-**Dimension:** Coverage  
+**Persistent URI:** https://example.org/metric/data.info.cov.2
+**Dimension:** Coverage
 
 ### Title
 Data Format
@@ -2092,8 +2090,8 @@ Boolean (pass/fail)
 ## Metric: Data Size
 
 **Metric ID:** data.info.cov.3  
-**Persistent URI:** https://example.org/metric/data.info.cov.3  
-**Dimension:** Coverage  
+**Persistent URI:** https://example.org/metric/data.info.cov.3
+**Dimension:** Coverage
 
 ### Title
 Data Size
@@ -2190,8 +2188,8 @@ Boolean (pass/fail)
 ## Metric: Repository Data Type
 
 **Metric ID:** data.info.feas.1  
-**Persistent URI:** https://example.org/metric/data.info.feas.1  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.info.feas.1
+**Dimension:** Feasibility
 
 ### Title
 Repository Data Type
@@ -2292,8 +2290,8 @@ Boolean (pass/fail)
 ## Metric: Repository Data Format
 
 **Metric ID:** data.info.feas.2  
-**Persistent URI:** https://example.org/metric/data.info.feas.2  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.info.feas.2
+**Dimension:** Feasibility
 
 ### Title
 Repository Data Format
@@ -2391,8 +2389,8 @@ Boolean (pass/fail)
 ## Metric: Repository Data Size
 
 **Metric ID:** data.info.feas.3  
-**Persistent URI:** https://example.org/metric/data.info.feas.3  
-**Dimension:** Feasibility  
+**Persistent URI:** https://example.org/metric/data.info.feas.3
+**Dimension:** Feasibility
 
 ### Title
 Repository Data Size
@@ -2490,8 +2488,8 @@ Boolean (pass/fail)
 ## Metric: DMP Common Standard Field Compliance
 
 **Metric ID:** meta.comp.1  
-**Persistent URI:** https://example.org/metric/meta.comp.1  
-**Dimension:** Compliance  
+**Persistent URI:** https://example.org/metric/meta.comp.1
+**Dimension:** Compliance
 
 ### Title
 DMP Common Standard Field Compliance
@@ -2588,8 +2586,8 @@ Boolean (pass/fail)
 ## Metric: Controlled Vocabularies Used in Methodology
 
 **Metric ID:** meta.co.1  
-**Persistent URI:** https://example.org/metric/meta.co.1  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/meta.co.1
+**Dimension:** Completeness
 
 ### Title
 Controlled Vocabularies Used in Methodology
@@ -2686,8 +2684,8 @@ Boolean (pass/fail)
 ## Metric: Electronic Lab Notebook Referenced as a technical resource
 
 **Metric ID:** meta.co.2  
-**Persistent URI:** https://example.org/metric/meta.co.2  
-**Dimension:** Completeness  
+**Persistent URI:** https://example.org/metric/meta.co.2
+**Dimension:** Completeness
 
 ### Title
 Electronic Lab Notebook Referenced as a technical resource
@@ -2782,8 +2780,8 @@ Boolean (pass/fail)
 ## Metric: ReadMe File Reference
 
 **Metric ID:** meta.qual.2  
-**Persistent URI:** https://example.org/metric/meta.qual.2  
-**Dimension:** Quality  
+**Persistent URI:** https://example.org/metric/meta.qual.2
+**Dimension:** Quality
 
 ### Title
 ReadMe File Reference
@@ -2878,8 +2876,8 @@ Boolean (pass/fail)
 ## Metric: Metadata Standards Used
 
 **Metric ID:** meta.stand.comp.1  
-**Persistent URI:** https://example.org/metric/meta.stand.comp.1  
-**Dimension:** Compliance  
+**Persistent URI:** https://example.org/metric/meta.stand.comp.1
+**Dimension:** Compliance
 
 ### Title
 Metadata Standards Used
@@ -3084,8 +3082,8 @@ Boolean (pass/fail)
 ## Metric: Use of Open File Formats for datasets
 
 **Metric ID:** meta.form.op.1  
-**Persistent URI:** https://example.org/metric/meta.form.op.1  
-**Dimension:** Openness  
+**Persistent URI:** https://example.org/metric/meta.form.op.1
+**Dimension:** Openness
 
 ### Title
 Use of Open File Formats for datasets
@@ -3983,7 +3981,7 @@ No mention of a version control system can be found in any `technical_resource` 
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check DMP for version control system and update metadata](tests.md#test-check-dmp-for-version-control-system-and-update-metadata)
+- [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
 
 ### JSON-LD (Metric)
 ```json
@@ -5963,7 +5961,7 @@ If `ethical_issues_exist` is set to `yes`, the `ethical_issues_report` field is 
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check ethical_issues_report is present when ethical_issues_exist is yes](tests.md#test-check-ethical_issues_report-is-present-when-ethical_issues_exist-is-yes)
+- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
 
 ### JSON-LD (Metric)
 ```json
@@ -8263,116 +8261,6 @@ Boolean (pass/fail)
 
 ---
 
-## Metric: Repository Policy Compliance
-
-**Metric ID:** repo.comp.3
-**Persistent URI:** https://example.org/metric/repo.comp.3
-**Dimension:** Compliance
-
-### Title
-Repository Policy Compliance
-
-### Narrative
-Validates if the selected repository is compliant with relevant policies.
-
-### Intended Outcome
-Determine whether the destination repository declared in the maDMP is aligned with relevant policies and registry entries, by cross-referencing `host_id.identifier` and `host_id.type` against repository records in Zenodo and FAIRsharing to confirm policy compliance.
-
-### Applies To
-Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo and FAIRsharing registry entries.
-
-### Success Criterion
-For at least one dataset distribution in scope, the `host_id.identifier` and `host_id.type` values resolve to a repository entry in either Zenodo or FAIRsharing that is associated with relevant policies, confirming that the selected repository is compliant with applicable policy requirements.
-
-### Failure Criterion
-No dataset distribution contains `host_id.identifier` or `host_id.type` values that resolve to a repository entry in Zenodo or FAIRsharing with associated policy compliance records, or the relevant fields are absent or empty.
-
-### Expected Result Type
-Boolean (pass/fail)
-
-### Associated Test(s)
-- [Check host_id against Zenodo and FAIRsharing for policy compliance](tests.md#test-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance)
-
-### JSON-LD (Metric)
-```json
-{
-  "@context": "https://w3id.org/ftr/context",
-  "@id": "https://example.org/metric/repo.comp.3",
-  "@type": "dqv:Metric",
-  "identifier": "https://example.org/metric/repo.comp.3",
-  "title": {
-    "@language": "en",
-    "@value": "Repository Policy Compliance"
-  },
-  "description": {
-    "@language": "en",
-    "@value": "Validates if the selected repository is compliant with relevant policies."
-  },
-  "license": {
-    "@id": "http://creativecommons.org/licenses/by/4.0/"
-  },
-  "dcterms:creator": [
-    {
-      "@id": "https://example.org/organization"
-    }
-  ],
-  "dcterms:publisher": {
-    "@id": "https://example.org/organization"
-  },
-  "hasImplementation": {
-    "@id": "https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy"
-  },
-  "abbreviation": {
-    "@value": "repo.comp.3-M"
-  },
-  "contactPoint": {
-    "@id": "https://example.org/contact"
-  },
-  "keyword": [
-    {
-      "@language": "en",
-      "@value": "repository policy compliance"
-    },
-    {
-      "@language": "en",
-      "@value": "FAIRsharing"
-    },
-    {
-      "@language": "en",
-      "@value": "Zenodo"
-    },
-    {
-      "@language": "en",
-      "@value": "maDMP"
-    }
-  ],
-  "landingPage": {
-    "@id": "https://example.org/metric/repo.comp.3"
-  },
-  "version": {
-    "@value": "0.0.1"
-  },
-  "inDimension": {
-    "@value": "Compliance"
-  },
-  "isApplicableFor": {
-    "@id": "https://schema.org/Dataset"
-  },
-  "hasBenchmark": {
-    "@id": "https://example.org/benchmark/default"
-  },
-  "status": {
-    "@language": "en",
-    "@value": "Draft"
-  },
-  "supportedBy": {
-    "@id": "https://example.org/project"
-  }
-}
-```
-
----
-
 ## Metric: Data External Resources Included in the DMP
 
 **Metric ID:** data.exteresource.co.1
@@ -9287,7 +9175,6 @@ The `dataset_id.identifier` value is absent, empty, not of a resolvable type, or
 Boolean (pass/fail)
 
 ### Associated Test(s)
-- [Check dataset_id resolves via DOI URL in Zenodo](tests.md#test-check-dataset_id-resolves-via-doi-url-in-zenodo)
 
 ### JSON-LD (Metric)
 ```json

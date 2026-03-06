@@ -3,6 +3,7 @@
 | ID | Title |
 |----------|------|
 | madmp-reused-datasets-declared-json | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
+| T-DCSC | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
 | T-DCSC | [License for reused datasets](#test-license-for-reused-datasets) |
 | T-DCSC | [Check for reused dataset PID](#test-check-for-reused-dataset-pid) |
 | T-DCSC | [Distribution Present](#test-distribution-present) |
@@ -48,7 +49,6 @@
 | T-DCSC | [Check host security and backup reflect sensitivity level](#test-check-host-security-and-backup-reflect-sensitivity-level) |
 | T-DCSC | [Check contributor.role for backup responsibility](#test-check-contributorrole-for-backup-responsibility) |
 | T-DCSC | [Check backup_frequency is declared](#test-check-backup_frequency-is-declared) |
-| T-DCSC | [Check maDMP for version control system reference](#test-check-madmp-for-version-control-system-reference) |
 | T-DCSC | [Check host.id matches Zenodo deposit location](#test-check-hostid-matches-zenodo-deposit-location) |
 | T-DCSC | [Check security_and_privacy.title for security measures](#test-check-security_and_privacytitle-for-security-measures) |
 | T-DCSC | [Check security_and_privacy.description for access rights management](#test-check-security_and_privacydescription-for-access-rights-management) |
@@ -66,7 +66,6 @@
 | T-DCSC | [Check contributor.role for data owner](#test-check-contributorrole-for-data-owner) |
 | T-DCSC | [Check contributor for author role when dataset type is software](#test-check-contributor-for-author-role-when-dataset-type-is-software) |
 | T-DCSC | [Check ethical_issues_exist for valid value](#test-check-ethical_issues_exist-for-valid-value) |
-| T-DCSC | [Check ethical_issues_report is present when ethical_issues_exist is yes](#test-check-ethical_issues_report-is-present-when-ethical_issues_exist-is-yes) |
 | T-DCSC | [Check ethical_issues_description is present when ethical_issues_exist is no](#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no) |
 | T-DCSC | [Check data_access for open status](#test-check-data_access-for-open-status) |
 | T-DCSC | [Check distribution is present for dataset](#test-check-distribution-is-present-for-dataset) |
@@ -79,7 +78,6 @@
 | T-DCSC | [Check rights matches destination host restriction policy](#test-check-rights-matches-destination-host-restriction-policy) |
 | T-DCSC | [Check repository host for absence of embargo date](#test-check-repository-host-for-absence-of-embargo-date) |
 | T-DCSC | [Check distribution.license.start_date for absence in maDMP](#test-check-distributionlicensestart_date-for-absence-in-madmp) |
-| T-DCSC | [Check preservation_statement exists in host](#test-check-preservation_statement-exists-in-host) |
 | T-DCSC | [Check host.title and host.url against thematic repository registries](#test-check-hosttitle-and-hosturl-against-thematic-repository-registries) |
 | T-DCSC | [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](#test-check-host-against-openaire-and-fairsharing-fair-benchmarks) |
 | T-DCSC | [Check host against trusted repository registry benchmark](#test-check-host-against-trusted-repository-registry-benchmark) |
@@ -101,7 +99,6 @@
 | T-DCSC | [Check certified_with against trusted registry](#test-check-certified_with-against-trusted-registry) |
 | T-DCSC | [Check host_id.identifier and host_id.type for valid repository link](#test-check-host_ididentifier-and-host_idtype-for-valid-repository-link) |
 | T-DCSC | [Check host.pid_system matches destination PID system in Zenodo](#test-check-hostpid_system-matches-destination-pid-system-in-zenodo) |
-| T-DCSC | [Check dataset_id resolves via DOI URL in Zenodo](#test-check-dataset_id-resolves-via-doi-url-in-zenodo) |
 | T-DCSC | [Check dmp.contributor name, role, and contact](#test-check-dmpcontributor-name-role-and-contact) |
 | T-DCSC | [Check dmp.contributor.role for Data Steward](#test-check-dmpcontributorrole-for-data-steward) |
 | T-DCSC | [Check contributor_id and affiliation.affiliation_id for PIDs](#test-check-contributor_id-and-affiliationaffiliation_id-for-pids) |
@@ -111,14 +108,13 @@
 | T-DCSC | [Check cost in maDMP against repository cost](#test-check-cost-in-madmp-against-repository-cost) |
 | T-DCSC | [Check cost fields for budget specification](#test-check-cost-fields-for-budget-specification) |
 | T-DCSC | [Check cost in maDMP for no additional resources statement](#test-check-cost-in-madmp-for-no-additional-resources-statement) |
-| T-DCSC | [Check DMP for version control system and update metadata](#test-check-dmp-for-version-control-system-and-update-metadata) |
 
 ---
 
 ## Test: Check for reused dataset declaration
 
 **Test ID:** madmp-reused-datasets-declared-json  
-**Persistent URI:** https://example.org/test/madmp-reused-datasets-declared-json  
+**Persistent URI:** https://example.org/test/madmp-reused-datasets-declared-json
 
 **Implements:** [data.reused.co.1](metrics.md#metric-madmp-declares-reused-datasets)
 
@@ -159,7 +155,7 @@ pass/fail
     }
   ],
   "vivo:abbreviation": {
-    "@value": "madmp-reused-datasets-declared-json-T"
+    "@value": "T-DCSC-T"
   },
   "dcat:endpointDescription": {
     "@id": "https://example.org/api"
@@ -218,7 +214,7 @@ pass/fail
 ## Test: License for reused datasets
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-license  
+**Persistent URI:** https://example.org/test/T-DCSC-license
 
 **Implements:** [data.reused.co.3](metrics.md#metric-reused-data-license)
 
@@ -321,7 +317,7 @@ pass/fail
 ## Test: Check for reused dataset PID
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC  
+**Persistent URI:** https://example.org/test/T-DCSC-reused-dataset-pid
 
 **Implements:** [data.reused.co.2](metrics.md#metric-reused-data-pid)
 
@@ -347,7 +343,7 @@ pass/fail
 ```json
 {
   "@context": "https://w3id.org/ftr/context",
-  "@id": "https://example.org/test/T-DCSC",
+  "@id": "https://example.org/test/T-DCSC-reused-dataset-pid",
   "@type": "ftr:Test",
   "dcterms:identifier": "T-DCSC",
   "dcterms:title": {
@@ -371,7 +367,7 @@ pass/fail
     "@id": "https://example.org/api"
   },
   "dcat:endpointURL": {
-    "@id": "https://example.org/test/T-DCSC/run"
+    "@id": "https://example.org/test/T-DCSC-reused-dataset-pid/run"
   },
   "doap:repository": {
     "@id": "https://example.org/repository"
@@ -424,7 +420,7 @@ pass/fail
 ## Test: Distribution Present
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-present  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-present
 
 **Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
@@ -525,7 +521,7 @@ pass/fail
 ## Test: Distribution Access Information
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-access  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-access
 
 **Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
@@ -625,7 +621,7 @@ pass/fail
 ## Test: Distribution Title
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-title  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-title
 
 **Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
 
@@ -725,7 +721,7 @@ pass/fail
 ## Test: Access rights for reused datasets
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-access  
+**Persistent URI:** https://example.org/test/T-DCSC-access
 
 **Implements:** [data.reused.co.5](metrics.md#metric-reused-data-access)
 
@@ -827,7 +823,7 @@ pass/fail
 ## Test: Personal data for reused datasets
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-personal-data  
+**Persistent URI:** https://example.org/test/T-DCSC-personal-data
 
 **Implements:** [data.reused.co.6](metrics.md#metric-reused-data-personal)
 
@@ -929,7 +925,7 @@ pass/fail
 ## Test: Sensitive data for reused datasets
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-sensitive-data  
+**Persistent URI:** https://example.org/test/T-DCSC-sensitive-data
 
 **Implements:** [data.reused.co.7](metrics.md#metric-reused-data-sensitive)
 
@@ -1031,7 +1027,7 @@ pass/fail
 ## Test: Distribution present (URL)
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present
 
 **Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
@@ -1131,7 +1127,7 @@ pass/fail
 ## Test: Access URL
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-access-url  
+**Persistent URI:** https://example.org/test/T-DCSC-access-url
 
 **Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
 
@@ -1231,7 +1227,7 @@ pass/fail
 ## Test: PID matches destination repository record
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-repo-match  
+**Persistent URI:** https://example.org/test/T-DCSC-repo-match
 
 **Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
@@ -1333,7 +1329,7 @@ pass/fail
 ## Test: PID resolves
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-pid-resolves  
+**Persistent URI:** https://example.org/test/T-DCSC-pid-resolves
 
 **Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
 
@@ -1434,7 +1430,7 @@ pass/fail
 ## Test: Reused data access matches destination
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-access-match  
+**Persistent URI:** https://example.org/test/T-DCSC-access-match
 
 **Implements:** [data.reused.feas.2](metrics.md#metric-repository-reused-data-access)
 
@@ -1536,7 +1532,7 @@ pass/fail
 ## Test: Reused data license matches destination
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-license-match  
+**Persistent URI:** https://example.org/test/T-DCSC-license-match
 
 **Implements:** [data.reused.feas.3](metrics.md#metric-repository-reused-data-license)
 
@@ -1638,7 +1634,7 @@ pass/fail
 ## Test: Check for new data (no is_reused)
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data
 
 **Implements:** [data.new.1](metrics.md#metric-new-data)
 
@@ -1738,7 +1734,7 @@ pass/fail
 ## Test: Check technical_resource for new data collection/creation
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-technical-resource  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-technical-resource
 
 **Implements:** [data.new.2](metrics.md#metric-new-data-collection-or-creation)
 
@@ -1841,7 +1837,7 @@ pass/fail
 ## Test: Check data_access for new datasets
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-access  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-access
 
 **Implements:** [data.new.3](metrics.md#metric-new-data-access)
 
@@ -1943,7 +1939,7 @@ pass/fail
 ## Test: Check rights of new dataset
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-rights  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-rights
 
 **Implements:** [data.new.3](metrics.md#metric-new-data-access)
 
@@ -2045,7 +2041,7 @@ pass/fail
 ## Test: Check metadata for new dataset
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-metadata  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-metadata
 
 **Implements:** [data.new.4](metrics.md#metric-new-data-metadata)
 
@@ -2150,7 +2146,7 @@ pass/fail
 ## Test: Check dataset_id exists
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-id-exists  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-id-exists
 
 **Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
 
@@ -2250,7 +2246,7 @@ pass/fail
 ## Test: Check PID resolves for dataset_id
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-id-resolves  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-id-resolves
 
 **Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
 
@@ -2351,7 +2347,7 @@ pass/fail
 ## Test: Check new data access matches destination
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-access-match-destination  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-access-match-destination
 
 **Implements:** [data.new.feas.2](metrics.md#metric-repository-new-data-access)
 
@@ -2454,7 +2450,7 @@ pass/fail
 ## Test: Check new data license matches destination
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-new-data-license-match-destination  
+**Persistent URI:** https://example.org/test/T-DCSC-new-data-license-match-destination
 
 **Implements:** [data.new.feas.3](metrics.md#metric-repository-new-data-license)
 
@@ -2558,7 +2554,7 @@ pass/fail
 ## Test: Check dataset.type is specified
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-type  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type
 
 **Implements:** [data.info.cov.1](metrics.md#metric-data-type)
 
@@ -2659,7 +2655,7 @@ pass/fail
 ## Test: Check distribution.format is specified
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-format  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-format
 
 **Implements:** [data.info.cov.2](metrics.md#metric-data-format)
 
@@ -2760,7 +2756,7 @@ pass/fail
 ## Test: Check distribution.byte_size is specified
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-byte-size  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-byte-size
 
 **Implements:** [data.info.cov.3](metrics.md#metric-data-size)
 
@@ -2861,7 +2857,7 @@ pass/fail
 ## Test: Check dataset.type matches destination type
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-match-destination-type  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-match-destination-type
 
 **Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
 
@@ -2964,7 +2960,7 @@ pass/fail
 ## Test: Check dataset.type aligns with destination subtype
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-align-destination-subtype  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-type-align-destination-subtype
 
 **Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
 
@@ -3067,7 +3063,7 @@ pass/fail
 ## Test: Check final dataset format matches destination files
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-format-match-destination-files  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-format-match-destination-files
 
 **Implements:** [data.info.feas.2](metrics.md#metric-repository-data-format)
 
@@ -3172,7 +3168,7 @@ pass/fail
 ## Test: Check final dataset size matches destination size
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-size-match-destination-size  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-size-match-destination-size
 
 **Implements:** [data.info.feas.3](metrics.md#metric-repository-data-size)
 
@@ -3278,7 +3274,7 @@ pass/fail
 ## Test: Validate maDMP JSON against DMP Common Standard schema
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation  
+**Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation
 
 **Implements:** [meta.comp.1](metrics.md#metric-dmp-common-standard-field-compliance)
 
@@ -3379,7 +3375,7 @@ pass/fail
 ## Test: Check dataset_methodology for controlled vocabularies
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies  
+**Persistent URI:** https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies
 
 **Implements:** [meta.co.1](metrics.md#metric-controlled-vocabularies-used-in-methodology)
 
@@ -3481,7 +3477,7 @@ pass/fail
 ## Test: Check technical_resource.name for electronic lab notebook reference
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-technical-resource-eln-reference  
+**Persistent URI:** https://example.org/test/T-DCSC-technical-resource-eln-reference
 
 **Implements:** [meta.co.2](metrics.md#metric-electronic-lab-notebook-referenced-as-a-technical-resource)
 
@@ -3580,7 +3576,7 @@ pass/fail
 ## Test: Check related_identifier resource_type for ReadMe file
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-related-identifier-readme-file  
+**Persistent URI:** https://example.org/test/T-DCSC-related-identifier-readme-file
 
 **Implements:** [meta.qual.2](metrics.md#metric-readme-file-reference)
 
@@ -3679,7 +3675,7 @@ pass/fail
 ## Test: Check metadata_standard_id is registered in metadata registries
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-metadata-standard-registered  
+**Persistent URI:** https://example.org/test/T-DCSC-metadata-standard-registered
 
 **Implements:** [meta.stand.comp.1](metrics.md#metric-metadata-standards-used)
 
@@ -3779,7 +3775,7 @@ pass/fail
 ## Test: Check distribution format is open
 
 **Test ID:** T-DCSC  
-**Persistent URI:** https://example.org/test/T-DCSC-distribution-format-open  
+**Persistent URI:** https://example.org/test/T-DCSC-distribution-format-open
 
 **Implements:** [meta.form.op.1](metrics.md#metric-use-of-open-file-formats-for-datasets)
 
