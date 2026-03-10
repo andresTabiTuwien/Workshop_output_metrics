@@ -123,9 +123,6 @@ At least one dataset entry in the maDMP contains a boolean field indicating reus
 ### Failure Criterion
 No dataset entry contains reuse information.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check for reused dataset declaration](tests.md#test-check-for-reused-dataset-declaration)
 
@@ -236,9 +233,6 @@ For each dataset declared as reused (`is_reused = true`), an identifier is prese
 
 ### Failure Criterion
 At least one reused dataset is missing an identifier or identifier metadata.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check for reused dataset PID](tests.md#test-check-for-reused-dataset-pid)
@@ -351,9 +345,6 @@ For each dataset declared as reused (`is_reused = true`), license metadata is pr
 ### Failure Criterion
 At least one reused dataset is missing license information or required license fields.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check License for Reused Datasets](tests.md#test-license-for-reused-datasets)
 
@@ -464,9 +455,6 @@ For each dataset declared as reused (`is_reused = true`), distribution or source
 
 ### Failure Criterion
 At least one reused dataset lacks distribution or source metadata, or required minimal fields.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check Distribution Entry is Present](tests.md#test-distribution-present)
@@ -581,9 +569,6 @@ For each dataset declared as reused (`is_reused = true`), a `data_access` value 
 ### Failure Criterion
 At least one reused dataset is missing a `data_access` value or contains an invalid value.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check Access Rights for Reused Datasets](tests.md#test-access-rights-for-reused-datasets)
 
@@ -694,9 +679,6 @@ For each dataset declared as reused (`is_reused = true`), a `personal_data` fiel
 
 ### Failure Criterion
 At least one reused dataset is missing `personal_data` information or contains an invalid or undefined value.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check Personal Data Flag for Reused Datasets](tests.md#test-personal-data-for-reused-datasets)
@@ -809,9 +791,6 @@ For each dataset declared as reused (`is_reused = true`), a `sensitive_data` fie
 ### Failure Criterion
 At least one reused dataset is missing `sensitive_data` information or contains an invalid or undefined value.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check Sensitive Data Flag for Reused Datasets](tests.md#test-sensitive-data-for-reused-datasets)
 
@@ -922,9 +901,6 @@ For each dataset declared as reused (`is_reused = true`), at least one distribut
 
 ### Failure Criterion
 At least one reused dataset lacks a distribution URL.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check Distribution URL is Present](tests.md#test-distribution-present-url)
@@ -1044,9 +1020,6 @@ At least one reused dataset PID:
 - cannot be matched to a target repository record, **or**  
 - does not resolve via a PID resolver.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check PID Matches Destination Repository Record](tests.md#test-pid-matches-destination-repository-record)
 - [Check PID Resolves Successfully](tests.md#test-pid-resolves)
@@ -1164,9 +1137,6 @@ For each dataset declared as reused (`is_reused = true`), the `data_access` valu
 ### Failure Criterion
 At least one reused dataset has a `data_access` value in the maDMP that does not match the access rights recorded in the destination repository.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check Reused Data Access Matches Destination](tests.md#test-reused-data-access-matches-destination)
 
@@ -1283,9 +1253,6 @@ For each dataset declared as reused (`is_reused = true`), the license value in t
 ### Failure Criterion
 At least one reused dataset has a license value in the maDMP that does not match the license recorded in the destination repository.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check Reused Data License Matches Destination](tests.md#test-reused-data-license-matches-destination)
 
@@ -1400,9 +1367,6 @@ At least one dataset entry exists where `is_reused` is **absent** (per the state
 
 ### Failure Criterion
 All dataset entries include `is_reused` (i.e., no dataset is found without `is_reused`), or no dataset entries exist.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check for new data (no is_reused)](tests.md#test-check-for-new-data-no-is_reused)
@@ -1519,9 +1483,6 @@ For at least one “new” dataset (i.e., dataset not marked as reused per your 
 ### Failure Criterion
 No dataset provides `technical_resource`, or one or more required fields are missing (`description`, `name`, `id.identifier`, `id.type`).
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check technical_resource for new data collection/creation](tests.md#test-check-technical_resource-for-new-data-collectioncreation)
 
@@ -1634,9 +1595,6 @@ For at least one “new” dataset (dataset not marked as reused per your policy
 
 ### Failure Criterion
 No “new” dataset contains `data_access` and/or rights information, or `data_access` is missing/invalid.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check data_access for new datasets](tests.md#test-check-data_access-for-new-datasets)
@@ -1754,9 +1712,6 @@ For at least one “new” dataset (dataset not marked as reused per your policy
 ### Failure Criterion
 No “new” dataset provides `metadata`, or one or more required fields are missing (`description`, `language`, `metadata_id.identifier`, `metadata_id.type`).
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check metadata for new dataset](tests.md#test-check-metadata-for-new-dataset)
 
@@ -1870,9 +1825,6 @@ Determine whether dataset identifiers provided in the maDMP exist and can be res
 ### Failure Criterion
 No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dataset_id exists](tests.md#test-check-dataset_id-exists)
 - [Check PID resolves for dataset_id](tests.md#test-check-pid-resolves-for-dataset_id)
@@ -1985,9 +1937,6 @@ For each “new” dataset (per your policy for determining new vs reused), the 
 
 ### Failure Criterion
 At least one new dataset has `data_access` in the maDMP that does not match the destination repository access rights, or required fields cannot be found.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check new data access matches destination](tests.md#test-check-new-data-access-matches-destination)
@@ -2105,9 +2054,6 @@ For each “new” dataset (per your policy for determining new vs reused), the 
 ### Failure Criterion
 At least one new dataset has a license value in the maDMP that does not match the destination repository license, or required fields cannot be found.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check new data license matches destination](tests.md#test-check-new-data-license-matches-destination)
 
@@ -2223,9 +2169,6 @@ For each dataset (or at minimum for the dataset(s) in scope), the field `dataset
 ### Failure Criterion
 `dataset.type` is missing/empty for one or more dataset entries, or uses values outside the accepted vocabulary (if validation against a vocabulary is required).
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dataset.type is specified](tests.md#test-check-datasettype-is-specified)
 
@@ -2337,9 +2280,6 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 ### Failure Criterion
 `distribution.format` is missing/empty for one or more distributions, or no distribution information exists where expected.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check distribution.format is specified](tests.md#test-check-distributionformat-is-specified)
 
@@ -2450,9 +2390,6 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 
 ### Failure Criterion
 `distribution.byte_size` is missing, empty, non-numeric, or negative for one or more distributions, or no distribution information exists where expected.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check distribution.byte_size is specified](tests.md#test-check-distributionbyte_size-is-specified)
@@ -2568,9 +2505,6 @@ For each dataset in scope:
 ### Failure Criterion
 At least one dataset has a type or subtype mismatch between maDMP and the destination repository, or required fields cannot be retrieved.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dataset.type matches destination type](tests.md#test-check-datasettype-matches-destination-type)
 - [Check dataset.type aligns with destination subtype](tests.md#test-check-datasettype-aligns-with-destination-subtype)
@@ -2684,9 +2618,6 @@ For each dataset distribution in scope, the maDMP `distribution.format` matches 
 ### Failure Criterion
 At least one distribution format declared in the maDMP does not match (or cannot be mapped to) the formats of the deposited files in the destination repository, or required repository metadata cannot be retrieved.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check final dataset format matches destination files](tests.md#test-check-final-dataset-format-matches-destination-files)
 
@@ -2799,9 +2730,6 @@ For each dataset distribution in scope, the maDMP `distribution.byte_size` match
 ### Failure Criterion
 At least one distribution has a size mismatch between maDMP and destination repository, or required repository metadata cannot be retrieved.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check final dataset size matches destination size](tests.md#test-check-final-dataset-size-matches-destination-size)
 
@@ -2912,9 +2840,6 @@ The maDMP JSON validates successfully against the DMP Common Standard JSON Schem
 
 ### Failure Criterion
 The maDMP JSON fails schema validation (one or more validation errors), including type mismatches, missing required fields, or invalid structures.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check maDMP JSON Validates Against DMP Common Standard Schema](tests.md#test-validate-madmp-json-against-dmp-common-standard-schema)
@@ -3027,9 +2952,6 @@ For dataset methodology information in scope, `dataset_methodology` includes ref
 ### Failure Criterion
 No controlled vocabulary usage can be identified in `dataset_methodology`, or methodology information is missing where expected.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dataset_methodology for controlled vocabularies](tests.md#test-check-dataset_methodology-for-controlled-vocabularies)
 
@@ -3141,9 +3063,6 @@ At least one `technical_resource.name` value indicates an electronic lab noteboo
 ### Failure Criterion
 No technical resource references an electronic lab notebook, or technical resource information is missing where expected.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check technical_resource.name for electronic lab notebook reference](tests.md#test-check-technical_resourcename-for-electronic-lab-notebook-reference)
 
@@ -3253,9 +3172,6 @@ At least one related identifier entry indicates a ReadMe file through its `resou
 ### Failure Criterion
 No related identifier entry indicates a ReadMe file, or related identifier information is missing where expected.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check related_identifier resource_type for ReadMe file](tests.md#test-check-related_identifier-resource_type-for-readme-file)
 
@@ -3349,9 +3265,6 @@ For each metadata standard in scope, `metadata_standard_id` is present and can b
 ### Failure Criterion
 `metadata_standard_id` is missing, or one or more referenced metadata standards cannot be found in the target registries.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check metadata_standard_id is registered in metadata registries](tests.md#test-check-metadata_standard_id-is-registered-in-metadata-registries)
 
@@ -3444,9 +3357,6 @@ For at least one dataset in scope, a `related_identifier` entry exists that refe
 
 ### Failure Criterion
 No dataset contains a `related_identifier` or `technical_resource.name` entry that can be linked to an electronic lab notebook.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check ELN dataset linked via related_ids](tests.md#test-check-eln-dataset-linked-via-related_ids)
@@ -3554,9 +3464,6 @@ For each dataset distribution in scope, the declared `distribution_format` (or e
 
 ### Failure Criterion
 At least one declared dataset format is not open, cannot be classified as open, or format information is missing where expected.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check distribution format is open](tests.md#test-check-distribution-format-is-open)
@@ -3668,9 +3575,6 @@ For at least one dataset in scope, a `technical_resource` entry exists with a no
 ### Failure Criterion
 No dataset contains a `technical_resource` entry, or all `technical_resource` entries are missing both `name` and `technical_resource_id`.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check technical_resource for dataset documentation](tests.md#test-check-technical_resource-for-dataset-documentation)
 
@@ -3777,9 +3681,6 @@ For at least one dataset in scope, the `data_quality_assurance` field is present
 
 ### Failure Criterion
 No dataset contains a `data_quality_assurance` field, or all present values are empty or missing.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check data_quality_assurance for quality control methods](tests.md#test-check-data_quality_assurance-for-quality-control-methods)
@@ -3888,9 +3789,6 @@ For at least one dataset distribution in scope, a `host` object is present conta
 ### Failure Criterion
 No dataset distribution contains a `host` object, or all present `host` entries are missing both `title` and `url`.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host.title and host.url for storage location](tests.md#test-check-hosttitle-and-hosturl-for-storage-location)
 
@@ -3997,9 +3895,6 @@ For at least one dataset distribution in scope, the `host` object is present and
 
 ### Failure Criterion
 No dataset distribution declares a `host`, or all declared hosts cannot be identified as a trusted repository (e.g., reference to personal storage, local device, or missing host information).
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check host for trusted repository storage](tests.md#test-check-host-for-trusted-repository-storage)
@@ -4109,9 +4004,6 @@ For at least one dataset in scope:
 
 ### Failure Criterion
 At least one dataset is missing `sensitive_data`, or the declared storage and backup properties (`security_and_privacy`, `backup_type`) are absent or inconsistent with the sensitivity classification.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check sensitive_data classification is assigned](tests.md#test-check-sensitive_data-classification-is-assigned)
@@ -4225,9 +4117,6 @@ At least one `contributor` entry is present with a `role` value that indicates r
 ### Failure Criterion
 No `contributor` entry exists, or no contributor has a `role` value that can be associated with backup responsibilities.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check contributor.role for backup responsibility](tests.md#test-check-contributorrole-for-backup-responsibility)
 
@@ -4334,9 +4223,6 @@ For at least one dataset distribution in scope, the `host.backup_frequency` fiel
 
 ### Failure Criterion
 No dataset distribution contains a `host` object with a `backup_frequency` field, or all present values are empty or missing.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check backup_frequency is declared](tests.md#test-check-backup_frequency-is-declared)
@@ -4445,9 +4331,6 @@ For at least one dataset or technical resource in scope, the maDMP includes a me
 ### Failure Criterion
 No mention of a version control system can be found in any `technical_resource` or equivalent field, or the relevant fields are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
 
@@ -4554,9 +4437,6 @@ The `host.id` declared in the maDMP resolves to the same repository or record id
 
 ### Failure Criterion
 The `host.id` in the maDMP is absent, does not resolve, or does not match the identifier of the actual deposit location in the target repository.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
@@ -4665,9 +4545,6 @@ For at least one dataset distribution in scope, a `security_and_privacy` object 
 ### Failure Criterion
 No dataset distribution contains a `security_and_privacy` object, or all present entries are missing a `title` or have an empty value.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check security_and_privacy.title for security measures](tests.md#test-check-security_and_privacytitle-for-security-measures)
 
@@ -4774,9 +4651,6 @@ For at least one dataset where `sensitive_data` is set to true (or equivalent), 
 
 ### Failure Criterion
 A dataset is flagged as sensitive but has no `security_and_privacy` entry, or the `description` field is absent, empty, or contains no reference to access rights management.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check security_and_privacy.description for access rights management](tests.md#test-check-security_and_privacydescription-for-access-rights-management)
@@ -4885,9 +4759,6 @@ For at least one dataset distribution in scope, a `security_and_privacy` entry i
 ### Failure Criterion
 No dataset distribution contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control for authorised users.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check security_and_privacy.description for authorised access controls](tests.md#test-check-security_and_privacydescription-for-authorised-access-controls)
 
@@ -4994,9 +4865,6 @@ For at least one dataset where sensitive data is present, a `security_and_privac
 
 ### Failure Criterion
 No dataset containing sensitive data includes a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control and user permission management.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check security_and_privacy.description for access control and user permissions](tests.md#test-check-security_and_privacydescription-for-access-control-and-user-permissions)
@@ -5105,9 +4973,6 @@ For at least one dataset in scope, a `security_and_privacy` entry is present wit
 ### Failure Criterion
 No dataset contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access procedures for restricted or sensitive data.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check security_and_privacy.description for access procedures](tests.md#test-check-security_and_privacydescription-for-access-procedures)
 
@@ -5214,9 +5079,6 @@ For at least one dataset in scope, either: (a) the `security_and_privacy.descrip
 
 ### Failure Criterion
 No dataset contains a `security_and_privacy.description` referencing GDPR or data protection requirements, and no `ethical_issues_report` field is present or non-empty across the maDMP.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](tests.md#test-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance)
@@ -5325,9 +5187,6 @@ For at least one dataset distribution in scope, a `security_and_privacy` entry i
 ### Failure Criterion
 No dataset distribution contains a `security_and_privacy` entry with a non-empty `title`, indicating that no security measures have been confirmed as implemented at the destination.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check security_and_privacy.title for implemented security measures at destination](tests.md#test-check-security_and_privacytitle-for-implemented-security-measures-at-destination)
 
@@ -5434,9 +5293,6 @@ For at least one dataset where `sensitive_data` is set to true (or equivalent), 
 
 ### Failure Criterion
 A dataset is flagged as sensitive but has no `security_and_privacy` entry, or all present `description` values are absent or empty, with no data protection method described.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check security_and_privacy.description for data protection method when sensitive_data is true](tests.md#test-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true)
@@ -5545,9 +5401,6 @@ For at least one dataset in scope, a `security_and_privacy` entry is present who
 ### Failure Criterion
 No dataset contains a `security_and_privacy` entry, or all present entries contain no reference to the provision of anonymised or synthetic data.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check security_and_privacy for anonymised synthetic data provision](tests.md#test-check-security_and_privacy-for-anonymised-synthetic-data-provision)
 
@@ -5654,9 +5507,6 @@ For at least one dataset distribution in scope, the `rights` field is present an
 
 ### Failure Criterion
 No dataset distribution contains a `rights` field, or all present `rights` values indicate restrictions or are ambiguous about the absence of restrictions.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check rights for statement of no data restrictions](tests.md#test-check-rights-for-statement-of-no-data-restrictions)
@@ -5765,9 +5615,6 @@ For at least one dataset distribution in scope, a `license_ref` field is present
 ### Failure Criterion
 No dataset distribution contains a `license_ref` field, or all present values are empty or missing.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check license_ref for dataset licence](tests.md#test-check-license_ref-for-dataset-licence)
 
@@ -5874,9 +5721,6 @@ For at least one dataset where `type` is set to software, a `license_ref` is pre
 
 ### Failure Criterion
 A dataset is typed as software but has no `license_ref`, or the declared `license_ref` does not match any recognised software licence in the SPDX registry.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check license_ref against SPDX for software datasets](tests.md#test-check-license_ref-against-spdx-for-software-datasets)
@@ -5985,9 +5829,6 @@ For at least one dataset in scope, the `data_access` field or a `rights` entry r
 ### Failure Criterion
 No dataset contains a `data_access` or `rights` entry that references a data access agreement or MoU, or all present values are absent, empty, or contain no indication of a formal agreement.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check data_access and rights for access agreements or MoUs](tests.md#test-check-data_access-and-rights-for-access-agreements-or-mous)
 
@@ -6094,9 +5935,6 @@ At least one `contributor` entry is present with a `role` value of `owner` and n
 
 ### Failure Criterion
 No `contributor` entry exists with a `role` of `owner`, or the ownership field is present but blank.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check contributor.role for data owner](tests.md#test-check-contributorrole-for-data-owner)
@@ -6205,9 +6043,6 @@ For at least one dataset where `type` is set to software, a `contributor` entry 
 ### Failure Criterion
 A dataset is typed as software but has no `contributor` entry, or no contributor has a role indicating authorship.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check contributor for author role when dataset type is software](tests.md#test-check-contributor-for-author-role-when-dataset-type-is-software)
 
@@ -6314,9 +6149,6 @@ The `ethical_issues_exist` field is present and contains one of the accepted val
 
 ### Failure Criterion
 The `ethical_issues_exist` field is absent, empty, or contains a value outside the accepted set of `yes`, `no`, or `unknown`.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check ethical_issues_exist for valid value](tests.md#test-check-ethical_issues_exist-for-valid-value)
@@ -6425,9 +6257,6 @@ If `ethical_issues_exist` is set to `yes`, the `ethical_issues_report` field is 
 ### Failure Criterion
 `ethical_issues_exist` is set to `yes` but the `ethical_issues_report` field is absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
 
@@ -6534,9 +6363,6 @@ If `ethical_issues_exist` is set to `no`, the `ethical_issues_description` field
 
 ### Failure Criterion
 `ethical_issues_exist` is set to `no` but the `ethical_issues_description` field is absent or empty, with no justification provided.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
@@ -6645,9 +6471,6 @@ For at least one dataset in scope, the `data_access` field is present and set to
 ### Failure Criterion
 No dataset contains a `data_access` field, or all present values are set to `shared`, `closed`, or any value other than `open`.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check data_access for open status](tests.md#test-check-data_access-for-open-status)
 
@@ -6754,9 +6577,6 @@ For at least one dataset in scope, a `distribution` entry is present and contain
 
 ### Failure Criterion
 No dataset contains a `distribution` entry, or all present distributions lack a `license_ref` field or contain an empty value.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check distribution is present for dataset](tests.md#test-check-distribution-is-present-for-dataset)
@@ -6871,9 +6691,6 @@ For at least one dataset distribution in scope, a `rights` field is present and 
 ### Failure Criterion
 No dataset distribution contains a `rights` field, or all present values are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check rights for data restrictions reference](tests.md#test-check-rights-for-data-restrictions-reference)
 
@@ -6980,9 +6797,6 @@ For at least one dataset distribution in scope, the `license_ref` field is prese
 
 ### Failure Criterion
 No dataset distribution contains a `license_ref` field, or all present `license_ref` values do not correspond to a CC-BY licence as required by Horizon Europe RDM guidelines.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check distribution license_ref for Horizon Europe CC-BY compliance](tests.md#test-check-distribution-license_ref-for-horizon-europe-cc-by-compliance)
@@ -7091,9 +6905,6 @@ For at least one dataset in scope, the `data_access` value at dataset level is c
 ### Failure Criterion
 The `data_access` value at dataset level conflicts with or is not supported by the access policy of the declared destination host, or the relevant fields are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check data_access matches destination host access policy](tests.md#test-check-data_access-matches-destination-host-access-policy)
 
@@ -7200,9 +7011,6 @@ For at least one dataset distribution in scope, the `license_ref` value is prese
 
 ### Failure Criterion
 The `license_ref` value is absent, empty, or inconsistent with the licence policy of the declared destination host, indicating a mismatch between the declared data licence and the repository's requirements.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check distribution license_ref matches destination host licence policy](tests.md#test-check-distribution-license_ref-matches-destination-host-licence-policy)
@@ -7311,9 +7119,6 @@ For at least one dataset distribution in scope, the `license.start_date` field i
 ### Failure Criterion
 The `license.start_date` field is absent or empty, or its value is inconsistent with the embargo policy of the declared destination host, indicating a mismatch between the planned embargo date and the repository's supported availability window.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check distribution license.start_date matches destination embargo policy](tests.md#test-check-distribution-licensestart_date-matches-destination-embargo-policy)
 
@@ -7421,9 +7226,6 @@ For at least one dataset distribution in scope, the `rights` field is present an
 ### Failure Criterion
 The `rights` field is absent or empty, or its value is inconsistent with the restriction policy of the declared destination host, indicating a mismatch between the declared data restrictions and the repository's supported access conditions.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check rights matches destination host restriction policy](tests.md#test-check-rights-matches-destination-host-restriction-policy)
 
@@ -7530,9 +7332,6 @@ Both of the following conditions are met: (1) no embargo date field is present i
 
 ### Failure Criterion
 An embargo date is present in the repository host entry, or `distribution.license.start_date` is set in the maDMP, indicating a potential violation of Horizon Europe embargo policy.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check repository host for absence of embargo date](tests.md#test-check-repository-host-for-absence-of-embargo-date)
@@ -7647,9 +7446,6 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` v
 ### Failure Criterion
 No dataset distribution contains a `host.title` or `host.url` value that matches a thematic repository in the OpenAIRE Graph repositories API or equivalent SKG API registry, or the relevant fields are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host.title and host.url against thematic repository registries](tests.md#test-check-hosttitle-and-hosturl-against-thematic-repository-registries)
 
@@ -7756,9 +7552,6 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` m
 
 ### Failure Criterion
 No dataset distribution contains a `host.title` or `host.url` that matches a FAIR-assessed repository in OpenAIRE or FAIRsharing, or the relevant fields are absent or empty.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](tests.md#test-check-host-against-openaire-and-fairsharing-fair-benchmarks)
@@ -7867,9 +7660,6 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` m
 ### Failure Criterion
 No dataset distribution contains a `host.title` or `host.url` that matches an entry in a recognised trusted repository registry, or the relevant fields are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host against trusted repository registry benchmark](tests.md#test-check-host-against-trusted-repository-registry-benchmark)
 
@@ -7976,9 +7766,6 @@ For at least one dataset distribution in scope, the `host` entry contains both a
 
 ### Failure Criterion
 No dataset distribution contains a `host` entry with both `backup_frequency` and `backup_type` fields present and non-empty, indicating that no back-up strategy has been documented.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check host.backup_frequency and host.backup_type for back-up strategy](tests.md#test-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy)
@@ -8087,9 +7874,6 @@ For at least one dataset distribution in scope, the `host` entry contains a non-
 ### Failure Criterion
 No dataset distribution contains a `host` entry with a `certified_with` field present and non-empty, indicating that no repository certification has been documented.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check certified_with exists in host](tests.md#test-check-certified_with-exists-in-host)
 
@@ -8196,9 +7980,6 @@ At least one `cost` entry is present with non-empty `currency_code`, `value`, an
 
 ### Failure Criterion
 No `cost` entry is present, or no present `cost` entry contains a `title` or `description` referencing preservation, indicating that no resources for long-term preservation have been declared.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check cost title or description for preservation reference](tests.md#test-check-cost-title-or-description-for-preservation-reference)
@@ -8307,9 +8088,6 @@ For at least one dataset distribution in scope, the `host_id.identifier` and `ho
 ### Failure Criterion
 No dataset distribution contains a `host_id.identifier` or `host_id.type` that resolves to a FAIRsharing repository entry with associated policies, or the relevant fields are absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host_id against FAIRsharing for repository policy](tests.md#test-check-host_id-against-fairsharing-for-repository-policy)
 
@@ -8416,9 +8194,6 @@ For at least one dataset in scope, the `dataset_id` value resolves via its DOI U
 
 ### Failure Criterion
 The `dataset_id` value is absent or empty, does not resolve via DOI URL, or resolves to a repository other than the declared destination, indicating a mismatch between the dataset identifier and its intended destination.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check dataset_id resolves to declared destination via DOI URL](tests.md#test-check-dataset_id-resolves-to-declared-destination-via-doi-url)
@@ -8527,9 +8302,6 @@ For at least one dataset distribution in scope, a non-empty `preservation_statem
 ### Failure Criterion
 No dataset distribution contains both a non-empty `preservation_statement` and a declared `host` entry, indicating that no intention to store the dataset in a long-term storage system has been documented.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check preservation_statement and host for long-term storage intention](tests.md#test-check-preservation_statement-and-host-for-long-term-storage-intention)
 
@@ -8636,9 +8408,6 @@ For at least one dataset in scope, both `dataset.keyword` values match keywords 
 
 ### Failure Criterion
 No dataset contains `keyword` or `language` values that match the characteristics supported by the declared destination repository in Zenodo, or the relevant fields are absent or empty.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check dataset.keyword against Zenodo keywords](tests.md#test-check-datasetkeyword-against-zenodo-keywords)
@@ -8753,9 +8522,6 @@ For at least one dataset in scope, a `related_identifier` entry is present conta
 ### Failure Criterion
 No dataset contains a `related_identifier` entry with a non-empty `identifier` field, indicating that no external resources have been declared in the DMP.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check related_identifier.identifier for external resources](tests.md#test-check-related_identifieridentifier-for-external-resources)
 
@@ -8862,9 +8628,6 @@ For at least one dataset in scope, a `related_identifier` entry is present conta
 
 ### Failure Criterion
 No dataset contains a `related_identifier` entry with non-empty `metadata_scheme`, `scheme_type`, and `scheme_uri` fields, indicating that no metadata standard or format has been declared in the DMP.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check related_identifier for metadata standard fields](tests.md#test-check-related_identifier-for-metadata-standard-fields)
@@ -8973,9 +8736,6 @@ For at least one URL present in the maDMP, the URL is syntactically valid and re
 ### Failure Criterion
 All URLs present in the maDMP are either syntactically invalid, unreachable, or return error responses, indicating that no declared external resource link is resolvable.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check URLs in maDMP are valid and resolvable](tests.md#test-check-urls-in-madmp-are-valid-and-resolvable)
 
@@ -9082,9 +8842,6 @@ For at least one dataset in scope, the combination of `dataset_id.identifier`, `
 
 ### Failure Criterion
 No dataset in scope produces a matching record in the OpenAIRE SKG-IF API using the declared `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, or `dataset.type`, or the relevant fields are absent or empty.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check dataset fields against OpenAIRE SKG-IF API](tests.md#test-check-dataset-fields-against-openaire-skg-if-api)
@@ -9193,9 +8950,6 @@ For at least one dataset in scope, a `contributor` entry is present whose `role`
 ### Failure Criterion
 No dataset contains a `contributor` entry whose `role` value matches a CRediT taxonomy term, or the `contributor` field is absent or empty.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check contributor roles against CRediT taxonomy](tests.md#test-check-contributor-roles-against-credit-taxonomy)
 
@@ -9303,9 +9057,6 @@ For at least one dataset distribution in scope, the `host` entry contains a non-
 ### Failure Criterion
 No dataset distribution contains a `host` entry with a non-empty `pid_system` field, indicating that no persistent identifier system has been declared.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host.pid_system for PID declaration](tests.md#test-check-hostpid_system-for-pid-declaration)
 
@@ -9412,9 +9163,6 @@ Both of the following conditions are met: (1) at least one distribution's `host`
 
 ### Failure Criterion
 Either the `certified_with` field is absent or does not match a trusted registry, or `host_id.identifier` and `host_id.type` are absent, empty, or do not resolve to a valid repository link.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check certified_with against trusted registry](tests.md#test-check-certified_with-against-trusted-registry)
@@ -9529,9 +9277,6 @@ For at least one dataset distribution in scope, the `host.pid_system` value matc
 ### Failure Criterion
 The `host.pid_system` value is absent, empty, or does not match the PID system supported by the declared destination repository in Zenodo, indicating a mismatch between the declared and actual PID provision.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check host.pid_system matches destination PID system in Zenodo](tests.md#test-check-hostpid_system-matches-destination-pid-system-in-zenodo)
 
@@ -9639,9 +9384,6 @@ For at least one dataset in scope, the `dataset_id.identifier` value of type DOI
 ### Failure Criterion
 The `dataset_id.identifier` value is absent, empty, not of a resolvable type, or fails to resolve via its DOI URL in Zenodo, indicating that the declared PID is invalid or not resolvable.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 
 ### JSON-LD (Metric)
@@ -9747,9 +9489,6 @@ At least one `contributor` entry is present at DMP level containing non-empty va
 
 ### Failure Criterion
 No `contributor` entry is present at DMP level, or no present entry contains non-empty values for all three of `name`, `role`, and `contact`, indicating that contributor role information is incomplete or absent.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check dmp.contributor name, role, and contact](tests.md#test-check-dmpcontributor-name-role-and-contact)
@@ -9858,9 +9597,6 @@ At least one `contributor` entry is present at DMP level with a `role` value equ
 ### Failure Criterion
 No `contributor` entry is present with a `role` value of `Data Steward`, indicating that no Data Steward has been assigned to validate the DMP.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dmp.contributor.role for Data Steward](tests.md#test-check-dmpcontributorrole-for-data-steward)
 
@@ -9967,9 +9703,6 @@ At least one `contributor` entry is present containing both a non-empty `contrib
 
 ### Failure Criterion
 No `contributor` entry contains both a non-empty `contributor_id` and a non-empty `affiliation.affiliation_id`, indicating that contributor and/or organisational PIDs are absent or incomplete.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check contributor_id and affiliation.affiliation_id for PIDs](tests.md#test-check-contributor_id-and-affiliationaffiliation_id-for-pids)
@@ -10078,9 +9811,6 @@ For at least one contributor declared in the maDMP, the `dmp.contributor.name`, 
 ### Failure Criterion
 No contributor declared in the maDMP via `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` can be matched against `contributors.name` and `contributors.type` in the destination, or the relevant fields are absent or empty in either source.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check dmp.contributor fields against destination contributors](tests.md#test-check-dmpcontributor-fields-against-destination-contributors)
 
@@ -10187,9 +9917,6 @@ At least one contributor in the maDMP has a `role` value of `Data Steward`, and 
 
 ### Failure Criterion
 No contributor in the maDMP has a `role` value of `Data Steward`, or no corresponding `contributors.type` of `Other` is present in the destination, indicating that the Data Steward validation is not reflected in the destination record.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check Data Steward role in maDMP against contributors.type Other in destination](tests.md#test-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination)
@@ -10298,9 +10025,6 @@ For at least one contributor declared in the maDMP, the `contributor.contributor
 ### Failure Criterion
 No contributor declared in the maDMP has a `contributor.contributor_id` or `contributor.affiliation.affiliation_id` that can be matched against `contributors.orcid` or `contributors.affiliation` in Zenodo, or the relevant fields are absent or empty in either source.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check contributor PIDs in maDMP against Zenodo contributors](tests.md#test-check-contributor-pids-in-madmp-against-zenodo-contributors)
 
@@ -10407,9 +10131,6 @@ At least one `cost` entry is present in the maDMP whose declared values are cons
 
 ### Failure Criterion
 No `cost` entry is present in the maDMP, or the declared cost values do not match the actual cost of the destination repository, indicating a discrepancy between the budgeted and actual repository cost.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check cost in maDMP against repository cost](tests.md#test-check-cost-in-madmp-against-repository-cost)
@@ -10518,9 +10239,6 @@ At least one `cost` entry is present at DMP level containing non-empty values fo
 ### Failure Criterion
 No `cost` entry is present at DMP level, or no present entry contains the required non-empty fields, indicating that budget information for the DMP is absent or incomplete.
 
-### Expected Result Type
-Boolean (pass/fail)
-
 ### Associated Test(s)
 - [Check cost fields for budget specification](tests.md#test-check-cost-fields-for-budget-specification)
 
@@ -10627,9 +10345,6 @@ The `cost` field in the maDMP is present and its content explicitly states that 
 
 ### Failure Criterion
 The `cost` field is absent, empty, or does not contain any indication that no additional resources are required, indicating that the DMP does not address the absence of extra RDM costs.
-
-### Expected Result Type
-Boolean (pass/fail)
 
 ### Associated Test(s)
 - [Check cost in maDMP for no additional resources statement](tests.md#test-check-cost-in-madmp-for-no-additional-resources-statement)
