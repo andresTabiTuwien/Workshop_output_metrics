@@ -104,7 +104,7 @@ Use the structured records in [`metrics.md`](metrics.md) and [`tests.md`](tests.
 
 ### For funders and policy makers
 Use the catalogue as a reference framework for defining DMP requirements and quality benchmarks. 
-Metrics are mapped to quality dimensions and cover Horizon Europe compliance, FAIR data principles, and trusted repository standards.
+Metrics are mapped to quality dimensions and cover Horizon Europe compliance, FAIR data principles.
 
 ---
 
