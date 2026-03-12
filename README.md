@@ -23,6 +23,7 @@ The metrics and tests are designed to be used as the basis for automated DMP eva
 | [`metrics.md`](metrics.md) | Catalogue of 95 evaluation metrics, each describing a measurable quality criterion for a maDMP |
 | [`tests.md`](tests.md) | Catalogue of 105 automated tests, each implementing one or more metrics with defined inputs, outputs, and procedures |
 | [`LICENSE`](LICENSE) | CC BY 4.0 licence |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guidelines for contributing new metrics or tests |
 
 ---
 
