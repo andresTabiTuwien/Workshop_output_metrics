@@ -1,122 +1,123 @@
 # Tests Catalog
 
-| ID | Title |
-|----------|------|
-| madmp-reused-datasets-declared-json | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
-| T-DCSC | [Check for reused dataset declaration](#test-check-for-reused-dataset-declaration) |
-| T-DCSC | [Check License for Reused Datasets](#test-license-for-reused-datasets) |
-| T-DCSC | [Check for reused dataset PID](#test-check-for-reused-dataset-pid) |
-| T-DCSC | [Check Distribution Entry is Present](#test-distribution-present) |
-| T-DCSC | [Check Distribution Access Information is Present](#test-distribution-access-information) |
-| T-DCSC | [Check Distribution Title is Present](#test-distribution-title) |
-| T-DCSC | [Check Access Rights for Reused Datasets](#test-access-rights-for-reused-datasets) |
-| T-DCSC | [Check Personal Data Flag for Reused Datasets](#test-personal-data-for-reused-datasets) |
-| T-DCSC | [Check Sensitive Data Flag for Reused Datasets](#test-sensitive-data-for-reused-datasets) |
-| T-DCSC | [Check Distribution URL is Present](#test-distribution-present-url) |
-| T-DCSC | [Check Access URL is Present and Non-empty](#test-access-url) |
-| T-DCSC | [Check PID Matches Destination Repository Record](#test-pid-matches-destination-repository-record) |
-| T-DCSC | [Check PID Resolves Successfully](#test-pid-resolves) |
-| T-DCSC | [Check Reused Data Access Matches Destination](#test-reused-data-access-matches-destination) |
-| T-DCSC | [Check Reused Data License Matches Destination](#test-reused-data-license-matches-destination) |
-| T-DCSC | [Check for new data (no is_reused)](#test-check-for-new-data-no-is_reused) |
-| T-DCSC | [Check technical_resource for new data collection/creation](#test-check-technical_resource-for-new-data-collectioncreation) |
-| T-DCSC | [Check data_access for new datasets](#test-check-data_access-for-new-datasets) |
-| T-DCSC | [Check rights of new dataset](#test-check-rights-of-new-dataset) |
-| T-DCSC | [Check metadata for new dataset](#test-check-metadata-for-new-dataset) |
-| T-DCSC | [Check dataset_id exists](#test-check-dataset_id-exists) |
-| T-DCSC | [Check PID resolves for dataset_id](#test-check-pid-resolves-for-dataset_id) |
-| T-DCSC | [Check new data access matches destination](#test-check-new-data-access-matches-destination) |
-| T-DCSC | [Check new data license matches destination](#test-check-new-data-license-matches-destination) |
-| T-DCSC | [Check dataset.type is specified](#test-check-datasettype-is-specified) |
-| T-DCSC | [Check distribution.format is specified](#test-check-distributionformat-is-specified) |
-| T-DCSC | [Check distribution.byte_size is specified](#test-check-distributionbyte_size-is-specified) |
-| T-DCSC | [Check dataset.type matches destination type](#test-check-datasettype-matches-destination-type) |
-| T-DCSC | [Check dataset.type aligns with destination subtype](#test-check-datasettype-aligns-with-destination-subtype) |
-| T-DCSC | [Check final dataset format matches destination files](#test-check-final-dataset-format-matches-destination-files) |
-| T-DCSC | [Check final dataset size matches destination size](#test-check-final-dataset-size-matches-destination-size) |
-| T-DCSC | [Check maDMP JSON Validates Against DMP Common Standard Schema](#test-validate-madmp-json-against-dmp-common-standard-schema) |
-| T-DCSC | [Check dataset_methodology for controlled vocabularies](#test-check-dataset_methodology-for-controlled-vocabularies) |
-| T-DCSC | [Check technical_resource.name for electronic lab notebook reference](#test-check-technical_resourcename-for-electronic-lab-notebook-reference) |
-| T-DCSC | [Check related_identifier resource_type for ReadMe file](#test-check-related_identifier-resource_type-for-readme-file) |
-| T-DCSC | [Check metadata_standard_id is registered in metadata registries](#test-check-metadata_standard_id-is-registered-in-metadata-registries) |
-| T-DCSC | [Check distribution format is open](#test-check-distribution-format-is-open) |
-| T-DCSC | [Check ELN dataset linked via related_ids](#test-check-eln-dataset-linked-via-related_ids) |
-| T-DCSC | [Check technical_resource for dataset documentation](#test-check-technical_resource-for-dataset-documentation) |
-| T-DCSC | [Check data_quality_assurance for quality control methods](#test-check-data_quality_assurance-for-quality-control-methods) |
-| T-DCSC | [Check host.title and host.url for storage location](#test-check-hosttitle-and-hosturl-for-storage-location) |
-| T-DCSC | [Check host for trusted repository storage](#test-check-host-for-trusted-repository-storage) |
-| T-DCSC | [Check sensitive_data classification is assigned](#test-check-sensitive_data-classification-is-assigned) |
-| T-DCSC | [Check host security and backup reflect sensitivity level](#test-check-host-security-and-backup-reflect-sensitivity-level) |
-| T-DCSC | [Check contributor.role for backup responsibility](#test-check-contributorrole-for-backup-responsibility) |
-| T-DCSC | [Check backup_frequency is declared](#test-check-backup_frequency-is-declared) |
-| T-DCSC | [Check host.id matches Zenodo deposit location](#test-check-hostid-matches-zenodo-deposit-location) |
-| T-DCSC | [Check security_and_privacy.title for security measures](#test-check-security_and_privacytitle-for-security-measures) |
-| T-DCSC | [Check security_and_privacy.description for access rights management](#test-check-security_and_privacydescription-for-access-rights-management) |
-| T-DCSC | [Check security_and_privacy.description for authorised access controls](#test-check-security_and_privacydescription-for-authorised-access-controls) |
-| T-DCSC | [Check security_and_privacy.description for access control and user permissions](#test-check-security_and_privacydescription-for-access-control-and-user-permissions) |
-| T-DCSC | [Check security_and_privacy.description for access procedures](#test-check-security_and_privacydescription-for-access-procedures) |
-| T-DCSC | [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](#test-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance) |
-| T-DCSC | [Check security_and_privacy.title for implemented security measures at destination](#test-check-security_and_privacytitle-for-implemented-security-measures-at-destination) |
-| T-DCSC | [Check security_and_privacy.description for data protection method when sensitive_data is true](#test-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true) |
-| T-DCSC | [Check security_and_privacy for anonymised synthetic data provision](#test-check-security_and_privacy-for-anonymised-synthetic-data-provision) |
-| T-DCSC | [Check rights for statement of no data restrictions](#test-check-rights-for-statement-of-no-data-restrictions) |
-| T-DCSC | [Check license_ref for dataset licence](#test-check-license_ref-for-dataset-licence) |
-| T-DCSC | [Check license_ref against SPDX for software datasets](#test-check-license_ref-against-spdx-for-software-datasets) |
-| T-DCSC | [Check data_access and rights for access agreements or MoUs](#test-check-data_access-and-rights-for-access-agreements-or-mous) |
-| T-DCSC | [Check contributor.role for data owner](#test-check-contributorrole-for-data-owner) |
-| T-DCSC | [Check contributor for author role when dataset type is software](#test-check-contributor-for-author-role-when-dataset-type-is-software) |
-| T-DCSC | [Check ethical_issues_exist for valid value](#test-check-ethical_issues_exist-for-valid-value) |
-| T-DCSC | [Check ethical_issues_description is present when ethical_issues_exist is no](#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no) |
-| T-DCSC | [Check data_access for open status](#test-check-data_access-for-open-status) |
-| T-DCSC | [Check distribution is present for dataset](#test-check-distribution-is-present-for-dataset) |
-| T-DCSC | [Check license_ref is present within distribution](#test-check-license_ref-is-present-within-distribution) |
-| T-DCSC | [Check rights for data restrictions reference](#test-check-rights-for-data-restrictions-reference) |
-| T-DCSC | [Check distribution license_ref for Horizon Europe CC-BY compliance](#test-check-distribution-license_ref-for-horizon-europe-cc-by-compliance) |
-| T-DCSC | [Check data_access matches destination host access policy](#test-check-data_access-matches-destination-host-access-policy) |
-| T-DCSC | [Check distribution license_ref matches destination host licence policy](#test-check-distribution-license_ref-matches-destination-host-licence-policy) |
-| T-DCSC | [Check distribution license.start_date matches destination embargo policy](#test-check-distribution-licensestart_date-matches-destination-embargo-policy) |
-| T-DCSC | [Check rights matches destination host restriction policy](#test-check-rights-matches-destination-host-restriction-policy) |
-| T-DCSC | [Check repository host for absence of embargo date](#test-check-repository-host-for-absence-of-embargo-date) |
-| T-DCSC | [Check distribution.license.start_date for absence in maDMP](#test-check-distributionlicensestart_date-for-absence-in-madmp) |
-| T-DCSC | [Check host.title and host.url against thematic repository registries](#test-check-hosttitle-and-hosturl-against-thematic-repository-registries) |
-| T-DCSC | [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](#test-check-host-against-openaire-and-fairsharing-fair-benchmarks) |
-| T-DCSC | [Check host against trusted repository registry benchmark](#test-check-host-against-trusted-repository-registry-benchmark) |
-| T-DCSC | [Check host.backup_frequency and host.backup_type for back-up strategy](#test-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy) |
-| T-DCSC | [Check certified_with exists in host](#test-check-certified_with-exists-in-host) |
-| T-DCSC | [Check cost title or description for preservation reference](#test-check-cost-title-or-description-for-preservation-reference) |
-| T-DCSC | [Check host_id against FAIRsharing for repository policy](#test-check-host_id-against-fairsharing-for-repository-policy) |
-| T-DCSC | [Check dataset_id resolves to declared destination via DOI URL](#test-check-dataset_id-resolves-to-declared-destination-via-doi-url) |
-| T-DCSC | [Check preservation_statement and host for long-term storage intention](#test-check-preservation_statement-and-host-for-long-term-storage-intention) |
-| T-DCSC | [Check dataset.keyword against Zenodo keywords](#test-check-datasetkeyword-against-zenodo-keywords) |
-| T-DCSC | [Check dataset.language against Zenodo language support](#test-check-datasetlanguage-against-zenodo-language-support) |
-| T-DCSC | [Check host_id against Zenodo and FAIRsharing for policy compliance](#test-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance) |
-| T-DCSC | [Check related_identifier.identifier for external resources](#test-check-related_identifieridentifier-for-external-resources) |
-| T-DCSC | [Check related_identifier for metadata standard fields](#test-check-related_identifier-for-metadata-standard-fields) |
-| T-DCSC | [Check URLs in maDMP are valid and resolvable](#test-check-urls-in-madmp-are-valid-and-resolvable) |
-| T-DCSC | [Check dataset fields against OpenAIRE SKG-IF API](#test-check-dataset-fields-against-openaire-skg-if-api) |
-| T-DCSC | [Check contributor roles against CRediT taxonomy](#test-check-contributor-roles-against-credit-taxonomy) |
-| T-DCSC | [Check host.pid_system for PID declaration](#test-check-hostpid_system-for-pid-declaration) |
-| T-DCSC | [Check certified_with against trusted registry](#test-check-certified_with-against-trusted-registry) |
-| T-DCSC | [Check host_id.identifier and host_id.type for valid repository link](#test-check-host_ididentifier-and-host_idtype-for-valid-repository-link) |
-| T-DCSC | [Check host.pid_system matches destination PID system in Zenodo](#test-check-hostpid_system-matches-destination-pid-system-in-zenodo) |
-| T-DCSC | [Check dmp.contributor name, role, and contact](#test-check-dmpcontributor-name-role-and-contact) |
-| T-DCSC | [Check dmp.contributor.role for Data Steward](#test-check-dmpcontributorrole-for-data-steward) |
-| T-DCSC | [Check contributor_id and affiliation.affiliation_id for PIDs](#test-check-contributor_id-and-affiliationaffiliation_id-for-pids) |
-| T-DCSC | [Check dmp.contributor fields against destination contributors](#test-check-dmpcontributor-fields-against-destination-contributors) |
-| T-DCSC | [Check Data Steward role in maDMP against contributors.type Other in destination](#test-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination) |
-| T-DCSC | [Check contributor PIDs in maDMP against Zenodo contributors](#test-check-contributor-pids-in-madmp-against-zenodo-contributors) |
-| T-DCSC | [Check cost in maDMP against repository cost](#test-check-cost-in-madmp-against-repository-cost) |
-| T-DCSC | [Check cost fields for budget specification](#test-check-cost-fields-for-budget-specification) |
-| T-DCSC | [Check cost in maDMP for no additional resources statement](#test-check-cost-in-madmp-for-no-additional-resources-statement) |
+| No. | Test ID | Title |
+|-----|---------|------|
+| 1 | T-DCSC | [Check for reused dataset declaration](#test-1-check-for-reused-dataset-declaration) |
+| 2 | T-DCSC | [Check License for Reused Datasets](#test-2-check-license-for-reused-datasets) |
+| 3 | T-DCSC | [Check for reused dataset PID](#test-3-check-for-reused-dataset-pid) |
+| 4 | T-DCSC | [Check Distribution Entry is Present](#test-4-check-distribution-entry-is-present) |
+| 5 | T-DCSC | [Check Distribution Access Information is Present](#test-5-check-distribution-access-information-is-present) |
+| 6 | T-DCSC | [Check Distribution Title is Present](#test-6-check-distribution-title-is-present) |
+| 7 | T-DCSC | [Check Access Rights for Reused Datasets](#test-7-check-access-rights-for-reused-datasets) |
+| 8 | T-DCSC | [Check Personal Data Flag for Reused Datasets](#test-8-check-personal-data-flag-for-reused-datasets) |
+| 9 | T-DCSC | [Check Sensitive Data Flag for Reused Datasets](#test-9-check-sensitive-data-flag-for-reused-datasets) |
+| 10 | T-DCSC | [Check Distribution URL is Present](#test-10-check-distribution-url-is-present) |
+| 11 | T-DCSC | [Check Access URL is Present and Non-empty](#test-11-check-access-url-is-present-and-non-empty) |
+| 12 | T-DCSC | [Check PID Matches Destination Repository Record](#test-12-check-pid-matches-destination-repository-record) |
+| 13 | T-DCSC | [Check PID Resolves Successfully](#test-13-check-pid-resolves-successfully) |
+| 14 | T-DCSC | [Check Reused Data Access Matches Destination](#test-14-check-reused-data-access-matches-destination) |
+| 15 | T-DCSC | [Check Reused Data License Matches Destination](#test-15-check-reused-data-license-matches-destination) |
+| 16 | T-DCSC | [Check for new data (no is_reused)](#test-16-check-for-new-data-no-is_reused) |
+| 17 | T-DCSC | [Check technical_resource for new data collection/creation](#test-17-check-technical_resource-for-new-data-collectioncreation) |
+| 18 | T-DCSC | [Check data_access for new datasets](#test-18-check-data_access-for-new-datasets) |
+| 19 | T-DCSC | [Check rights of new dataset](#test-19-check-rights-of-new-dataset) |
+| 20 | T-DCSC | [Check metadata for new dataset](#test-20-check-metadata-for-new-dataset) |
+| 21 | T-DCSC | [Check dataset_id exists](#test-21-check-dataset_id-exists) |
+| 22 | T-DCSC | [Check PID resolves for dataset_id](#test-22-check-pid-resolves-for-dataset_id) |
+| 23 | T-DCSC | [Check new data access matches destination](#test-23-check-new-data-access-matches-destination) |
+| 24 | T-DCSC | [Check new data license matches destination](#test-24-check-new-data-license-matches-destination) |
+| 25 | T-DCSC | [Check dataset.type is specified](#test-25-check-datasettype-is-specified) |
+| 26 | T-DCSC | [Check distribution.format is specified](#test-26-check-distributionformat-is-specified) |
+| 27 | T-DCSC | [Check distribution.byte_size is specified](#test-27-check-distributionbyte_size-is-specified) |
+| 28 | T-DCSC | [Check dataset.type matches destination type](#test-28-check-datasettype-matches-destination-type) |
+| 29 | T-DCSC | [Check dataset.type aligns with destination subtype](#test-29-check-datasettype-aligns-with-destination-subtype) |
+| 30 | T-DCSC | [Check final dataset format matches destination files](#test-30-check-final-dataset-format-matches-destination-files) |
+| 31 | T-DCSC | [Check final dataset size matches destination size](#test-31-check-final-dataset-size-matches-destination-size) |
+| 32 | T-DCSC | [Check maDMP JSON Validates Against DMP Common Standard Schema](#test-32-check-madmp-json-validates-against-dmp-common-standard-schema) |
+| 33 | T-DCSC | [Check dataset_methodology for controlled vocabularies](#test-33-check-dataset_methodology-for-controlled-vocabularies) |
+| 34 | T-DCSC | [Check technical_resource.name for electronic lab notebook reference](#test-34-check-technical_resourcename-for-electronic-lab-notebook-reference) |
+| 35 | T-DCSC | [Check related_identifier resource_type for ReadMe file](#test-35-check-related_identifier-resource_type-for-readme-file) |
+| 36 | T-DCSC | [Check metadata_standard_id is registered in metadata registries](#test-36-check-metadata_standard_id-is-registered-in-metadata-registries) |
+| 37 | T-DCSC | [Check distribution format is open](#test-37-check-distribution-format-is-open) |
+| 38 | T-DCSC | [Check ELN dataset linked via related_ids](#test-38-check-eln-dataset-linked-via-related_ids) |
+| 39 | T-DCSC | [Check technical_resource for dataset documentation](#test-39-check-technical_resource-for-dataset-documentation) |
+| 40 | T-DCSC | [Check data_quality_assurance for quality control methods](#test-40-check-data_quality_assurance-for-quality-control-methods) |
+| 41 | T-DCSC | [Check host.title and host.url for storage location](#test-41-check-hosttitle-and-hosturl-for-storage-location) |
+| 42 | T-DCSC | [Check host for trusted repository storage](#test-42-check-host-for-trusted-repository-storage) |
+| 43 | T-DCSC | [Check sensitive_data classification is assigned](#test-43-check-sensitive_data-classification-is-assigned) |
+| 44 | T-DCSC | [Check host security and backup reflect sensitivity level](#test-44-check-host-security-and-backup-reflect-sensitivity-level) |
+| 45 | T-DCSC | [Check contributor.role for backup responsibility](#test-45-check-contributorrole-for-backup-responsibility) |
+| 46 | T-DCSC | [Check backup_frequency is declared](#test-46-check-backup_frequency-is-declared) |
+| 47 | T-DCSC | [Check host.id matches Zenodo deposit location](#test-47-check-hostid-matches-zenodo-deposit-location) |
+| 48 | T-DCSC | [Check security_and_privacy.title for security measures](#test-48-check-security_and_privacytitle-for-security-measures) |
+| 49 | T-DCSC | [Check security_and_privacy.description for access rights management](#test-49-check-security_and_privacydescription-for-access-rights-management) |
+| 50 | T-DCSC | [Check security_and_privacy.description for authorised access controls](#test-50-check-security_and_privacydescription-for-authorised-access-controls) |
+| 51 | T-DCSC | [Check security_and_privacy.description for access control and user permissions](#test-51-check-security_and_privacydescription-for-access-control-and-user-permissions) |
+| 52 | T-DCSC | [Check security_and_privacy.description for access procedures](#test-52-check-security_and_privacydescription-for-access-procedures) |
+| 53 | T-DCSC | [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](#test-53-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance) |
+| 54 | T-DCSC | [Check security_and_privacy.title for implemented security measures at destination](#test-54-check-security_and_privacytitle-for-implemented-security-measures-at-destination) |
+| 55 | T-DCSC | [Check security_and_privacy.description for data protection method when sensitive_data is true](#test-55-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true) |
+| 56 | T-DCSC | [Check security_and_privacy for anonymised synthetic data provision](#test-56-check-security_and_privacy-for-anonymised-synthetic-data-provision) |
+| 57 | T-DCSC | [Check rights for statement of no data restrictions](#test-57-check-rights-for-statement-of-no-data-restrictions) |
+| 58 | T-DCSC | [Check license_ref for dataset licence](#test-58-check-license_ref-for-dataset-licence) |
+| 59 | T-DCSC | [Check license_ref against SPDX for software datasets](#test-59-check-license_ref-against-spdx-for-software-datasets) |
+| 60 | T-DCSC | [Check data_access and rights for access agreements or MoUs](#test-60-check-data_access-and-rights-for-access-agreements-or-mous) |
+| 61 | T-DCSC | [Check contributor.role for data owner](#test-61-check-contributorrole-for-data-owner) |
+| 62 | T-DCSC | [Check contributor for author role when dataset type is software](#test-62-check-contributor-for-author-role-when-dataset-type-is-software) |
+| 63 | T-DCSC | [Check ethical_issues_exist for valid value](#test-63-check-ethical_issues_exist-for-valid-value) |
+| 64 | T-DCSC | [Check ethical_issues_description is present when ethical_issues_exist is no](#test-64-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no) |
+| 65 | T-DCSC | [Check data_access for open status](#test-65-check-data_access-for-open-status) |
+| 66 | T-DCSC | [Check distribution is present for dataset](#test-66-check-distribution-is-present-for-dataset) |
+| 67 | T-DCSC | [Check license_ref is present within distribution](#test-67-check-license_ref-is-present-within-distribution) |
+| 68 | T-DCSC | [Check rights for data restrictions reference](#test-68-check-rights-for-data-restrictions-reference) |
+| 69 | T-DCSC | [Check distribution license_ref for Horizon Europe CC-BY compliance](#test-69-check-distribution-license_ref-for-horizon-europe-cc-by-compliance) |
+| 70 | T-DCSC | [Check data_access matches destination host access policy](#test-70-check-data_access-matches-destination-host-access-policy) |
+| 71 | T-DCSC | [Check distribution license_ref matches destination host licence policy](#test-71-check-distribution-license_ref-matches-destination-host-licence-policy) |
+| 72 | T-DCSC | [Check distribution license.start_date matches destination embargo policy](#test-72-check-distribution-licensestart_date-matches-destination-embargo-policy) |
+| 73 | T-DCSC | [Check rights matches destination host restriction policy](#test-73-check-rights-matches-destination-host-restriction-policy) |
+| 74 | T-DCSC | [Check repository host for absence of embargo date](#test-74-check-repository-host-for-absence-of-embargo-date) |
+| 75 | T-DCSC | [Check distribution.license.start_date for absence in maDMP](#test-75-check-distributionlicensestart_date-for-absence-in-madmp) |
+| 76 | T-DCSC | [Check host.title and host.url against thematic repository registries](#test-76-check-hosttitle-and-hosturl-against-thematic-repository-registries) |
+| 77 | T-DCSC | [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](#test-77-check-host-against-openaire-and-fairsharing-fair-benchmarks) |
+| 78 | T-DCSC | [Check host against trusted repository registry benchmark](#test-78-check-host-against-trusted-repository-registry-benchmark) |
+| 79 | T-DCSC | [Check host.backup_frequency and host.backup_type for back-up strategy](#test-79-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy) |
+| 80 | T-DCSC | [Check certified_with exists in host](#test-80-check-certified_with-exists-in-host) |
+| 81 | T-DCSC | [Check cost title or description for preservation reference](#test-81-check-cost-title-or-description-for-preservation-reference) |
+| 82 | T-DCSC | [Check host_id against FAIRsharing for repository policy](#test-82-check-host_id-against-fairsharing-for-repository-policy) |
+| 83 | T-DCSC | [Check dataset_id resolves to declared destination via DOI URL](#test-83-check-dataset_id-resolves-to-declared-destination-via-doi-url) |
+| 84 | T-DCSC | [Check preservation_statement and host for long-term storage intention](#test-84-check-preservation_statement-and-host-for-long-term-storage-intention) |
+| 85 | T-DCSC | [Check dataset.keyword against Zenodo keywords](#test-85-check-datasetkeyword-against-zenodo-keywords) |
+| 86 | T-DCSC | [Check dataset.language against Zenodo language support](#test-86-check-datasetlanguage-against-zenodo-language-support) |
+| 87 | T-DCSC | [Check host_id against Zenodo and FAIRsharing for policy compliance](#test-87-check-host_id-against-zenodo-and-fairsharing-for-policy-compliance) |
+| 88 | T-DCSC | [Check related_identifier.identifier for external resources](#test-88-check-related_identifieridentifier-for-external-resources) |
+| 89 | T-DCSC | [Check related_identifier for metadata standard fields](#test-89-check-related_identifier-for-metadata-standard-fields) |
+| 90 | T-DCSC | [Check URLs in maDMP are valid and resolvable](#test-90-check-urls-in-madmp-are-valid-and-resolvable) |
+| 91 | T-DCSC | [Check dataset fields against OpenAIRE SKG-IF API](#test-91-check-dataset-fields-against-openaire-skg-if-api) |
+| 92 | T-DCSC | [Check contributor roles against CRediT taxonomy](#test-92-check-contributor-roles-against-credit-taxonomy) |
+| 93 | T-DCSC | [Check host.pid_system for PID declaration](#test-93-check-hostpid_system-for-pid-declaration) |
+| 94 | T-DCSC | [Check certified_with against trusted registry](#test-94-check-certified_with-against-trusted-registry) |
+| 95 | T-DCSC | [Check host_id.identifier and host_id.type for valid repository link](#test-95-check-host_ididentifier-and-host_idtype-for-valid-repository-link) |
+| 96 | T-DCSC | [Check host.pid_system matches destination PID system in Zenodo](#test-96-check-hostpid_system-matches-destination-pid-system-in-zenodo) |
+| 97 | T-DCSC | [Check dmp.contributor name, role, and contact](#test-97-check-dmpcontributor-name-role-and-contact) |
+| 98 | T-DCSC | [Check dmp.contributor.role for Data Steward](#test-98-check-dmpcontributorrole-for-data-steward) |
+| 99 | T-DCSC | [Check contributor_id and affiliation.affiliation_id for PIDs](#test-99-check-contributor_id-and-affiliationaffiliation_id-for-pids) |
+| 100 | T-DCSC | [Check dmp.contributor fields against destination contributors](#test-100-check-dmpcontributor-fields-against-destination-contributors) |
+| 101 | T-DCSC | [Check Data Steward role in maDMP against contributors.type Other in destination](#test-101-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination) |
+| 102 | T-DCSC | [Check contributor PIDs in maDMP against Zenodo contributors](#test-102-check-contributor-pids-in-madmp-against-zenodo-contributors) |
+| 103 | T-DCSC | [Check cost in maDMP against repository cost](#test-103-check-cost-in-madmp-against-repository-cost) |
+| 104 | T-DCSC | [Check cost fields for budget specification](#test-104-check-cost-fields-for-budget-specification) |
+| 105 | T-DCSC | [Check cost in maDMP for no additional resources statement](#test-105-check-cost-in-madmp-for-no-additional-resources-statement) |
+
+
 
 ---
 
-## Test: Check for reused dataset declaration
+## Test 1: Check for reused dataset declaration
 
 **Test ID:** madmp-reused-datasets-declared-json  
 **Persistent URI:** https://example.org/test/madmp-reused-datasets-declared-json
 
-**Implements:** [data.reused.co.1](metrics.md#metric-madmp-declares-reused-datasets)
+**Implements:** [data.reused.co.1](metrics.md#metric-1-madmp-declares-reused-datasets)
 
 ### Description
 Given a maDMP JSON document, inspect dataset objects and verify the presence of a field indicating whether the dataset is reused.
@@ -223,12 +224,12 @@ pass/fail
 
 ---
 
-## Test: Check License for Reused Datasets
+## Test 2: Check License for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license
 
-**Implements:** [data.reused.co.3](metrics.md#metric-reused-data-license)
+**Implements:** [data.reused.co.3](metrics.md#metric-3-reused-data-license)
 
 ### Description
 Checks whether the `is_reused` dataset entry includes a license reference (`license_ref`) with both a license identifier and a start date, confirming that the legal terms for reusing the dataset are declared.
@@ -338,12 +339,12 @@ pass/fail
 
 ---
 
-## Test: Check for reused dataset PID
+## Test 3: Check for reused dataset PID
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-reused-dataset-pid
 
-**Implements:** [data.reused.co.2](metrics.md#metric-reused-data-pid)
+**Implements:** [data.reused.co.2](metrics.md#metric-2-reused-data-pid)
 
 ### Description
 Checks whether the `is_reused` dataset entry includes a persistent identifier (`dataset_id`) with both an identifier value and a type, confirming that the reused dataset can be unambiguously referenced.
@@ -453,12 +454,12 @@ pass/fail
 
 ---
 
-## Test: Check Distribution Entry is Present
+## Test 4: Check Distribution Entry is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-present
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
 
 ### Description
 Checks whether at least one distribution entry exists for the dataset, confirming that information about how and where the data is accessible has been provided in the maDMP.
@@ -566,12 +567,12 @@ pass/fail
 
 ---
 
-## Test: Check Distribution Access Information is Present
+## Test 5: Check Distribution Access Information is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-access
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
 
 ### Description
 Checks whether distribution includes access information (e.g., access URL or download URL).
@@ -678,12 +679,12 @@ pass/fail
 
 ---
 
-## Test: Check Distribution Title is Present
+## Test 6: Check Distribution Title is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-title
 
-**Implements:** [data.reused.co.4](metrics.md#metric-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
 
 ### Description
 Checks whether the distribution entry includes a non-empty title, confirming that the distribution is named and can be identified by users browsing the dataset record.
@@ -790,12 +791,12 @@ pass/fail
 
 ---
 
-## Test: Check Access Rights for Reused Datasets
+## Test 7: Check Access Rights for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access
 
-**Implements:** [data.reused.co.5](metrics.md#metric-reused-data-access)
+**Implements:** [data.reused.co.5](metrics.md#metric-5-reused-data-access)
 
 ### Description
 Checks whether the data access field (`data_access`) for the reused dataset is declared with a recognised value — open, shared, or closed — confirming that access conditions are explicitly stated.
@@ -904,12 +905,12 @@ pass/fail
 
 ---
 
-## Test: Check Personal Data Flag for Reused Datasets
+## Test 8: Check Personal Data Flag for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-personal-data
 
-**Implements:** [data.reused.co.6](metrics.md#metric-reused-data-personal)
+**Implements:** [data.reused.co.6](metrics.md#metric-6-reused-data-personal)
 
 ### Description
 Checks whether the `personal_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data contains personal information subject to data protection regulations.
@@ -1018,12 +1019,12 @@ pass/fail
 
 ---
 
-## Test: Check Sensitive Data Flag for Reused Datasets
+## Test 9: Check Sensitive Data Flag for Reused Datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data
 
-**Implements:** [data.reused.co.7](metrics.md#metric-reused-data-sensitive)
+**Implements:** [data.reused.co.7](metrics.md#metric-7-reused-data-sensitive)
 
 ### Description
 Checks whether the `sensitive_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data requires special handling or protection measures.
@@ -1132,12 +1133,12 @@ pass/fail
 
 ---
 
-## Test: Check Distribution URL is Present
+## Test 10: Check Distribution URL is Present
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present
 
-**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
+**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-data-url)
 
 ### Description
 Checks whether a distribution entry with an access URL is present for the reused dataset, confirming that users can locate and retrieve the data from a declared address.
@@ -1244,12 +1245,12 @@ pass/fail
 
 ---
 
-## Test: Check Access URL is Present and Non-empty
+## Test 11: Check Access URL is Present and Non-empty
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-url
 
-**Implements:** [data.reused.co.8](metrics.md#metric-reused-data-url)
+**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-data-url)
 
 ### Description
 Checks whether the `access_url` field within the distribution entry is present and non-empty, confirming that a direct link to the data is provided in the maDMP.
@@ -1356,12 +1357,12 @@ pass/fail
 
 ---
 
-## Test: Check PID Matches Destination Repository Record
+## Test 12: Check PID Matches Destination Repository Record
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-repo-match
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
+**Implements:** [data.reused.feas.1](metrics.md#metric-9-repository-reused-data-pid)
 
 ### Description
 Checks whether the persistent identifier declared for the reused dataset in the maDMP matches the corresponding record found in the destination repository, confirming consistency between the plan and the repository.
@@ -1470,12 +1471,12 @@ pass/fail
 
 ---
 
-## Test: Check PID Resolves Successfully
+## Test 13: Check PID Resolves Successfully
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-pid-resolves
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-repository-reused-data-pid)
+**Implements:** [data.reused.feas.1](metrics.md#metric-9-repository-reused-data-pid)
 
 ### Description
 Checks whether the persistent identifier declared in the maDMP resolves to an accessible online resource, confirming that the PID is active, valid, and leads to the correct dataset.
@@ -1583,12 +1584,12 @@ pass/fail
 
 ---
 
-## Test: Check Reused Data Access Matches Destination
+## Test 14: Check Reused Data Access Matches Destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-match
 
-**Implements:** [data.reused.feas.2](metrics.md#metric-repository-reused-data-access)
+**Implements:** [data.reused.feas.2](metrics.md#metric-10-repository-reused-data-access)
 
 ### Description
 Check if reused data access in DMP matches the destination.
@@ -1697,12 +1698,12 @@ pass/fail
 
 ---
 
-## Test: Check Reused Data License Matches Destination
+## Test 15: Check Reused Data License Matches Destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license-match
 
-**Implements:** [data.reused.feas.3](metrics.md#metric-repository-reused-data-license)
+**Implements:** [data.reused.feas.3](metrics.md#metric-11-repository-reused-data-license)
 
 ### Description
 Checks if the license of the repository is the one mentioned in the DMP.
@@ -1811,12 +1812,12 @@ pass/fail
 
 ---
 
-## Test: Check for new data (no is_reused)
+## Test 16: Check for new data (no is_reused)
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data
 
-**Implements:** [data.new.1](metrics.md#metric-new-data)
+**Implements:** [data.new.1](metrics.md#metric-12-new-dataset-declared-in-the-dmp)
 
 ### Description
 Checks whether the maDMP includes at least one dataset entry that does not carry an `is_reused` flag, confirming that newly produced or collected data is declared as part of the research project.
@@ -1923,12 +1924,12 @@ pass/fail
 
 ---
 
-## Test: Check technical_resource for new data collection/creation
+## Test 17: Check technical_resource for new data collection/creation
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-technical-resource
 
-**Implements:** [data.new.2](metrics.md#metric-new-data-collection-or-creation)
+**Implements:** [data.new.2](metrics.md#metric-13-new-data-collection-or-creation)
 
 ### Description
 Checks whether the `technical_resource` entries for new datasets include description, name, and identifier fields, confirming that the tools and methods used for data collection or creation are documented.
@@ -2038,12 +2039,12 @@ pass/fail
 
 ---
 
-## Test: Check data_access for new datasets
+## Test 18: Check data_access for new datasets
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-access
 
-**Implements:** [data.new.3](metrics.md#metric-new-data-access)
+**Implements:** [data.new.3](metrics.md#metric-14-new-data-access)
 
 ### Description
 Checks whether the `data_access` field for new datasets is declared with a recognised value — open, shared, or closed — confirming that access conditions for newly produced data are explicitly stated.
@@ -2152,12 +2153,12 @@ pass/fail
 
 ---
 
-## Test: Check rights of new dataset
+## Test 19: Check rights of new dataset
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-rights
 
-**Implements:** [data.new.3](metrics.md#metric-new-data-access)
+**Implements:** [data.new.3](metrics.md#metric-14-new-data-access)
 
 ### Description
 Checks whether the `rights` field is present and non-empty for new datasets, confirming that the legal terms or conditions governing access to the newly produced data are documented.
@@ -2266,12 +2267,12 @@ pass/fail
 
 ---
 
-## Test: Check metadata for new dataset
+## Test 20: Check metadata for new dataset
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-metadata
 
-**Implements:** [data.new.4](metrics.md#metric-new-data-metadata)
+**Implements:** [data.new.4](metrics.md#metric-15-new-data-metadata)
 
 ### Description
 Checks whether new dataset entries include metadata fields such as description, language, and metadata standard identifier, confirming that sufficient information is provided for users to understand and reuse the data.
@@ -2383,12 +2384,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset_id exists
+## Test 21: Check dataset_id exists
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-id-exists
 
-**Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
+**Implements:** [data.new.feas.1](metrics.md#metric-16-repository-pid-resolution)
 
 ### Description
 Checks whether a `dataset_id` field with a non-empty identifier is present for the new dataset, confirming that the data has been assigned a reference that can be used to locate and cite it.
@@ -2495,12 +2496,12 @@ pass/fail
 
 ---
 
-## Test: Check PID resolves for dataset_id
+## Test 22: Check PID resolves for dataset_id
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-id-resolves
 
-**Implements:** [data.new.feas.1](metrics.md#metric-repository-pid-resolution)
+**Implements:** [data.new.feas.1](metrics.md#metric-16-repository-pid-resolution)
 
 ### Description
 Checks whether the persistent identifier declared in the `dataset_id` field resolves successfully to an accessible online resource, confirming that the identifier is active and leads to the correct dataset record.
@@ -2608,12 +2609,12 @@ pass/fail
 
 ---
 
-## Test: Check new data access matches destination
+## Test 23: Check new data access matches destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-access-match-destination
 
-**Implements:** [data.new.feas.2](metrics.md#metric-repository-new-data-access)
+**Implements:** [data.new.feas.2](metrics.md#metric-17-repository-new-data-access)
 
 ### Description
 Check if new data access in DMP matches the destination.
@@ -2723,12 +2724,12 @@ pass/fail
 
 ---
 
-## Test: Check new data license matches destination
+## Test 24: Check new data license matches destination
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-license-match-destination
 
-**Implements:** [data.new.feas.3](metrics.md#metric-repository-new-data-license)
+**Implements:** [data.new.feas.3](metrics.md#metric-18-repository-new-data-license)
 
 ### Description
 Checks if the license of the repository is the one mentioned in the DMP.
@@ -2839,12 +2840,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset.type is specified
+## Test 25: Check dataset.type is specified
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-type
 
-**Implements:** [data.info.cov.1](metrics.md#metric-data-type)
+**Implements:** [data.info.cov.1](metrics.md#metric-19-dataset-type-specified)
 
 ### Description
 Checks if the dataset type (e.g., qualitative or quantitative) is specified (`dataset.type`).
@@ -2952,12 +2953,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution.format is specified
+## Test 26: Check distribution.format is specified
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-format
 
-**Implements:** [data.info.cov.2](metrics.md#metric-data-format)
+**Implements:** [data.info.cov.2](metrics.md#metric-20-dataset-file-format-specified)
 
 ### Description
 Checks whether the `format` field within the dataset distribution entry is present and non-empty, confirming that the file format of the data has been declared so users know what tools are needed to open it.
@@ -3065,12 +3066,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution.byte_size is specified
+## Test 27: Check distribution.byte_size is specified
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-byte-size
 
-**Implements:** [data.info.cov.3](metrics.md#metric-data-size)
+**Implements:** [data.info.cov.3](metrics.md#metric-21-dataset-size-specified)
 
 ### Description
 Checks whether the `byte_size` field within the dataset distribution entry is present and has a positive value, confirming that the size of the dataset has been declared to support storage planning.
@@ -3178,12 +3179,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset.type matches destination type
+## Test 28: Check dataset.type matches destination type
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-type-match-destination-type
 
-**Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
+**Implements:** [data.info.feas.1](metrics.md#metric-22-repository-data-type)
 
 ### Description
 Checks that dataset is both the type of each destination.
@@ -3293,12 +3294,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset.type aligns with destination subtype
+## Test 29: Check dataset.type aligns with destination subtype
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-type-align-destination-subtype
 
-**Implements:** [data.info.feas.1](metrics.md#metric-repository-data-type)
+**Implements:** [data.info.feas.1](metrics.md#metric-22-repository-data-type)
 
 ### Description
 Checks whether the dataset type declared in the maDMP aligns with the sub-type or resource type classification used by the destination repository, confirming consistency in how the data is categorised.
@@ -3408,12 +3409,12 @@ pass/fail
 
 ---
 
-## Test: Check final dataset format matches destination files
+## Test 30: Check final dataset format matches destination files
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-format-match-destination-files
 
-**Implements:** [data.info.feas.2](metrics.md#metric-repository-data-format)
+**Implements:** [data.info.feas.2](metrics.md#metric-23-repository-data-format)
 
 ### Description
 Checks whether the file format declared in the maDMP for the dataset distribution matches the actual file format of the data deposited in the destination repository, confirming that the plan reflects reality.
@@ -3525,12 +3526,12 @@ pass/fail
 
 ---
 
-## Test: Check final dataset size matches destination size
+## Test 31: Check final dataset size matches destination size
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-size-match-destination-size
 
-**Implements:** [data.info.feas.3](metrics.md#metric-repository-data-size)
+**Implements:** [data.info.feas.3](metrics.md#metric-24-repository-data-size)
 
 ### Description
 Checks whether the dataset size declared in the maDMP matches the actual size of the data deposited in the destination repository, confirming that the stated and actual storage requirements are consistent.
@@ -3643,12 +3644,12 @@ pass/fail
 
 ---
 
-## Test: Check maDMP JSON Validates Against DMP Common Standard Schema
+## Test 32: Check maDMP JSON Validates Against DMP Common Standard Schema
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dmp-cs-schema-validation
 
-**Implements:** [meta.comp.1](metrics.md#metric-dmp-common-standard-field-compliance)
+**Implements:** [meta.comp.1](metrics.md#metric-25-dmp-common-standard-field-compliance)
 
 ### Description
 Checks if the JSON matches with DMP Common Standard schema.
@@ -3756,12 +3757,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset_methodology for controlled vocabularies
+## Test 33: Check dataset_methodology for controlled vocabularies
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-methodology-controlled-vocabularies
 
-**Implements:** [meta.co.1](metrics.md#metric-controlled-vocabularies-used-in-methodology)
+**Implements:** [meta.co.1](metrics.md#metric-26-controlled-vocabularies-used-in-methodology)
 
 ### Description
 Checks whether the methodology description in the maDMP references terms from a recognised controlled vocabulary, confirming that the research methods are described in a standardised and interoperable way.
@@ -3870,12 +3871,12 @@ pass/fail
 
 ---
 
-## Test: Check technical_resource.name for electronic lab notebook reference
+## Test 34: Check technical_resource.name for electronic lab notebook reference
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-technical-resource-eln-reference
 
-**Implements:** [meta.co.2](metrics.md#metric-electronic-lab-notebook-referenced-as-a-technical-resource)
+**Implements:** [meta.co.2](metrics.md#metric-27-electronic-lab-notebook-referenced-as-a-technical-resource)
 
 ### Description
 Checks whether the `technical_resource.name` field in the maDMP includes a reference to an electronic lab notebook, confirming that the use of this documentation tool has been declared in the plan.
@@ -3981,12 +3982,12 @@ pass/fail
 }
 ```
 
-## Test: Check related_identifier resource_type for ReadMe file
+## Test 35: Check related_identifier resource_type for ReadMe file
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-related-identifier-readme-file
 
-**Implements:** [meta.qual.2](metrics.md#metric-readme-file-reference)
+**Implements:** [meta.qual.2](metrics.md#metric-28-readme-file-reference)
 
 ### Description
 Checks if a ReadMe file is included in the related_identifier resource_type.
@@ -4080,12 +4081,12 @@ pass/fail
 }
 ```
 
-## Test: Check metadata_standard_id is registered in metadata registries
+## Test 36: Check metadata_standard_id is registered in metadata registries
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-metadata-standard-registered
 
-**Implements:** [meta.stand.comp.1](metrics.md#metric-metadata-standards-used)
+**Implements:** [meta.stand.comp.1](metrics.md#metric-29-metadata-standards-used)
 
 ### Description
 Checks metadata_standard_id to be registered in RDA Directory and FAIRsharing.
@@ -4180,12 +4181,12 @@ pass/fail
 }
 ```
 
-## Test: Check distribution format is open
+## Test 37: Check distribution format is open
 
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-format-open
 
-**Implements:** [meta.form.op.1](metrics.md#metric-use-of-open-file-formats-for-datasets)
+**Implements:** [meta.form.op.1](metrics.md#metric-30-use-of-open-file-formats-for-datasets)
 
 ### Description
 Checks distribution_format to be open.
@@ -4280,12 +4281,12 @@ pass/fail
 ```
 ---
 
-## Test: Check ELN dataset linked via related_ids
+## Test 38: Check ELN dataset linked via related_ids
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-eln-dataset-linked-related-ids
 
-**Implements:** [meta.doc.qual.1](metrics.md#metric-electronic-lab-notebook-linked)
+**Implements:** [meta.doc.qual.1](metrics.md#metric-31-electronic-lab-notebook-linked)
 
 ### Description
 Checks that the electronic lab notebook dataset or `technical_resource.name` includes `related_ids` with the dataset.
@@ -4394,12 +4395,12 @@ pass/fail
 
 ---
 
-## Test: Check technical_resource for dataset documentation
+## Test 39: Check technical_resource for dataset documentation
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-technical-resource-dataset-documentation
 
-**Implements:** [meta.feas.1](metrics.md#metric-existence-of-dataset-documentation)
+**Implements:** [meta.feas.1](metrics.md#metric-32-existence-of-dataset-documentation)
 
 ### Description
 Checks if there is the presence of any documentation supporting the dataset.
@@ -4507,12 +4508,12 @@ pass/fail
 
 ---
 
-## Test: Check data_quality_assurance for quality control methods
+## Test 40: Check data_quality_assurance for quality control methods
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-quality-assurance
 
-**Implements:** [qc.qual.1](metrics.md#metric-quality-control-methods-stated)
+**Implements:** [qc.qual.1](metrics.md#metric-33-quality-control-methods-stated)
 
 ### Description
 Checks if quality control methods are mentioned, either as narrative or controlled terms (`data_quality_assurance`).
@@ -4620,12 +4621,12 @@ pass/fail
 
 ---
 
-## Test: Check host.title and host.url for storage location
+## Test 41: Check host.title and host.url for storage location
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-storage-location
 
-**Implements:** [store.cov.1](metrics.md#metric-data-storage-location-mentioned-in-the-dmp)
+**Implements:** [store.cov.1](metrics.md#metric-34-data-storage-location-mentioned-in-the-dmp)
 
 ### Description
 Checks if there is a reference of storage (`host.title`; `host.url`).
@@ -4733,12 +4734,12 @@ pass/fail
 
 ---
 
-## Test: Check host for trusted repository storage
+## Test 42: Check host for trusted repository storage
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-trusted-repository
 
-**Implements:** [store.cov.2](metrics.md#metric-use-of-secure-storage-for-the-dataset-in-a-trusted-repository)
+**Implements:** [store.cov.2](metrics.md#metric-35-use-of-secure-storage-for-the-dataset-in-a-trusted-repository)
 
 ### Description
 Checks if the data are stored in trusted repositories (`host`).
@@ -4847,12 +4848,12 @@ pass/fail
 
 ---
 
-## Test: Check sensitive_data classification is assigned
+## Test 43: Check sensitive_data classification is assigned
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data-classification
 
-**Implements:** [store.comp.1](metrics.md#metric-alignment-of-storage-and-backup-with-information-sensitivity)
+**Implements:** [store.comp.1](metrics.md#metric-36-alignment-of-storage-and-backup-with-information-sensitivity)
 
 ### Description
 Checks if the dataset has an assigned classification level (`sensitive_data`).
@@ -4960,12 +4961,12 @@ pass/fail
 
 ---
 
-## Test: Check host security and backup reflect sensitivity level
+## Test 44: Check host security and backup reflect sensitivity level
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-security-backup-sensitivity
 
-**Implements:** [store.comp.1](metrics.md#metric-alignment-of-storage-and-backup-with-information-sensitivity)
+**Implements:** [store.comp.1](metrics.md#metric-36-alignment-of-storage-and-backup-with-information-sensitivity)
 
 ### Description
 Checks if the host/storage method reflects appropriate protection level (`security_and_privacy`; `backup_type`).
@@ -5075,12 +5076,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor.role for backup responsibility
+## Test 45: Check contributor.role for backup responsibility
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-role-backup
 
-**Implements:** [store.cov.3](metrics.md#metric-back-up-responsibility)
+**Implements:** [store.cov.3](metrics.md#metric-37-back-up-responsibility)
 
 ### Description
 Checks if someone is responsible for back up activities (`contributor.role`).
@@ -5188,12 +5189,12 @@ pass/fail
 
 ---
 
-## Test: Check backup_frequency is declared
+## Test 46: Check backup_frequency is declared
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-backup-frequency
 
-**Implements:** [store.co.1](metrics.md#metric-back-up-frequency)
+**Implements:** [store.co.1](metrics.md#metric-38-back-up-frequency)
 
 ### Description
 Checks whether the `backup_frequency` field in the maDMP is present and non-empty, confirming that the plan specifies how often data backups will be performed to protect against loss.
@@ -5301,12 +5302,12 @@ pass/fail
 
 ---
 
-## Test: Check host.id matches Zenodo deposit location
+## Test 47: Check host.id matches Zenodo deposit location
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-id-matches-zenodo
 
-**Implements:** [stor.feas.1](metrics.md#metric-stored-dataset-location-confirmed)
+**Implements:** [stor.feas.1](metrics.md#metric-40-stored-dataset-location-confirmed)
 
 ### Description
 Checks if the storage of the data matches the destination.
@@ -5415,12 +5416,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.title for security measures
+## Test 48: Check security_and_privacy.title for security measures
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-title
 
-**Implements:** [secur.co.1](metrics.md#metric-security-measures-implementation)
+**Implements:** [secur.co.1](metrics.md#metric-41-security-measures-implementation)
 
 ### Description
 Checks whether the `security_and_privacy.title` field is present and non-empty in the maDMP, confirming that at least one security measure has been named and associated with the dataset.
@@ -5528,12 +5529,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description for access rights management
+## Test 49: Check security_and_privacy.description for access rights management
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-description
 
-**Implements:** [secur.co.2](metrics.md#metric-sensitive-data-protection-description)
+**Implements:** [secur.co.2](metrics.md#metric-42-sensitive-data-protection-description)
 
 ### Description
 Checks if the sensitive data includes a description for access rights management (`security_and_privacy.description`).
@@ -5642,12 +5643,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description for authorised access controls
+## Test 50: Check security_and_privacy.description for authorised access controls
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-authorised-access
 
-**Implements:** [secur.co.3](metrics.md#metric-authorised-access-control)
+**Implements:** [secur.co.3](metrics.md#metric-43-authorised-access-control)
 
 ### Description
 Checks if access control measures exist for authorised users (`security_and_privacy.description`).
@@ -5756,12 +5757,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description for access control and user permissions
+## Test 51: Check security_and_privacy.description for access control and user permissions
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-user-management
 
-**Implements:** [secur.co.4](metrics.md#metric-access-control-and-user-management)
+**Implements:** [secur.co.4](metrics.md#metric-44-access-control-and-user-management)
 
 ### Description
 Checks how access to the data is controlled and if user roles or permissions are defined (`security_and_privacy.description`).
@@ -5871,12 +5872,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description for access procedures
+## Test 52: Check security_and_privacy.description for access procedures
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-access-procedures
 
-**Implements:** [secur.co.5](metrics.md#metric-required-access-procedures)
+**Implements:** [secur.co.5](metrics.md#metric-45-required-access-procedures)
 
 ### Description
 Checks if access procedures for restricted/sensitive data are described in the DMP (`security_and_privacy.description`).
@@ -5985,12 +5986,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance
+## Test 53: Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-gdpr-ethics-compliance
 
-**Implements:** [secur.comp.1](metrics.md#metric-gdpr-and-ethics-compliance)
+**Implements:** [secur.comp.1](metrics.md#metric-46-gdpr-and-ethics-compliance)
 
 ### Description
 Checks if GDPR and ethical review is mentioned in the DMP `security_and_privacy.description` of the maDMP, validated against the GDPR checklist at https://gdpr.eu/checklist/, and whether `ethical_issues_report` is present.
@@ -6099,12 +6100,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.title for implemented security measures at destination
+## Test 54: Check security_and_privacy.title for implemented security measures at destination
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-security-and-privacy-title-destination
 
-**Implements:** [secur.feas.1](metrics.md#metric-final-security-measures-implementation)
+**Implements:** [secur.feas.1](metrics.md#metric-47-final-security-measures-implementation)
 
 ### Description
 Checks if security measures are implemented in the destination (`security_and_privacy.title` in maDMP).
@@ -6212,12 +6213,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy.description for data protection method when sensitive_data is true
+## Test 55: Check security_and_privacy.description for data protection method when sensitive_data is true
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data-protection-method
 
-**Implements:** [sens.secure.co.1](metrics.md#metric-sensitive-data-using-method)
+**Implements:** [sens.secure.co.1](metrics.md#metric-48-sensitive-data-using-method)
 
 ### Description
 Checks if a data protection method is mentioned when sensitive data exist.
@@ -6327,12 +6328,12 @@ pass/fail
 
 ---
 
-## Test: Check security_and_privacy for anonymised synthetic data provision
+## Test 56: Check security_and_privacy for anonymised synthetic data provision
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-anonymised-synthetic-data
 
-**Implements:** [sens.secure.co.2](metrics.md#metric-provision-of-anonymised-synthetic-data)
+**Implements:** [sens.secure.co.2](metrics.md#metric-49-provision-of-anonymised-synthetic-data)
 
 ### Description
 Checks if anonymised synthetic data will be provided (`security_and_privacy` in maDMP).
@@ -6440,12 +6441,12 @@ pass/fail
 
 ---
 
-## Test: Check rights for statement of no data restrictions
+## Test 57: Check rights for statement of no data restrictions
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-rights-no-restrictions
 
-**Implements:** [data.restrict.co.3](metrics.md#metric-statement-of-no-data-restrictions)
+**Implements:** [data.restrict.co.3](metrics.md#metric-50-statement-of-no-data-restrictions)
 
 ### Description
 Checks if there are any restrictions applied to the data (`rights` in maDMP).
@@ -6553,12 +6554,12 @@ pass/fail
 
 ---
 
-## Test: Check license_ref for dataset licence
+## Test 58: Check license_ref for dataset licence
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-license-ref
 
-**Implements:** [data.lice.co.1](metrics.md#metric-dataset-license)
+**Implements:** [data.lice.co.1](metrics.md#metric-51-dataset-license-declared)
 
 ### Description
 Checks whether the `license_ref` field within the dataset distribution entry is present and non-empty, confirming that a license has been declared and users know the terms under which the data may be used.
@@ -6666,12 +6667,12 @@ pass/fail
 
 ---
 
-## Test: Check license_ref against SPDX for software datasets
+## Test 59: Check license_ref against SPDX for software datasets
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-license-ref-spdx-software
 
-**Implements:** [soft.lice.comp.1](metrics.md#metric-software-license)
+**Implements:** [soft.lice.comp.1](metrics.md#metric-52-software-dataset-license-declared)
 
 ### Description
 Checks if the dataset type is software, then verifies that `license_ref` matches a recognised software licence from the SPDX licence list at https://spdx.org/licenses/.
@@ -6780,12 +6781,12 @@ pass/fail
 
 ---
 
-## Test: Check data_access and rights for access agreements or MoUs
+## Test 60: Check data_access and rights for access agreements or MoUs
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-access-agreements
 
-**Implements:** [data.agree.comp.2](metrics.md#metric-data-access-agreements)
+**Implements:** [data.agree.comp.2](metrics.md#metric-53-data-access-agreements)
 
 ### Description
 Checks the `data_access` and `rights` fields in the maDMP for references to collaborative agreements or MoUs.
@@ -6893,12 +6894,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor.role for data owner
+## Test 61: Check contributor.role for data owner
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-role-owner
 
-**Implements:** [own.co.2](metrics.md#metric-data-ownership)
+**Implements:** [own.co.2](metrics.md#metric-54-data-ownership-role-declared)
 
 ### Description
 Checks that the `contributor.role` field is not blank and contains the value `owner`.
@@ -7007,12 +7008,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor for author role when dataset type is software
+## Test 62: Check contributor for author role when dataset type is software
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-author-software
 
-**Implements:** [soft.auth.co.3](metrics.md#metric-software-author)
+**Implements:** [soft.auth.co.3](metrics.md#metric-55-software-dataset-author-declared)
 
 ### Description
 Checks if the dataset type is software, then verifies that at least one contributor is present as author.
@@ -7121,12 +7122,12 @@ pass/fail
 
 ---
 
-## Test: Check ethical_issues_exist for valid value
+## Test 63: Check ethical_issues_exist for valid value
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-ethical-issues-exist
 
-**Implements:** [ethics.co.1](metrics.md#metric-ethical-issues)
+**Implements:** [ethics.co.1](metrics.md#metric-56-ethical-issues-status-declared)
 
 ### Description
 Checks the `ethical_issues_exist` field for a valid value (`yes`, `no`, `unknown`).
@@ -7234,12 +7235,12 @@ pass/fail
 
 ---
 
-## Test: Check ethical_issues_description is present when ethical_issues_exist is no
+## Test 64: Check ethical_issues_description is present when ethical_issues_exist is no
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-ethical-issues-description-no
 
-**Implements:** [ethics.co.3](metrics.md#metric-justification-for-absence-of-ethical-issues)
+**Implements:** [ethics.co.3](metrics.md#metric-58-justification-for-absence-of-ethical-issues)
 
 ### Description
 Checks if a justification is provided when `ethical_issues_exist` = `no`, by verifying the presence of `ethical_issues_description`.
@@ -7347,12 +7348,12 @@ pass/fail
 
 ---
 
-## Test: Check data_access for open status
+## Test 65: Check data_access for open status
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-access-open
 
-**Implements:** [data.shar.op.1](metrics.md#metric-data-access-status-open-for-the-dataset)
+**Implements:** [data.shar.op.1](metrics.md#metric-59-data-access-status-open-for-the-dataset)
 
 ### Description
 Checks that `data_access` is set to `open` (accepted values: `open`, `shared`, `closed`).
@@ -7460,12 +7461,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution is present for dataset
+## Test 66: Check distribution is present for dataset
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-present
 
-**Implements:** [data.shar.co.1](metrics.md#metric-data-license-is-present)
+**Implements:** [data.shar.co.1](metrics.md#metric-60-data-license-is-present)
 
 ### Description
 Checks that a `distribution` entry is present for the dataset.
@@ -7572,12 +7573,12 @@ pass/fail
 
 ---
 
-## Test: Check license_ref is present within distribution
+## Test 67: Check license_ref is present within distribution
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-ref
 
-**Implements:** [data.shar.co.1](metrics.md#metric-data-license-is-present)
+**Implements:** [data.shar.co.1](metrics.md#metric-60-data-license-is-present)
 
 ### Description
 Checks that a `license_ref` is present within the distribution entry.
@@ -7684,12 +7685,12 @@ pass/fail
 
 ---
 
-## Test: Check rights for data restrictions reference
+## Test 68: Check rights for data restrictions reference
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-rights-restrictions-reference
 
-**Implements:** [data.shar.co.2](metrics.md#metric-data-restrictions-reference)
+**Implements:** [data.shar.co.2](metrics.md#metric-61-data-restrictions-reference)
 
 ### Description
 Checks if any data restrictions are referenced via the `rights` field in the maDMP.
@@ -7796,12 +7797,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution license_ref for Horizon Europe CC-BY compliance
+## Test 69: Check distribution license_ref for Horizon Europe CC-BY compliance
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-cc-by
 
-**Implements:** [data.shar.comp.1](metrics.md#metric-funders-data-license)
+**Implements:** [data.shar.comp.1](metrics.md#metric-62-funders-data-license)
 
 ### Description
 Checks if the maDMP `dataset.distribution.license_ref` matches Horizon Europe RDM requirements, i.e. CC-BY.
@@ -7909,12 +7910,12 @@ pass/fail
 
 ---
 
-## Test: Check data_access matches destination host access policy
+## Test 70: Check data_access matches destination host access policy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-access-host-consistency
 
-**Implements:** [data.shar.feas.1](metrics.md#metric-repository-access-rights-consistency-aligned)
+**Implements:** [data.shar.feas.1](metrics.md#metric-63-repository-access-rights-consistency-aligned)
 
 ### Description
 Checks if the dataset `data_access` value matches the access rights supported by the destination host in the maDMP.
@@ -8023,12 +8024,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution license_ref matches destination host licence policy
+## Test 71: Check distribution license_ref matches destination host licence policy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-host-alignment
 
-**Implements:** [data.shar.feas.2](metrics.md#metric-repository-data-license-aligned-with-the-dmp)
+**Implements:** [data.shar.feas.2](metrics.md#metric-64-repository-data-license-aligned-with-the-dmp)
 
 ### Description
 Checks if the data licence matches the destination by verifying `distribution.license.license_ref` against the destination host's licence policy in the maDMP.
@@ -8137,12 +8138,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution license.start_date matches destination embargo policy
+## Test 72: Check distribution license.start_date matches destination embargo policy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-start-date-embargo
 
-**Implements:** [data.shar.feas.3](metrics.md#metric-embargo-implementation-alignment)
+**Implements:** [data.shar.feas.3](metrics.md#metric-65-embargo-implementation-alignment)
 
 ### Description
 Checks if the embargo date matches the destination by verifying `distribution.license.start_date` against the destination host's embargo policy in the maDMP.
@@ -8251,12 +8252,12 @@ pass/fail
 
 ---
 
-## Test: Check rights matches destination host restriction policy
+## Test 73: Check rights matches destination host restriction policy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-rights-destination-restriction-alignment
 
-**Implements:** [data.shar.feas.4](metrics.md#metric-repository-data-restrictions)
+**Implements:** [data.shar.feas.4](metrics.md#metric-66-repository-data-restrictions)
 
 ### Description
 Checks if the data restrictions match the destination by verifying the `rights` field against the destination host's restriction policy in the maDMP.
@@ -8365,12 +8366,12 @@ pass/fail
 
 ---
 
-## Test: Check repository host for absence of embargo date
+## Test 74: Check repository host for absence of embargo date
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-embargo-date-absent
 
-**Implements:** [data.shar.comp.2](metrics.md#metric-embargo-license)
+**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-period-license-declared)
 
 ### Description
 Checks that no embargo date field exists in the destination repository host entry, in compliance with Horizon Europe embargo policy.
@@ -8478,12 +8479,12 @@ pass/fail
 
 ---
 
-## Test: Check distribution.license.start_date for absence in maDMP
+## Test 75: Check distribution.license.start_date for absence in maDMP
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-start-date-absent
 
-**Implements:** [data.shar.comp.2](metrics.md#metric-embargo-license)
+**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-period-license-declared)
 
 ### Description
 Checks that `distribution.license.start_date` is not set in the maDMP, in compliance with Horizon Europe embargo policy.
@@ -8590,12 +8591,12 @@ pass/fail
 
 ---
 
-## Test: Check host.title and host.url against thematic repository registries
+## Test 76: Check host.title and host.url against thematic repository registries
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-thematic-registry-match
 
-**Implements:** [repo.co.3](metrics.md#metric-thematic-data-repositories-referenced)
+**Implements:** [repo.co.3](metrics.md#metric-68-thematic-data-repositories-referenced)
 
 ### Description
 Checks if the repository `host.title` or `host.url` matches a thematic repository in the OpenAIRE Graph repositories API or another SKG API repository registry.
@@ -8704,12 +8705,12 @@ pass/fail
 
 ---
 
-## Test: Check host against OpenAIRE and FAIRsharing FAIR benchmarks
+## Test 77: Check host against OpenAIRE and FAIRsharing FAIR benchmarks
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-fair-benchmark
 
-**Implements:** [repo.comp.2](metrics.md#metric-repository-fairness-conformation)
+**Implements:** [repo.comp.2](metrics.md#metric-69-repository-fairness-conformation)
 
 ### Description
 Checks if the repository declared in `host` is aligned with FAIR data principles by cross-referencing against benchmarks in OpenAIRE and FAIRsharing.
@@ -8818,12 +8819,12 @@ pass/fail
 
 ---
 
-## Test: Check host against trusted repository registry benchmark
+## Test 78: Check host against trusted repository registry benchmark
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-trusted-registry
 
-**Implements:** [repo.comp.3](metrics.md#metric-trusted-repository-is-used)
+**Implements:** [repo.comp.3](metrics.md#metric-70-trusted-repository-is-used)
 
 ### Description
 Checks if the repository declared in `host` is included in a trusted repository registry benchmark.
@@ -8932,12 +8933,12 @@ pass/fail
 
 ---
 
-## Test: Check host.backup_frequency and host.backup_type for back-up strategy
+## Test 79: Check host.backup_frequency and host.backup_type for back-up strategy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-backup-strategy
 
-**Implements:** [repo.co.4](metrics.md#metric-verification-of-back-up-strategy)
+**Implements:** [repo.co.4](metrics.md#metric-71-verification-of-back-up-strategy)
 
 ### Description
 Checks that a back-up strategy exists by verifying that `host.backup_frequency` and `host.backup_type` are present and non-empty in the maDMP.
@@ -9046,12 +9047,12 @@ pass/fail
 
 ---
 
-## Test: Check certified_with exists in host
+## Test 80: Check certified_with exists in host
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-certified-with
 
-**Implements:** [repo.co.5](metrics.md#metric-certification-of-repository)
+**Implements:** [repo.co.5](metrics.md#metric-72-certification-of-repository)
 
 ### Description
 Checks that a `certified_with` field exists and is non-empty within the `host` entry of the maDMP.
@@ -9159,12 +9160,12 @@ pass/fail
 
 ---
 
-## Test: Check cost title or description for preservation reference
+## Test 81: Check cost title or description for preservation reference
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-preservation-reference
 
-**Implements:** [repo.co.7](metrics.md#metric-used-resources-for-preservation)
+**Implements:** [repo.co.7](metrics.md#metric-73-used-resources-for-preservation)
 
 ### Description
 Checks if a `cost` entry with `currency_code`, `description`, `title`, and `value` includes a reference to preservation in its `title` or `description`.
@@ -9272,12 +9273,12 @@ pass/fail
 
 ---
 
-## Test: Check host_id against FAIRsharing for repository policy
+## Test 82: Check host_id against FAIRsharing for repository policy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-id-fairsharing-policy
 
-**Implements:** [repo.co.6](metrics.md#metric-repository-policy-is-present)
+**Implements:** [repo.co.6](metrics.md#metric-74-repository-policy-is-present)
 
 ### Description
 Checks if the repository identified by `host_id.identifier` and `host_id.type` in the maDMP has associated policies in FAIRsharing.
@@ -9386,12 +9387,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset_id resolves to declared destination via DOI URL
+## Test 83: Check dataset_id resolves to declared destination via DOI URL
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-id-doi-destination
 
-**Implements:** [repo.feas.1](metrics.md#metric-repository-identifier-accuracy)
+**Implements:** [repo.feas.1](metrics.md#metric-75-repository-identifier-accuracy)
 
 ### Description
 Checks if the reused dataset identifier in the maDMP matches the destination by resolving `dataset_id` against its DOI URL.
@@ -9500,12 +9501,12 @@ pass/fail
 
 ---
 
-## Test: Check preservation_statement and host for long-term storage intention
+## Test 84: Check preservation_statement and host for long-term storage intention
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-preservation-statement-host
 
-**Implements:** [repo.feas.2](metrics.md#metric-long-term-preservation-dataset)
+**Implements:** [repo.feas.2](metrics.md#metric-76-long-term-preservation-dataset)
 
 ### Description
 Checks the dataset `preservation_statement` and `host` fields to verify that the dataset is intended to be archived in a long-term storage repository.
@@ -9613,12 +9614,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset.keyword against Zenodo keywords
+## Test 85: Check dataset.keyword against Zenodo keywords
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-keyword-zenodo
 
-**Implements:** [repo.feas.4](metrics.md#metric-repository-specificities)
+**Implements:** [repo.feas.4](metrics.md#metric-77-repository-compatibility-with-dataset-characteristics)
 
 ### Description
 Checks if the repository has the appropriate characteristics by verifying that `dataset.keyword` values in the maDMP match keywords supported or indexed in Zenodo.
@@ -9726,12 +9727,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset.language against Zenodo language support
+## Test 86: Check dataset.language against Zenodo language support
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-language-zenodo
 
-**Implements:** [repo.feas.4](metrics.md#metric-repository-specificities)
+**Implements:** [repo.feas.4](metrics.md#metric-77-repository-compatibility-with-dataset-characteristics)
 
 ### Description
 Checks if the repository has the appropriate characteristics by verifying that `dataset.language` in the maDMP matches a language supported by Zenodo.
@@ -9839,12 +9840,12 @@ pass/fail
 
 ---
 
-## Test: Check host_id against Zenodo and FAIRsharing for policy compliance
+## Test 87: Check host_id against Zenodo and FAIRsharing for policy compliance
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-id-zenodo-fairsharing-policy
 
-**Implements:** [repo.comp.3](metrics.md#metric-repository-policy-compliance)
+**Implements:** [repo.comp.3](metrics.md#metric-70-trusted-repository-is-used)
 
 ### Description
 Checks if the repository is aligned with policies and registry entries by cross-referencing `host_id.identifier` and `host_id.type` against repository records in Zenodo and FAIRsharing.
@@ -9953,12 +9954,12 @@ pass/fail
 
 ---
 
-## Test: Check related_identifier.identifier for external resources
+## Test 88: Check related_identifier.identifier for external resources
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-related-identifier-external-resources
 
-**Implements:** [data.exteresource.co.1](metrics.md#metric-data-external-resources-included-in-the-dmp)
+**Implements:** [data.exteresource.co.1](metrics.md#metric-78-data-external-resources-included-in-the-dmp)
 
 ### Description
 Checks if there are external resources declared in the DMP by verifying the presence of `related_identifier.identifier` entries.
@@ -10065,12 +10066,12 @@ pass/fail
 
 ---
 
-## Test: Check related_identifier for metadata standard fields
+## Test 89: Check related_identifier for metadata standard fields
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-related-identifier-metadata-standard
 
-**Implements:** [data.exteresource.co.2](metrics.md#metric-metadata-standard-specified-in-the-dmp)
+**Implements:** [data.exteresource.co.2](metrics.md#metric-79-metadata-standard-specified-in-the-dmp)
 
 ### Description
 Checks if a metadata format or standard is listed in the DMP by verifying that `related_identifier.metadata_scheme`, `related_identifier.scheme_type`, and `related_identifier.scheme_uri` are present and non-empty.
@@ -10177,12 +10178,12 @@ pass/fail
 
 ---
 
-## Test: Check URLs in maDMP are valid and resolvable
+## Test 90: Check URLs in maDMP are valid and resolvable
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-url-resolvable
 
-**Implements:** [data.exteresource.feas.1](metrics.md#metric-resolvable-external-resources)
+**Implements:** [data.exteresource.feas.1](metrics.md#metric-80-resolvable-external-resources)
 
 ### Description
 Checks if all included URLs in the maDMP are syntactically valid and resolve to accessible resources.
@@ -10290,12 +10291,12 @@ pass/fail
 
 ---
 
-## Test: Check dataset fields against OpenAIRE SKG-IF API
+## Test 91: Check dataset fields against OpenAIRE SKG-IF API
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-openaire-skg-if
 
-**Implements:** [data.exteresource.feas.2](metrics.md#metric-openaire-mentioned-dataset-validation)
+**Implements:** [data.exteresource.feas.2](metrics.md#metric-81-openaire-mentioned-dataset-validation)
 
 ### Description
 Checks if datasets declared in the maDMP are found in the OpenAIRE SKG-IF API by querying with `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, and `dataset.type`.
@@ -10404,12 +10405,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor roles against CRediT taxonomy
+## Test 92: Check contributor roles against CRediT taxonomy
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-credit-taxonomy
 
-**Implements:** [data.exteresource.feas.3](metrics.md#metric-used-taxonomy)
+**Implements:** [data.exteresource.feas.3](metrics.md#metric-82-contributor-roles-follow-credit-taxonomy)
 
 ### Description
 Checks if the dataset uses the CRediT taxonomy by verifying that `contributor` role values in the maDMP match recognised CRediT taxonomy terms.
@@ -10517,12 +10518,12 @@ pass/fail
 
 ---
 
-## Test: Check host.pid_system for PID declaration
+## Test 93: Check host.pid_system for PID declaration
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-pid-system
 
-**Implements:** [data.pid.cov.1](metrics.md#metric-dataset-pid)
+**Implements:** [data.pid.cov.1](metrics.md#metric-83-dataset-persistent-identifier-declared)
 
 ### Description
 Checks if the dataset has a PID by verifying that `host.pid_system` is present and non-empty in the maDMP.
@@ -10630,12 +10631,12 @@ pass/fail
 
 ---
 
-## Test: Check certified_with against trusted registry
+## Test 94: Check certified_with against trusted registry
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-certified-with-trusted-registry
 
-**Implements:** [data.pid.cov.2](metrics.md#metric-trusted-repository-referenced)
+**Implements:** [data.pid.cov.2](metrics.md#metric-84-trusted-repository-referenced)
 
 ### Description
 Checks if the repository is listed in a trusted registry by verifying the `certified_with` field in the maDMP.
@@ -10743,12 +10744,12 @@ pass/fail
 
 ---
 
-## Test: Check host_id.identifier and host_id.type for valid repository link
+## Test 95: Check host_id.identifier and host_id.type for valid repository link
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-id-valid-link
 
-**Implements:** [data.pid.cov.2](metrics.md#metric-trusted-repository-referenced)
+**Implements:** [data.pid.cov.2](metrics.md#metric-84-trusted-repository-referenced)
 
 ### Description
 Checks if a valid link to the repository is provided by verifying that `host_id.identifier` and `host_id.type` are present, non-empty, and resolvable in the maDMP.
@@ -10857,12 +10858,12 @@ pass/fail
 
 ---
 
-## Test: Check host.pid_system matches destination PID system in Zenodo
+## Test 96: Check host.pid_system matches destination PID system in Zenodo
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-pid-system-zenodo
 
-**Implements:** [data.pid.feas.1](metrics.md#metric-repository-pid)
+**Implements:** [data.pid.feas.1](metrics.md#metric-85-repository-persistent-identifier-system-verified)
 
 ### Description
 Checks if the PID system declared in `host.pid_system` matches the PID system provided by the destination repository, cross-referenced against Zenodo DOI metadata.
@@ -10971,12 +10972,12 @@ pass/fail
 
 ---
 
-## Test: Check dmp.contributor name, role, and contact
+## Test 97: Check dmp.contributor name, role, and contact
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-name-role-contact
 
-**Implements:** [role.co.1](metrics.md#metric-rdm-roles)
+**Implements:** [role.co.1](metrics.md#metric-87-research-data-management-roles-declared)
 
 ### Description
 Checks that `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` are present and non-empty in the maDMP.
@@ -11083,12 +11084,12 @@ pass/fail
 
 ---
 
-## Test: Check dmp.contributor.role for Data Steward
+## Test 98: Check dmp.contributor.role for Data Steward
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-role-data-steward
 
-**Implements:** [dmp.valid.co.2](metrics.md#metric-dmp-validation-by-data-steward)
+**Implements:** [dmp.valid.co.2](metrics.md#metric-88-dmp-validation-by-data-steward)
 
 ### Description
 Checks that at least one `dmp.contributor.role` value equals `Data Steward` in the maDMP.
@@ -11196,12 +11197,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor_id and affiliation.affiliation_id for PIDs
+## Test 99: Check contributor_id and affiliation.affiliation_id for PIDs
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-id-affiliation-id
 
-**Implements:** [role.pid.co.1](metrics.md#metric-contributors-and-organisations-pids)
+**Implements:** [role.pid.co.1](metrics.md#metric-89-contributors-and-organisations-pids)
 
 ### Description
 Checks that `contributor.contributor_id` and `contributor.affiliation.affiliation_id` are present and non-empty in the maDMP.
@@ -11309,12 +11310,12 @@ pass/fail
 
 ---
 
-## Test: Check dmp.contributor fields against destination contributors
+## Test 100: Check dmp.contributor fields against destination contributors
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-fields-destination
 
-**Implements:** [role.feas.1](metrics.md#metric-referenced-rdm-roles)
+**Implements:** [role.feas.1](metrics.md#metric-90-referenced-rdm-roles)
 
 ### Description
 Checks that the roles of the contributors declared in the maDMP are mentioned in the destination by cross-referencing `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` against `contributors.name` and `contributors.type` in the destination.
@@ -11423,12 +11424,12 @@ pass/fail
 
 ---
 
-## Test: Check Data Steward role in maDMP against contributors.type Other in destination
+## Test 101: Check Data Steward role in maDMP against contributors.type Other in destination
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-steward-role-destination-other
 
-**Implements:** [role.feas.2](metrics.md#metric-final-data-steward-validation)
+**Implements:** [role.feas.2](metrics.md#metric-91-final-data-steward-validation)
 
 ### Description
 Checks that the contribution of a Data Steward is referenced in the destination by verifying that `dmp.contributor.role` equals `Data Steward` in the maDMP and a corresponding `contributors.type` of `Other` is present in the destination.
@@ -11538,12 +11539,12 @@ pass/fail
 
 ---
 
-## Test: Check contributor PIDs in maDMP against Zenodo contributors
+## Test 102: Check contributor PIDs in maDMP against Zenodo contributors
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-pids-zenodo
 
-**Implements:** [role.feas.3](metrics.md#metric-referenced-contributors-and-organisations-pids)
+**Implements:** [role.feas.3](metrics.md#metric-92-referenced-contributors-and-organisations-pids)
 
 ### Description
 Checks if each contributor entry includes a valid PID in the destination by cross-referencing `contributor.affiliation.affiliation_id` and `contributor.contributor_id` in the maDMP against `contributors.affiliation` and `contributors.orcid` in Zenodo.
@@ -11652,12 +11653,12 @@ pass/fail
 
 ---
 
-## Test: Check cost in maDMP against repository cost
+## Test 103: Check cost in maDMP against repository cost
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-repository
 
-**Implements:** [cost.comp.1](metrics.md#metric-repository-cost)
+**Implements:** [cost.comp.1](metrics.md#metric-93-repository-cost-verified-against-actual-pricing)
 
 ### Description
 Checks the cost of the repository by verifying that the `cost` declared in the maDMP is consistent with the actual cost of the destination repository.
@@ -11767,12 +11768,12 @@ pass/fail
 
 ---
 
-## Test: Check cost fields for budget specification
+## Test 104: Check cost fields for budget specification
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-budget-specification
 
-**Implements:** [cost.co.1](metrics.md#metric-dmp-budget-specifications)
+**Implements:** [cost.co.1](metrics.md#metric-94-dmp-budget-specifications)
 
 ### Description
 Checks that the `cost` field in the maDMP is present and contains the required budget information for PMs and monetary resources.
@@ -11879,12 +11880,12 @@ pass/fail
 
 ---
 
-## Test: Check cost in maDMP for no additional resources statement
+## Test 105: Check cost in maDMP for no additional resources statement
 
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-no-additional-resources
 
-**Implements:** [cost.co.2](metrics.md#metric-no-extra-rdm-costs)
+**Implements:** [cost.co.2](metrics.md#metric-95-no-extra-rdm-costs)
 
 ### Description
 Checks the `cost` field in the maDMP to verify that it explicitly states that no additional resources are needed for data management activities.

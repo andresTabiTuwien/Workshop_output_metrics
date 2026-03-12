@@ -1,106 +1,107 @@
 # Metrics Catalog
 
-| ID | Title |
-|----------|------|
-| data.reused.co.1 | [maDMP declares reused datasets](#metric-madmp-declares-reused-datasets) |
-| data.reused.co.2 | [Reused Data PID](#metric-reused-data-pid) |
-| data.reused.co.3 | [Reused Data License](#metric-reused-data-license) |
-| data.reused.co.4 | [Reused Data Source](#metric-reused-data-source) |
-| data.reused.co.5 | [Reused Data Access](#metric-reused-data-access) |
-| data.reused.co.6 | [Reused Data Personal](#metric-reused-data-personal) |
-| data.reused.co.7 | [Reused Data Sensitive](#metric-reused-data-sensitive) |
-| data.reused.co.8 | [Reused Data URL](#metric-reused-data-url) |
-| data.reused.feas.1 | [Repository Reused Data PID](#metric-repository-reused-data-pid) |
-| data.reused.feas.2 | [Repository Reused Data Access](#metric-repository-reused-data-access) |
-| data.reused.feas.3 | [Repository Reused Data License](#metric-repository-reused-data-license) |
-| data.new.1 | [New Dataset Declared in the DMP](#metric-new-data) |
-| data.new.2 | [New Data Collection or Creation](#metric-new-data-collection-or-creation) |
-| data.new.3 | [New Data Access](#metric-new-data-access) |
-| data.new.4 | [New Data Metadata](#metric-new-data-metadata) |
-| data.new.feas.1 | [Repository PID Resolution](#metric-repository-pid-resolution) |
-| data.new.feas.2 | [Repository New Data Access](#metric-repository-new-data-access) |
-| data.new.feas.3 | [Repository New Data License](#metric-repository-new-data-license) |
-| data.info.cov.1 | [Dataset Type Specified](#metric-data-type) |
-| data.info.cov.2 | [Dataset File Format Specified](#metric-data-format) |
-| data.info.cov.3 | [Dataset Size Specified](#metric-data-size) |
-| data.info.feas.1 | [Repository Data Type](#metric-repository-data-type) |
-| data.info.feas.2 | [Repository Data Format](#metric-repository-data-format) |
-| data.info.feas.3 | [Repository Data Size](#metric-repository-data-size) |
-| meta.comp.1 | [DMP Common Standard Field Compliance](#metric-dmp-common-standard-field-compliance) |
-| meta.co.1 | [Controlled Vocabularies Used in Methodology](#metric-controlled-vocabularies-used-in-methodology) |
-| meta.co.2 | [Electronic Lab Notebook Referenced as a technical resource](#metric-electronic-lab-notebook-referenced-as-a-technical-resource) |
-| meta.qual.2 | [ReadMe File Reference](#metric-readme-file-reference) |
-| meta.stand.comp.1 | [Metadata Standards Used](#metric-metadata-standards-used) |
-| meta.form.op.1 | [Use of Open File Formats for datasets](#metric-use-of-open-file-formats-for-datasets) |
-| meta.doc.qual.1 | [Electronic Lab Notebook Linked](#metric-electronic-lab-notebook-linked) |
-| meta.feas.1 | [Existence of Dataset Documentation](#metric-existence-of-dataset-documentation) |
-| qc.qual.1 | [Quality Control Methods Stated](#metric-quality-control-methods-stated) |
-| store.cov.1 | [Data Storage Location mentioned in the DMP](#metric-data-storage-location-mentioned-in-the-dmp) |
-| store.cov.2 | [Use of Secure Storage for the dataset in a trusted repository](#metric-use-of-secure-storage-for-the-dataset-in-a-trusted-repository) |
-| store.comp.1 | [Alignment of Storage and Backup with Information Sensitivity](#metric-alignment-of-storage-and-backup-with-information-sensitivity) |
-| store.cov.3 | [Back up Responsibility](#metric-back-up-responsibility) |
-| store.co.1 | [Back up Frequency](#metric-back-up-frequency) |
-| store.comp.3 | [Version Control Practices for Software](#metric-version-control-practices-for-software) |
-| stor.feas.1 | [Stored Dataset Location Confirmed](#metric-stored-dataset-location-confirmed) |
-| secur.co.1 | [Security Measures Implementation](#metric-security-measures-implementation) |
-| secur.co.2 | [Sensitive Data Protection Description](#metric-sensitive-data-protection-description) |
-| secur.co.3 | [Authorised Access Control](#metric-authorised-access-control) |
-| secur.co.4 | [Access Control and User Management](#metric-access-control-and-user-management) |
-| secur.co.5 | [Required Access Procedures](#metric-required-access-procedures) |
-| secur.comp.1 | [GDPR and Ethics Compliance](#metric-gdpr-and-ethics-compliance) |
-| secur.feas.1 | [Final Security Measures Implementation](#metric-final-security-measures-implementation) |
-| sens.secure.co.1 | [Sensitive Data Using Method](#metric-sensitive-data-using-method) |
-| sens.secure.co.2 | [Provision of Anonymised Synthetic Data](#metric-provision-of-anonymised-synthetic-data) |
-| data.restrict.co.3 | [Statement of No Data Restrictions](#metric-statement-of-no-data-restrictions) |
-| data.lice.co.1 | [Dataset License Declared](#metric-dataset-license) |
-| soft.lice.comp.1 | [Software Dataset License Declared](#metric-software-license) |
-| data.agree.comp.2 | [Data Access Agreements](#metric-data-access-agreements) |
-| own.co.2 | [Data Ownership Role Declared](#metric-data-ownership) |
-| soft.auth.co.3 | [Software Dataset Author Declared](#metric-software-author) |
-| ethics.co.1 | [Ethical Issues Status Declared](#metric-ethical-issues) |
-| ethics.co.2 | [Ethical Issues and Review](#metric-ethical-issues-and-review) |
-| ethics.co.3 | [Justification for Absence of Ethical Issues](#metric-justification-for-absence-of-ethical-issues) |
-| data.shar.op.1 | [Data Access Status Open for the Dataset](#metric-data-access-status-open-for-the-dataset) |
-| data.shar.co.1 | [Data License is Present](#metric-data-license-is-present) |
-| data.shar.co.2 | [Data Restrictions Reference](#metric-data-restrictions-reference) |
-| data.shar.comp.1 | [Funder's Data License](#metric-funders-data-license) |
-| data.shar.feas.1 | [Repository Access Rights Consistency Aligned](#metric-repository-access-rights-consistency-aligned) |
-| data.shar.feas.2 | [Repository Data License Aligned with the DMP](#metric-repository-data-license-aligned-with-the-dmp) |
-| data.shar.feas.3 | [Embargo Implementation Alignment](#metric-embargo-implementation-alignment) |
-| data.shar.feas.4 | [Repository Data Restrictions](#metric-repository-data-restrictions) |
-| data.shar.comp.2 | [Embargo Period License Declared](#metric-embargo-license) |
-| repo.co.3 | [Thematic Data Repositories Referenced](#metric-thematic-data-repositories-referenced) |
-| repo.comp.2 | [Repository FAIRness Conformation](#metric-repository-fairness-conformation) |
-| repo.comp.3 | [Trusted Repository is Used](#metric-trusted-repository-is-used) |
-| repo.co.4 | [Verification of Back-up Strategy](#metric-verification-of-back-up-strategy) |
-| repo.co.5 | [Certification of Repository](#metric-certification-of-repository) |
-| repo.co.7 | [Used Resources for Preservation](#metric-used-resources-for-preservation) |
-| repo.co.6 | [Repository Policy is Present](#metric-repository-policy-is-present) |
-| repo.feas.1 | [Repository Identifier Accuracy](#metric-repository-identifier-accuracy) |
-| repo.feas.2 | [Long-Term Preservation Dataset](#metric-long-term-preservation-dataset) |
-| repo.feas.4 | [Repository Compatibility with Dataset Characteristics](#metric-repository-specificities) |
-| data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-data-external-resources-included-in-the-dmp) |
-| data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-metadata-standard-specified-in-the-dmp) |
-| data.exteresource.feas.1 | [Resolvable External Resources](#metric-resolvable-external-resources) |
-| data.exteresource.feas.2 | [OpenAIRE Mentioned Dataset Validation](#metric-openaire-mentioned-dataset-validation) |
-| data.exteresource.feas.3 | [Contributor Roles Follow CRediT Taxonomy](#metric-used-taxonomy) |
-| data.pid.cov.1 | [Dataset Persistent Identifier Declared](#metric-dataset-pid) |
-| data.pid.cov.2 | [Trusted Repository Referenced](#metric-trusted-repository-referenced) |
-| data.pid.feas.1 | [Repository Persistent Identifier System Verified](#metric-repository-pid) |
-| data.pid.feas.3 | [PIDs can be Resolved](#metric-pids-can-be-resolved) |
-| role.co.1 | [Research Data Management Roles Declared](#metric-rdm-roles) |
-| dmp.valid.co.2 | [DMP Validation by Data Steward](#metric-dmp-validation-by-data-steward) |
-| role.pid.co.1 | [Contributors and Organisations PIDs](#metric-contributors-and-organisations-pids) |
-| role.feas.1 | [Referenced RDM Roles](#metric-referenced-rdm-roles) |
-| role.feas.2 | [Final Data Steward Validation](#metric-final-data-steward-validation) |
-| role.feas.3 | [Referenced Contributors and Organisations PIDs](#metric-referenced-contributors-and-organisations-pids) |
-| cost.comp.1 | [Repository Cost Verified Against Actual Pricing](#metric-repository-cost) |
-| cost.co.1 | [DMP Budget Specifications](#metric-dmp-budget-specifications) |
-| cost.co.2 | [No Extra RDM Costs](#metric-no-extra-rdm-costs) |
+| No. | ID | Title |
+|-----|----------|------|
+| 1 | data.reused.co.1 | [maDMP declares reused datasets](#metric-1-madmp-declares-reused-datasets) |
+| 2 | data.reused.co.2 | [Reused Data PID](#metric-2-reused-data-pid) |
+| 3 | data.reused.co.3 | [Reused Data License](#metric-3-reused-data-license) |
+| 4 | data.reused.co.4 | [Reused Data Source](#metric-4-reused-data-source) |
+| 5 | data.reused.co.5 | [Reused Data Access](#metric-5-reused-data-access) |
+| 6 | data.reused.co.6 | [Reused Data Personal](#metric-6-reused-data-personal) |
+| 7 | data.reused.co.7 | [Reused Data Sensitive](#metric-7-reused-data-sensitive) |
+| 8 | data.reused.co.8 | [Reused Data URL](#metric-8-reused-data-url) |
+| 9 | data.reused.feas.1 | [Repository Reused Data PID](#metric-9-repository-reused-data-pid) |
+| 10 | data.reused.feas.2 | [Repository Reused Data Access](#metric-10-repository-reused-data-access) |
+| 11 | data.reused.feas.3 | [Repository Reused Data License](#metric-11-repository-reused-data-license) |
+| 12 | data.new.1 | [New Dataset Declared in the DMP](#metric-12-new-dataset-declared-in-the-dmp) |
+| 13 | data.new.2 | [New Data Collection or Creation](#metric-13-new-data-collection-or-creation) |
+| 14 | data.new.3 | [New Data Access](#metric-14-new-data-access) |
+| 15 | data.new.4 | [New Data Metadata](#metric-15-new-data-metadata) |
+| 16 | data.new.feas.1 | [Repository PID Resolution](#metric-16-repository-pid-resolution) |
+| 17 | data.new.feas.2 | [Repository New Data Access](#metric-17-repository-new-data-access) |
+| 18 | data.new.feas.3 | [Repository New Data License](#metric-18-repository-new-data-license) |
+| 19 | data.info.cov.1 | [Dataset Type Specified](#metric-19-dataset-type-specified) |
+| 20 | data.info.cov.2 | [Dataset File Format Specified](#metric-20-dataset-file-format-specified) |
+| 21 | data.info.cov.3 | [Dataset Size Specified](#metric-21-dataset-size-specified) |
+| 22 | data.info.feas.1 | [Repository Data Type](#metric-22-repository-data-type) |
+| 23 | data.info.feas.2 | [Repository Data Format](#metric-23-repository-data-format) |
+| 24 | data.info.feas.3 | [Repository Data Size](#metric-24-repository-data-size) |
+| 25 | meta.comp.1 | [DMP Common Standard Field Compliance](#metric-25-dmp-common-standard-field-compliance) |
+| 26 | meta.co.1 | [Controlled Vocabularies Used in Methodology](#metric-26-controlled-vocabularies-used-in-methodology) |
+| 27 | meta.co.2 | [Electronic Lab Notebook Referenced as a technical resource](#metric-27-electronic-lab-notebook-referenced-as-a-technical-resource) |
+| 28 | meta.qual.2 | [ReadMe File Reference](#metric-28-readme-file-reference) |
+| 29 | meta.stand.comp.1 | [Metadata Standards Used](#metric-29-metadata-standards-used) |
+| 30 | meta.form.op.1 | [Use of Open File Formats for datasets](#metric-30-use-of-open-file-formats-for-datasets) |
+| 31 | meta.doc.qual.1 | [Electronic Lab Notebook Linked](#metric-31-electronic-lab-notebook-linked) |
+| 32 | meta.feas.1 | [Existence of Dataset Documentation](#metric-32-existence-of-dataset-documentation) |
+| 33 | qc.qual.1 | [Quality Control Methods Stated](#metric-33-quality-control-methods-stated) |
+| 34 | store.cov.1 | [Data Storage Location mentioned in the DMP](#metric-34-data-storage-location-mentioned-in-the-dmp) |
+| 35 | store.cov.2 | [Use of Secure Storage for the dataset in a trusted repository](#metric-35-use-of-secure-storage-for-the-dataset-in-a-trusted-repository) |
+| 36 | store.comp.1 | [Alignment of Storage and Backup with Information Sensitivity](#metric-36-alignment-of-storage-and-backup-with-information-sensitivity) |
+| 37 | store.cov.3 | [Back up Responsibility](#metric-37-back-up-responsibility) |
+| 38 | store.co.1 | [Back up Frequency](#metric-38-back-up-frequency) |
+| 39 | store.comp.3 | [Version Control Practices for Software](#metric-39-version-control-practices-for-software) |
+| 40 | stor.feas.1 | [Stored Dataset Location Confirmed](#metric-40-stored-dataset-location-confirmed) |
+| 41 | secur.co.1 | [Security Measures Implementation](#metric-41-security-measures-implementation) |
+| 42 | secur.co.2 | [Sensitive Data Protection Description](#metric-42-sensitive-data-protection-description) |
+| 43 | secur.co.3 | [Authorised Access Control](#metric-43-authorised-access-control) |
+| 44 | secur.co.4 | [Access Control and User Management](#metric-44-access-control-and-user-management) |
+| 45 | secur.co.5 | [Required Access Procedures](#metric-45-required-access-procedures) |
+| 46 | secur.comp.1 | [GDPR and Ethics Compliance](#metric-46-gdpr-and-ethics-compliance) |
+| 47 | secur.feas.1 | [Final Security Measures Implementation](#metric-47-final-security-measures-implementation) |
+| 48 | sens.secure.co.1 | [Sensitive Data Using Method](#metric-48-sensitive-data-using-method) |
+| 49 | sens.secure.co.2 | [Provision of Anonymised Synthetic Data](#metric-49-provision-of-anonymised-synthetic-data) |
+| 50 | data.restrict.co.3 | [Statement of No Data Restrictions](#metric-50-statement-of-no-data-restrictions) |
+| 51 | data.lice.co.1 | [Dataset License Declared](#metric-51-dataset-license-declared) |
+| 52 | soft.lice.comp.1 | [Software Dataset License Declared](#metric-52-software-dataset-license-declared) |
+| 53 | data.agree.comp.2 | [Data Access Agreements](#metric-53-data-access-agreements) |
+| 54 | own.co.2 | [Data Ownership Role Declared](#metric-54-data-ownership-role-declared) |
+| 55 | soft.auth.co.3 | [Software Dataset Author Declared](#metric-55-software-dataset-author-declared) |
+| 56 | ethics.co.1 | [Ethical Issues Status Declared](#metric-56-ethical-issues-status-declared) |
+| 57 | ethics.co.2 | [Ethical Issues and Review](#metric-57-ethical-issues-and-review) |
+| 58 | ethics.co.3 | [Justification for Absence of Ethical Issues](#metric-58-justification-for-absence-of-ethical-issues) |
+| 59 | data.shar.op.1 | [Data Access Status Open for the Dataset](#metric-59-data-access-status-open-for-the-dataset) |
+| 60 | data.shar.co.1 | [Data License is Present](#metric-60-data-license-is-present) |
+| 61 | data.shar.co.2 | [Data Restrictions Reference](#metric-61-data-restrictions-reference) |
+| 62 | data.shar.comp.1 | [Funder's Data License](#metric-62-funders-data-license) |
+| 63 | data.shar.feas.1 | [Repository Access Rights Consistency Aligned](#metric-63-repository-access-rights-consistency-aligned) |
+| 64 | data.shar.feas.2 | [Repository Data License Aligned with the DMP](#metric-64-repository-data-license-aligned-with-the-dmp) |
+| 65 | data.shar.feas.3 | [Embargo Implementation Alignment](#metric-65-embargo-implementation-alignment) |
+| 66 | data.shar.feas.4 | [Repository Data Restrictions](#metric-66-repository-data-restrictions) |
+| 67 | data.shar.comp.2 | [Embargo Period License Declared](#metric-67-embargo-period-license-declared) |
+| 68 | repo.co.3 | [Thematic Data Repositories Referenced](#metric-68-thematic-data-repositories-referenced) |
+| 69 | repo.comp.2 | [Repository FAIRness Conformation](#metric-69-repository-fairness-conformation) |
+| 70 | repo.comp.3 | [Trusted Repository is Used](#metric-70-trusted-repository-is-used) |
+| 71 | repo.co.4 | [Verification of Back-up Strategy](#metric-71-verification-of-back-up-strategy) |
+| 72 | repo.co.5 | [Certification of Repository](#metric-72-certification-of-repository) |
+| 73 | repo.co.7 | [Used Resources for Preservation](#metric-73-used-resources-for-preservation) |
+| 74 | repo.co.6 | [Repository Policy is Present](#metric-74-repository-policy-is-present) |
+| 75 | repo.feas.1 | [Repository Identifier Accuracy](#metric-75-repository-identifier-accuracy) |
+| 76 | repo.feas.2 | [Long-Term Preservation Dataset](#metric-76-long-term-preservation-dataset) |
+| 77 | repo.feas.4 | [Repository Compatibility with Dataset Characteristics](#metric-77-repository-compatibility-with-dataset-characteristics) |
+| 78 | data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-78-data-external-resources-included-in-the-dmp) |
+| 79 | data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-79-metadata-standard-specified-in-the-dmp) |
+| 80 | data.exteresource.feas.1 | [Resolvable External Resources](#metric-80-resolvable-external-resources) |
+| 81 | data.exteresource.feas.2 | [OpenAIRE Mentioned Dataset Validation](#metric-81-openaire-mentioned-dataset-validation) |
+| 82 | data.exteresource.feas.3 | [Contributor Roles Follow CRediT Taxonomy](#metric-82-contributor-roles-follow-credit-taxonomy) |
+| 83 | data.pid.cov.1 | [Dataset Persistent Identifier Declared](#metric-83-dataset-persistent-identifier-declared) |
+| 84 | data.pid.cov.2 | [Trusted Repository Referenced](#metric-84-trusted-repository-referenced) |
+| 85 | data.pid.feas.1 | [Repository Persistent Identifier System Verified](#metric-85-repository-persistent-identifier-system-verified) |
+| 86 | data.pid.feas.3 | [PIDs can be Resolved](#metric-86-pids-can-be-resolved) |
+| 87 | role.co.1 | [Research Data Management Roles Declared](#metric-87-research-data-management-roles-declared) |
+| 88 | dmp.valid.co.2 | [DMP Validation by Data Steward](#metric-88-dmp-validation-by-data-steward) |
+| 89 | role.pid.co.1 | [Contributors and Organisations PIDs](#metric-89-contributors-and-organisations-pids) |
+| 90 | role.feas.1 | [Referenced RDM Roles](#metric-90-referenced-rdm-roles) |
+| 91 | role.feas.2 | [Final Data Steward Validation](#metric-91-final-data-steward-validation) |
+| 92 | role.feas.3 | [Referenced Contributors and Organisations PIDs](#metric-92-referenced-contributors-and-organisations-pids) |
+| 93 | cost.comp.1 | [Repository Cost Verified Against Actual Pricing](#metric-93-repository-cost-verified-against-actual-pricing) |
+| 94 | cost.co.1 | [DMP Budget Specifications](#metric-94-dmp-budget-specifications) |
+| 95 | cost.co.2 | [No Extra RDM Costs](#metric-95-no-extra-rdm-costs) |
+
 
 ---
 
-## Metric: maDMP declares reused datasets
+## Metric 1: maDMP declares reused datasets
 
 **Metric ID:** data.reused.co.1  
 **Persistent URI:** https://example.org/metric/data.reused.co.1
@@ -124,7 +125,7 @@ At least one dataset entry in the maDMP contains a boolean field indicating reus
 No dataset entry contains reuse information.
 
 ### Associated Test(s)
-- [Check for reused dataset declaration](tests.md#test-check-for-reused-dataset-declaration)
+- [Check for reused dataset declaration](tests.md#test-1-check-for-reused-dataset-declaration)
 
 ### JSON-LD (Metric)
 ```json
@@ -210,7 +211,7 @@ No dataset entry contains reuse information.
 
 ---
 
-## Metric: Reused Data PID
+## Metric 2: Reused Data PID
 
 **Metric ID:** data.reused.co.2  
 **Persistent URI:** https://example.org/metric/data.reused.co.2
@@ -235,7 +236,7 @@ For each dataset declared as reused (`is_reused = true`), an identifier is prese
 At least one reused dataset is missing an identifier or identifier metadata.
 
 ### Associated Test(s)
-- [Check for reused dataset PID](tests.md#test-check-for-reused-dataset-pid)
+- [Check for reused dataset PID](tests.md#test-3-check-for-reused-dataset-pid)
 
 ### JSON-LD (Metric)
 ```json
@@ -321,7 +322,7 @@ At least one reused dataset is missing an identifier or identifier metadata.
 
 ---
 
-## Metric: Reused Data License
+## Metric 3: Reused Data License
 
 **Metric ID:** data.reused.co.3  
 **Persistent URI:** https://example.org/metric/data.reused.co.3
@@ -346,7 +347,7 @@ For each dataset declared as reused (`is_reused = true`), license metadata is pr
 At least one reused dataset is missing license information or required license fields.
 
 ### Associated Test(s)
-- [Check License for Reused Datasets](tests.md#test-license-for-reused-datasets)
+- [Check License for Reused Datasets](tests.md#test-2-check-license-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -432,7 +433,7 @@ At least one reused dataset is missing license information or required license f
 
 ---
 
-## Metric: Reused Data Source
+## Metric 4: Reused Data Source
 
 **Metric ID:** data.reused.co.4  
 **Persistent URI:** https://example.org/metric/data.reused.co.4
@@ -457,9 +458,9 @@ For each dataset declared as reused (`is_reused = true`), distribution or source
 At least one reused dataset lacks distribution or source metadata, or required minimal fields.
 
 ### Associated Test(s)
-- [Check Distribution Entry is Present](tests.md#test-distribution-present)
-- [Check Distribution Access Information is Present](tests.md#test-distribution-access-information)
-- [Check Distribution Title is Present](tests.md#test-distribution-title)
+- [Check Distribution Entry is Present](tests.md#test-4-check-distribution-entry-is-present)
+- [Check Distribution Access Information is Present](tests.md#test-5-check-distribution-access-information-is-present)
+- [Check Distribution Title is Present](tests.md#test-6-check-distribution-title-is-present)
 
 ### JSON-LD (Metric)
 ```json
@@ -545,7 +546,7 @@ At least one reused dataset lacks distribution or source metadata, or required m
 
 ---
 
-## Metric: Reused Data Access
+## Metric 5: Reused Data Access
 
 **Metric ID:** data.reused.co.5  
 **Persistent URI:** https://example.org/metric/data.reused.co.5
@@ -570,7 +571,7 @@ For each dataset declared as reused (`is_reused = true`), a `data_access` value 
 At least one reused dataset is missing a `data_access` value or contains an invalid value.
 
 ### Associated Test(s)
-- [Check Access Rights for Reused Datasets](tests.md#test-access-rights-for-reused-datasets)
+- [Check Access Rights for Reused Datasets](tests.md#test-7-check-access-rights-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -656,7 +657,7 @@ At least one reused dataset is missing a `data_access` value or contains an inva
 
 ---
 
-## Metric: Reused Data Personal
+## Metric 6: Reused Data Personal
 
 **Metric ID:** data.reused.co.6  
 **Persistent URI:** https://example.org/metric/data.reused.co.6
@@ -681,7 +682,7 @@ For each dataset declared as reused (`is_reused = true`), a `personal_data` fiel
 At least one reused dataset is missing `personal_data` information or contains an invalid or undefined value.
 
 ### Associated Test(s)
-- [Check Personal Data Flag for Reused Datasets](tests.md#test-personal-data-for-reused-datasets)
+- [Check Personal Data Flag for Reused Datasets](tests.md#test-8-check-personal-data-flag-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -767,7 +768,7 @@ At least one reused dataset is missing `personal_data` information or contains a
 
 ---
 
-## Metric: Reused Data Sensitive
+## Metric 7: Reused Data Sensitive
 
 **Metric ID:** data.reused.co.7  
 **Persistent URI:** https://example.org/metric/data.reused.co.7
@@ -792,7 +793,7 @@ For each dataset declared as reused (`is_reused = true`), a `sensitive_data` fie
 At least one reused dataset is missing `sensitive_data` information or contains an invalid or undefined value.
 
 ### Associated Test(s)
-- [Check Sensitive Data Flag for Reused Datasets](tests.md#test-sensitive-data-for-reused-datasets)
+- [Check Sensitive Data Flag for Reused Datasets](tests.md#test-9-check-sensitive-data-flag-for-reused-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -878,7 +879,7 @@ At least one reused dataset is missing `sensitive_data` information or contains 
 
 ---
 
-## Metric: Reused Data URL
+## Metric 8: Reused Data URL
 
 **Metric ID:** data.reused.co.8  
 **Persistent URI:** https://example.org/metric/data.reused.co.8
@@ -903,8 +904,8 @@ For each dataset declared as reused (`is_reused = true`), at least one distribut
 At least one reused dataset lacks a distribution URL.
 
 ### Associated Test(s)
-- [Check Distribution URL is Present](tests.md#test-distribution-present-url)
-- [Check Access URL is Present and Non-empty](tests.md#test-access-url)
+- [Check Distribution URL is Present](tests.md#test-10-check-distribution-url-is-present)
+- [Check Access URL is Present and Non-empty](tests.md#test-11-check-access-url-is-present-and-non-empty)
 
 ### JSON-LD (Metric)
 ```json
@@ -990,7 +991,7 @@ At least one reused dataset lacks a distribution URL.
 
 ---
 
-## Metric: Repository Reused Data PID
+## Metric 9: Repository Reused Data PID
 
 **Metric ID:** data.reused.feas.1  
 **Persistent URI:** https://example.org/metric/data.reused.feas.1
@@ -1021,8 +1022,8 @@ At least one reused dataset PID:
 - does not resolve via a PID resolver.
 
 ### Associated Test(s)
-- [Check PID Matches Destination Repository Record](tests.md#test-pid-matches-destination-repository-record)
-- [Check PID Resolves Successfully](tests.md#test-pid-resolves)
+- [Check PID Matches Destination Repository Record](tests.md#test-12-check-pid-matches-destination-repository-record)
+- [Check PID Resolves Successfully](tests.md#test-13-check-pid-resolves-successfully)
 
 ### JSON-LD (Metric)
 ```json
@@ -1112,7 +1113,7 @@ At least one reused dataset PID:
 
 ---
 
-## Metric: Repository Reused Data Access
+## Metric 10: Repository Reused Data Access
 
 **Metric ID:** data.reused.feas.2  
 **Persistent URI:** https://example.org/metric/data.reused.feas.2
@@ -1138,7 +1139,7 @@ For each dataset declared as reused (`is_reused = true`), the `data_access` valu
 At least one reused dataset has a `data_access` value in the maDMP that does not match the access rights recorded in the destination repository.
 
 ### Associated Test(s)
-- [Check Reused Data Access Matches Destination](tests.md#test-reused-data-access-matches-destination)
+- [Check Reused Data Access Matches Destination](tests.md#test-14-check-reused-data-access-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -1228,7 +1229,7 @@ At least one reused dataset has a `data_access` value in the maDMP that does not
 
 ---
 
-## Metric: Repository Reused Data License
+## Metric 11: Repository Reused Data License
 
 **Metric ID:** data.reused.feas.3  
 **Persistent URI:** https://example.org/metric/data.reused.feas.3
@@ -1254,7 +1255,7 @@ For each dataset declared as reused (`is_reused = true`), the license value in t
 At least one reused dataset has a license value in the maDMP that does not match the license recorded in the destination repository.
 
 ### Associated Test(s)
-- [Check Reused Data License Matches Destination](tests.md#test-reused-data-license-matches-destination)
+- [Check Reused Data License Matches Destination](tests.md#test-15-check-reused-data-license-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -1344,7 +1345,7 @@ At least one reused dataset has a license value in the maDMP that does not match
 
 ---
 
-## Metric: New Dataset Declared in the DMP
+## Metric 12: New Dataset Declared in the DMP
 
 **Metric ID:** data.new.1  
 **Persistent URI:** https://example.org/metric/data.new.1
@@ -1369,7 +1370,7 @@ At least one dataset entry exists where `is_reused` is **absent** (per the state
 All dataset entries include `is_reused` (i.e., no dataset is found without `is_reused`), or no dataset entries exist.
 
 ### Associated Test(s)
-- [Check for new data (no is_reused)](tests.md#test-check-for-new-data-no-is_reused)
+- [Check for new data (no is_reused)](tests.md#test-16-check-for-new-data-no-is_reused)
 
 ### JSON-LD (Metric)
 ```json
@@ -1455,7 +1456,7 @@ All dataset entries include `is_reused` (i.e., no dataset is found without `is_r
 
 ---
 
-## Metric: New Data Collection or Creation
+## Metric 13: New Data Collection or Creation
 
 **Metric ID:** data.new.2  
 **Persistent URI:** https://example.org/metric/data.new.2
@@ -1484,7 +1485,7 @@ For at least one “new” dataset (i.e., dataset not marked as reused per your 
 No dataset provides `technical_resource`, or one or more required fields are missing (`description`, `name`, `id.identifier`, `id.type`).
 
 ### Associated Test(s)
-- [Check technical_resource for new data collection/creation](tests.md#test-check-technical_resource-for-new-data-collectioncreation)
+- [Check technical_resource for new data collection/creation](tests.md#test-17-check-technical_resource-for-new-data-collectioncreation)
 
 ### JSON-LD (Metric)
 ```json
@@ -1570,7 +1571,7 @@ No dataset provides `technical_resource`, or one or more required fields are mis
 
 ---
 
-## Metric: New Data Access
+## Metric 14: New Data Access
 
 **Metric ID:** data.new.3  
 **Persistent URI:** https://example.org/metric/data.new.3
@@ -1597,8 +1598,8 @@ For at least one “new” dataset (dataset not marked as reused per your policy
 No “new” dataset contains `data_access` and/or rights information, or `data_access` is missing/invalid.
 
 ### Associated Test(s)
-- [Check data_access for new datasets](tests.md#test-check-data_access-for-new-datasets)
-- [Check rights of new dataset](tests.md#test-check-rights-of-new-dataset)
+- [Check data_access for new datasets](tests.md#test-18-check-data_access-for-new-datasets)
+- [Check rights of new dataset](tests.md#test-19-check-rights-of-new-dataset)
 
 ### JSON-LD (Metric)
 ```json
@@ -1684,7 +1685,7 @@ No “new” dataset contains `data_access` and/or rights information, or `data_
 
 ---
 
-## Metric: New Data Metadata
+## Metric 15: New Data Metadata
 
 **Metric ID:** data.new.4  
 **Persistent URI:** https://example.org/metric/data.new.4
@@ -1713,7 +1714,7 @@ For at least one “new” dataset (dataset not marked as reused per your policy
 No “new” dataset provides `metadata`, or one or more required fields are missing (`description`, `language`, `metadata_id.identifier`, `metadata_id.type`).
 
 ### Associated Test(s)
-- [Check metadata for new dataset](tests.md#test-check-metadata-for-new-dataset)
+- [Check metadata for new dataset](tests.md#test-20-check-metadata-for-new-dataset)
 
 ### JSON-LD (Metric)
 ```json
@@ -1799,7 +1800,7 @@ No “new” dataset provides `metadata`, or one or more required fields are mis
 
 ---
 
-## Metric: Repository PID Resolution
+## Metric 16: Repository PID Resolution
 
 **Metric ID:** data.new.feas.1  
 **Persistent URI:** https://example.org/metric/data.new.feas.1
@@ -1826,8 +1827,8 @@ Determine whether dataset identifiers provided in the maDMP exist and can be res
 No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
 
 ### Associated Test(s)
-- [Check dataset_id exists](tests.md#test-check-dataset_id-exists)
-- [Check PID resolves for dataset_id](tests.md#test-check-pid-resolves-for-dataset_id)
+- [Check dataset_id exists](tests.md#test-21-check-dataset_id-exists)
+- [Check PID resolves for dataset_id](tests.md#test-22-check-pid-resolves-for-dataset_id)
 
 ### JSON-LD (Metric)
 ```json
@@ -1913,7 +1914,7 @@ No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
 
 ---
 
-## Metric: Repository New Data Access
+## Metric 17: Repository New Data Access
 
 **Metric ID:** data.new.feas.2  
 **Persistent URI:** https://example.org/metric/data.new.feas.2
@@ -1939,7 +1940,7 @@ For each “new” dataset (per your policy for determining new vs reused), the 
 At least one new dataset has `data_access` in the maDMP that does not match the destination repository access rights, or required fields cannot be found.
 
 ### Associated Test(s)
-- [Check new data access matches destination](tests.md#test-check-new-data-access-matches-destination)
+- [Check new data access matches destination](tests.md#test-23-check-new-data-access-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -2029,7 +2030,7 @@ At least one new dataset has `data_access` in the maDMP that does not match the 
 
 ---
 
-## Metric: Repository New Data License
+## Metric 18: Repository New Data License
 
 **Metric ID:** data.new.feas.3  
 **Persistent URI:** https://example.org/metric/data.new.feas.3
@@ -2055,7 +2056,7 @@ For each “new” dataset (per your policy for determining new vs reused), the 
 At least one new dataset has a license value in the maDMP that does not match the destination repository license, or required fields cannot be found.
 
 ### Associated Test(s)
-- [Check new data license matches destination](tests.md#test-check-new-data-license-matches-destination)
+- [Check new data license matches destination](tests.md#test-24-check-new-data-license-matches-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -2145,7 +2146,7 @@ At least one new dataset has a license value in the maDMP that does not match th
 
 ---
 
-## Metric: Dataset Type Specified
+## Metric 19: Dataset Type Specified
 
 **Metric ID:** data.info.cov.1  
 **Persistent URI:** https://example.org/metric/data.info.cov.1
@@ -2170,7 +2171,7 @@ For each dataset (or at minimum for the dataset(s) in scope), the field `dataset
 `dataset.type` is missing/empty for one or more dataset entries, or uses values outside the accepted vocabulary (if validation against a vocabulary is required).
 
 ### Associated Test(s)
-- [Check dataset.type is specified](tests.md#test-check-datasettype-is-specified)
+- [Check dataset.type is specified](tests.md#test-25-check-datasettype-is-specified)
 
 ### JSON-LD (Metric)
 ```json
@@ -2256,7 +2257,7 @@ For each dataset (or at minimum for the dataset(s) in scope), the field `dataset
 
 ---
 
-## Metric: Dataset File Format Specified
+## Metric 20: Dataset File Format Specified
 
 **Metric ID:** data.info.cov.2  
 **Persistent URI:** https://example.org/metric/data.info.cov.2
@@ -2281,7 +2282,7 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 `distribution.format` is missing/empty for one or more distributions, or no distribution information exists where expected.
 
 ### Associated Test(s)
-- [Check distribution.format is specified](tests.md#test-check-distributionformat-is-specified)
+- [Check distribution.format is specified](tests.md#test-26-check-distributionformat-is-specified)
 
 ### JSON-LD (Metric)
 ```json
@@ -2367,7 +2368,7 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 
 ---
 
-## Metric: Dataset Size Specified
+## Metric 21: Dataset Size Specified
 
 **Metric ID:** data.info.cov.3  
 **Persistent URI:** https://example.org/metric/data.info.cov.3
@@ -2392,7 +2393,7 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 `distribution.byte_size` is missing, empty, non-numeric, or negative for one or more distributions, or no distribution information exists where expected.
 
 ### Associated Test(s)
-- [Check distribution.byte_size is specified](tests.md#test-check-distributionbyte_size-is-specified)
+- [Check distribution.byte_size is specified](tests.md#test-27-check-distributionbyte_size-is-specified)
 
 ### JSON-LD (Metric)
 ```json
@@ -2478,7 +2479,7 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 
 ---
 
-## Metric: Repository Data Type
+## Metric 22: Repository Data Type
 
 **Metric ID:** data.info.feas.1  
 **Persistent URI:** https://example.org/metric/data.info.feas.1
@@ -2506,8 +2507,8 @@ For each dataset in scope:
 At least one dataset has a type or subtype mismatch between maDMP and the destination repository, or required fields cannot be retrieved.
 
 ### Associated Test(s)
-- [Check dataset.type matches destination type](tests.md#test-check-datasettype-matches-destination-type)
-- [Check dataset.type aligns with destination subtype](tests.md#test-check-datasettype-aligns-with-destination-subtype)
+- [Check dataset.type matches destination type](tests.md#test-28-check-datasettype-matches-destination-type)
+- [Check dataset.type aligns with destination subtype](tests.md#test-29-check-datasettype-aligns-with-destination-subtype)
 
 ### JSON-LD (Metric)
 ```json
@@ -2593,7 +2594,7 @@ At least one dataset has a type or subtype mismatch between maDMP and the destin
 
 ---
 
-## Metric: Repository Data Format
+## Metric 23: Repository Data Format
 
 **Metric ID:** data.info.feas.2  
 **Persistent URI:** https://example.org/metric/data.info.feas.2
@@ -2619,7 +2620,7 @@ For each dataset distribution in scope, the maDMP `distribution.format` matches 
 At least one distribution format declared in the maDMP does not match (or cannot be mapped to) the formats of the deposited files in the destination repository, or required repository metadata cannot be retrieved.
 
 ### Associated Test(s)
-- [Check final dataset format matches destination files](tests.md#test-check-final-dataset-format-matches-destination-files)
+- [Check final dataset format matches destination files](tests.md#test-30-check-final-dataset-format-matches-destination-files)
 
 ### JSON-LD (Metric)
 ```json
@@ -2705,7 +2706,7 @@ At least one distribution format declared in the maDMP does not match (or cannot
 
 ---
 
-## Metric: Repository Data Size
+## Metric 24: Repository Data Size
 
 **Metric ID:** data.info.feas.3  
 **Persistent URI:** https://example.org/metric/data.info.feas.3
@@ -2731,7 +2732,7 @@ For each dataset distribution in scope, the maDMP `distribution.byte_size` match
 At least one distribution has a size mismatch between maDMP and destination repository, or required repository metadata cannot be retrieved.
 
 ### Associated Test(s)
-- [Check final dataset size matches destination size](tests.md#test-check-final-dataset-size-matches-destination-size)
+- [Check final dataset size matches destination size](tests.md#test-31-check-final-dataset-size-matches-destination-size)
 
 ### JSON-LD (Metric)
 ```json
@@ -2817,7 +2818,7 @@ At least one distribution has a size mismatch between maDMP and destination repo
 
 ---
 
-## Metric: DMP Common Standard Field Compliance
+## Metric 25: DMP Common Standard Field Compliance
 
 **Metric ID:** meta.comp.1  
 **Persistent URI:** https://example.org/metric/meta.comp.1
@@ -2842,7 +2843,7 @@ The maDMP JSON validates successfully against the DMP Common Standard JSON Schem
 The maDMP JSON fails schema validation (one or more validation errors), including type mismatches, missing required fields, or invalid structures.
 
 ### Associated Test(s)
-- [Check maDMP JSON Validates Against DMP Common Standard Schema](tests.md#test-validate-madmp-json-against-dmp-common-standard-schema)
+- [Check maDMP JSON Validates Against DMP Common Standard Schema](tests.md#test-32-check-madmp-json-validates-against-dmp-common-standard-schema)
 
 ### JSON-LD (Metric)
 ```json
@@ -2928,7 +2929,7 @@ The maDMP JSON fails schema validation (one or more validation errors), includin
 
 ---
 
-## Metric: Controlled Vocabularies Used in Methodology
+## Metric 26: Controlled Vocabularies Used in Methodology
 
 **Metric ID:** meta.co.1  
 **Persistent URI:** https://example.org/metric/meta.co.1
@@ -2953,7 +2954,7 @@ For dataset methodology information in scope, `dataset_methodology` includes ref
 No controlled vocabulary usage can be identified in `dataset_methodology`, or methodology information is missing where expected.
 
 ### Associated Test(s)
-- [Check dataset_methodology for controlled vocabularies](tests.md#test-check-dataset_methodology-for-controlled-vocabularies)
+- [Check dataset_methodology for controlled vocabularies](tests.md#test-33-check-dataset_methodology-for-controlled-vocabularies)
 
 ### JSON-LD (Metric)
 ```json
@@ -3039,7 +3040,7 @@ No controlled vocabulary usage can be identified in `dataset_methodology`, or me
 
 ---
 
-## Metric: Electronic Lab Notebook Referenced as a technical resource
+## Metric 27: Electronic Lab Notebook Referenced as a technical resource
 
 **Metric ID:** meta.co.2  
 **Persistent URI:** https://example.org/metric/meta.co.2
@@ -3064,7 +3065,7 @@ At least one `technical_resource.name` value indicates an electronic lab noteboo
 No technical resource references an electronic lab notebook, or technical resource information is missing where expected.
 
 ### Associated Test(s)
-- [Check technical_resource.name for electronic lab notebook reference](tests.md#test-check-technical_resourcename-for-electronic-lab-notebook-reference)
+- [Check technical_resource.name for electronic lab notebook reference](tests.md#test-34-check-technical_resourcename-for-electronic-lab-notebook-reference)
 
 ### JSON-LD (Metric)
 ```json
@@ -3148,7 +3149,7 @@ No technical resource references an electronic lab notebook, or technical resour
 }
 ```
 
-## Metric: ReadMe File Reference
+## Metric 28: ReadMe File Reference
 
 **Metric ID:** meta.qual.2  
 **Persistent URI:** https://example.org/metric/meta.qual.2
@@ -3173,7 +3174,7 @@ At least one related identifier entry indicates a ReadMe file through its `resou
 No related identifier entry indicates a ReadMe file, or related identifier information is missing where expected.
 
 ### Associated Test(s)
-- [Check related_identifier resource_type for ReadMe file](tests.md#test-check-related_identifier-resource_type-for-readme-file)
+- [Check related_identifier resource_type for ReadMe file](tests.md#test-35-check-related_identifier-resource_type-for-readme-file)
 
 ### JSON-LD (Metric)
 ```json
@@ -3241,7 +3242,7 @@ No related identifier entry indicates a ReadMe file, or related identifier infor
 }
 ```
 
-## Metric: Metadata Standards Used
+## Metric 29: Metadata Standards Used
 
 **Metric ID:** meta.stand.comp.1  
 **Persistent URI:** https://example.org/metric/meta.stand.comp.1
@@ -3266,7 +3267,7 @@ For each metadata standard in scope, `metadata_standard_id` is present and can b
 `metadata_standard_id` is missing, or one or more referenced metadata standards cannot be found in the target registries.
 
 ### Associated Test(s)
-- [Check metadata_standard_id is registered in metadata registries](tests.md#test-check-metadata_standard_id-is-registered-in-metadata-registries)
+- [Check metadata_standard_id is registered in metadata registries](tests.md#test-36-check-metadata_standard_id-is-registered-in-metadata-registries)
 
 ### JSON-LD (Metric)
 ```json
@@ -3334,7 +3335,7 @@ For each metadata standard in scope, `metadata_standard_id` is present and can b
 }
 ```
 
-## Metric: Electronic Lab Notebook Linked
+## Metric 31: Electronic Lab Notebook Linked
 
 **Metric ID:** meta.doc.qual.1
 **Persistent URI:** https://example.org/metric/meta.doc.qual.1
@@ -3359,7 +3360,7 @@ For at least one dataset in scope, a `related_identifier` entry exists that refe
 No dataset contains a `related_identifier` or `technical_resource.name` entry that can be linked to an electronic lab notebook.
 
 ### Associated Test(s)
-- [Check ELN dataset linked via related_ids](tests.md#test-check-eln-dataset-linked-via-related_ids)
+- [Check ELN dataset linked via related_ids](tests.md#test-38-check-eln-dataset-linked-via-related_ids)
 
 ### JSON-LD (Metric)
 ```json
@@ -3441,7 +3442,7 @@ No dataset contains a `related_identifier` or `technical_resource.name` entry th
 
 ---
 
-## Metric: Use of Open File Formats for datasets
+## Metric 30: Use of Open File Formats for datasets
 
 **Metric ID:** meta.form.op.1  
 **Persistent URI:** https://example.org/metric/meta.form.op.1
@@ -3466,7 +3467,7 @@ For each dataset distribution in scope, the declared `distribution_format` (or e
 At least one declared dataset format is not open, cannot be classified as open, or format information is missing where expected.
 
 ### Associated Test(s)
-- [Check distribution format is open](tests.md#test-check-distribution-format-is-open)
+- [Check distribution format is open](tests.md#test-37-check-distribution-format-is-open)
 
 ### JSON-LD (Metric)
 ```json
@@ -3551,7 +3552,7 @@ At least one declared dataset format is not open, cannot be classified as open, 
 ```
 ---
 
-## Metric: Existence of Dataset Documentation
+## Metric 32: Existence of Dataset Documentation
 
 **Metric ID:** meta.feas.1
 **Persistent URI:** https://example.org/metric/meta.feas.1
@@ -3576,7 +3577,7 @@ For at least one dataset in scope, a `technical_resource` entry exists with a no
 No dataset contains a `technical_resource` entry, or all `technical_resource` entries are missing both `name` and `technical_resource_id`.
 
 ### Associated Test(s)
-- [Check technical_resource for dataset documentation](tests.md#test-check-technical_resource-for-dataset-documentation)
+- [Check technical_resource for dataset documentation](tests.md#test-39-check-technical_resource-for-dataset-documentation)
 
 ### JSON-LD (Metric)
 ```json
@@ -3658,7 +3659,7 @@ No dataset contains a `technical_resource` entry, or all `technical_resource` en
 
 ---
 
-## Metric: Quality Control Methods Stated
+## Metric 33: Quality Control Methods Stated
 
 **Metric ID:** qc.qual.1
 **Persistent URI:** https://example.org/metric/qc.qual.1
@@ -3683,7 +3684,7 @@ For at least one dataset in scope, the `data_quality_assurance` field is present
 No dataset contains a `data_quality_assurance` field, or all present values are empty or missing.
 
 ### Associated Test(s)
-- [Check data_quality_assurance for quality control methods](tests.md#test-check-data_quality_assurance-for-quality-control-methods)
+- [Check data_quality_assurance for quality control methods](tests.md#test-40-check-data_quality_assurance-for-quality-control-methods)
 
 ### JSON-LD (Metric)
 ```json
@@ -3765,7 +3766,7 @@ No dataset contains a `data_quality_assurance` field, or all present values are 
 
 ---
 
-## Metric: Data Storage Location mentioned in the DMP
+## Metric 34: Data Storage Location mentioned in the DMP
 
 **Metric ID:** store.cov.1
 **Persistent URI:** https://example.org/metric/store.cov.1
@@ -3790,7 +3791,7 @@ For at least one dataset distribution in scope, a `host` object is present conta
 No dataset distribution contains a `host` object, or all present `host` entries are missing both `title` and `url`.
 
 ### Associated Test(s)
-- [Check host.title and host.url for storage location](tests.md#test-check-hosttitle-and-hosturl-for-storage-location)
+- [Check host.title and host.url for storage location](tests.md#test-41-check-hosttitle-and-hosturl-for-storage-location)
 
 ### JSON-LD (Metric)
 ```json
@@ -3872,7 +3873,7 @@ No dataset distribution contains a `host` object, or all present `host` entries 
 
 ---
 
-## Metric: Use of Secure Storage for the dataset in a trusted repository
+## Metric 35: Use of Secure Storage for the dataset in a trusted repository
 
 **Metric ID:** store.cov.2
 **Persistent URI:** https://example.org/metric/store.cov.2
@@ -3897,7 +3898,7 @@ For at least one dataset distribution in scope, the `host` object is present and
 No dataset distribution declares a `host`, or all declared hosts cannot be identified as a trusted repository (e.g., reference to personal storage, local device, or missing host information).
 
 ### Associated Test(s)
-- [Check host for trusted repository storage](tests.md#test-check-host-for-trusted-repository-storage)
+- [Check host for trusted repository storage](tests.md#test-42-check-host-for-trusted-repository-storage)
 
 ### JSON-LD (Metric)
 ```json
@@ -3979,7 +3980,7 @@ No dataset distribution declares a `host`, or all declared hosts cannot be ident
 
 ---
 
-## Metric: Alignment of Storage and Backup with Information Sensitivity
+## Metric 36: Alignment of Storage and Backup with Information Sensitivity
 
 **Metric ID:** store.comp.1
 **Persistent URI:** https://example.org/metric/store.comp.1
@@ -4006,8 +4007,8 @@ For at least one dataset in scope:
 At least one dataset is missing `sensitive_data`, or the declared storage and backup properties (`security_and_privacy`, `backup_type`) are absent or inconsistent with the sensitivity classification.
 
 ### Associated Test(s)
-- [Check sensitive_data classification is assigned](tests.md#test-check-sensitive_data-classification-is-assigned)
-- [Check host security and backup reflect sensitivity level](tests.md#test-check-host-security-and-backup-reflect-sensitivity-level)
+- [Check sensitive_data classification is assigned](tests.md#test-43-check-sensitive_data-classification-is-assigned)
+- [Check host security and backup reflect sensitivity level](tests.md#test-44-check-host-security-and-backup-reflect-sensitivity-level)
 
 ### JSON-LD (Metric)
 ```json
@@ -4093,7 +4094,7 @@ At least one dataset is missing `sensitive_data`, or the declared storage and ba
 
 ---
 
-## Metric: Back up Responsibility
+## Metric 37: Back up Responsibility
 
 **Metric ID:** store.cov.3
 **Persistent URI:** https://example.org/metric/store.cov.3
@@ -4118,7 +4119,7 @@ At least one `contributor` entry is present with a `role` value that indicates r
 No `contributor` entry exists, or no contributor has a `role` value that can be associated with backup responsibilities.
 
 ### Associated Test(s)
-- [Check contributor.role for backup responsibility](tests.md#test-check-contributorrole-for-backup-responsibility)
+- [Check contributor.role for backup responsibility](tests.md#test-45-check-contributorrole-for-backup-responsibility)
 
 ### JSON-LD (Metric)
 ```json
@@ -4200,7 +4201,7 @@ No `contributor` entry exists, or no contributor has a `role` value that can be 
 
 ---
 
-## Metric: Back up Frequency
+## Metric 38: Back up Frequency
 
 **Metric ID:** store.co.1
 **Persistent URI:** https://example.org/metric/store.co.1
@@ -4225,7 +4226,7 @@ For at least one dataset distribution in scope, the `host.backup_frequency` fiel
 No dataset distribution contains a `host` object with a `backup_frequency` field, or all present values are empty or missing.
 
 ### Associated Test(s)
-- [Check backup_frequency is declared](tests.md#test-check-backup_frequency-is-declared)
+- [Check backup_frequency is declared](tests.md#test-46-check-backup_frequency-is-declared)
 
 ### JSON-LD (Metric)
 ```json
@@ -4307,7 +4308,7 @@ No dataset distribution contains a `host` object with a `backup_frequency` field
 
 ---
 
-## Metric: Version Control Practices for Software
+## Metric 39: Version Control Practices for Software
 
 **Metric ID:** store.comp.3
 **Persistent URI:** https://example.org/metric/store.comp.3
@@ -4332,7 +4333,7 @@ For at least one dataset or technical resource in scope, the maDMP includes a me
 No mention of a version control system can be found in any `technical_resource` or equivalent field, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
+- [Check host.id matches Zenodo deposit location](tests.md#test-47-check-hostid-matches-zenodo-deposit-location)
 
 ### JSON-LD (Metric)
 ```json
@@ -4414,7 +4415,7 @@ No mention of a version control system can be found in any `technical_resource` 
 
 ---
 
-## Metric: Stored Dataset Location Confirmed
+## Metric 40: Stored Dataset Location Confirmed
 
 **Metric ID:** stor.feas.1
 **Persistent URI:** https://example.org/metric/stor.feas.1
@@ -4439,7 +4440,7 @@ The `host.id` declared in the maDMP resolves to the same repository or record id
 The `host.id` in the maDMP is absent, does not resolve, or does not match the identifier of the actual deposit location in the target repository.
 
 ### Associated Test(s)
-- [Check host.id matches Zenodo deposit location](tests.md#test-check-hostid-matches-zenodo-deposit-location)
+- [Check host.id matches Zenodo deposit location](tests.md#test-47-check-hostid-matches-zenodo-deposit-location)
 
 ### JSON-LD (Metric)
 ```json
@@ -4521,7 +4522,7 @@ The `host.id` in the maDMP is absent, does not resolve, or does not match the id
 
 ---
 
-## Metric: Security Measures Implementation
+## Metric 41: Security Measures Implementation
 
 **Metric ID:** secur.co.1
 **Persistent URI:** https://example.org/metric/secur.co.1
@@ -4546,7 +4547,7 @@ For at least one dataset distribution in scope, a `security_and_privacy` object 
 No dataset distribution contains a `security_and_privacy` object, or all present entries are missing a `title` or have an empty value.
 
 ### Associated Test(s)
-- [Check security_and_privacy.title for security measures](tests.md#test-check-security_and_privacytitle-for-security-measures)
+- [Check security_and_privacy.title for security measures](tests.md#test-48-check-security_and_privacytitle-for-security-measures)
 
 ### JSON-LD (Metric)
 ```json
@@ -4628,7 +4629,7 @@ No dataset distribution contains a `security_and_privacy` object, or all present
 
 ---
 
-## Metric: Sensitive Data Protection Description
+## Metric 42: Sensitive Data Protection Description
 
 **Metric ID:** secur.co.2
 **Persistent URI:** https://example.org/metric/secur.co.2
@@ -4653,7 +4654,7 @@ For at least one dataset where `sensitive_data` is set to true (or equivalent), 
 A dataset is flagged as sensitive but has no `security_and_privacy` entry, or the `description` field is absent, empty, or contains no reference to access rights management.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description for access rights management](tests.md#test-check-security_and_privacydescription-for-access-rights-management)
+- [Check security_and_privacy.description for access rights management](tests.md#test-49-check-security_and_privacydescription-for-access-rights-management)
 
 ### JSON-LD (Metric)
 ```json
@@ -4735,7 +4736,7 @@ A dataset is flagged as sensitive but has no `security_and_privacy` entry, or th
 
 ---
 
-## Metric: Authorised Access Control
+## Metric 43: Authorised Access Control
 
 **Metric ID:** secur.co.3
 **Persistent URI:** https://example.org/metric/secur.co.3
@@ -4760,7 +4761,7 @@ For at least one dataset distribution in scope, a `security_and_privacy` entry i
 No dataset distribution contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control for authorised users.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description for authorised access controls](tests.md#test-check-security_and_privacydescription-for-authorised-access-controls)
+- [Check security_and_privacy.description for authorised access controls](tests.md#test-50-check-security_and_privacydescription-for-authorised-access-controls)
 
 ### JSON-LD (Metric)
 ```json
@@ -4842,7 +4843,7 @@ No dataset distribution contains a `security_and_privacy` entry, or all present 
 
 ---
 
-## Metric: Access Control and User Management
+## Metric 44: Access Control and User Management
 
 **Metric ID:** secur.co.4
 **Persistent URI:** https://example.org/metric/secur.co.4
@@ -4867,7 +4868,7 @@ For at least one dataset where sensitive data is present, a `security_and_privac
 No dataset containing sensitive data includes a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access control and user permission management.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description for access control and user permissions](tests.md#test-check-security_and_privacydescription-for-access-control-and-user-permissions)
+- [Check security_and_privacy.description for access control and user permissions](tests.md#test-51-check-security_and_privacydescription-for-access-control-and-user-permissions)
 
 ### JSON-LD (Metric)
 ```json
@@ -4949,7 +4950,7 @@ No dataset containing sensitive data includes a `security_and_privacy` entry, or
 
 ---
 
-## Metric: Required Access Procedures
+## Metric 45: Required Access Procedures
 
 **Metric ID:** secur.co.5
 **Persistent URI:** https://example.org/metric/secur.co.5
@@ -4974,7 +4975,7 @@ For at least one dataset in scope, a `security_and_privacy` entry is present wit
 No dataset contains a `security_and_privacy` entry, or all present `description` values are absent, empty, or contain no reference to access procedures for restricted or sensitive data.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description for access procedures](tests.md#test-check-security_and_privacydescription-for-access-procedures)
+- [Check security_and_privacy.description for access procedures](tests.md#test-52-check-security_and_privacydescription-for-access-procedures)
 
 ### JSON-LD (Metric)
 ```json
@@ -5056,7 +5057,7 @@ No dataset contains a `security_and_privacy` entry, or all present `description`
 
 ---
 
-## Metric: GDPR and Ethics Compliance
+## Metric 46: GDPR and Ethics Compliance
 
 **Metric ID:** secur.comp.1
 **Persistent URI:** https://example.org/metric/secur.comp.1
@@ -5081,7 +5082,7 @@ For at least one dataset in scope, either: (a) the `security_and_privacy.descrip
 No dataset contains a `security_and_privacy.description` referencing GDPR or data protection requirements, and no `ethical_issues_report` field is present or non-empty across the maDMP.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](tests.md#test-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance)
+- [Check security_and_privacy.description and ethical_issues_report for GDPR and ethics compliance](tests.md#test-53-check-security_and_privacydescription-and-ethical_issues_report-for-gdpr-and-ethics-compliance)
 
 ### JSON-LD (Metric)
 ```json
@@ -5163,7 +5164,7 @@ No dataset contains a `security_and_privacy.description` referencing GDPR or dat
 
 ---
 
-## Metric: Final Security Measures Implementation
+## Metric 47: Final Security Measures Implementation
 
 **Metric ID:** secur.feas.1
 **Persistent URI:** https://example.org/metric/secur.feas.1
@@ -5188,7 +5189,7 @@ For at least one dataset distribution in scope, a `security_and_privacy` entry i
 No dataset distribution contains a `security_and_privacy` entry with a non-empty `title`, indicating that no security measures have been confirmed as implemented at the destination.
 
 ### Associated Test(s)
-- [Check security_and_privacy.title for implemented security measures at destination](tests.md#test-check-security_and_privacytitle-for-implemented-security-measures-at-destination)
+- [Check security_and_privacy.title for implemented security measures at destination](tests.md#test-54-check-security_and_privacytitle-for-implemented-security-measures-at-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -5270,7 +5271,7 @@ No dataset distribution contains a `security_and_privacy` entry with a non-empty
 
 ---
 
-## Metric: Sensitive Data Using Method
+## Metric 48: Sensitive Data Using Method
 
 **Metric ID:** sens.secure.co.1
 **Persistent URI:** https://example.org/metric/sens.secure.co.1
@@ -5295,7 +5296,7 @@ For at least one dataset where `sensitive_data` is set to true (or equivalent), 
 A dataset is flagged as sensitive but has no `security_and_privacy` entry, or all present `description` values are absent or empty, with no data protection method described.
 
 ### Associated Test(s)
-- [Check security_and_privacy.description for data protection method when sensitive_data is true](tests.md#test-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true)
+- [Check security_and_privacy.description for data protection method when sensitive_data is true](tests.md#test-55-check-security_and_privacydescription-for-data-protection-method-when-sensitive_data-is-true)
 
 ### JSON-LD (Metric)
 ```json
@@ -5377,7 +5378,7 @@ A dataset is flagged as sensitive but has no `security_and_privacy` entry, or al
 
 ---
 
-## Metric: Provision of Anonymised Synthetic Data
+## Metric 49: Provision of Anonymised Synthetic Data
 
 **Metric ID:** sens.secure.co.2
 **Persistent URI:** https://example.org/metric/sens.secure.co.2
@@ -5402,7 +5403,7 @@ For at least one dataset in scope, a `security_and_privacy` entry is present who
 No dataset contains a `security_and_privacy` entry, or all present entries contain no reference to the provision of anonymised or synthetic data.
 
 ### Associated Test(s)
-- [Check security_and_privacy for anonymised synthetic data provision](tests.md#test-check-security_and_privacy-for-anonymised-synthetic-data-provision)
+- [Check security_and_privacy for anonymised synthetic data provision](tests.md#test-56-check-security_and_privacy-for-anonymised-synthetic-data-provision)
 
 ### JSON-LD (Metric)
 ```json
@@ -5484,7 +5485,7 @@ No dataset contains a `security_and_privacy` entry, or all present entries conta
 
 ---
 
-## Metric: Statement of No Data Restrictions
+## Metric 50: Statement of No Data Restrictions
 
 **Metric ID:** data.restrict.co.3
 **Persistent URI:** https://example.org/metric/data.restrict.co.3
@@ -5509,7 +5510,7 @@ For at least one dataset distribution in scope, the `rights` field is present an
 No dataset distribution contains a `rights` field, or all present `rights` values indicate restrictions or are ambiguous about the absence of restrictions.
 
 ### Associated Test(s)
-- [Check rights for statement of no data restrictions](tests.md#test-check-rights-for-statement-of-no-data-restrictions)
+- [Check rights for statement of no data restrictions](tests.md#test-57-check-rights-for-statement-of-no-data-restrictions)
 
 ### JSON-LD (Metric)
 ```json
@@ -5591,7 +5592,7 @@ No dataset distribution contains a `rights` field, or all present `rights` value
 
 ---
 
-## Metric: Dataset License Declared
+## Metric 51: Dataset License Declared
 
 **Metric ID:** data.lice.co.1
 **Persistent URI:** https://example.org/metric/data.lice.co.1
@@ -5616,7 +5617,7 @@ For at least one dataset distribution in scope, a `license_ref` field is present
 No dataset distribution contains a `license_ref` field, or all present values are empty or missing.
 
 ### Associated Test(s)
-- [Check license_ref for dataset licence](tests.md#test-check-license_ref-for-dataset-licence)
+- [Check license_ref for dataset licence](tests.md#test-58-check-license_ref-for-dataset-licence)
 
 ### JSON-LD (Metric)
 ```json
@@ -5698,7 +5699,7 @@ No dataset distribution contains a `license_ref` field, or all present values ar
 
 ---
 
-## Metric: Software Dataset License Declared
+## Metric 52: Software Dataset License Declared
 
 **Metric ID:** soft.lice.comp.1
 **Persistent URI:** https://example.org/metric/soft.lice.comp.1
@@ -5723,7 +5724,7 @@ For at least one dataset where `type` is set to software, a `license_ref` is pre
 A dataset is typed as software but has no `license_ref`, or the declared `license_ref` does not match any recognised software licence in the SPDX registry.
 
 ### Associated Test(s)
-- [Check license_ref against SPDX for software datasets](tests.md#test-check-license_ref-against-spdx-for-software-datasets)
+- [Check license_ref against SPDX for software datasets](tests.md#test-59-check-license_ref-against-spdx-for-software-datasets)
 
 ### JSON-LD (Metric)
 ```json
@@ -5805,7 +5806,7 @@ A dataset is typed as software but has no `license_ref`, or the declared `licens
 
 ---
 
-## Metric: Data Access Agreements
+## Metric 53: Data Access Agreements
 
 **Metric ID:** data.agree.comp.2
 **Persistent URI:** https://example.org/metric/data.agree.comp.2
@@ -5830,7 +5831,7 @@ For at least one dataset in scope, the `data_access` field or a `rights` entry r
 No dataset contains a `data_access` or `rights` entry that references a data access agreement or MoU, or all present values are absent, empty, or contain no indication of a formal agreement.
 
 ### Associated Test(s)
-- [Check data_access and rights for access agreements or MoUs](tests.md#test-check-data_access-and-rights-for-access-agreements-or-mous)
+- [Check data_access and rights for access agreements or MoUs](tests.md#test-60-check-data_access-and-rights-for-access-agreements-or-mous)
 
 ### JSON-LD (Metric)
 ```json
@@ -5912,7 +5913,7 @@ No dataset contains a `data_access` or `rights` entry that references a data acc
 
 ---
 
-## Metric: Data Ownership Role Declared
+## Metric 54: Data Ownership Role Declared
 
 **Metric ID:** own.co.2
 **Persistent URI:** https://example.org/metric/own.co.2
@@ -5937,7 +5938,7 @@ At least one `contributor` entry is present with a `role` value of `owner` and n
 No `contributor` entry exists with a `role` of `owner`, or the ownership field is present but blank.
 
 ### Associated Test(s)
-- [Check contributor.role for data owner](tests.md#test-check-contributorrole-for-data-owner)
+- [Check contributor.role for data owner](tests.md#test-61-check-contributorrole-for-data-owner)
 
 ### JSON-LD (Metric)
 ```json
@@ -6019,7 +6020,7 @@ No `contributor` entry exists with a `role` of `owner`, or the ownership field i
 
 ---
 
-## Metric: Software Dataset Author Declared
+## Metric 55: Software Dataset Author Declared
 
 **Metric ID:** soft.auth.co.3
 **Persistent URI:** https://example.org/metric/soft.auth.co.3
@@ -6044,7 +6045,7 @@ For at least one dataset where `type` is set to software, a `contributor` entry 
 A dataset is typed as software but has no `contributor` entry, or no contributor has a role indicating authorship.
 
 ### Associated Test(s)
-- [Check contributor for author role when dataset type is software](tests.md#test-check-contributor-for-author-role-when-dataset-type-is-software)
+- [Check contributor for author role when dataset type is software](tests.md#test-62-check-contributor-for-author-role-when-dataset-type-is-software)
 
 ### JSON-LD (Metric)
 ```json
@@ -6126,7 +6127,7 @@ A dataset is typed as software but has no `contributor` entry, or no contributor
 
 ---
 
-## Metric: Ethical Issues Status Declared
+## Metric 56: Ethical Issues Status Declared
 
 **Metric ID:** ethics.co.1
 **Persistent URI:** https://example.org/metric/ethics.co.1
@@ -6151,7 +6152,7 @@ The `ethical_issues_exist` field is present and contains one of the accepted val
 The `ethical_issues_exist` field is absent, empty, or contains a value outside the accepted set of `yes`, `no`, or `unknown`.
 
 ### Associated Test(s)
-- [Check ethical_issues_exist for valid value](tests.md#test-check-ethical_issues_exist-for-valid-value)
+- [Check ethical_issues_exist for valid value](tests.md#test-63-check-ethical_issues_exist-for-valid-value)
 
 ### JSON-LD (Metric)
 ```json
@@ -6233,7 +6234,7 @@ The `ethical_issues_exist` field is absent, empty, or contains a value outside t
 
 ---
 
-## Metric: Ethical Issues and Review
+## Metric 57: Ethical Issues and Review
 
 **Metric ID:** ethics.co.2
 **Persistent URI:** https://example.org/metric/ethics.co.2
@@ -6258,7 +6259,7 @@ If `ethical_issues_exist` is set to `yes`, the `ethical_issues_report` field is 
 `ethical_issues_exist` is set to `yes` but the `ethical_issues_report` field is absent or empty.
 
 ### Associated Test(s)
-- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
+- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-64-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
 
 ### JSON-LD (Metric)
 ```json
@@ -6340,7 +6341,7 @@ If `ethical_issues_exist` is set to `yes`, the `ethical_issues_report` field is 
 
 ---
 
-## Metric: Justification for Absence of Ethical Issues
+## Metric 58: Justification for Absence of Ethical Issues
 
 **Metric ID:** ethics.co.3
 **Persistent URI:** https://example.org/metric/ethics.co.3
@@ -6365,7 +6366,7 @@ If `ethical_issues_exist` is set to `no`, the `ethical_issues_description` field
 `ethical_issues_exist` is set to `no` but the `ethical_issues_description` field is absent or empty, with no justification provided.
 
 ### Associated Test(s)
-- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
+- [Check ethical_issues_description is present when ethical_issues_exist is no](tests.md#test-64-check-ethical_issues_description-is-present-when-ethical_issues_exist-is-no)
 
 ### JSON-LD (Metric)
 ```json
@@ -6447,7 +6448,7 @@ If `ethical_issues_exist` is set to `no`, the `ethical_issues_description` field
 
 ---
 
-## Metric: Data Access Status Open for the Dataset
+## Metric 59: Data Access Status Open for the Dataset
 
 **Metric ID:** data.shar.op.1
 **Persistent URI:** https://example.org/metric/data.shar.op.1
@@ -6472,7 +6473,7 @@ For at least one dataset in scope, the `data_access` field is present and set to
 No dataset contains a `data_access` field, or all present values are set to `shared`, `closed`, or any value other than `open`.
 
 ### Associated Test(s)
-- [Check data_access for open status](tests.md#test-check-data_access-for-open-status)
+- [Check data_access for open status](tests.md#test-65-check-data_access-for-open-status)
 
 ### JSON-LD (Metric)
 ```json
@@ -6554,7 +6555,7 @@ No dataset contains a `data_access` field, or all present values are set to `sha
 
 ---
 
-## Metric: Data License is Present
+## Metric 60: Data License is Present
 
 **Metric ID:** data.shar.co.1
 **Persistent URI:** https://example.org/metric/data.shar.co.1
@@ -6579,8 +6580,8 @@ For at least one dataset in scope, a `distribution` entry is present and contain
 No dataset contains a `distribution` entry, or all present distributions lack a `license_ref` field or contain an empty value.
 
 ### Associated Test(s)
-- [Check distribution is present for dataset](tests.md#test-check-distribution-is-present-for-dataset)
-- [Check license_ref is present within distribution](tests.md#test-check-license_ref-is-present-within-distribution)
+- [Check distribution is present for dataset](tests.md#test-66-check-distribution-is-present-for-dataset)
+- [Check license_ref is present within distribution](tests.md#test-67-check-license_ref-is-present-within-distribution)
 
 ### JSON-LD (Metric)
 ```json
@@ -6667,7 +6668,7 @@ No dataset contains a `distribution` entry, or all present distributions lack a 
 
 ---
 
-## Metric: Data Restrictions Reference
+## Metric 61: Data Restrictions Reference
 
 **Metric ID:** data.shar.co.2
 **Persistent URI:** https://example.org/metric/data.shar.co.2
@@ -6692,7 +6693,7 @@ For at least one dataset distribution in scope, a `rights` field is present and 
 No dataset distribution contains a `rights` field, or all present values are absent or empty.
 
 ### Associated Test(s)
-- [Check rights for data restrictions reference](tests.md#test-check-rights-for-data-restrictions-reference)
+- [Check rights for data restrictions reference](tests.md#test-68-check-rights-for-data-restrictions-reference)
 
 ### JSON-LD (Metric)
 ```json
@@ -6774,7 +6775,7 @@ No dataset distribution contains a `rights` field, or all present values are abs
 
 ---
 
-## Metric: Funder's Data License
+## Metric 62: Funder's Data License
 
 **Metric ID:** data.shar.comp.1
 **Persistent URI:** https://example.org/metric/data.shar.comp.1
@@ -6799,7 +6800,7 @@ For at least one dataset distribution in scope, the `license_ref` field is prese
 No dataset distribution contains a `license_ref` field, or all present `license_ref` values do not correspond to a CC-BY licence as required by Horizon Europe RDM guidelines.
 
 ### Associated Test(s)
-- [Check distribution license_ref for Horizon Europe CC-BY compliance](tests.md#test-check-distribution-license_ref-for-horizon-europe-cc-by-compliance)
+- [Check distribution license_ref for Horizon Europe CC-BY compliance](tests.md#test-69-check-distribution-license_ref-for-horizon-europe-cc-by-compliance)
 
 ### JSON-LD (Metric)
 ```json
@@ -6881,7 +6882,7 @@ No dataset distribution contains a `license_ref` field, or all present `license_
 
 ---
 
-## Metric: Repository Access Rights Consistency Aligned
+## Metric 63: Repository Access Rights Consistency Aligned
 
 **Metric ID:** data.shar.feas.1
 **Persistent URI:** https://example.org/metric/data.shar.feas.1
@@ -6906,7 +6907,7 @@ For at least one dataset in scope, the `data_access` value at dataset level is c
 The `data_access` value at dataset level conflicts with or is not supported by the access policy of the declared destination host, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check data_access matches destination host access policy](tests.md#test-check-data_access-matches-destination-host-access-policy)
+- [Check data_access matches destination host access policy](tests.md#test-70-check-data_access-matches-destination-host-access-policy)
 
 ### JSON-LD (Metric)
 ```json
@@ -6988,7 +6989,7 @@ The `data_access` value at dataset level conflicts with or is not supported by t
 
 ---
 
-## Metric: Repository Data License Aligned with the DMP
+## Metric 64: Repository Data License Aligned with the DMP
 
 **Metric ID:** data.shar.feas.2
 **Persistent URI:** https://example.org/metric/data.shar.feas.2
@@ -7013,7 +7014,7 @@ For at least one dataset distribution in scope, the `license_ref` value is prese
 The `license_ref` value is absent, empty, or inconsistent with the licence policy of the declared destination host, indicating a mismatch between the declared data licence and the repository's requirements.
 
 ### Associated Test(s)
-- [Check distribution license_ref matches destination host licence policy](tests.md#test-check-distribution-license_ref-matches-destination-host-licence-policy)
+- [Check distribution license_ref matches destination host licence policy](tests.md#test-71-check-distribution-license_ref-matches-destination-host-licence-policy)
 
 ### JSON-LD (Metric)
 ```json
@@ -7095,7 +7096,7 @@ The `license_ref` value is absent, empty, or inconsistent with the licence polic
 
 ---
 
-## Metric: Embargo Implementation Alignment
+## Metric 65: Embargo Implementation Alignment
 
 **Metric ID:** data.shar.feas.3
 **Persistent URI:** https://example.org/metric/data.shar.feas.3
@@ -7120,7 +7121,7 @@ For at least one dataset distribution in scope, the `license.start_date` field i
 The `license.start_date` field is absent or empty, or its value is inconsistent with the embargo policy of the declared destination host, indicating a mismatch between the planned embargo date and the repository's supported availability window.
 
 ### Associated Test(s)
-- [Check distribution license.start_date matches destination embargo policy](tests.md#test-check-distribution-licensestart_date-matches-destination-embargo-policy)
+- [Check distribution license.start_date matches destination embargo policy](tests.md#test-72-check-distribution-licensestart_date-matches-destination-embargo-policy)
 
 ### JSON-LD (Metric)
 ```json
@@ -7202,7 +7203,7 @@ The `license.start_date` field is absent or empty, or its value is inconsistent 
 
 ---
 
-## Metric: Repository Data Restrictions
+## Metric 66: Repository Data Restrictions
 
 **Metric ID:** data.shar.feas.4
 **Persistent URI:** https://example.org/metric/data.shar.feas.4
@@ -7227,7 +7228,7 @@ For at least one dataset distribution in scope, the `rights` field is present an
 The `rights` field is absent or empty, or its value is inconsistent with the restriction policy of the declared destination host, indicating a mismatch between the declared data restrictions and the repository's supported access conditions.
 
 ### Associated Test(s)
-- [Check rights matches destination host restriction policy](tests.md#test-check-rights-matches-destination-host-restriction-policy)
+- [Check rights matches destination host restriction policy](tests.md#test-73-check-rights-matches-destination-host-restriction-policy)
 
 ### JSON-LD (Metric)
 ```json
@@ -7309,7 +7310,7 @@ The `rights` field is absent or empty, or its value is inconsistent with the res
 
 ---
 
-## Metric: Embargo Period License Declared
+## Metric 67: Embargo Period License Declared
 
 **Metric ID:** data.shar.comp.2
 **Persistent URI:** https://example.org/metric/data.shar.comp.2
@@ -7334,8 +7335,8 @@ Both of the following conditions are met: (1) no embargo date field is present i
 An embargo date is present in the repository host entry, or `distribution.license.start_date` is set in the maDMP, indicating a potential violation of Horizon Europe embargo policy.
 
 ### Associated Test(s)
-- [Check repository host for absence of embargo date](tests.md#test-check-repository-host-for-absence-of-embargo-date)
-- [Check distribution.license.start_date for absence in maDMP](tests.md#test-check-distributionlicensestart_date-for-absence-in-madmp)
+- [Check repository host for absence of embargo date](tests.md#test-74-check-repository-host-for-absence-of-embargo-date)
+- [Check distribution.license.start_date for absence in maDMP](tests.md#test-75-check-distributionlicensestart_date-for-absence-in-madmp)
 
 ### JSON-LD (Metric)
 ```json
@@ -7422,7 +7423,7 @@ An embargo date is present in the repository host entry, or `distribution.licens
 
 ---
 
-## Metric: Thematic Data Repositories Referenced
+## Metric 68: Thematic Data Repositories Referenced
 
 **Metric ID:** repo.co.3
 **Persistent URI:** https://example.org/metric/repo.co.3
@@ -7447,7 +7448,7 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` v
 No dataset distribution contains a `host.title` or `host.url` value that matches a thematic repository in the OpenAIRE Graph repositories API or equivalent SKG API registry, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check host.title and host.url against thematic repository registries](tests.md#test-check-hosttitle-and-hosturl-against-thematic-repository-registries)
+- [Check host.title and host.url against thematic repository registries](tests.md#test-76-check-hosttitle-and-hosturl-against-thematic-repository-registries)
 
 ### JSON-LD (Metric)
 ```json
@@ -7529,7 +7530,7 @@ No dataset distribution contains a `host.title` or `host.url` value that matches
 
 ---
 
-## Metric: Repository FAIRness Conformation
+## Metric 69: Repository FAIRness Conformation
 
 **Metric ID:** repo.comp.2
 **Persistent URI:** https://example.org/metric/repo.comp.2
@@ -7554,7 +7555,7 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` m
 No dataset distribution contains a `host.title` or `host.url` that matches a FAIR-assessed repository in OpenAIRE or FAIRsharing, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](tests.md#test-check-host-against-openaire-and-fairsharing-fair-benchmarks)
+- [Check host against OpenAIRE and FAIRsharing FAIR benchmarks](tests.md#test-77-check-host-against-openaire-and-fairsharing-fair-benchmarks)
 
 ### JSON-LD (Metric)
 ```json
@@ -7636,7 +7637,7 @@ No dataset distribution contains a `host.title` or `host.url` that matches a FAI
 
 ---
 
-## Metric: Trusted Repository is Used
+## Metric 70: Trusted Repository is Used
 
 **Metric ID:** repo.comp.3
 **Persistent URI:** https://example.org/metric/repo.comp.3
@@ -7661,7 +7662,7 @@ For at least one dataset distribution in scope, the `host.title` or `host.url` m
 No dataset distribution contains a `host.title` or `host.url` that matches an entry in a recognised trusted repository registry, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check host against trusted repository registry benchmark](tests.md#test-check-host-against-trusted-repository-registry-benchmark)
+- [Check host against trusted repository registry benchmark](tests.md#test-78-check-host-against-trusted-repository-registry-benchmark)
 
 ### JSON-LD (Metric)
 ```json
@@ -7743,7 +7744,7 @@ No dataset distribution contains a `host.title` or `host.url` that matches an en
 
 ---
 
-## Metric: Verification of Back-up Strategy
+## Metric 71: Verification of Back-up Strategy
 
 **Metric ID:** repo.co.4
 **Persistent URI:** https://example.org/metric/repo.co.4
@@ -7768,7 +7769,7 @@ For at least one dataset distribution in scope, the `host` entry contains both a
 No dataset distribution contains a `host` entry with both `backup_frequency` and `backup_type` fields present and non-empty, indicating that no back-up strategy has been documented.
 
 ### Associated Test(s)
-- [Check host.backup_frequency and host.backup_type for back-up strategy](tests.md#test-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy)
+- [Check host.backup_frequency and host.backup_type for back-up strategy](tests.md#test-79-check-hostbackup_frequency-and-hostbackup_type-for-back-up-strategy)
 
 ### JSON-LD (Metric)
 ```json
@@ -7850,7 +7851,7 @@ No dataset distribution contains a `host` entry with both `backup_frequency` and
 
 ---
 
-## Metric: Certification of Repository
+## Metric 72: Certification of Repository
 
 **Metric ID:** repo.co.5
 **Persistent URI:** https://example.org/metric/repo.co.5
@@ -7875,7 +7876,7 @@ For at least one dataset distribution in scope, the `host` entry contains a non-
 No dataset distribution contains a `host` entry with a `certified_with` field present and non-empty, indicating that no repository certification has been documented.
 
 ### Associated Test(s)
-- [Check certified_with exists in host](tests.md#test-check-certified_with-exists-in-host)
+- [Check certified_with exists in host](tests.md#test-80-check-certified_with-exists-in-host)
 
 ### JSON-LD (Metric)
 ```json
@@ -7957,7 +7958,7 @@ No dataset distribution contains a `host` entry with a `certified_with` field pr
 
 ---
 
-## Metric: Used Resources for Preservation
+## Metric 73: Used Resources for Preservation
 
 **Metric ID:** repo.co.7
 **Persistent URI:** https://example.org/metric/repo.co.7
@@ -7982,7 +7983,7 @@ At least one `cost` entry is present with non-empty `currency_code`, `value`, an
 No `cost` entry is present, or no present `cost` entry contains a `title` or `description` referencing preservation, indicating that no resources for long-term preservation have been declared.
 
 ### Associated Test(s)
-- [Check cost title or description for preservation reference](tests.md#test-check-cost-title-or-description-for-preservation-reference)
+- [Check cost title or description for preservation reference](tests.md#test-81-check-cost-title-or-description-for-preservation-reference)
 
 ### JSON-LD (Metric)
 ```json
@@ -8064,7 +8065,7 @@ No `cost` entry is present, or no present `cost` entry contains a `title` or `de
 
 ---
 
-## Metric: Repository Policy is Present
+## Metric 74: Repository Policy is Present
 
 **Metric ID:** repo.co.6
 **Persistent URI:** https://example.org/metric/repo.co.6
@@ -8089,7 +8090,7 @@ For at least one dataset distribution in scope, the `host_id.identifier` and `ho
 No dataset distribution contains a `host_id.identifier` or `host_id.type` that resolves to a FAIRsharing repository entry with associated policies, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check host_id against FAIRsharing for repository policy](tests.md#test-check-host_id-against-fairsharing-for-repository-policy)
+- [Check host_id against FAIRsharing for repository policy](tests.md#test-82-check-host_id-against-fairsharing-for-repository-policy)
 
 ### JSON-LD (Metric)
 ```json
@@ -8171,7 +8172,7 @@ No dataset distribution contains a `host_id.identifier` or `host_id.type` that r
 
 ---
 
-## Metric: Repository Identifier Accuracy
+## Metric 75: Repository Identifier Accuracy
 
 **Metric ID:** repo.feas.1
 **Persistent URI:** https://example.org/metric/repo.feas.1
@@ -8196,7 +8197,7 @@ For at least one dataset in scope, the `dataset_id` value resolves via its DOI U
 The `dataset_id` value is absent or empty, does not resolve via DOI URL, or resolves to a repository other than the declared destination, indicating a mismatch between the dataset identifier and its intended destination.
 
 ### Associated Test(s)
-- [Check dataset_id resolves to declared destination via DOI URL](tests.md#test-check-dataset_id-resolves-to-declared-destination-via-doi-url)
+- [Check dataset_id resolves to declared destination via DOI URL](tests.md#test-83-check-dataset_id-resolves-to-declared-destination-via-doi-url)
 
 ### JSON-LD (Metric)
 ```json
@@ -8278,7 +8279,7 @@ The `dataset_id` value is absent or empty, does not resolve via DOI URL, or reso
 
 ---
 
-## Metric: Long-Term Preservation Dataset
+## Metric 76: Long-Term Preservation Dataset
 
 **Metric ID:** repo.feas.2
 **Persistent URI:** https://example.org/metric/repo.feas.2
@@ -8303,7 +8304,7 @@ For at least one dataset distribution in scope, a non-empty `preservation_statem
 No dataset distribution contains both a non-empty `preservation_statement` and a declared `host` entry, indicating that no intention to store the dataset in a long-term storage system has been documented.
 
 ### Associated Test(s)
-- [Check preservation_statement and host for long-term storage intention](tests.md#test-check-preservation_statement-and-host-for-long-term-storage-intention)
+- [Check preservation_statement and host for long-term storage intention](tests.md#test-84-check-preservation_statement-and-host-for-long-term-storage-intention)
 
 ### JSON-LD (Metric)
 ```json
@@ -8385,7 +8386,7 @@ No dataset distribution contains both a non-empty `preservation_statement` and a
 
 ---
 
-## Metric: Repository Compatibility with Dataset Characteristics
+## Metric 77: Repository Compatibility with Dataset Characteristics
 
 **Metric ID:** repo.feas.4
 **Persistent URI:** https://example.org/metric/repo.feas.4
@@ -8410,8 +8411,8 @@ For at least one dataset in scope, both `dataset.keyword` values match keywords 
 No dataset contains `keyword` or `language` values that match the characteristics supported by the declared destination repository in Zenodo, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check dataset.keyword against Zenodo keywords](tests.md#test-check-datasetkeyword-against-zenodo-keywords)
-- [Check dataset.language against Zenodo language support](tests.md#test-check-datasetlanguage-against-zenodo-language-support)
+- [Check dataset.keyword against Zenodo keywords](tests.md#test-85-check-datasetkeyword-against-zenodo-keywords)
+- [Check dataset.language against Zenodo language support](tests.md#test-86-check-datasetlanguage-against-zenodo-language-support)
 
 ### JSON-LD (Metric)
 ```json
@@ -8498,7 +8499,7 @@ No dataset contains `keyword` or `language` values that match the characteristic
 
 ---
 
-## Metric: Data External Resources Included in the DMP
+## Metric 78: Data External Resources Included in the DMP
 
 **Metric ID:** data.exteresource.co.1
 **Persistent URI:** https://example.org/metric/data.exteresource.co.1
@@ -8523,7 +8524,7 @@ For at least one dataset in scope, a `related_identifier` entry is present conta
 No dataset contains a `related_identifier` entry with a non-empty `identifier` field, indicating that no external resources have been declared in the DMP.
 
 ### Associated Test(s)
-- [Check related_identifier.identifier for external resources](tests.md#test-check-related_identifieridentifier-for-external-resources)
+- [Check related_identifier.identifier for external resources](tests.md#test-88-check-related_identifieridentifier-for-external-resources)
 
 ### JSON-LD (Metric)
 ```json
@@ -8605,7 +8606,7 @@ No dataset contains a `related_identifier` entry with a non-empty `identifier` f
 
 ---
 
-## Metric: Metadata Standard Specified in the DMP
+## Metric 79: Metadata Standard Specified in the DMP
 
 **Metric ID:** data.exteresource.co.2
 **Persistent URI:** https://example.org/metric/data.exteresource.co.2
@@ -8630,7 +8631,7 @@ For at least one dataset in scope, a `related_identifier` entry is present conta
 No dataset contains a `related_identifier` entry with non-empty `metadata_scheme`, `scheme_type`, and `scheme_uri` fields, indicating that no metadata standard or format has been declared in the DMP.
 
 ### Associated Test(s)
-- [Check related_identifier for metadata standard fields](tests.md#test-check-related_identifier-for-metadata-standard-fields)
+- [Check related_identifier for metadata standard fields](tests.md#test-89-check-related_identifier-for-metadata-standard-fields)
 
 ### JSON-LD (Metric)
 ```json
@@ -8712,7 +8713,7 @@ No dataset contains a `related_identifier` entry with non-empty `metadata_scheme
 
 ---
 
-## Metric: Resolvable External Resources
+## Metric 80: Resolvable External Resources
 
 **Metric ID:** data.exteresource.feas.1
 **Persistent URI:** https://example.org/metric/data.exteresource.feas.1
@@ -8737,7 +8738,7 @@ For at least one URL present in the maDMP, the URL is syntactically valid and re
 All URLs present in the maDMP are either syntactically invalid, unreachable, or return error responses, indicating that no declared external resource link is resolvable.
 
 ### Associated Test(s)
-- [Check URLs in maDMP are valid and resolvable](tests.md#test-check-urls-in-madmp-are-valid-and-resolvable)
+- [Check URLs in maDMP are valid and resolvable](tests.md#test-90-check-urls-in-madmp-are-valid-and-resolvable)
 
 ### JSON-LD (Metric)
 ```json
@@ -8819,7 +8820,7 @@ All URLs present in the maDMP are either syntactically invalid, unreachable, or 
 
 ---
 
-## Metric: OpenAIRE Mentioned Dataset Validation
+## Metric 81: OpenAIRE Mentioned Dataset Validation
 
 **Metric ID:** data.exteresource.feas.2
 **Persistent URI:** https://example.org/metric/data.exteresource.feas.2
@@ -8844,7 +8845,7 @@ For at least one dataset in scope, the combination of `dataset_id.identifier`, `
 No dataset in scope produces a matching record in the OpenAIRE SKG-IF API using the declared `dataset_id.identifier`, `dataset_id.type`, `dataset.title`, or `dataset.type`, or the relevant fields are absent or empty.
 
 ### Associated Test(s)
-- [Check dataset fields against OpenAIRE SKG-IF API](tests.md#test-check-dataset-fields-against-openaire-skg-if-api)
+- [Check dataset fields against OpenAIRE SKG-IF API](tests.md#test-91-check-dataset-fields-against-openaire-skg-if-api)
 
 ### JSON-LD (Metric)
 ```json
@@ -8926,7 +8927,7 @@ No dataset in scope produces a matching record in the OpenAIRE SKG-IF API using 
 
 ---
 
-## Metric: Contributor Roles Follow CRediT Taxonomy
+## Metric 82: Contributor Roles Follow CRediT Taxonomy
 
 **Metric ID:** data.exteresource.feas.3
 **Persistent URI:** https://example.org/metric/data.exteresource.feas.3
@@ -8951,7 +8952,7 @@ For at least one dataset in scope, a `contributor` entry is present whose `role`
 No dataset contains a `contributor` entry whose `role` value matches a CRediT taxonomy term, or the `contributor` field is absent or empty.
 
 ### Associated Test(s)
-- [Check contributor roles against CRediT taxonomy](tests.md#test-check-contributor-roles-against-credit-taxonomy)
+- [Check contributor roles against CRediT taxonomy](tests.md#test-92-check-contributor-roles-against-credit-taxonomy)
 
 ### JSON-LD (Metric)
 ```json
@@ -9033,7 +9034,7 @@ No dataset contains a `contributor` entry whose `role` value matches a CRediT ta
 
 ---
 
-## Metric: Dataset Persistent Identifier Declared
+## Metric 83: Dataset Persistent Identifier Declared
 
 **Metric ID:** data.pid.cov.1
 **Persistent URI:** https://example.org/metric/data.pid.cov.1
@@ -9058,7 +9059,7 @@ For at least one dataset distribution in scope, the `host` entry contains a non-
 No dataset distribution contains a `host` entry with a non-empty `pid_system` field, indicating that no persistent identifier system has been declared.
 
 ### Associated Test(s)
-- [Check host.pid_system for PID declaration](tests.md#test-check-hostpid_system-for-pid-declaration)
+- [Check host.pid_system for PID declaration](tests.md#test-93-check-hostpid_system-for-pid-declaration)
 
 ### JSON-LD (Metric)
 ```json
@@ -9140,7 +9141,7 @@ No dataset distribution contains a `host` entry with a non-empty `pid_system` fi
 
 ---
 
-## Metric: Trusted Repository Referenced
+## Metric 84: Trusted Repository Referenced
 
 **Metric ID:** data.pid.cov.2
 **Persistent URI:** https://example.org/metric/data.pid.cov.2
@@ -9165,8 +9166,8 @@ Both of the following conditions are met: (1) at least one distribution's `host`
 Either the `certified_with` field is absent or does not match a trusted registry, or `host_id.identifier` and `host_id.type` are absent, empty, or do not resolve to a valid repository link.
 
 ### Associated Test(s)
-- [Check certified_with against trusted registry](tests.md#test-check-certified_with-against-trusted-registry)
-- [Check host_id.identifier and host_id.type for valid repository link](tests.md#test-check-host_ididentifier-and-host_idtype-for-valid-repository-link)
+- [Check certified_with against trusted registry](tests.md#test-94-check-certified_with-against-trusted-registry)
+- [Check host_id.identifier and host_id.type for valid repository link](tests.md#test-95-check-host_ididentifier-and-host_idtype-for-valid-repository-link)
 
 ### JSON-LD (Metric)
 ```json
@@ -9253,7 +9254,7 @@ Either the `certified_with` field is absent or does not match a trusted registry
 
 ---
 
-## Metric: Repository Persistent Identifier System Verified
+## Metric 85: Repository Persistent Identifier System Verified
 
 **Metric ID:** data.pid.feas.1
 **Persistent URI:** https://example.org/metric/data.pid.feas.1
@@ -9278,7 +9279,7 @@ For at least one dataset distribution in scope, the `host.pid_system` value matc
 The `host.pid_system` value is absent, empty, or does not match the PID system supported by the declared destination repository in Zenodo, indicating a mismatch between the declared and actual PID provision.
 
 ### Associated Test(s)
-- [Check host.pid_system matches destination PID system in Zenodo](tests.md#test-check-hostpid_system-matches-destination-pid-system-in-zenodo)
+- [Check host.pid_system matches destination PID system in Zenodo](tests.md#test-96-check-hostpid_system-matches-destination-pid-system-in-zenodo)
 
 ### JSON-LD (Metric)
 ```json
@@ -9360,7 +9361,7 @@ The `host.pid_system` value is absent, empty, or does not match the PID system s
 
 ---
 
-## Metric: PIDs can be Resolved
+## Metric 86: PIDs can be Resolved
 
 **Metric ID:** data.pid.feas.3
 **Persistent URI:** https://example.org/metric/data.pid.feas.3
@@ -9466,7 +9467,7 @@ The `dataset_id.identifier` value is absent, empty, not of a resolvable type, or
 
 ---
 
-## Metric: Research Data Management Roles Declared
+## Metric 87: Research Data Management Roles Declared
 
 **Metric ID:** role.co.1
 **Persistent URI:** https://example.org/metric/role.co.1
@@ -9491,7 +9492,7 @@ At least one `contributor` entry is present at DMP level containing non-empty va
 No `contributor` entry is present at DMP level, or no present entry contains non-empty values for all three of `name`, `role`, and `contact`, indicating that contributor role information is incomplete or absent.
 
 ### Associated Test(s)
-- [Check dmp.contributor name, role, and contact](tests.md#test-check-dmpcontributor-name-role-and-contact)
+- [Check dmp.contributor name, role, and contact](tests.md#test-97-check-dmpcontributor-name-role-and-contact)
 
 ### JSON-LD (Metric)
 ```json
@@ -9573,7 +9574,7 @@ No `contributor` entry is present at DMP level, or no present entry contains non
 
 ---
 
-## Metric: DMP Validation by Data Steward
+## Metric 88: DMP Validation by Data Steward
 
 **Metric ID:** dmp.valid.co.2
 **Persistent URI:** https://example.org/metric/dmp.valid.co.2
@@ -9598,7 +9599,7 @@ At least one `contributor` entry is present at DMP level with a `role` value equ
 No `contributor` entry is present with a `role` value of `Data Steward`, indicating that no Data Steward has been assigned to validate the DMP.
 
 ### Associated Test(s)
-- [Check dmp.contributor.role for Data Steward](tests.md#test-check-dmpcontributorrole-for-data-steward)
+- [Check dmp.contributor.role for Data Steward](tests.md#test-98-check-dmpcontributorrole-for-data-steward)
 
 ### JSON-LD (Metric)
 ```json
@@ -9680,7 +9681,7 @@ No `contributor` entry is present with a `role` value of `Data Steward`, indicat
 
 ---
 
-## Metric: Contributors and Organisations PIDs
+## Metric 89: Contributors and Organisations PIDs
 
 **Metric ID:** role.pid.co.1
 **Persistent URI:** https://example.org/metric/role.pid.co.1
@@ -9705,7 +9706,7 @@ At least one `contributor` entry is present containing both a non-empty `contrib
 No `contributor` entry contains both a non-empty `contributor_id` and a non-empty `affiliation.affiliation_id`, indicating that contributor and/or organisational PIDs are absent or incomplete.
 
 ### Associated Test(s)
-- [Check contributor_id and affiliation.affiliation_id for PIDs](tests.md#test-check-contributor_id-and-affiliationaffiliation_id-for-pids)
+- [Check contributor_id and affiliation.affiliation_id for PIDs](tests.md#test-99-check-contributor_id-and-affiliationaffiliation_id-for-pids)
 
 ### JSON-LD (Metric)
 ```json
@@ -9787,7 +9788,7 @@ No `contributor` entry contains both a non-empty `contributor_id` and a non-empt
 
 ---
 
-## Metric: Referenced RDM Roles
+## Metric 90: Referenced RDM Roles
 
 **Metric ID:** role.feas.1
 **Persistent URI:** https://example.org/metric/role.feas.1
@@ -9812,7 +9813,7 @@ For at least one contributor declared in the maDMP, the `dmp.contributor.name`, 
 No contributor declared in the maDMP via `dmp.contributor.name`, `dmp.contributor.role`, and `dmp.contributor.contact` can be matched against `contributors.name` and `contributors.type` in the destination, or the relevant fields are absent or empty in either source.
 
 ### Associated Test(s)
-- [Check dmp.contributor fields against destination contributors](tests.md#test-check-dmpcontributor-fields-against-destination-contributors)
+- [Check dmp.contributor fields against destination contributors](tests.md#test-100-check-dmpcontributor-fields-against-destination-contributors)
 
 ### JSON-LD (Metric)
 ```json
@@ -9894,7 +9895,7 @@ No contributor declared in the maDMP via `dmp.contributor.name`, `dmp.contributo
 
 ---
 
-## Metric: Final Data Steward Validation
+## Metric 91: Final Data Steward Validation
 
 **Metric ID:** role.feas.2
 **Persistent URI:** https://example.org/metric/role.feas.2
@@ -9919,7 +9920,7 @@ At least one contributor in the maDMP has a `role` value of `Data Steward`, and 
 No contributor in the maDMP has a `role` value of `Data Steward`, or no corresponding `contributors.type` of `Other` is present in the destination, indicating that the Data Steward validation is not reflected in the destination record.
 
 ### Associated Test(s)
-- [Check Data Steward role in maDMP against contributors.type Other in destination](tests.md#test-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination)
+- [Check Data Steward role in maDMP against contributors.type Other in destination](tests.md#test-101-check-data-steward-role-in-madmp-against-contributorstype-other-in-destination)
 
 ### JSON-LD (Metric)
 ```json
@@ -10001,7 +10002,7 @@ No contributor in the maDMP has a `role` value of `Data Steward`, or no correspo
 
 ---
 
-## Metric: Referenced Contributors and Organisations PIDs
+## Metric 92: Referenced Contributors and Organisations PIDs
 
 **Metric ID:** role.feas.3
 **Persistent URI:** https://example.org/metric/role.feas.3
@@ -10026,7 +10027,7 @@ For at least one contributor declared in the maDMP, the `contributor.contributor
 No contributor declared in the maDMP has a `contributor.contributor_id` or `contributor.affiliation.affiliation_id` that can be matched against `contributors.orcid` or `contributors.affiliation` in Zenodo, or the relevant fields are absent or empty in either source.
 
 ### Associated Test(s)
-- [Check contributor PIDs in maDMP against Zenodo contributors](tests.md#test-check-contributor-pids-in-madmp-against-zenodo-contributors)
+- [Check contributor PIDs in maDMP against Zenodo contributors](tests.md#test-102-check-contributor-pids-in-madmp-against-zenodo-contributors)
 
 ### JSON-LD (Metric)
 ```json
@@ -10108,7 +10109,7 @@ No contributor declared in the maDMP has a `contributor.contributor_id` or `cont
 
 ---
 
-## Metric: Repository Cost Verified Against Actual Pricing
+## Metric 93: Repository Cost Verified Against Actual Pricing
 
 **Metric ID:** cost.comp.1
 **Persistent URI:** https://example.org/metric/cost.comp.1
@@ -10133,7 +10134,7 @@ At least one `cost` entry is present in the maDMP whose declared values are cons
 No `cost` entry is present in the maDMP, or the declared cost values do not match the actual cost of the destination repository, indicating a discrepancy between the budgeted and actual repository cost.
 
 ### Associated Test(s)
-- [Check cost in maDMP against repository cost](tests.md#test-check-cost-in-madmp-against-repository-cost)
+- [Check cost in maDMP against repository cost](tests.md#test-103-check-cost-in-madmp-against-repository-cost)
 
 ### JSON-LD (Metric)
 ```json
@@ -10215,7 +10216,7 @@ No `cost` entry is present in the maDMP, or the declared cost values do not matc
 
 ---
 
-## Metric: DMP Budget Specifications
+## Metric 94: DMP Budget Specifications
 
 **Metric ID:** cost.co.1
 **Persistent URI:** https://example.org/metric/cost.co.1
@@ -10240,7 +10241,7 @@ At least one `cost` entry is present at DMP level containing non-empty values fo
 No `cost` entry is present at DMP level, or no present entry contains the required non-empty fields, indicating that budget information for the DMP is absent or incomplete.
 
 ### Associated Test(s)
-- [Check cost fields for budget specification](tests.md#test-check-cost-fields-for-budget-specification)
+- [Check cost fields for budget specification](tests.md#test-104-check-cost-fields-for-budget-specification)
 
 ### JSON-LD (Metric)
 ```json
@@ -10322,7 +10323,7 @@ No `cost` entry is present at DMP level, or no present entry contains the requir
 
 ---
 
-## Metric: No Extra RDM Costs
+## Metric 95: No Extra RDM Costs
 
 **Metric ID:** cost.co.2
 **Persistent URI:** https://example.org/metric/cost.co.2
@@ -10347,7 +10348,7 @@ The `cost` field in the maDMP is present and its content explicitly states that 
 The `cost` field is absent, empty, or does not contain any indication that no additional resources are required, indicating that the DMP does not address the absence of extra RDM costs.
 
 ### Associated Test(s)
-- [Check cost in maDMP for no additional resources statement](tests.md#test-check-cost-in-madmp-for-no-additional-resources-statement)
+- [Check cost in maDMP for no additional resources statement](tests.md#test-105-check-cost-in-madmp-for-no-additional-resources-statement)
 
 ### JSON-LD (Metric)
 ```json
