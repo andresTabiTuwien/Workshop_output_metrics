@@ -117,7 +117,7 @@
 **Test ID:** madmp-reused-datasets-declared-json  
 **Persistent URI:** https://example.org/test/madmp-reused-datasets-declared-json
 
-**Implements:** [data.reused.co.1](metrics.md#metric-1-madmp-declares-reused-datasets)
+**Implements:** [data.reused.co.1](metrics.md#metric-1-reused-dataset-declared-in-the-dmp)
 
 ### Description
 Given a maDMP JSON document, inspect dataset objects and verify the presence of a field indicating whether the dataset is reused.
@@ -229,7 +229,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license
 
-**Implements:** [data.reused.co.3](metrics.md#metric-3-reused-data-license)
+**Implements:** [data.reused.co.3](metrics.md#metric-3-reused-dataset-has-a-declared-license)
 
 ### Description
 Checks whether the `is_reused` dataset entry includes a license reference (`license_ref`) with both a license identifier and a start date, confirming that the legal terms for reusing the dataset are declared.
@@ -344,7 +344,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-reused-dataset-pid
 
-**Implements:** [data.reused.co.2](metrics.md#metric-2-reused-data-pid)
+**Implements:** [data.reused.co.2](metrics.md#metric-2-reused-dataset-has-a-persistent-identifier)
 
 ### Description
 Checks whether the `is_reused` dataset entry includes a persistent identifier (`dataset_id`) with both an identifier value and a type, confirming that the reused dataset can be unambiguously referenced.
@@ -459,7 +459,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-present
 
-**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-dataset-has-distribution-information)
 
 ### Description
 Checks whether at least one distribution entry exists for the dataset, confirming that information about how and where the data is accessible has been provided in the maDMP.
@@ -572,7 +572,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-access
 
-**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-dataset-has-distribution-information)
 
 ### Description
 Checks whether distribution includes access information (e.g., access URL or download URL).
@@ -684,7 +684,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-title
 
-**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-data-source)
+**Implements:** [data.reused.co.4](metrics.md#metric-4-reused-dataset-has-distribution-information)
 
 ### Description
 Checks whether the distribution entry includes a non-empty title, confirming that the distribution is named and can be identified by users browsing the dataset record.
@@ -796,7 +796,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access
 
-**Implements:** [data.reused.co.5](metrics.md#metric-5-reused-data-access)
+**Implements:** [data.reused.co.5](metrics.md#metric-5-reused-dataset-has-declared-access-conditions)
 
 ### Description
 Checks whether the data access field (`data_access`) for the reused dataset is declared with a recognised value — open, shared, or closed — confirming that access conditions are explicitly stated.
@@ -910,7 +910,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-personal-data
 
-**Implements:** [data.reused.co.6](metrics.md#metric-6-reused-data-personal)
+**Implements:** [data.reused.co.6](metrics.md#metric-6-reused-dataset-contains-personal-data)
 
 ### Description
 Checks whether the `personal_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data contains personal information subject to data protection regulations.
@@ -1024,7 +1024,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-sensitive-data
 
-**Implements:** [data.reused.co.7](metrics.md#metric-7-reused-data-sensitive)
+**Implements:** [data.reused.co.7](metrics.md#metric-7-reused-dataset-contains-sensitive-data)
 
 ### Description
 Checks whether the `sensitive_data` field is present and populated for the reused dataset entry, confirming that the DMP addresses whether the data requires special handling or protection measures.
@@ -1138,7 +1138,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-url-present
 
-**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-data-url)
+**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-dataset-has-an-access-url)
 
 ### Description
 Checks whether a distribution entry with an access URL is present for the reused dataset, confirming that users can locate and retrieve the data from a declared address.
@@ -1250,7 +1250,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-url
 
-**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-data-url)
+**Implements:** [data.reused.co.8](metrics.md#metric-8-reused-dataset-has-an-access-url)
 
 ### Description
 Checks whether the `access_url` field within the distribution entry is present and non-empty, confirming that a direct link to the data is provided in the maDMP.
@@ -1362,7 +1362,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-repo-match
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-9-repository-reused-data-pid)
+**Implements:** [data.reused.feas.1](metrics.md#metric-9-reused-dataset-pid-resolves-in-the-repository)
 
 ### Description
 Checks whether the persistent identifier declared for the reused dataset in the maDMP matches the corresponding record found in the destination repository, confirming consistency between the plan and the repository.
@@ -1476,7 +1476,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-pid-resolves
 
-**Implements:** [data.reused.feas.1](metrics.md#metric-9-repository-reused-data-pid)
+**Implements:** [data.reused.feas.1](metrics.md#metric-9-reused-dataset-pid-resolves-in-the-repository)
 
 ### Description
 Checks whether the persistent identifier declared in the maDMP resolves to an accessible online resource, confirming that the PID is active, valid, and leads to the correct dataset.
@@ -1589,7 +1589,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-access-match
 
-**Implements:** [data.reused.feas.2](metrics.md#metric-10-repository-reused-data-access)
+**Implements:** [data.reused.feas.2](metrics.md#metric-10-reused-dataset-access-conditions-match-the-repository)
 
 ### Description
 Check if reused data access in DMP matches the destination.
@@ -1703,7 +1703,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-license-match
 
-**Implements:** [data.reused.feas.3](metrics.md#metric-11-repository-reused-data-license)
+**Implements:** [data.reused.feas.3](metrics.md#metric-11-reused-dataset-license-matches-the-repository)
 
 ### Description
 Checks if the license of the repository is the one mentioned in the DMP.
@@ -1929,7 +1929,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-technical-resource
 
-**Implements:** [data.new.2](metrics.md#metric-13-new-data-collection-or-creation)
+**Implements:** [data.new.2](metrics.md#metric-13-new-dataset-collection-or-creation-method-declared)
 
 ### Description
 Checks whether the `technical_resource` entries for new datasets include description, name, and identifier fields, confirming that the tools and methods used for data collection or creation are documented.
@@ -2044,7 +2044,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-access
 
-**Implements:** [data.new.3](metrics.md#metric-14-new-data-access)
+**Implements:** [data.new.3](metrics.md#metric-14-new-dataset-has-declared-access-conditions)
 
 ### Description
 Checks whether the `data_access` field for new datasets is declared with a recognised value — open, shared, or closed — confirming that access conditions for newly produced data are explicitly stated.
@@ -2158,7 +2158,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-rights
 
-**Implements:** [data.new.3](metrics.md#metric-14-new-data-access)
+**Implements:** [data.new.3](metrics.md#metric-14-new-dataset-has-declared-access-conditions)
 
 ### Description
 Checks whether the `rights` field is present and non-empty for new datasets, confirming that the legal terms or conditions governing access to the newly produced data are documented.
@@ -2272,7 +2272,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-metadata
 
-**Implements:** [data.new.4](metrics.md#metric-15-new-data-metadata)
+**Implements:** [data.new.4](metrics.md#metric-15-new-dataset-has-sufficient-metadata)
 
 ### Description
 Checks whether new dataset entries include metadata fields such as description, language, and metadata standard identifier, confirming that sufficient information is provided for users to understand and reuse the data.
@@ -2389,7 +2389,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-id-exists
 
-**Implements:** [data.new.feas.1](metrics.md#metric-16-repository-pid-resolution)
+**Implements:** [data.new.feas.1](metrics.md#metric-16-new-dataset-persistent-identifier-resolves-successfully)
 
 ### Description
 Checks whether a `dataset_id` field with a non-empty identifier is present for the new dataset, confirming that the data has been assigned a reference that can be used to locate and cite it.
@@ -2501,7 +2501,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-id-resolves
 
-**Implements:** [data.new.feas.1](metrics.md#metric-16-repository-pid-resolution)
+**Implements:** [data.new.feas.1](metrics.md#metric-16-new-dataset-persistent-identifier-resolves-successfully)
 
 ### Description
 Checks whether the persistent identifier declared in the `dataset_id` field resolves successfully to an accessible online resource, confirming that the identifier is active and leads to the correct dataset record.
@@ -2614,7 +2614,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-access-match-destination
 
-**Implements:** [data.new.feas.2](metrics.md#metric-17-repository-new-data-access)
+**Implements:** [data.new.feas.2](metrics.md#metric-17-new-dataset-access-conditions-match-the-repository)
 
 ### Description
 Check if new data access in DMP matches the destination.
@@ -2729,7 +2729,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-new-data-license-match-destination
 
-**Implements:** [data.new.feas.3](metrics.md#metric-18-repository-new-data-license)
+**Implements:** [data.new.feas.3](metrics.md#metric-18-new-dataset-license-matches-the-repository)
 
 ### Description
 Checks if the license of the repository is the one mentioned in the DMP.
@@ -3184,7 +3184,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-type-match-destination-type
 
-**Implements:** [data.info.feas.1](metrics.md#metric-22-repository-data-type)
+**Implements:** [data.info.feas.1](metrics.md#metric-22-dataset-type-matches-the-repository)
 
 ### Description
 Checks that dataset is both the type of each destination.
@@ -3299,7 +3299,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-type-align-destination-subtype
 
-**Implements:** [data.info.feas.1](metrics.md#metric-22-repository-data-type)
+**Implements:** [data.info.feas.1](metrics.md#metric-22-dataset-type-matches-the-repository)
 
 ### Description
 Checks whether the dataset type declared in the maDMP aligns with the sub-type or resource type classification used by the destination repository, confirming consistency in how the data is categorised.
@@ -3414,7 +3414,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-format-match-destination-files
 
-**Implements:** [data.info.feas.2](metrics.md#metric-23-repository-data-format)
+**Implements:** [data.info.feas.2](metrics.md#metric-23-dataset-file-format-matches-the-repository)
 
 ### Description
 Checks whether the file format declared in the maDMP for the dataset distribution matches the actual file format of the data deposited in the destination repository, confirming that the plan reflects reality.
@@ -3531,7 +3531,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-size-match-destination-size
 
-**Implements:** [data.info.feas.3](metrics.md#metric-24-repository-data-size)
+**Implements:** [data.info.feas.3](metrics.md#metric-24-dataset-size-matches-the-repository)
 
 ### Description
 Checks whether the dataset size declared in the maDMP matches the actual size of the data deposited in the destination repository, confirming that the stated and actual storage requirements are consistent.
@@ -3876,7 +3876,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-technical-resource-eln-reference
 
-**Implements:** [meta.co.2](metrics.md#metric-27-electronic-lab-notebook-referenced-as-a-technical-resource)
+**Implements:** [meta.co.2](metrics.md#metric-31-electronic-lab-notebook-linked)
 
 ### Description
 Checks whether the `technical_resource.name` field in the maDMP includes a reference to an electronic lab notebook, confirming that the use of this documentation tool has been declared in the plan.
@@ -4186,7 +4186,7 @@ pass/fail
 **Test ID:** T-DCSC  
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-format-open
 
-**Implements:** [meta.form.op.1](metrics.md#metric-30-use-of-open-file-formats-for-datasets)
+**Implements:** [meta.form.op.1](metrics.md#metric-30-dataset-distributions-use-open-file-formats)
 
 ### Description
 Checks distribution_format to be open.
@@ -6672,7 +6672,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-license-ref-spdx-software
 
-**Implements:** [soft.lice.comp.1](metrics.md#metric-52-software-dataset-license-declared)
+**Implements:** [soft.lice.comp.1](metrics.md#metric-52-software-dataset-has-a-standardised-machine-readable-license)
 
 ### Description
 Checks if the dataset type is software, then verifies that `license_ref` matches a recognised software licence from the SPDX licence list at https://spdx.org/licenses/.
@@ -7802,7 +7802,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-cc-by
 
-**Implements:** [data.shar.comp.1](metrics.md#metric-62-funders-data-license)
+**Implements:** [data.shar.comp.1](metrics.md#metric-62-dataset-license-complies-with-funder-requirements)
 
 ### Description
 Checks if the maDMP `dataset.distribution.license_ref` matches Horizon Europe RDM requirements, i.e. CC-BY.
@@ -8371,7 +8371,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-embargo-date-absent
 
-**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-period-license-declared)
+**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-declared-in-the-dmp-or-repository)
 
 ### Description
 Checks that no embargo date field exists in the destination repository host entry, in compliance with Horizon Europe embargo policy.
@@ -8484,7 +8484,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-distribution-license-start-date-absent
 
-**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-period-license-declared)
+**Implements:** [data.shar.comp.2](metrics.md#metric-67-embargo-declared-in-the-dmp-or-repository)
 
 ### Description
 Checks that `distribution.license.start_date` is not set in the maDMP, in compliance with Horizon Europe embargo policy.
@@ -8710,7 +8710,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-fair-benchmark
 
-**Implements:** [repo.comp.2](metrics.md#metric-69-repository-fairness-conformation)
+**Implements:** [repo.comp.2](metrics.md#metric-69-repository-conforms-with-fair-data-principles)
 
 ### Description
 Checks if the repository declared in `host` is aligned with FAIR data principles by cross-referencing against benchmarks in OpenAIRE and FAIRsharing.
@@ -9619,7 +9619,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-keyword-zenodo
 
-**Implements:** [repo.feas.4](metrics.md#metric-77-repository-compatibility-with-dataset-characteristics)
+**Implements:** [repo.feas.4](metrics.md#metric-77-dataset-characteristics-are-compatible-with-the-repository)
 
 ### Description
 Checks if the repository has the appropriate characteristics by verifying that `dataset.keyword` values in the maDMP match keywords supported or indexed in Zenodo.
@@ -9732,7 +9732,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-dataset-language-zenodo
 
-**Implements:** [repo.feas.4](metrics.md#metric-77-repository-compatibility-with-dataset-characteristics)
+**Implements:** [repo.feas.4](metrics.md#metric-77-dataset-characteristics-are-compatible-with-the-repository)
 
 ### Description
 Checks if the repository has the appropriate characteristics by verifying that `dataset.language` in the maDMP matches a language supported by Zenodo.
@@ -10523,7 +10523,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-pid-system
 
-**Implements:** [data.pid.cov.1](metrics.md#metric-83-dataset-persistent-identifier-declared)
+**Implements:** [data.pid.cov.1](metrics.md#metric-83-repository-supports-persistent-identifiers-for-datasets)
 
 ### Description
 Checks if the dataset has a PID by verifying that `host.pid_system` is present and non-empty in the maDMP.
@@ -10863,7 +10863,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-host-pid-system-zenodo
 
-**Implements:** [data.pid.feas.1](metrics.md#metric-85-repository-persistent-identifier-system-verified)
+**Implements:** [data.pid.feas.1](metrics.md#metric-85-dataset-pid-system-in-the-dmp-matches-the-repository)
 
 ### Description
 Checks if the PID system declared in `host.pid_system` matches the PID system provided by the destination repository, cross-referenced against Zenodo DOI metadata.
@@ -11429,7 +11429,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-data-steward-role-destination-other
 
-**Implements:** [role.feas.2](metrics.md#metric-91-final-data-steward-validation)
+**Implements:** [role.feas.2](metrics.md#metric-91-data-steward-contribution-reflected-in-the-destination-repository)
 
 ### Description
 Checks that the contribution of a Data Steward is referenced in the destination by verifying that `dmp.contributor.role` equals `Data Steward` in the maDMP and a corresponding `contributors.type` of `Other` is present in the destination.
@@ -11544,7 +11544,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-contributor-pids-zenodo
 
-**Implements:** [role.feas.3](metrics.md#metric-92-referenced-contributors-and-organisations-pids)
+**Implements:** [role.feas.3](metrics.md#metric-92-contributor-and-organisation-pids-match-the-destination-repository)
 
 ### Description
 Checks if each contributor entry includes a valid PID in the destination by cross-referencing `contributor.affiliation.affiliation_id` and `contributor.contributor_id` in the maDMP against `contributors.affiliation` and `contributors.orcid` in Zenodo.
@@ -11658,7 +11658,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-repository
 
-**Implements:** [cost.comp.1](metrics.md#metric-93-repository-cost-verified-against-actual-pricing)
+**Implements:** [cost.comp.1](metrics.md#metric-92-contributor-and-organisation-pids-match-the-destination-repository)
 
 ### Description
 Checks the cost of the repository by verifying that the `cost` declared in the maDMP is consistent with the actual cost of the destination repository.
@@ -11773,7 +11773,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-budget-specification
 
-**Implements:** [cost.co.1](metrics.md#metric-94-dmp-budget-specifications)
+**Implements:** [cost.co.1](metrics.md#metric-93-dmp-includes-a-budget-for-personnel-and-monetary-resources)
 
 ### Description
 Checks that the `cost` field in the maDMP is present and contains the required budget information for PMs and monetary resources.
@@ -11885,7 +11885,7 @@ pass/fail
 **Test ID:** T-DCSC
 **Persistent URI:** https://example.org/test/T-DCSC-cost-no-additional-resources
 
-**Implements:** [cost.co.2](metrics.md#metric-95-no-extra-rdm-costs)
+**Implements:** [cost.co.2](metrics.md#metric-94-dmp-states-no-additional-rdm-resources-are-required)
 
 ### Description
 Checks the `cost` field in the maDMP to verify that it explicitly states that no additional resources are needed for data management activities.

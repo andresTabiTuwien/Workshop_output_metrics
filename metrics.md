@@ -2,36 +2,36 @@
 
 | No. | ID | Title |
 |-----|----------|------|
-| 1 | data.reused.co.1 | [maDMP declares reused datasets](#metric-1-madmp-declares-reused-datasets) |
-| 2 | data.reused.co.2 | [Reused Data PID](#metric-2-reused-data-pid) |
-| 3 | data.reused.co.3 | [Reused Data License](#metric-3-reused-data-license) |
-| 4 | data.reused.co.4 | [Reused Data Source](#metric-4-reused-data-source) |
-| 5 | data.reused.co.5 | [Reused Data Access](#metric-5-reused-data-access) |
-| 6 | data.reused.co.6 | [Reused Data Personal](#metric-6-reused-data-personal) |
-| 7 | data.reused.co.7 | [Reused Data Sensitive](#metric-7-reused-data-sensitive) |
-| 8 | data.reused.co.8 | [Reused Data URL](#metric-8-reused-data-url) |
-| 9 | data.reused.feas.1 | [Repository Reused Data PID](#metric-9-repository-reused-data-pid) |
-| 10 | data.reused.feas.2 | [Repository Reused Data Access](#metric-10-repository-reused-data-access) |
-| 11 | data.reused.feas.3 | [Repository Reused Data License](#metric-11-repository-reused-data-license) |
+| 1 | data.reused.co.1 | [Reused Dataset Declared in the DMP](#metric-1-reused-dataset-declared-in-the-dmp) |
+| 2 | data.reused.co.2 | [Reused Dataset Has a Persistent Identifier](#metric-2-reused-dataset-has-a-persistent-identifier) |
+| 3 | data.reused.co.3 | [Reused Dataset Has a Declared License](#metric-3-reused-dataset-has-a-declared-license) |
+| 4 | data.reused.co.4 | [Reused Dataset Has Distribution Information](#metric-4-reused-dataset-has-distribution-information) |
+| 5 | data.reused.co.5 | [Reused Dataset Has Declared Access Conditions](#metric-5-reused-dataset-has-declared-access-conditions) |
+| 6 | data.reused.co.6 | [Reused Dataset Contains Personal Data](#metric-6-reused-dataset-contains-personal-data) |
+| 7 | data.reused.co.7 | [Reused Dataset Contains Sensitive Data](#metric-7-reused-dataset-contains-sensitive-data) |
+| 8 | data.reused.co.8 | [Reused Dataset Has an Access URL](#metric-8-reused-dataset-has-an-access-url) |
+| 9 | data.reused.feas.1 | [Reused Dataset PID Resolves in the Repository](#metric-9-reused-dataset-pid-resolves-in-the-repository) |
+| 10 | data.reused.feas.2 | [Reused Dataset Access Conditions Match the Repository](#metric-10-reused-dataset-access-conditions-match-the-repository) |
+| 11 | data.reused.feas.3 | [Reused Dataset License Matches the Repository](#metric-11-reused-dataset-license-matches-the-repository) |
 | 12 | data.new.1 | [New Dataset Declared in the DMP](#metric-12-new-dataset-declared-in-the-dmp) |
-| 13 | data.new.2 | [New Data Collection or Creation](#metric-13-new-data-collection-or-creation) |
-| 14 | data.new.3 | [New Data Access](#metric-14-new-data-access) |
-| 15 | data.new.4 | [New Data Metadata](#metric-15-new-data-metadata) |
-| 16 | data.new.feas.1 | [Repository PID Resolution](#metric-16-repository-pid-resolution) |
-| 17 | data.new.feas.2 | [Repository New Data Access](#metric-17-repository-new-data-access) |
-| 18 | data.new.feas.3 | [Repository New Data License](#metric-18-repository-new-data-license) |
+| 13 | data.new.2 | [New Dataset Collection or Creation Method Declared](#metric-13-new-dataset-collection-or-creation-method-declared) |
+| 14 | data.new.3 | [New Dataset Has Declared Access Conditions](#metric-14-new-dataset-has-declared-access-conditions) |
+| 15 | data.new.4 | [New Dataset Has Sufficient Metadata](#metric-15-new-dataset-has-sufficient-metadata) |
+| 16 | data.new.feas.1 | [New Dataset Persistent Identifier Resolves Successfully](#metric-16-new-dataset-persistent-identifier-resolves-successfully) |
+| 17 | data.new.feas.2 | [New Dataset Access Conditions Match the Repository](#metric-17-new-dataset-access-conditions-match-the-repository) |
+| 18 | data.new.feas.3 | [New Dataset License Matches the Repository](#metric-18-new-dataset-license-matches-the-repository) |
 | 19 | data.info.cov.1 | [Dataset Type Specified](#metric-19-dataset-type-specified) |
 | 20 | data.info.cov.2 | [Dataset File Format Specified](#metric-20-dataset-file-format-specified) |
 | 21 | data.info.cov.3 | [Dataset Size Specified](#metric-21-dataset-size-specified) |
-| 22 | data.info.feas.1 | [Repository Data Type](#metric-22-repository-data-type) |
-| 23 | data.info.feas.2 | [Repository Data Format](#metric-23-repository-data-format) |
-| 24 | data.info.feas.3 | [Repository Data Size](#metric-24-repository-data-size) |
+| 22 | data.info.feas.1 | [Dataset Type Matches the Repository](#metric-22-dataset-type-matches-the-repository) |
+| 23 | data.info.feas.2 | [Dataset File Format Matches the Repository](#metric-23-dataset-file-format-matches-the-repository) |
+| 24 | data.info.feas.3 | [Dataset Size Matches the Repository](#metric-24-dataset-size-matches-the-repository) |
 | 25 | meta.comp.1 | [DMP Common Standard Field Compliance](#metric-25-dmp-common-standard-field-compliance) |
 | 26 | meta.co.1 | [Controlled Vocabularies Used in Methodology](#metric-26-controlled-vocabularies-used-in-methodology) |
-| 27 | meta.co.2 | [Electronic Lab Notebook Referenced as a technical resource](#metric-27-electronic-lab-notebook-referenced-as-a-technical-resource) |
+| 27 | meta.co.2 | [Electronic Lab Notebook Referenced as a Technical Resource](#metric-27-electronic-lab-notebook-referenced-as-a-technical-resource) |
 | 28 | meta.qual.2 | [ReadMe File Reference](#metric-28-readme-file-reference) |
 | 29 | meta.stand.comp.1 | [Metadata Standards Used](#metric-29-metadata-standards-used) |
-| 30 | meta.form.op.1 | [Use of Open File Formats for datasets](#metric-30-use-of-open-file-formats-for-datasets) |
+| 30 | meta.form.op.1 | [Dataset Distributions Use Open File Formats](#metric-30-dataset-distributions-use-open-file-formats) |
 | 31 | meta.doc.qual.1 | [Electronic Lab Notebook Linked](#metric-31-electronic-lab-notebook-linked) |
 | 32 | meta.feas.1 | [Existence of Dataset Documentation](#metric-32-existence-of-dataset-documentation) |
 | 33 | qc.qual.1 | [Quality Control Methods Stated](#metric-33-quality-control-methods-stated) |
@@ -53,7 +53,7 @@
 | 49 | sens.secure.co.2 | [Provision of Anonymised Synthetic Data](#metric-49-provision-of-anonymised-synthetic-data) |
 | 50 | data.restrict.co.3 | [Statement of No Data Restrictions](#metric-50-statement-of-no-data-restrictions) |
 | 51 | data.lice.co.1 | [Dataset License Declared](#metric-51-dataset-license-declared) |
-| 52 | soft.lice.comp.1 | [Software Dataset License Declared](#metric-52-software-dataset-license-declared) |
+| 52 | soft.lice.comp.1 | [Software Dataset Has a Standardised Machine-Readable License](#metric-52-software-dataset-has-a-standardised-machine-readable-license) |
 | 53 | data.agree.comp.2 | [Data Access Agreements](#metric-53-data-access-agreements) |
 | 54 | own.co.2 | [Data Ownership Role Declared](#metric-54-data-ownership-role-declared) |
 | 55 | soft.auth.co.3 | [Software Dataset Author Declared](#metric-55-software-dataset-author-declared) |
@@ -63,14 +63,14 @@
 | 59 | data.shar.op.1 | [Data Access Status Open for the Dataset](#metric-59-data-access-status-open-for-the-dataset) |
 | 60 | data.shar.co.1 | [Data License is Present](#metric-60-data-license-is-present) |
 | 61 | data.shar.co.2 | [Data Restrictions Reference](#metric-61-data-restrictions-reference) |
-| 62 | data.shar.comp.1 | [Funder's Data License](#metric-62-funders-data-license) |
+| 62 | data.shar.comp.1 | [Dataset License Complies with Funder Requirements](#metric-62-dataset-license-complies-with-funder-requirements) |
 | 63 | data.shar.feas.1 | [Repository Access Rights Consistency Aligned](#metric-63-repository-access-rights-consistency-aligned) |
 | 64 | data.shar.feas.2 | [Repository Data License Aligned with the DMP](#metric-64-repository-data-license-aligned-with-the-dmp) |
 | 65 | data.shar.feas.3 | [Embargo Implementation Alignment](#metric-65-embargo-implementation-alignment) |
 | 66 | data.shar.feas.4 | [Repository Data Restrictions](#metric-66-repository-data-restrictions) |
-| 67 | data.shar.comp.2 | [Embargo Period License Declared](#metric-67-embargo-period-license-declared) |
+| 67 | data.shar.comp.2 | [Embargo Declared in the DMP or Repository](#metric-67-embargo-declared-in-the-dmp-or-repository) |
 | 68 | repo.co.3 | [Thematic Data Repositories Referenced](#metric-68-thematic-data-repositories-referenced) |
-| 69 | repo.comp.2 | [Repository FAIRness Conformation](#metric-69-repository-fairness-conformation) |
+| 69 | repo.comp.2 | [Repository Conforms with FAIR Data Principles](#metric-69-repository-conforms-with-fair-data-principles) |
 | 70 | repo.comp.3 | [Trusted Repository is Used](#metric-70-trusted-repository-is-used) |
 | 71 | repo.co.4 | [Verification of Back-up Strategy](#metric-71-verification-of-back-up-strategy) |
 | 72 | repo.co.5 | [Certification of Repository](#metric-72-certification-of-repository) |
@@ -78,30 +78,29 @@
 | 74 | repo.co.6 | [Repository Policy is Present](#metric-74-repository-policy-is-present) |
 | 75 | repo.feas.1 | [Repository Identifier Accuracy](#metric-75-repository-identifier-accuracy) |
 | 76 | repo.feas.2 | [Long-Term Preservation Dataset](#metric-76-long-term-preservation-dataset) |
-| 77 | repo.feas.4 | [Repository Compatibility with Dataset Characteristics](#metric-77-repository-compatibility-with-dataset-characteristics) |
+| 77 | repo.feas.4 | [Dataset Characteristics Are Compatible with the Repository](#metric-77-dataset-characteristics-are-compatible-with-the-repository) |
 | 78 | data.exteresource.co.1 | [Data External Resources Included in the DMP](#metric-78-data-external-resources-included-in-the-dmp) |
 | 79 | data.exteresource.co.2 | [Metadata Standard Specified in the DMP](#metric-79-metadata-standard-specified-in-the-dmp) |
 | 80 | data.exteresource.feas.1 | [Resolvable External Resources](#metric-80-resolvable-external-resources) |
 | 81 | data.exteresource.feas.2 | [OpenAIRE Mentioned Dataset Validation](#metric-81-openaire-mentioned-dataset-validation) |
 | 82 | data.exteresource.feas.3 | [Contributor Roles Follow CRediT Taxonomy](#metric-82-contributor-roles-follow-credit-taxonomy) |
-| 83 | data.pid.cov.1 | [Dataset Persistent Identifier Declared](#metric-83-dataset-persistent-identifier-declared) |
+| 83 | data.pid.cov.1 | [Repository Supports Persistent Identifiers for Datasets](#metric-83-repository-supports-persistent-identifiers-for-datasets) |
 | 84 | data.pid.cov.2 | [Trusted Repository Referenced](#metric-84-trusted-repository-referenced) |
-| 85 | data.pid.feas.1 | [Repository Persistent Identifier System Verified](#metric-85-repository-persistent-identifier-system-verified) |
-| 86 | data.pid.feas.3 | [PIDs can be Resolved](#metric-86-pids-can-be-resolved) |
+| 85 | data.pid.feas.1 | [Dataset PID System in the DMP Matches the Repository](#metric-85-dataset-pid-system-in-the-dmp-matches-the-repository) |
+| 86 | data.pid.feas.3 | [Dataset Persistent Identifier Resolves Successfully](#metric-86-dataset-persistent-identifier-resolves-successfully) |
 | 87 | role.co.1 | [Research Data Management Roles Declared](#metric-87-research-data-management-roles-declared) |
 | 88 | dmp.valid.co.2 | [DMP Validation by Data Steward](#metric-88-dmp-validation-by-data-steward) |
 | 89 | role.pid.co.1 | [Contributors and Organisations PIDs](#metric-89-contributors-and-organisations-pids) |
 | 90 | role.feas.1 | [Referenced RDM Roles](#metric-90-referenced-rdm-roles) |
-| 91 | role.feas.2 | [Final Data Steward Validation](#metric-91-final-data-steward-validation) |
-| 92 | role.feas.3 | [Referenced Contributors and Organisations PIDs](#metric-92-referenced-contributors-and-organisations-pids) |
-| 93 | cost.comp.1 | [Repository Cost Verified Against Actual Pricing](#metric-93-repository-cost-verified-against-actual-pricing) |
-| 94 | cost.co.1 | [DMP Budget Specifications](#metric-94-dmp-budget-specifications) |
-| 95 | cost.co.2 | [No Extra RDM Costs](#metric-95-no-extra-rdm-costs) |
+| 91 | role.feas.2 | [Data Steward Contribution Reflected in the Destination Repository](#metric-91-data-steward-contribution-reflected-in-the-destination-repository) |
+| 92 | role.feas.3 | [Contributor and Organisation PIDs Match the Destination Repository](#metric-92-contributor-and-organisation-pids-match-the-destination-repository) |
+| 93 | cost.co.1 | [DMP Includes a Budget for Personnel and Monetary Resources](#metric-93-dmp-includes-a-budget-for-personnel-and-monetary-resources) |
+| 94 | cost.co.2 | [DMP States No Additional RDM Resources Are Required](#metric-94-dmp-states-no-additional-rdm-resources-are-required) |
 
 
 ---
 
-## Metric 1: maDMP declares reused datasets
+## Metric 1: Reused Dataset Declared in the DMP
 
 **Metric ID:** data.reused.co.1  
 **Persistent URI:** https://example.org/metric/data.reused.co.1
@@ -110,7 +109,7 @@
 maDMP declares reused datasets
 
 ### Narrative
-The machine-actionable Data Management Plan (maDMP) declares whether any dataset described in the plan is reused.
+Checks whether the DMP explicitly identifies at least one dataset as reused from a pre-existing source.
 
 ### Intended Outcome
 Determine whether the reuse of existing datasets is explicitly declared in the maDMP, confirming that the research project accounts for pre-existing data sources rather than treating all data as newly produced.
@@ -136,11 +135,11 @@ No dataset entry contains reuse information.
   "identifier": "https://example.org/metric/data.reused.co.1",
   "title": {
     "@language": "en",
-    "@value": "maDMP declares reused datasets"
+    "@value": "Reused Dataset Declared in the DMP"
   },
   "description": {
     "@language": "en",
-    "@value": "Checks whether the maDMP explicitly declares the reuse of existing datasets as part of the research project."
+    "@value": "Checks whether the DMP explicitly identifies at least one dataset as reused from a pre-existing source."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -211,7 +210,7 @@ No dataset entry contains reuse information.
 
 ---
 
-## Metric 2: Reused Data PID
+## Metric 2: Reused Dataset Has a Persistent Identifier
 
 **Metric ID:** data.reused.co.2  
 **Persistent URI:** https://example.org/metric/data.reused.co.2
@@ -221,7 +220,7 @@ No dataset entry contains reuse information.
 Reused Data PID
 
 ### Narrative
-Verifies that each reused dataset referenced in the DMP includes a persistent identifier (PID), enabling reliable and unambiguous discovery of the original data source.
+Checks whether each reused dataset referenced in the DMP includes a persistent identifier such as a DOI, so the original data source can be unambiguously referenced.
 
 ### Intended Outcome
 Determine whether reused datasets declared in the maDMP are accompanied by a persistent identifier, such as a DOI or URL-based PID, enabling reliable citation and unambiguous discovery of the original data source.
@@ -247,11 +246,11 @@ At least one reused dataset is missing an identifier or identifier metadata.
   "identifier": "https://example.org/metric/data.reused.co.2",
   "title": {
     "@language": "en",
-    "@value": "Reused Data PID"
+    "@value": "Reused Dataset Has a Persistent Identifier"
   },
   "description": {
     "@language": "en",
-    "@value": "Checks whether each reused dataset referenced in the maDMP includes a persistent identifier for reliable citation and discovery."
+    "@value": "Checks whether each reused dataset referenced in the DMP includes a persistent identifier such as a DOI, so the original data source can be unambiguously referenced."
   },
   "license": {
     "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -322,7 +321,7 @@ At least one reused dataset is missing an identifier or identifier metadata.
 
 ---
 
-## Metric 3: Reused Data License
+## Metric 3: Reused Dataset Has a Declared License
 
 **Metric ID:** data.reused.co.3  
 **Persistent URI:** https://example.org/metric/data.reused.co.3
@@ -358,7 +357,7 @@ At least one reused dataset is missing license information or required license f
   "identifier": "https://example.org/metric/data.reused.co.3",
   "title": {
     "@language": "en",
-    "@value": "Reused Data License"
+    "@value": "Reused Dataset Has a Declared License"
   },
   "description": {
     "@language": "en",
@@ -433,7 +432,7 @@ At least one reused dataset is missing license information or required license f
 
 ---
 
-## Metric 4: Reused Data Source
+## Metric 4: Reused Dataset Has Distribution Information
 
 **Metric ID:** data.reused.co.4  
 **Persistent URI:** https://example.org/metric/data.reused.co.4
@@ -471,7 +470,7 @@ At least one reused dataset lacks distribution or source metadata, or required m
   "identifier": "https://example.org/metric/data.reused.co.4",
   "title": {
     "@language": "en",
-    "@value": "Reused Data Source"
+    "@value": "Reused Dataset Has Distribution Information"
   },
   "description": {
     "@language": "en",
@@ -546,7 +545,7 @@ At least one reused dataset lacks distribution or source metadata, or required m
 
 ---
 
-## Metric 5: Reused Data Access
+## Metric 5: Reused Dataset Has Declared Access Conditions
 
 **Metric ID:** data.reused.co.5  
 **Persistent URI:** https://example.org/metric/data.reused.co.5
@@ -582,7 +581,7 @@ At least one reused dataset is missing a `data_access` value or contains an inva
   "identifier": "https://example.org/metric/data.reused.co.5",
   "title": {
     "@language": "en",
-    "@value": "Reused Data Access"
+    "@value": "Reused Dataset Has Declared Access Conditions"
   },
   "description": {
     "@language": "en",
@@ -657,7 +656,7 @@ At least one reused dataset is missing a `data_access` value or contains an inva
 
 ---
 
-## Metric 6: Reused Data Personal
+## Metric 6: Reused Dataset Contains Personal Data
 
 **Metric ID:** data.reused.co.6  
 **Persistent URI:** https://example.org/metric/data.reused.co.6
@@ -693,7 +692,7 @@ At least one reused dataset is missing `personal_data` information or contains a
   "identifier": "https://example.org/metric/data.reused.co.6",
   "title": {
     "@language": "en",
-    "@value": "Reused Data Personal"
+    "@value": "Reused Dataset Contains Personal Data"
   },
   "description": {
     "@language": "en",
@@ -768,7 +767,7 @@ At least one reused dataset is missing `personal_data` information or contains a
 
 ---
 
-## Metric 7: Reused Data Sensitive
+## Metric 7: Reused Dataset Contains Sensitive Data
 
 **Metric ID:** data.reused.co.7  
 **Persistent URI:** https://example.org/metric/data.reused.co.7
@@ -804,7 +803,7 @@ At least one reused dataset is missing `sensitive_data` information or contains 
   "identifier": "https://example.org/metric/data.reused.co.7",
   "title": {
     "@language": "en",
-    "@value": "Reused Data Sensitive"
+    "@value": "Reused Dataset Contains Sensitive Data"
   },
   "description": {
     "@language": "en",
@@ -879,7 +878,7 @@ At least one reused dataset is missing `sensitive_data` information or contains 
 
 ---
 
-## Metric 8: Reused Data URL
+## Metric 8: Reused Dataset Has an Access URL
 
 **Metric ID:** data.reused.co.8  
 **Persistent URI:** https://example.org/metric/data.reused.co.8
@@ -916,7 +915,7 @@ At least one reused dataset lacks a distribution URL.
   "identifier": "https://example.org/metric/data.reused.co.8",
   "title": {
     "@language": "en",
-    "@value": "Reused Data URL"
+    "@value": "Reused Dataset Has an Access URL"
   },
   "description": {
     "@language": "en",
@@ -991,7 +990,7 @@ At least one reused dataset lacks a distribution URL.
 
 ---
 
-## Metric 9: Repository Reused Data PID
+## Metric 9: Reused Dataset PID Resolves in the Repository
 
 **Metric ID:** data.reused.feas.1  
 **Persistent URI:** https://example.org/metric/data.reused.feas.1
@@ -1034,7 +1033,7 @@ At least one reused dataset PID:
   "identifier": "https://example.org/metric/data.reused.feas.1",
   "title": {
     "@language": "en",
-    "@value": "Repository Reused Data PID"
+    "@value": "Reused Dataset PID Resolves in the Repository"
   },
   "description": {
     "@language": "en",
@@ -1113,7 +1112,7 @@ At least one reused dataset PID:
 
 ---
 
-## Metric 10: Repository Reused Data Access
+## Metric 10: Reused Dataset Access Conditions Match the Repository
 
 **Metric ID:** data.reused.feas.2  
 **Persistent URI:** https://example.org/metric/data.reused.feas.2
@@ -1150,7 +1149,7 @@ At least one reused dataset has a `data_access` value in the maDMP that does not
   "identifier": "https://example.org/metric/data.reused.feas.2",
   "title": {
     "@language": "en",
-    "@value": "Repository Reused Data Access"
+    "@value": "Reused Dataset Access Conditions Match the Repository"
   },
   "description": {
     "@language": "en",
@@ -1229,7 +1228,7 @@ At least one reused dataset has a `data_access` value in the maDMP that does not
 
 ---
 
-## Metric 11: Repository Reused Data License
+## Metric 11: Reused Dataset License Matches the Repository
 
 **Metric ID:** data.reused.feas.3  
 **Persistent URI:** https://example.org/metric/data.reused.feas.3
@@ -1266,7 +1265,7 @@ At least one reused dataset has a license value in the maDMP that does not match
   "identifier": "https://example.org/metric/data.reused.feas.3",
   "title": {
     "@language": "en",
-    "@value": "Repository Reused Data License"
+    "@value": "Reused Dataset License Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -1456,7 +1455,7 @@ All dataset entries include `is_reused` (i.e., no dataset is found without `is_r
 
 ---
 
-## Metric 13: New Data Collection or Creation
+## Metric 13: New Dataset Collection or Creation Method Declared
 
 **Metric ID:** data.new.2  
 **Persistent URI:** https://example.org/metric/data.new.2
@@ -1496,7 +1495,7 @@ No dataset provides `technical_resource`, or one or more required fields are mis
   "identifier": "https://example.org/metric/data.new.2",
   "title": {
     "@language": "en",
-    "@value": "New Data Collection or Creation"
+    "@value": "New Dataset Collection or Creation Method Declared"
   },
   "description": {
     "@language": "en",
@@ -1571,7 +1570,7 @@ No dataset provides `technical_resource`, or one or more required fields are mis
 
 ---
 
-## Metric 14: New Data Access
+## Metric 14: New Dataset Has Declared Access Conditions
 
 **Metric ID:** data.new.3  
 **Persistent URI:** https://example.org/metric/data.new.3
@@ -1610,7 +1609,7 @@ No “new” dataset contains `data_access` and/or rights information, or `data_
   "identifier": "https://example.org/metric/data.new.3",
   "title": {
     "@language": "en",
-    "@value": "New Data Access"
+    "@value": "New Dataset Has Declared Access Conditions"
   },
   "description": {
     "@language": "en",
@@ -1685,7 +1684,7 @@ No “new” dataset contains `data_access` and/or rights information, or `data_
 
 ---
 
-## Metric 15: New Data Metadata
+## Metric 15: New Dataset Has Sufficient Metadata
 
 **Metric ID:** data.new.4  
 **Persistent URI:** https://example.org/metric/data.new.4
@@ -1725,7 +1724,7 @@ No “new” dataset provides `metadata`, or one or more required fields are mis
   "identifier": "https://example.org/metric/data.new.4",
   "title": {
     "@language": "en",
-    "@value": "New Data Metadata"
+    "@value": "New Dataset Has Sufficient Metadata"
   },
   "description": {
     "@language": "en",
@@ -1800,7 +1799,7 @@ No “new” dataset provides `metadata`, or one or more required fields are mis
 
 ---
 
-## Metric 16: Repository PID Resolution
+## Metric 16: New Dataset Persistent Identifier Resolves Successfully
 
 **Metric ID:** data.new.feas.1  
 **Persistent URI:** https://example.org/metric/data.new.feas.1
@@ -1839,7 +1838,7 @@ No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
   "identifier": "https://example.org/metric/data.new.feas.1",
   "title": {
     "@language": "en",
-    "@value": "Repository PID Resolution"
+    "@value": "New Dataset Persistent Identifier Resolves Successfully"
   },
   "description": {
     "@language": "en",
@@ -1914,7 +1913,7 @@ No `dataset_id` is provided, and/or the provided PID(s) do not resolve.
 
 ---
 
-## Metric 17: Repository New Data Access
+## Metric 17: New Dataset Access Conditions Match the Repository
 
 **Metric ID:** data.new.feas.2  
 **Persistent URI:** https://example.org/metric/data.new.feas.2
@@ -1951,7 +1950,7 @@ At least one new dataset has `data_access` in the maDMP that does not match the 
   "identifier": "https://example.org/metric/data.new.feas.2",
   "title": {
     "@language": "en",
-    "@value": "Repository New Data Access"
+    "@value": "New Dataset Access Conditions Match the Repository"
   },
   "description": {
     "@language": "en",
@@ -2030,7 +2029,7 @@ At least one new dataset has `data_access` in the maDMP that does not match the 
 
 ---
 
-## Metric 18: Repository New Data License
+## Metric 18: New Dataset License Matches the Repository
 
 **Metric ID:** data.new.feas.3  
 **Persistent URI:** https://example.org/metric/data.new.feas.3
@@ -2067,7 +2066,7 @@ At least one new dataset has a license value in the maDMP that does not match th
   "identifier": "https://example.org/metric/data.new.feas.3",
   "title": {
     "@language": "en",
-    "@value": "Repository New Data License"
+    "@value": "New Dataset License Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -2479,7 +2478,7 @@ For each dataset distribution (or at minimum for the distribution(s) in scope), 
 
 ---
 
-## Metric 22: Repository Data Type
+## Metric 22: Dataset Type Matches the Repository
 
 **Metric ID:** data.info.feas.1  
 **Persistent URI:** https://example.org/metric/data.info.feas.1
@@ -2519,7 +2518,7 @@ At least one dataset has a type or subtype mismatch between maDMP and the destin
   "identifier": "https://example.org/metric/data.info.feas.1",
   "title": {
     "@language": "en",
-    "@value": "Repository Data Type"
+    "@value": "Dataset Type Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -2594,7 +2593,7 @@ At least one dataset has a type or subtype mismatch between maDMP and the destin
 
 ---
 
-## Metric 23: Repository Data Format
+## Metric 23: Dataset File Format Matches the Repository
 
 **Metric ID:** data.info.feas.2  
 **Persistent URI:** https://example.org/metric/data.info.feas.2
@@ -2631,7 +2630,7 @@ At least one distribution format declared in the maDMP does not match (or cannot
   "identifier": "https://example.org/metric/data.info.feas.2",
   "title": {
     "@language": "en",
-    "@value": "Repository Data Format"
+    "@value": "Dataset File Format Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -2706,7 +2705,7 @@ At least one distribution format declared in the maDMP does not match (or cannot
 
 ---
 
-## Metric 24: Repository Data Size
+## Metric 24: Dataset Size Matches the Repository
 
 **Metric ID:** data.info.feas.3  
 **Persistent URI:** https://example.org/metric/data.info.feas.3
@@ -2743,7 +2742,7 @@ At least one distribution has a size mismatch between maDMP and destination repo
   "identifier": "https://example.org/metric/data.info.feas.3",
   "title": {
     "@language": "en",
-    "@value": "Repository Data Size"
+    "@value": "Dataset Size Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -3040,7 +3039,7 @@ No controlled vocabulary usage can be identified in `dataset_methodology`, or me
 
 ---
 
-## Metric 27: Electronic Lab Notebook Referenced as a technical resource
+## Metric 27: Electronic Lab Notebook Referenced as a Technical Resource
 
 **Metric ID:** meta.co.2  
 **Persistent URI:** https://example.org/metric/meta.co.2
@@ -3076,7 +3075,7 @@ No technical resource references an electronic lab notebook, or technical resour
   "identifier": "https://example.org/metric/meta.co.2",
   "title": {
     "@language": "en",
-    "@value": "Electronic Lab Notebook Referenced as a technical resource"
+    "@value": "Electronic Lab Notebook Referenced as a Technical Resource"
   },
   "description": {
     "@language": "en",
@@ -3442,7 +3441,7 @@ No dataset contains a `related_identifier` or `technical_resource.name` entry th
 
 ---
 
-## Metric 30: Use of Open File Formats for datasets
+## Metric 30: Dataset Distributions Use Open File Formats
 
 **Metric ID:** meta.form.op.1  
 **Persistent URI:** https://example.org/metric/meta.form.op.1
@@ -3478,7 +3477,7 @@ At least one declared dataset format is not open, cannot be classified as open, 
   "identifier": "https://example.org/metric/meta.form.op.1",
   "title": {
     "@language": "en",
-    "@value": "Use of Open File Formats for datasets"
+    "@value": "Dataset Distributions Use Open File Formats"
   },
   "description": {
     "@language": "en",
@@ -5699,7 +5698,7 @@ No dataset distribution contains a `license_ref` field, or all present values ar
 
 ---
 
-## Metric 52: Software Dataset License Declared
+## Metric 52: Software Dataset Has a Standardised Machine-Readable License
 
 **Metric ID:** soft.lice.comp.1
 **Persistent URI:** https://example.org/metric/soft.lice.comp.1
@@ -5735,7 +5734,7 @@ A dataset is typed as software but has no `license_ref`, or the declared `licens
   "identifier": "https://example.org/metric/soft.lice.comp.1",
   "title": {
     "@language": "en",
-    "@value": "Software Dataset License Declared"
+    "@value": "Software Dataset Has a Standardised Machine-Readable License"
   },
   "description": {
     "@language": "en",
@@ -6775,7 +6774,7 @@ No dataset distribution contains a `rights` field, or all present values are abs
 
 ---
 
-## Metric 62: Funder's Data License
+## Metric 62: Dataset License Complies with Funder Requirements
 
 **Metric ID:** data.shar.comp.1
 **Persistent URI:** https://example.org/metric/data.shar.comp.1
@@ -6811,7 +6810,7 @@ No dataset distribution contains a `license_ref` field, or all present `license_
   "identifier": "https://example.org/metric/data.shar.comp.1",
   "title": {
     "@language": "en",
-    "@value": "Funder's Data License"
+    "@value": "Dataset License Complies with Funder Requirements"
   },
   "description": {
     "@language": "en",
@@ -7310,7 +7309,7 @@ The `rights` field is absent or empty, or its value is inconsistent with the res
 
 ---
 
-## Metric 67: Embargo Period License Declared
+## Metric 67: Embargo Declared in the DMP or Repository
 
 **Metric ID:** data.shar.comp.2
 **Persistent URI:** https://example.org/metric/data.shar.comp.2
@@ -7347,7 +7346,7 @@ An embargo date is present in the repository host entry, or `distribution.licens
   "identifier": "https://example.org/metric/data.shar.comp.2",
   "title": {
     "@language": "en",
-    "@value": "Embargo Period License Declared"
+    "@value": "Embargo Declared in the DMP or Repository"
   },
   "description": {
     "@language": "en",
@@ -7530,7 +7529,7 @@ No dataset distribution contains a `host.title` or `host.url` value that matches
 
 ---
 
-## Metric 69: Repository FAIRness Conformation
+## Metric 69: Repository Conforms with FAIR Data Principles
 
 **Metric ID:** repo.comp.2
 **Persistent URI:** https://example.org/metric/repo.comp.2
@@ -7566,7 +7565,7 @@ No dataset distribution contains a `host.title` or `host.url` that matches a FAI
   "identifier": "https://example.org/metric/repo.comp.2",
   "title": {
     "@language": "en",
-    "@value": "Repository FAIRness Conformation"
+    "@value": "Repository Conforms with FAIR Data Principles"
   },
   "description": {
     "@language": "en",
@@ -8386,7 +8385,7 @@ No dataset distribution contains both a non-empty `preservation_statement` and a
 
 ---
 
-## Metric 77: Repository Compatibility with Dataset Characteristics
+## Metric 77: Dataset Characteristics Are Compatible with the Repository
 
 **Metric ID:** repo.feas.4
 **Persistent URI:** https://example.org/metric/repo.feas.4
@@ -8423,7 +8422,7 @@ No dataset contains `keyword` or `language` values that match the characteristic
   "identifier": "https://example.org/metric/repo.feas.4",
   "title": {
     "@language": "en",
-    "@value": "Repository Compatibility with Dataset Characteristics"
+    "@value": "Dataset Characteristics Are Compatible with the Repository"
   },
   "description": {
     "@language": "en",
@@ -9034,7 +9033,7 @@ No dataset contains a `contributor` entry whose `role` value matches a CRediT ta
 
 ---
 
-## Metric 83: Dataset Persistent Identifier Declared
+## Metric 83: Repository Supports Persistent Identifiers for Datasets
 
 **Metric ID:** data.pid.cov.1
 **Persistent URI:** https://example.org/metric/data.pid.cov.1
@@ -9070,7 +9069,7 @@ No dataset distribution contains a `host` entry with a non-empty `pid_system` fi
   "identifier": "https://example.org/metric/data.pid.cov.1",
   "title": {
     "@language": "en",
-    "@value": "Dataset Persistent Identifier Declared"
+    "@value": "Repository Supports Persistent Identifiers for Datasets"
   },
   "description": {
     "@language": "en",
@@ -9254,7 +9253,7 @@ Either the `certified_with` field is absent or does not match a trusted registry
 
 ---
 
-## Metric 85: Repository Persistent Identifier System Verified
+## Metric 85: Dataset PID System in the DMP Matches the Repository
 
 **Metric ID:** data.pid.feas.1
 **Persistent URI:** https://example.org/metric/data.pid.feas.1
@@ -9290,7 +9289,7 @@ The `host.pid_system` value is absent, empty, or does not match the PID system s
   "identifier": "https://example.org/metric/data.pid.feas.1",
   "title": {
     "@language": "en",
-    "@value": "Repository Persistent Identifier System Verified"
+    "@value": "Dataset PID System in the DMP Matches the Repository"
   },
   "description": {
     "@language": "en",
@@ -9361,7 +9360,7 @@ The `host.pid_system` value is absent, empty, or does not match the PID system s
 
 ---
 
-## Metric 86: PIDs can be Resolved
+## Metric 86: Dataset Persistent Identifier Resolves Successfully
 
 **Metric ID:** data.pid.feas.3
 **Persistent URI:** https://example.org/metric/data.pid.feas.3
@@ -9396,7 +9395,7 @@ The `dataset_id.identifier` value is absent, empty, not of a resolvable type, or
   "identifier": "https://example.org/metric/data.pid.feas.3",
   "title": {
     "@language": "en",
-    "@value": "PIDs can be Resolved"
+    "@value": "Dataset Persistent Identifier Resolves Successfully"
   },
   "description": {
     "@language": "en",
@@ -9895,7 +9894,7 @@ No contributor declared in the maDMP via `dmp.contributor.name`, `dmp.contributo
 
 ---
 
-## Metric 91: Final Data Steward Validation
+## Metric 91: Data Steward Contribution Reflected in the Destination Repository
 
 **Metric ID:** role.feas.2
 **Persistent URI:** https://example.org/metric/role.feas.2
@@ -9931,7 +9930,7 @@ No contributor in the maDMP has a `role` value of `Data Steward`, or no correspo
   "identifier": "https://example.org/metric/role.feas.2",
   "title": {
     "@language": "en",
-    "@value": "Final Data Steward Validation"
+    "@value": "Data Steward Contribution Reflected in the Destination Repository"
   },
   "description": {
     "@language": "en",
@@ -10002,114 +10001,7 @@ No contributor in the maDMP has a `role` value of `Data Steward`, or no correspo
 
 ---
 
-## Metric 92: Referenced Contributors and Organisations PIDs
-
-**Metric ID:** role.feas.3
-**Persistent URI:** https://example.org/metric/role.feas.3
-**Dimension:** Feasibility
-
-### Title
-Referenced Contributors and Organisations PIDs
-
-### Narrative
-Validates that the PIDs of the contributors are included in the destination.
-
-### Intended Outcome
-Determine whether the contributor and affiliation PIDs declared in the maDMP via `contributor.contributor_id` and `contributor.affiliation.affiliation_id` are reflected in the destination, by cross-referencing against `contributors.orcid` and `contributors.affiliation` in Zenodo, confirming that persistent identifiers for contributors and their organisations are consistently carried through to the destination record.
-
-### Applies To
-Machine-actionable Data Management Plan (maDMP) in JSON format, cross-referenced with Zenodo contributor metadata.
-
-### Success Criterion
-For at least one contributor declared in the maDMP, the `contributor.contributor_id` matches a `contributors.orcid` entry in Zenodo and the `contributor.affiliation.affiliation_id` matches a `contributors.affiliation` entry in Zenodo, confirming that contributor and organisational PIDs are referenced in the destination.
-
-### Failure Criterion
-No contributor declared in the maDMP has a `contributor.contributor_id` or `contributor.affiliation.affiliation_id` that can be matched against `contributors.orcid` or `contributors.affiliation` in Zenodo, or the relevant fields are absent or empty in either source.
-
-### Associated Test(s)
-- [Check contributor PIDs in maDMP against Zenodo contributors](tests.md#test-102-check-contributor-pids-in-madmp-against-zenodo-contributors)
-
-### JSON-LD (Metric)
-```json
-{
-  "@context": "https://w3id.org/ftr/context",
-  "@id": "https://example.org/metric/role.feas.3",
-  "@type": "dqv:Metric",
-  "identifier": "https://example.org/metric/role.feas.3",
-  "title": {
-    "@language": "en",
-    "@value": "Referenced Contributors and Organisations PIDs"
-  },
-  "description": {
-    "@language": "en",
-    "@value": "Checks whether the contributor and affiliation identifiers declared in the maDMP are present in the destination repository record."
-  },
-  "license": {
-    "@id": "http://creativecommons.org/licenses/by/4.0/"
-  },
-  "dcterms:creator": [
-    {
-      "@id": "https://example.org/organization"
-    }
-  ],
-  "dcterms:publisher": {
-    "@id": "https://example.org/organization"
-  },
-  "hasImplementation": {
-    "@id": "https://example.org/test/T-DCSC-contributor-pids-zenodo"
-  },
-  "abbreviation": {
-    "@value": "role.feas.3-M"
-  },
-  "contactPoint": {
-    "@id": "https://example.org/contact"
-  },
-  "keyword": [
-    {
-      "@language": "en",
-      "@value": "contributor PID"
-    },
-    {
-      "@language": "en",
-      "@value": "affiliation PID"
-    },
-    {
-      "@language": "en",
-      "@value": "Zenodo"
-    },
-    {
-      "@language": "en",
-      "@value": "maDMP"
-    }
-  ],
-  "landingPage": {
-    "@id": "https://example.org/metric/role.feas.3"
-  },
-  "version": {
-    "@value": "0.0.1"
-  },
-  "inDimension": {
-    "@value": "Feasibility"
-  },
-  "isApplicableFor": {
-    "@id": "https://schema.org/Dataset"
-  },
-  "hasBenchmark": {
-    "@id": "https://example.org/benchmark/default"
-  },
-  "status": {
-    "@language": "en",
-    "@value": "Draft"
-  },
-  "supportedBy": {
-    "@id": "https://example.org/project"
-  }
-}
-```
-
----
-
-## Metric 93: Repository Cost Verified Against Actual Pricing
+## Metric 92: Contributor and Organisation PIDs Match the Destination Repository
 
 **Metric ID:** cost.comp.1
 **Persistent URI:** https://example.org/metric/cost.comp.1
@@ -10216,7 +10108,7 @@ No `cost` entry is present in the maDMP, or the declared cost values do not matc
 
 ---
 
-## Metric 94: DMP Budget Specifications
+## Metric 93: DMP Includes a Budget for Personnel and Monetary Resources
 
 **Metric ID:** cost.co.1
 **Persistent URI:** https://example.org/metric/cost.co.1
@@ -10252,7 +10144,7 @@ No `cost` entry is present at DMP level, or no present entry contains the requir
   "identifier": "https://example.org/metric/cost.co.1",
   "title": {
     "@language": "en",
-    "@value": "DMP Budget Specifications"
+    "@value": "DMP Includes a Budget for Personnel and Monetary Resources"
   },
   "description": {
     "@language": "en",
@@ -10323,7 +10215,7 @@ No `cost` entry is present at DMP level, or no present entry contains the requir
 
 ---
 
-## Metric 95: No Extra RDM Costs
+## Metric 94: DMP States No Additional RDM Resources Are Required
 
 **Metric ID:** cost.co.2
 **Persistent URI:** https://example.org/metric/cost.co.2
@@ -10359,7 +10251,7 @@ The `cost` field is absent, empty, or does not contain any indication that no ad
   "identifier": "https://example.org/metric/cost.co.2",
   "title": {
     "@language": "en",
-    "@value": "No Extra RDM Costs"
+    "@value": "DMP States No Additional RDM Resources Are Required"
   },
   "description": {
     "@language": "en",
